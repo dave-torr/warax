@@ -9,3 +9,50 @@
   display: flex;
   justify-content: center;
 }
+
+.cartDialog{
+  width: 400px;
+}
+
+.cartTitle{
+  padding: 0 15px;
+}
+
+.eachCartElemCont{
+  width: 360px;
+  margin: 12px;
+  padding: 12px;
+  border: solid 1px black;
+}
+
+.eachCartItemCont{
+  font-size: 0.9em;
+  border-bottom: dotted 1px black;
+  padding-bottom: 9px;
+}
+
+.cartItmeDescription{
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  /* font-weight: 600; */
+}
+
+.cartItmePrice{
+  text-align: end;
+  font-weight: 800;
+}
+
+.totalCartPrice{
+  padding-top: 15px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rmvBTN{
+  color: red;
+  font-weight: 700;
+  padding: 3px;
+  cursor: pointer;
+}

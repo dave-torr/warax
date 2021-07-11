@@ -6,7 +6,8 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 export function EventDisp(props){
 
     let aSampleEvent = {
-        "eventName":"Criollando Con Amigos",
+        "eventName": "Criollando Con Amigos",
+        "eventType": "concierto en linea",
         "eventDescription":"Agarrate Catalina volvió a los escenarios con Amor y Odio, primer premio del carnaval 2020. Un espectáculo critico. humoristico y humanista, con el sello proprio de la murga más ganadora de los últimos veinte años.",
         "priceObj":[
             {
@@ -30,7 +31,8 @@ export function EventDisp(props){
         <div className={styles.aPriceBox}>
             <div className={styles.priceDetail}> {elem.priceDetail} </div>
             <div className={styles.anEventPrice}> $ {elem.price} </div>
-            <div className={styles.addToCart}> Comprar <AddShoppingCartIcon /> </div>
+            <div className={styles.addToCart} onClick={()=>{props.addToCart(elem)}}
+            > Comprar <AddShoppingCartIcon /> </div>
         </div>
     </React.Fragment>)
 
@@ -46,6 +48,7 @@ export function EventDisp(props){
                     />
                 </div>
                 <div className={styles.eventDescrCont}>
+                    <div className={styles.eventListing}> eventos / {aSampleEvent.eventType} </div>
                     <h2> {aSampleEvent.eventName} </h2>
                     <p> {aSampleEvent.eventDescription} </p>
                     <div className={styles.priceContainer}> 

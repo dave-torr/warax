@@ -7,12 +7,15 @@ import styles from  "./../styles/components/navi.module.css"
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import YouTubeIcon from '@material-ui/icons/YouTube';
+
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+
 export function Navi(props){
 
     let menuOptsArr= [
         {
             "key": "Home",
-            "link": ""
+            "link": "home"
         },
         {
             "key": "Artistas",
@@ -34,39 +37,44 @@ export function Navi(props){
 
     const theMenu=()=>{
         let eachMenuOpt=menuOptsArr.map((elem, i)=><React.Fragment key={i}>
-                {elem.key===props.pageRouter? <>
+                {elem.link===props.pageDisplayer? <>
                 <a className={styles.eachMenuBTNActive}>
                     {elem.key}</a>
                 </>:<>
-                <Link href={`/${encodeURIComponent(elem.link) }`}>
-                    <a className={styles.eachMenuBTN}>
+                    <a className={styles.eachMenuBTN} onClick={()=>
+                    props.setPageDisplayer(elem.link)}>
                         {elem.key}</a>
-                </Link>
                 </>}
         </React.Fragment>)
 
         return(
             <>
                 <div className={styles.naviGenCont}>
-                    <Image
-                        src={"/assets/icons/waraxLogoBLK.png"}
-                        height={90}
-                        width={216}
-                        alt="Warax Logo"
-                        />
-                    <div className={styles.naviBTNCont}>
-                        {eachMenuOpt}
+                    <div className={styles.naviRow}>
+                        <Image
+                            src={"/assets/icons/waraxLogoBLK.png"}
+                            height={90}
+                            width={216}
+                            alt="Warax Logo"
+                            />
+                        <div className={styles.naviBTNCont}>
+                            {eachMenuOpt}
+                        </div>
+                        <div className={styles.hamburgerCont}> 
+                            <div className={styles.burgerLine} />
+                            <div className={styles.burgerLine} />
+                            <div className={styles.burgerLine} />
+                        </div>
                     </div>
-                    <div className={styles.hamburgerCont}> 
-                        <div className={styles.burgerLine} />
-                        <div className={styles.burgerLine} />
-                        <div className={styles.burgerLine} />
+                    {props.waraxCart.length>0&&<>
+                    <div className={styles.naviCartRow} onClick={()=>props.setCartModal(true)}>  
+                        Carrito Warax &nbsp; x {props.waraxCart.length} &nbsp;  <ShoppingCartIcon /> 
                     </div>
+                    </>}
                 </div>
             </>
         )
     }
-
 
     return(
         <>

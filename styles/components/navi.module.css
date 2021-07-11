@@ -1,14 +1,20 @@
 
 .naviGenCont{
-    padding: 21px 15px;
+    padding: 9px;
     font-weight: 500;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
     position: fixed;
     z-index: 99;
     background-color: white;
     top: 0;
+}
+
+.naviRow{
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .eachMenuBTN{
@@ -57,6 +63,17 @@
     align-items: center;
     margin: 6px;
 }
+
+.naviCartRow{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 15px;
+    font-size: 0.8em;
+    align-items: center;
+    cursor: pointer;
+}
+
 
 @media (max-width: 750px) {
 
