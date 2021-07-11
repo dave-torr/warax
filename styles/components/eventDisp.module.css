@@ -1,0 +1,82 @@
+.eventContainer{
+    width: 800px;
+    background-color: white;
+    margin: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: var(--general-transition);
+}
+
+.eventContainer:hover{
+    box-shadow: var(--aHighlightBoxShadow);
+}
+
+.imgCont{
+    padding: 6px;
+    width: 300px;
+}
+
+.eventDescrCont{
+    padding: 0 21px;
+    width: 80%;
+}
+.eventDescrCont p{
+    text-align: justify;
+}
+
+.priceContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.aPriceBox{
+    padding: 5px 15px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--general-transition);
+}
+
+.aPriceBox:hover{
+    box-shadow: var(--generalBoxShadow);
+}
+
+.aPriceBox:nth-of-type(2){
+    margin-left: 6px;
+    border-left: solid 1px grey;
+}
+
+.aPriceBox:nth-of-type(2){
+    margin-left: 6px;
+    border-left: solid 1px grey;
+}
+
+
+.priceDetail{
+    margin-bottom: 12px;
+    
+}
+
+.anEventPrice{
+    font-weight: 500;
+}
+
+.addToCart{
+    margin: 6px 0;
+    border-radius: 5px;
+    padding: 6px 9px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    border: solid 1px grey;
+    align-items: center;
+}
+
+.aPriceBox:first-of-type > .addToCart{
+    background-color: var(--purple-highlight);
+    color: white;
+
+}

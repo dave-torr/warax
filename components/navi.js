@@ -57,6 +57,11 @@ export function Navi(props){
                     <div className={styles.naviBTNCont}>
                         {eachMenuOpt}
                     </div>
+                    <div className={styles.hamburgerCont}> 
+                        <div className={styles.burgerLine} />
+                        <div className={styles.burgerLine} />
+                        <div className={styles.burgerLine} />
+                    </div>
                 </div>
             </>
         )

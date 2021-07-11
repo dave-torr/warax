@@ -1,4 +1,11 @@
 .generalCont{
   height: 150vh;
   padding-top: 130px;
+  background-color: whitesmoke;
+}
+
+.aHomeSection{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

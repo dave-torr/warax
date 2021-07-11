@@ -21,10 +21,15 @@
     padding: 6px 9px;
     margin: 3px;
     color: var(--purple-highlight);
+    transition: var(--general-transition);
 }
 
 .eachMenuBTN:hover{
     color: var(--purple-highlight);
+}
+
+.hamburgerCont{
+    display: none;
 }
 
 .generalFooterCont{
@@ -51,4 +56,34 @@
     justify-content: center;
     align-items: center;
     margin: 6px;
+}
+
+@media (max-width: 750px) {
+
+    .naviBTNCont{
+        display: none;
+    }
+
+    .hamburgerCont{
+        display: unset;
+        margin-right: 15px;
+        transition: var(--general-transition);
+    }
+    .hamburgerCont:hover{
+        box-shadow: var(--aHighlightBoxShadow);
+    }
+    .burgerLine:hover{
+        background-color: var(--purple-highlight);
+    }
+    .burgerLine{
+        height: 2px;
+        width: 21px;
+        background-color: rgb(58, 57, 57);
+        margin: 3px;
+        transition: var(--general-transition);
+    }
+
+    .naviGenCont{
+        justify-content: space-between;
+    }
 }
