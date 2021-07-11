@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html,
 body {
   padding: 0;
@@ -13,4 +15,27 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+:root{
+  /* colors */
+  --purple-highlight: #5c019d;
+  --blueMainTheme: #212d6c;
+  --maroonMainTheme: rgb(100, 38, 9);
+
+  --aquaMistAuxTheme: rgb(62, 68, 110);
+  --darkGreySecTheme: rgb(92, 91, 93);
+  
+
+  --general-transition: all ease-in 0.3s;
+  
+  
+  --generalBoxShadow: 3px 3px 3px rgba(0, 0, 0, 0.23);
+  --aHighlightBoxShadow: 6px 8px 15px rgba(0, 0, 0, 0.258);
+
+  --thinBorder: solid 1px black;
+
+
 }
