@@ -62,3 +62,17 @@
     align-items: center;
     cursor: pointer;
 }
+
+@media (max-width: 700px) {
+
+    .merchGenCont{
+        flex-direction: column;
+    }
+
+    .aMerchIMG{
+        width: 94%;
+    }
+    .merchDescCont{
+        width: 94%;
+    }
+}

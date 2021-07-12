@@ -9,6 +9,7 @@
     z-index: 99;
     background-color: white;
     top: 0;
+    border-bottom: solid;
 }
 
 .naviRow{
@@ -74,9 +75,16 @@
     cursor: pointer;
 }
 
+.naviCartRowMob{
+    display: none;
+}
+
 
 @media (max-width: 750px) {
-
+    .naviGenCont{
+        padding: unset;
+        padding-bottom: 6px;
+    }
     .naviRow{
         justify-content: space-between;
     }
@@ -102,5 +110,39 @@
         background-color: rgb(58, 57, 57);
         margin: 3px;
         transition: var(--general-transition);
+    }
+    .naviColum{
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .naviBTNContMobile{
+        display: flex;
+        flex-direction: column;
+        font-size: 2em;
+    }
+    .closeModBTN{
+        width: 100%;
+        text-align: end;
+        padding-right: 18px;
+    }
+
+    .naviCartRow{
+        display: none;
+    }
+
+    .naviCartRowMob{
+        display: unset;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 15px;
+        font-size: 0.8em;
+        align-items: center;
+        cursor: pointer;
     }
 }

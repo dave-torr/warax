@@ -77,6 +77,7 @@ export default function Home() {
   const [waraxCart, setWaraxCart]=useState([])
   const [addedItemSnack, setAddedItem]=useState(false)
   const [cartModalCont, setCartModal]=useState(false)
+  const [mobileCartTrig, setMobCartTrigg] =useState(false)
   const [finalPrice, setFinalPrice]=useState()
   const [payment, setPayment]=useState(false)
 
@@ -86,6 +87,7 @@ export default function Home() {
       setFinalPrice(waraxCart.map(elem => elem.price).reduce((prev, next) => prev + next))
     } else if(waraxCart.length===0){
       setCartModal(false)
+      setMobCartTrigg(false)
     }
   },[waraxCart])
   useEffect(()=>{
@@ -138,17 +140,10 @@ export default function Home() {
 
 
 
-
-
-
-
   const paymenInput=()=>{
     return(
       <>
         {payment? <>
-
-
-
 
 
           {/* CAJITA KUSHKI MOFOOO */}
@@ -162,39 +157,12 @@ export default function Home() {
               {formLoader()}
           </Script> */}
 
-
-
-
-
-
         </>:<>
           <div className={styles.payNowBtn} onClick={()=>{setPayment(true)}}> Pagar Ahora </div>
         </>}
       </>
     )
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -219,6 +187,22 @@ export default function Home() {
           <div className={styles.cartDialog} >
             <h2 className={styles.cartTitle}> Carrito Warax </h2>
             <div className={styles.eachCartElemCont}> {cartDispl} 
+              <div className={styles.totalCartPrice}>
+                <strong> Total </strong>
+                <span> ${finalPrice} </span>
+              </div>
+            </div>
+            {paymenInput()}
+          </div>
+        </Dialog>
+        <Dialog open={mobileCartTrig} fullScreen onClose={()=>setMobCartTrigg(false)}>
+          <div className={styles.cartDialog} >
+            <div style={{ "width":"100%", "textAlign": "end", "padding": "18px" }} onClick={()=>setMobCartTrigg(false)}> 
+              cerrar | <strong> X </strong>
+            </div>
+            <h2 className={styles.cartTitle}> Carrito Warax </h2>
+            <div className={styles.eachCartElemCont}> 
+              {cartDispl} 
               <div className={styles.totalCartPrice}>
                 <strong> Total </strong>
                 <span> ${finalPrice} </span>
@@ -302,6 +286,7 @@ export default function Home() {
           waraxCart={waraxCart}
           setWaraxCart={setWaraxCart}
           setCartModal={setCartModal}
+          setMobCartTrigg={setMobCartTrigg}
         />
 
         {pageDisplayer==="home"&&<>
@@ -317,9 +302,12 @@ export default function Home() {
         </>}
         {pageDisplayer==="servicios"&&<>
           SERVICIOS
+          {merchDisp()}
         </>}
         {pageDisplayer==="eventos"&&<>
+          <br></br>
           {anEventDisp()}
+          {merchDisp()}
         </>}
 
 

@@ -91,6 +91,10 @@
     .eventContainer{
         width: 96%;
     }
+
+    .priceContainer{
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 750px) {
@@ -104,5 +108,16 @@
         padding-bottom: 12px;
         
     }
+
+    .aPriceBox{
+        width: 90%;
+        border: unset;
+        border-bottom: solid 1px black;
+    }
+    .aPriceBox:first-of-type{
+        border: unset;
+        border-bottom: solid 1px black;
+    }
+
 
 }

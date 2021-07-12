@@ -9,7 +9,7 @@ export function EventDisp(props){
     let aSampleEvent = {
         "eventName": "Criollando Con Amigos",
         "eventType": "concierto en linea",
-        "eventDescription":"Agarrate Catalina volvió a los escenarios con Amor y Odio, primer premio del carnaval 2020. Un espectáculo critico. humoristico y humanista, con el sello proprio de la murga más ganadora de los últimos veinte años.",
+        "eventDescription":"Iraiz y Sebastian Oviedo después de trece años de trabajo juntos tienen la dicha de presentarnos su primer disco grabado en vivo “Criollando con amigos” que es un homenaje a la música popular latinoamericana. Una “guitarreada” virtual acompañada de amigos entrañables y admirados.",
         "priceObj":[
             {
                 "price": 13,
@@ -17,10 +17,15 @@ export function EventDisp(props){
                 "productName": "Criollando Con Amigos"
             },
             {
+                "price": 10,
+                "priceDetail": "Concierto Virtual + Disco Digital",
+                "productName": "Criollando Con Amigos"
+            },
+            {
                 "price": 8,
                 "priceDetail": "Concierto Virtual",
                 "productName": "Criollando Con Amigos"
-            }
+            },
         ],
         "eventPoster":{
             "src":"/assets/eventPosters/criollando.jpg",

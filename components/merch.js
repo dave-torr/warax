@@ -20,7 +20,6 @@ let theItem = props.merchItem
 
     let variantPickers=theItem.variants.map((elem, i)=><React.Fragment key={i}>
             <option value={elem}> {elem} </option>
-            {console.log(elem)}
         </React.Fragment>)
     
     const IMGDisplayer=(imgObj)=>{

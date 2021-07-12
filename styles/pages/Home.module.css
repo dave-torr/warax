@@ -122,7 +122,21 @@
 
 @media (max-width: 700px) {
   .homeSplashText{
-    bottom: 45px;
+    bottom: 66px;
     font-size: 2em;
+  }
+  .aSectiontitle{
+    font-size: 1.7em;
+  }
+
+  .cartDialog{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .eachCartElemCont{
+    width: 90%;
   }
 }
