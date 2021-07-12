@@ -113,7 +113,7 @@
   font-weight: 500;
   color: white;
 }
-
+.homeSplashIMGMobi{display: none;}
 @media (max-width: 1080px) {
   .aSectiontitle{
     width: 100%;
@@ -127,6 +127,12 @@
   }
   .aSectiontitle{
     font-size: 1.7em;
+  }
+  .homeSplashIMG{
+    display: none;
+  }
+  .homeSplashIMGMobi{
+    display: unset;
   }
 
   .cartDialog{

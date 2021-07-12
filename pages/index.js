@@ -251,6 +251,12 @@ export default function Home() {
               height={1030}
               alt="Warax Concerts Image - Saxophone player with Band"
             /></div>
+          <div className={styles.homeSplashIMGMobi}>
+            <Image
+              src={"/assets/pictures/coverMain.png"}
+              layout="fill" objectFit="cover"
+              alt="Warax Concerts Image - Saxophone player with Band"
+            /></div>
           <div className={styles.homeSplashText}> WARAX <strong>LO HACE REAL</strong> </div>
           </div> 
         </div>
