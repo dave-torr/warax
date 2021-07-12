@@ -13,11 +13,13 @@ export function EventDisp(props){
         "priceObj":[
             {
                 "price": 13,
-                "priceDetail": "Concierto Virtual + Disco"
+                "priceDetail": "Concierto Virtual + Disco",
+                "productName": "Criollando Con Amigos"
             },
             {
                 "price": 8,
-                "priceDetail": "Concierto Virtual"
+                "priceDetail": "Concierto Virtual",
+                "productName": "Criollando Con Amigos"
             }
         ],
         "eventPoster":{

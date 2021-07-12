@@ -1,0 +1,64 @@
+.merchGenCont{
+    min-height: 50px;
+    margin: 15px;
+    background-color: white;
+    min-width: 50px;
+    display: flex;
+    transition: all ease-in 0.3s;
+    align-items: center;
+    
+}
+
+.aMerchIMG{
+    width: 210px;
+    padding: 6px;
+    background-color: white;
+    filter: brightness(1.2) saturate(1.5);
+}
+
+.merchDescCont{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    width: 210px;
+}
+
+.merchDescCont h2{
+    margin: 6px 0;
+}
+.merchDescCont h5{
+    margin: unset;
+}
+
+.merchListing{
+    font-style: italic;
+    font-size: 0.8em;    
+}
+
+.varPickLabel{
+    margin-top: 9px;
+    font-size: 0.7em;
+}
+
+.variantPickerInput{
+    border: solid 2px var(--purple-highlight);
+    border-radius: 5px;
+}
+
+.priceDet{
+    margin-top: 9px;
+}
+
+.addToCart{
+    background-color: var(--purple-highlight);
+    color: white;
+    margin: 6px 0;
+    border-radius: 5px;
+    padding: 6px 9px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    border: solid 1px grey;
+    align-items: center;
+    cursor: pointer;
+}

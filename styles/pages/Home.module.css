@@ -1,7 +1,7 @@
 .generalCont{
   min-height: 75vh;
-  padding-top: 100px;
-  background-color: whitesmoke;
+  padding-top: 110px;
+  background-color: rgb(230, 229, 229);
 }
 
 .aHomeSection{
@@ -66,11 +66,16 @@
   padding-bottom: 9px;
 }
 
-.cartItmeDescription{
-  font-style: italic;
+.cartItemName{
+  padding-top: 9px;
   display: flex;
   justify-content: space-between;
-  /* font-weight: 600; */
+  font-weight: 600;
+}
+
+.cartItmeDescription{
+  font-style: italic;
+  font-style: 0.8em;
 }
 
 .cartItmePrice{
@@ -91,6 +96,24 @@
   padding: 3px;
   cursor: pointer;
 }
+
+.merchDispCont{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.payNowBtn{
+  width: calc(100% - 36px);
+  margin: 12px;
+  padding: 12px;
+  background-color: var(--purple-highlight);
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+}
+
 @media (max-width: 1080px) {
   .aSectiontitle{
     width: 100%;
