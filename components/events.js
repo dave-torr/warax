@@ -20,12 +20,12 @@ export function EventDisp(props){
                 "price": 10,
                 "priceDetail": "Concierto Virtual + Disco Digital",
                 "productName": "Criollando Con Amigos"
-            },
-            {
-                "price": 8,
-                "priceDetail": "Concierto Virtual",
-                "productName": "Criollando Con Amigos"
-            },
+            }
+            // {
+            //     "price": 8,
+            //     "priceDetail": "Concierto Virtual",
+            //     "productName": "Criollando Con Amigos"
+            // },
         ],
         "eventPoster":{
             "src":"/assets/eventPosters/criollando.jpg",

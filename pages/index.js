@@ -10,6 +10,7 @@ import styles from '../styles/pages/Home.module.css'
 import {Navi, Footer} from "./../components/navi"
 import {EventDisp} from "./../components/events"
 import {MerchDisp} from "./../components/merch"
+import {ServiceDisp} from "./../components/services"
 
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
@@ -65,7 +66,65 @@ let merchTwo={
 }
 
 
-
+let serviceOne={
+  "serviceName": "Sala de ensayo",
+  "serviceType": "ensayo",
+  "serviceDescription":"Horas de ensayo en el iconico estudio de Warax, donde lo hacemos real",  
+  "priceObj":[
+      {
+          "price": 10,
+          "priceDetail": "1 hora de servicio",
+          "productName": "Sala de Ensayo"
+      },
+      {
+          "price": 65,
+          "priceDetail": "8 horas de ensayo por mes",
+          "productName": "Sala de ensayo"
+      }
+  ],
+  "serviceIMG":{
+    "src":"/assets/merchPics/salaEnsayo.png",
+    "height": 400,
+    "width": 400,
+    "alt": "Sala de Ensayo - Servicios"
+  }
+}
+let serviceTwo={
+  "serviceName": "Wuan Take",
+  "serviceType": "Wuan Take",
+  "serviceDescription":"Grabacion y edicion profesional de una session de ensayo. Incluye fotografia & Videografia profesional, masterisacion y edicion de video",  
+  "priceObj":[
+      {
+          "price": 250,
+          "priceDetail": "1 Sesion de Wuan Take",
+          "productName": "Wuan Take"
+      }
+  ],
+  "serviceIMG":{
+    "src":"/assets/merchPics/wuanTake.png",
+    "height": 400,
+    "width": 400,
+    "alt": "Wuan Take - Grabacion de sesiones en vivo"
+  }
+}
+let serviceThree={
+  "serviceName": "Estudio de Grabacion",
+  "serviceType": "grabacion",
+  "serviceDescription":"Horas de ensayo en el iconico estudio de Warax, donde lo hacemos real",  
+  "priceObj":[
+      {
+          "price": 15,
+          "priceDetail": "1 hora de grabacion",
+          "productName": "Estudio de Grabacion"
+      }
+  ],
+  "serviceIMG":{
+    "src":"/assets/merchPics/horaEstudio.jpg",
+    "height": 400,
+    "width": 400,
+    "alt": "Imagen - Estudio de Grabacion en Iconico Warax"
+  }
+}
 
 
 export default function Home() {
@@ -119,12 +178,6 @@ export default function Home() {
     tempCart.splice(prodIndex, 1)
     setWaraxCart(tempCart)
   }
-
-
-
-
-
-
 
   const formLoader=()=>{
     let kushki = new KushkiCheckout({
@@ -277,7 +330,21 @@ export default function Home() {
       </>
     )
   }
+  const servicedisp=()=>{
 
+    return(
+      <>
+        <div className={styles.aHomeSection}>
+          <h1 className={styles.aSectiontitle}> Servicios Warax </h1> 
+          <div className={styles.merchDispCont}>
+            <ServiceDisp addToCart={addToCart} theService={serviceOne} />
+            <ServiceDisp addToCart={addToCart} theService={serviceTwo} />
+            <ServiceDisp addToCart={addToCart} theService={serviceThree} />
+          </div>
+        </div>        
+      </>
+    )
+  }
 
 
 ////////////////////////////////////////////////////
@@ -299,6 +366,7 @@ export default function Home() {
           {homeLanding()}
           {anEventDisp()}
           {merchDisp()}
+          {servicedisp()}
         </>}
         {pageDisplayer==="artistas"&&<>
           artistas
@@ -307,7 +375,8 @@ export default function Home() {
           TEAM
         </>}
         {pageDisplayer==="servicios"&&<>
-          SERVICIOS
+          <br></br>
+          {servicedisp()}
           {merchDisp()}
         </>}
         {pageDisplayer==="eventos"&&<>
