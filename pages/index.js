@@ -152,7 +152,7 @@ export default function Home() {
 
 
           {/* CAJITA KUSHKI MOFOOO */}
-          <Script src="https://cdn.kushkipagos.com/kushki-checkout.js"/>
+          {/* <Script src="https://cdn.kushkipagos.com/kushki-checkout.js"/>
 
           <form id="payment-form" action="/confirm" method="post">
               <input type="hidden" name="cart_id" value="123"/>
@@ -160,7 +160,7 @@ export default function Home() {
 
           <Script type="text/javascript">
               {formLoader()}
-          </Script>
+          </Script> */}
 
 
 
