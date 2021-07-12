@@ -77,6 +77,10 @@
 
 @media (max-width: 750px) {
 
+    .naviRow{
+        justify-content: space-between;
+    }
+
     .naviBTNCont{
         display: none;
     }
@@ -98,9 +102,5 @@
         background-color: rgb(58, 57, 57);
         margin: 3px;
         transition: var(--general-transition);
-    }
-
-    .naviGenCont{
-        justify-content: space-between;
     }
 }

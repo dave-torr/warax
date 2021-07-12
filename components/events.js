@@ -3,6 +3,7 @@ import React from "react"
 
 import styles from "./../styles/components/eventDisp.module.css"
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+
 export function EventDisp(props){
 
     let aSampleEvent = {

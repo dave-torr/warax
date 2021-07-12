@@ -44,21 +44,18 @@
     flex-direction: column;
     justify-content: space-between;
     transition: var(--general-transition);
+    border-right: solid 1px grey;
 }
 
 .addToCart:hover{
     box-shadow: var(--generalBoxShadow);
 }
 
-.aPriceBox:nth-of-type(2){
+.aPriceBox:first-of-type{
     margin-left: 6px;
     border-left: solid 1px grey;
 }
 
-.aPriceBox:nth-of-type(2){
-    margin-left: 6px;
-    border-left: solid 1px grey;
-}
 
 
 .priceDetail{
@@ -85,5 +82,25 @@
 .aPriceBox:first-of-type > .addToCart{
     background-color: var(--purple-highlight);
     color: white;
+
+}
+
+@media (max-width: 1080px) {
+    .eventContainer{
+        width: 96%;
+    }
+}
+
+@media (max-width: 750px) {
+    .eventContainer{
+        flex-direction: column;
+        box-shadow: var(--aHighlightBoxShadow);        
+    }
+
+    .eventDescrCont{
+        width: 96%;
+        padding-bottom: 12px;
+        
+    }
 
 }

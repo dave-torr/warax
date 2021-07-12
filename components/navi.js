@@ -56,6 +56,7 @@ export function Navi(props){
                             height={90}
                             width={216}
                             alt="Warax Logo"
+                            onClick={()=>props.setPageDisplayer("home")}
                             />
                         <div className={styles.naviBTNCont}>
                             {eachMenuOpt}
@@ -110,12 +111,16 @@ export function Footer(props){
         <>
             <div className={styles.generalFooterCont}>
                 <div className={styles.aSomeIconCont}> {eachSoMeBTN} </div>
+                <Link href="/">
+                <a>
                 <Image
                     src={"/assets/icons/waraxIconWHT.png"}
                     width={150}
                     height={150}
                     alt="Warax Isotype"
                     />
+                    </a>
+                </Link>
             </div>
         </>
     )
