@@ -85,7 +85,7 @@ let serviceOne={
   "serviceIMG":{
     "src":"/assets/merchPics/salaEnsayo.png",
     "height": 400,
-    "width": 400,
+    "width": 350,
     "alt": "Sala de Ensayo - Servicios"
   }
 }
@@ -103,7 +103,7 @@ let serviceTwo={
   "serviceIMG":{
     "src":"/assets/merchPics/wuanTake.png",
     "height": 400,
-    "width": 400,
+    "width": 350,
     "alt": "Wuan Take - Grabacion de sesiones en vivo"
   }
 }
@@ -121,7 +121,7 @@ let serviceThree={
   "serviceIMG":{
     "src":"/assets/merchPics/horaEstudio.jpg",
     "height": 400,
-    "width": 400,
+    "width": 350,
     "alt": "Imagen - Estudio de Grabacion en Iconico Warax"
   }
 }
