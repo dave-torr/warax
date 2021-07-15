@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Dialog } from '@material-ui/core'
 
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 
 export function MerchDisp(props){
 
@@ -45,7 +45,13 @@ let theItem = props.merchItem
             </>
         )
     }
-
+    const cartReplacement=()=>{
+        return(
+            <>
+            {/* <a href="mailto"><WhatsAppIcon /></a> */}
+            </>
+        )
+    }
     return(
         <>
             {IMGDisplayer(theItem.merchIMG)}
@@ -71,8 +77,13 @@ let theItem = props.merchItem
                             })
                         }}> {variantPickers} </select>
                         <div className={styles.priceDet}> {merchObj.priceDetail} - ${merchObj.price} </div>
-                        <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}
-                        > Comprar <AddShoppingCartIcon /> </div> 
+
+                    {props.activeCart? <> 
+                        <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}> Comprar <AddShoppingCartIcon /> </div> 
+                    </>:<>
+                        {cartReplacement()}
+                        </>}
+
                     </>:<>
                         <label htmlFor="variantPickerID" className={styles.varPickLabel} > Selecciona tu opcion favorita:  </label>
                         <select id="variantPickerID" className={styles.variantPickerInput} onChange={(e)=>{

@@ -10,23 +10,25 @@ export function EventDisp(props){
         "eventName": "Criollando Con Amigos",
         "eventType": "concierto en linea",
         "eventDescription":"Iraiz y Sebastian Oviedo después de trece años de trabajo juntos tienen la dicha de presentarnos su primer disco grabado en vivo “Criollando con amigos” que es un homenaje a la música popular latinoamericana. Una “guitarreada” virtual acompañada de amigos entrañables y admirados.",
-        "priceObj":[
-            {
-                "price": 13,
-                "priceDetail": "Concierto Virtual + Disco",
-                "productName": "Criollando Con Amigos"
-            },
-            {
-                "price": 10,
-                "priceDetail": "Concierto Virtual + Disco Digital",
-                "productName": "Criollando Con Amigos"
-            }
-            // {
-            //     "price": 8,
-            //     "priceDetail": "Concierto Virtual",
-            //     "productName": "Criollando Con Amigos"
-            // },
-        ],
+        "buyNowURL": "https://recitalesapp.com/event/80",
+        // "priceObj":[
+        //     {
+        //         "price": 13,
+        //         "priceDetail": "Concierto Virtual + Disco",
+        //         "productName": "Criollando Con Amigos"
+        //     },
+        //     {
+        //         "price": 10,
+        //         "priceDetail": "Concierto Virtual + Disco Digital",
+        //         "productName": "Criollando Con Amigos"
+        //     }
+        //     ,
+        //     {
+        //         "price": 8,
+        //         "priceDetail": "Concierto Virtual",
+        //         "productName": "Criollando Con Amigos"
+        //     },
+        // ],
         "eventPoster":{
             "src":"/assets/eventPosters/criollando.jpg",
             "height": 765,
@@ -35,7 +37,9 @@ export function EventDisp(props){
         }
     }
 
-    let eachEventPrice=aSampleEvent.priceObj.map((elem, i)=><React.Fragment key={i}>
+    let eachEventPrice
+    if(aSampleEvent.priceObj){
+    eachEventPrice=aSampleEvent.priceObj.map((elem, i)=><React.Fragment key={i}>
         <div className={styles.aPriceBox}>
             <div className={styles.priceDetail}> {elem.priceDetail} </div>
             <div className={styles.anEventPrice}> $ {elem.price} </div>
@@ -43,6 +47,14 @@ export function EventDisp(props){
             > Comprar <AddShoppingCartIcon /> </div>
         </div>
     </React.Fragment>)
+    } else {
+        eachEventPrice= <>
+        <div className={styles.extsaleBTN}> 
+            <a href={aSampleEvent.buyNowURL} target="_blank" className={styles.buyNowBTN}> Comprar Ahora! </a>
+            <p> Link a RecitalesApp </p>
+        </div> 
+        </>
+    }
 
     return(
         <>

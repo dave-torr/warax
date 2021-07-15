@@ -133,6 +133,8 @@ export default function Home() {
 // State
   const [pageDisplayer,setPageDisplayer]=useState("home")
 
+  const [waraxiCarti, setWaraxiCart]=useState(false)
+
   const [waraxCart, setWaraxCart]=useState([])
   const [addedItemSnack, setAddedItem]=useState(false)
   const [cartModalCont, setCartModal]=useState(false)
@@ -323,8 +325,8 @@ export default function Home() {
       <div className={styles.aHomeSection}>
         <h1 className={styles.aSectiontitle}> Merch - Exclusiva para ti </h1> 
         <div className={styles.merchDispCont}>
-          <MerchDisp addToCart={addToCart} merchItem={merchOne} />
-          <MerchDisp addToCart={addToCart} merchItem={merchTwo} />
+          <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={merchOne} />
+          <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={merchTwo} />
         </div>
       </div>        
       </>
@@ -337,9 +339,9 @@ export default function Home() {
         <div className={styles.aHomeSection}>
           <h1 className={styles.aSectiontitle}> Servicios Warax </h1> 
           <div className={styles.merchDispCont}>
-            <ServiceDisp addToCart={addToCart} theService={serviceOne} />
-            <ServiceDisp addToCart={addToCart} theService={serviceTwo} />
-            <ServiceDisp addToCart={addToCart} theService={serviceThree} />
+            <ServiceDisp activeCart={waraxiCarti} addToCart={addToCart} theService={serviceOne} />
+            <ServiceDisp activeCart={waraxiCarti} addToCart={addToCart} theService={serviceTwo} />
+            <ServiceDisp activeCart={waraxiCarti} addToCart={addToCart} theService={serviceThree} />
           </div>
         </div>        
       </>

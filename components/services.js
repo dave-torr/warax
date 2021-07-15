@@ -16,8 +16,9 @@ export function ServiceDisp(props){
         <div className={styles.aPriceBox}>
             <div className={styles.priceDetail}> {elem.priceDetail} </div>
             <div className={styles.aPrice}> $ {elem.price} </div>
-            <div className={styles.addToCart} onClick={()=>{props.addToCart(elem)}}
-            > Comprar <AddShoppingCartIcon /> </div>
+            {props.activeCart&&<>
+            <div className={styles.addToCart} onClick={()=>{props.addToCart(elem)}}> 
+                Comprar <AddShoppingCartIcon /> </div></>}
         </div>
     </React.Fragment>)
 
