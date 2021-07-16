@@ -11,6 +11,7 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 import { Dialog } from '@material-ui/core'
+import { NavigationTwoTone } from "@material-ui/icons";
 
 
 export function Navi(props){
@@ -60,7 +61,7 @@ export function Navi(props){
                     <div className={styles.naviRow}>
                         <Image
                             src={"/assets/icons/waraxLogoBLK.png"}
-                            height={90}
+                            height={80}
                             width={216}
                             alt="Warax Logo"
                             onClick={()=>props.setPageDisplayer("home")}
@@ -113,6 +114,27 @@ export function Navi(props){
             {mobilePopup()}
         </>
     )
+}
+
+export function NaviTwo(props){
+    return(
+        <>
+            <div className={styles.naviGenCont}>
+            <Link href="/"><a> 
+                <div className={styles.naviRow}>
+                    <Image
+                        src={"/assets/icons/waraxLogoBLK.png"}
+                        height={80}
+                        width={216}
+                        alt="Warax Logo"
+                        onClick={()=>props.setPageDisplayer("home")}
+                        />
+
+                </div>
+            </a></Link>
+            </div>
+        </>
+    )    
 }
 
 export function Footer(props){

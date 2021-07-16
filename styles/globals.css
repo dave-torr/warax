@@ -16,14 +16,14 @@ a {
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 
 :root{
   /* colors */
-  --purple-highlight: #5c019d;
-  --blueMainTheme: #212d6c;
-  --maroonMainTheme: rgb(100, 38, 9);
+  --purple-highlight: #671f9a;
+  --limeWebVeo: rgb(230, 239, 67);
 
   --aquaMistAuxTheme: rgb(62, 68, 110);
   --darkGreySecTheme: rgb(92, 91, 93);
