@@ -122,6 +122,7 @@ export function NaviTwo(props){
             <div className={styles.naviGenCont}>
             <Link href="/"><a> 
                 <div className={styles.naviRow}>
+                <div className={styles.waraxNaviLogo}> 
                     <Image
                         src={"/assets/icons/waraxLogoBLK.png"}
                         height={80}
@@ -129,7 +130,7 @@ export function NaviTwo(props){
                         alt="Warax Logo"
                         onClick={()=>props.setPageDisplayer("home")}
                         />
-
+                </div>
                 </div>
             </a></Link>
             </div>

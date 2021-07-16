@@ -116,5 +116,21 @@
 
 
 @media (max-width: 1080px) {
-    
+    .animSection{
+      display: none;
+    }
+
+    .formOne{
+      padding: 15px;
+      margin-bottom: 33px;
+    }
+
+    .userInputCont{
+      flex-direction: column;
+    }
+
+    .aUserInput{
+      width: 224px;
+      margin-top: 5px;
+    }
 }
