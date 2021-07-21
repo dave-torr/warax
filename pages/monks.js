@@ -16,6 +16,12 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
+import MenuOpenIcon from '@material-ui/icons/MenuOpen';
+import TvIcon from '@material-ui/icons/Tv';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import MicIcon from '@material-ui/icons/Mic';
+import AlbumIcon from '@material-ui/icons/Album';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 
 import styles from "./../styles/pages/monks.module.css"
 import artistData from "./../data/swingOriginalMonks.json"
@@ -29,6 +35,13 @@ let menuOptsArr=[
     "discografia",
     "videos",
     "lyrics"
+]
+let menuIconArr=[
+    <AssignmentIndIcon />,
+    <MicIcon />,
+    <AlbumIcon />,
+    <TvIcon />,
+    <MenuBookIcon />
 ]
 
 let AlbumArr=[
@@ -52,7 +65,7 @@ let AlbumArr=[
 export default function MonksPage(props){
     
     const [monkCart, setMonkCart] = useState([])
-    const [monksMenu, setMonksMenu] = useState("home")
+    const [mobileMenuTrig, setMenuTrig]=useState(false)
 
     const eachIconDisp=(anIcon, iconLink)=>{
         return(
@@ -65,12 +78,18 @@ export default function MonksPage(props){
             </>
         )
     }
-
     const miniMenu =()=>{
 
         // vertical mini menu, always visible in wide displays, with content to right. 
 
         let menuItemDispl= menuOptsArr.map((elem, i)=><div key={i} className={styles.eachNaviBTN} onClick={()=>{
+            let menuNaviAncho = document.getElementById(`anchor${i}`)
+            menuNaviAncho.scrollIntoView({behavior: "smooth"})
+        }}>
+            {elem}
+        </div>)
+
+        let floatibngMenuOpts=menuIconArr.map((elem, i)=><div key={i} className={styles.aMenuItem} onClick={()=>{
             let menuNaviAncho = document.getElementById(`anchor${i}`)
             menuNaviAncho.scrollIntoView({behavior: "smooth"})
         }}>
@@ -99,7 +118,12 @@ export default function MonksPage(props){
                     </div>
                 </div>
 
-                <div className={styles.naviContMOBILE}>     </div>
+                <div className={styles.naviContMOBILE}>
+                    {floatibngMenuOpts}
+                    {/* <div className={styles.aMenuItem}>
+                        <MenuOpenIcon />
+                    </div> */}
+                </div>
             </>
         )
     }
@@ -252,26 +276,26 @@ export default function MonksPage(props){
                 <h3> Videos </h3>
                 <h4> Chocolate</h4>
                 <div className={styles.videoCont}>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0Di5yFzgIMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                    
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0Di5yFzgIMM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>                                    
                 </div>
                 <div className={styles.videoContMOBILE}>
-                    <iframe width="400" height="240" src="https://www.youtube.com/embed/0Di5yFzgIMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                    
+                    <iframe width="400" height="240" src="https://www.youtube.com/embed/0Di5yFzgIMM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>                                    
                 </div>
 
                 <h4> Hora Pico</h4>
                 <div className={styles.videoCont}>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/t7fb6Y-NQ_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/t7fb6Y-NQ_A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>                                 
                 </div>
                 <div className={styles.videoContMOBILE}>
-                    <iframe width="400" height="240" src="https://www.youtube.com/embed/t7fb6Y-NQ_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                   
+                    <iframe width="400" height="240" src="https://www.youtube.com/embed/t7fb6Y-NQ_A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>                                   
                 </div>
 
                 <h4> Amor Inalambrico </h4>
                 <div className={styles.videoCont}>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HhqiAgADhxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HhqiAgADhxA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>                                 
                 </div>
                 <div className={styles.videoContMOBILE}>
-                    <iframe width="400" height="240" src="https://www.youtube.com/embed/HhqiAgADhxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                  
+                    <iframe width="400" height="240" src="https://www.youtube.com/embed/HhqiAgADhxA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>                                  
                 </div>
             </div>
             </>
