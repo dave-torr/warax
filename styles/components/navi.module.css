@@ -20,6 +20,8 @@
 
 .naviBTNCont{
     padding-left: 12px;
+    -color: violet;
+    height: fit-content;
 }
 .eachMenuBTN{
     padding: 6px 9px;
@@ -91,11 +93,11 @@
     }
     .naviGenCont{
         padding: unset;
-        padding-bottom: 6px;
     }
     .naviRow{
         justify-content: space-between;
         width: 99%;
+        padding: 6px;
     }
 
     .naviBTNCont{
@@ -138,6 +140,7 @@
         width: 100%;
         text-align: end;
         padding-right: 18px;
+        
     }
 
     .naviCartRow{

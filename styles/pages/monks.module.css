@@ -1,0 +1,17 @@
+.aBandPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.aSectionContainer{
+    width: 650px;
+}
+
+.eachSongVerse{
+    display: flex;
+    flex-direction: column;
+    white-space: pre-line;
+}

@@ -61,8 +61,8 @@ export function Navi(props){
                     <div className={styles.naviRow}>
                         <Image
                             src={"/assets/icons/waraxLogoBLK.png"}
-                            height={80}
-                            width={216}
+                            height={70}
+                            width={190}
                             alt="Warax Logo"
                             onClick={()=>props.setPageDisplayer("home")}
                             />
@@ -92,10 +92,10 @@ export function Navi(props){
             <>
                 <Dialog open={dialogTrigg} fullScreen onClose={()=>setDialogTrigg(false)}> 
                     <div className={styles.naviColum}>
-                        <div className={styles.closeModBTN} onClick={()=>setDialogTrigg(false)}> cerrar | <strong>X</strong> </div>
+                        <div className={styles.closeModBTN} onClick={()=>setDialogTrigg(false)}> cerrar | x </div>
                         <Image
                             src={"/assets/icons/waraxLogoBLK.png"}
-                            height={90}
+                            height={80}
                             width={216}
                             alt="Warax Logo"
                             onClick={()=>props.setPageDisplayer("home")}

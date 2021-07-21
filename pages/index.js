@@ -133,7 +133,7 @@ export default function Home() {
 // State
   const [pageDisplayer,setPageDisplayer]=useState("home")
 
-  const [waraxiCarti, setWaraxiCart]=useState(false)
+  const [waraxiCarti, setWaraxiCart]=useState(true)
 
   const [waraxCart, setWaraxCart]=useState([])
   const [addedItemSnack, setAddedItem]=useState(false)

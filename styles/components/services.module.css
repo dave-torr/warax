@@ -45,10 +45,11 @@
 
 .aPriceBox{
     padding: 5px 15px;
-    width: 180px;
+    width: 200px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     transition: var(--general-transition);
     border-right: solid 1px grey;
 }
@@ -62,6 +63,11 @@
     border-left: solid 1px grey;
 }
 
+.cartOptions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .priceDetail{
     margin-bottom: 12px;   
@@ -69,6 +75,9 @@
 
 .aPrice{
     font-weight: 500;
+    font-size: 1.3em;
+    width: 95px;
+    text-align: end;
 }
 
 .addToCart{
@@ -88,6 +97,7 @@
     color: white;
 
 }
+
 
 @media (max-width: 1080px) {
     .aServiceCont{
@@ -112,9 +122,11 @@
     }
 
     .aPriceBox{
-        width: 90%;
+        width: 100%;
         border: unset;
         border-bottom: solid 1px black;
+        padding: unset;
+        margin-top: 9px;
     }
     .aPriceBox:first-of-type{
         border: unset;

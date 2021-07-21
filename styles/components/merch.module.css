@@ -62,6 +62,18 @@
     cursor: pointer;
 }
 
+.modalRow h2{
+    text-transform: uppercase;
+}
+
+.modalBTN{
+    margin: 9px;
+    padding: 6px 9px;
+    border-radius: 5px;
+    border: solid 1px black;
+    width: fit-content;
+}
+
 @media (max-width: 700px) {
 
     .merchGenCont{

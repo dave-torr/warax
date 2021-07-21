@@ -1,10 +1,14 @@
 import Image from "next/image"
-import React from "react"
+import React, { useState } from "react"
+
+import { Dialog } from '@material-ui/core'
 
 import styles from "./../styles/components/eventDisp.module.css"
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 export function EventDisp(props){
+
+    const [imgTrig, setImgTrig] = useState(false)
 
     let aSampleEvent = {
         "eventName": "Criollando Con Amigos",
@@ -59,7 +63,7 @@ export function EventDisp(props){
     return(
         <>
             <div className={styles.eventContainer}> 
-                <div className={styles.imgCont}> 
+                <div className={styles.imgCont} onClick={()=>setImgTrig(true)}> 
                     <Image
                         src={aSampleEvent.eventPoster.src}
                         width={aSampleEvent.eventPoster.width}
@@ -76,6 +80,18 @@ export function EventDisp(props){
                     </div>
                 </div>
             </div>
+            <Dialog open={imgTrig} onClose={()=>setImgTrig(false)} >
+                <div className={styles.generalModalCont} >
+                    <div className={styles.modalBTN} onClick={()=>setImgTrig(false)}> close | X </div>
+                    <h3> &nbsp; {aSampleEvent.eventName} </h3>
+                    <Image
+                        src={aSampleEvent.eventPoster.src}
+                        width={aSampleEvent.eventPoster.width}
+                        height={aSampleEvent.eventPoster.height}
+                        alt={aSampleEvent.eventPoster.alt}
+                    />
+                </div>
+            </Dialog>
         </>
     )
 }

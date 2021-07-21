@@ -1,6 +1,6 @@
 .generalCont{
   min-height: 75vh;
-  padding-top: 100px;
+  padding-top: 90px;
   background-color: rgb(230, 229, 229);
 }
 
@@ -22,7 +22,7 @@
 }
 
 .homeSplash{
-  height: calc(100vh - 100px);
+  height: calc(100vh - 90px);
   width: 100%;
   overflow: hidden;
   display: flex;

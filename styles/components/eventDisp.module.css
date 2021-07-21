@@ -110,6 +110,23 @@
 
 }
 
+.generalModalCont{
+    display: flex;
+    flex-direction: column;
+}
+
+.generalModalCont h3{
+    text-transform: uppercase;
+}
+
+.modalBTN{
+    margin: 9px;
+    padding: 6px 9px;
+    border-radius: 5px;
+    border: solid 1px black;
+    width: fit-content;
+}
+
 @media (max-width: 1080px) {
     .eventContainer{
         width: 96%;

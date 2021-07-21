@@ -16,7 +16,7 @@ a {
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 
