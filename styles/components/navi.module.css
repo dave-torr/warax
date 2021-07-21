@@ -106,11 +106,6 @@
 }
 
 @media (max-width: 750px) {
-    .waraxNaviLogo{
-        width: 180px;
-        margin-top: 9px;
-        margin-left: 9px;
-    }
     .naviGenCont{
         padding: unset;
     }
