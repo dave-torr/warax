@@ -1,17 +1,150 @@
 .aBandPage{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    background-color: rgba(20, 6, 6, 0.256);
 }
 
-.aSectionContainer{
-    width: 650px;
+.bandPageNavi{
+    width: 24%;
+    height: 100vh;
+    padding: 21px;
+    position: fixed;
 }
 
+.bandLogo{
+    margin-top: 33px;
+}
+
+.menuOptsCont{
+    margin-top: 88px;
+    width: 80%;
+    text-align: end;
+}
+
+.eachNaviBTN{
+    margin: 21px 0;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: var(--general-transition);
+}
+.eachNaviBTN:hover{
+    color: yellow;
+    cursor: pointer;
+}
+
+.bandPageContent{
+    width: 72%;
+    margin-left: 25%;
+    min-height: 100vh;
+}
+
+.eachSongTitle{
+    background-color: rgba(20, 6, 6, 0.256);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+
+.songVersesCont{
+    background-color: rgba(20, 6, 6, 0.256);
+    color: white;
+}
 .eachSongVerse{
+    font-weight: 500;
+    letter-spacing: 1px;
     display: flex;
     flex-direction: column;
     white-space: pre-line;
+    font-size: 0.9em;
+}
+
+.songVerses{
+    display: flex;
+    flex-direction: column;
+}
+.aSectionContainer{
+    scroll-margin-top: 48px;
+    min-height: 55vh;
+}
+.aSectionContainer > h3{
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.bioPicCont::after{
+    content: "FOTO: Juan Pablo Viteri";
+    display: block;
+    color: white;
+    margin: 9px;
+    font-size: 0.8em;
+}
+
+.eachBioParag{
+    margin: 15px 9px;
+    padding: 9px 0;
+    text-align: justify;
+    color: white;
+}
+
+.noEventsCont{
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.eachIconCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.eachIconDisp{
+    border-radius: 50%;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    margin: 9px 12px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eachAlbumCont{
+    color: white;
+}
+.albumArtCont{
+    display: flex;
+    width: 650px;
+    display: flex;
+    justify-content: center;
+}
+
+.albumDetails{
+    padding: 9px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+    margin: 15px;
+}
+
+.eachAlbumDetail{
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.eachAlbumDescript{
+    padding: 12px;
+    text-align: justify;
+    width: 650px;
+    margin: 15px;
 }
