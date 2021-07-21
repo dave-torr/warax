@@ -1,3 +1,14 @@
+.splashCont{
+    background-color: rgb(147, 148, 148);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 11;
+}
+
 .aBandPage{
     display: flex;
     background-color: rgba(20, 6, 6, 0.256);
@@ -8,14 +19,19 @@
     height: 100vh;
     padding: 21px;
     position: fixed;
+    z-index: 10;
+    top: 0;
 }
 
 .bandLogo{
     margin-top: 33px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .menuOptsCont{
-    margin-top: 88px;
+    margin-top: 81px;
     width: 80%;
     text-align: end;
 }
@@ -67,7 +83,8 @@
 }
 .aSectionContainer{
     scroll-margin-top: 48px;
-    min-height: 55vh;
+    min-height: 72vh;
+    width: 650px;
 }
 .aSectionContainer > h3{
     color: white;
@@ -75,6 +92,14 @@
     letter-spacing: 2px;
     font-size: 3em;
     text-transform: uppercase;
+}
+.aSectionContainer > h4{
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    
 }
 
 .bioPicCont::after{
@@ -91,6 +116,8 @@
     text-align: justify;
     color: white;
 }
+
+
 
 .noEventsCont{
     min-height: 30vh;
@@ -122,17 +149,15 @@
 }
 .albumArtCont{
     display: flex;
-    width: 650px;
     display: flex;
     justify-content: center;
 }
 
 .albumDetails{
     padding: 9px;
-    width: 100%;
+    width: 94%;
     display: flex;
     justify-content: space-between;
-    width: 650px;
     margin: 15px;
 }
 
@@ -145,6 +170,69 @@
 .eachAlbumDescript{
     padding: 12px;
     text-align: justify;
-    width: 650px;
     margin: 15px;
+}
+
+.lyricContainer{
+    margin-bottom: 33px;
+}
+
+.albumLogo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.videoContMOBILE{
+    display: none;
+}
+
+.socialLinks{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 44px;
+}
+
+@media (max-width: 900px){
+    .naviCont{
+        display: none;
+    }
+
+    .bandPageContent{
+        width: 100%;
+        margin: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+@media (max-width: 700px){
+    .aSectionContainer{
+        width: 100%;
+        padding: 0 12px;
+    }
+    .aSectionContainer > h3{
+        font-size: 1.9em;
+    }
+    .aSectionContainer > h4{
+        font-size: 1.4em;
+    }
+    .albumDetails{
+        font-size: 0.8em;
+    }
+
+    .videoCont{
+        display: none;
+    }
+    .videoContMOBILE{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
 }

@@ -8,11 +8,20 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ScheduleIcon from '@material-ui/icons/Schedule';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 
+import AppleIcon from '@material-ui/icons/Apple';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
+
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
 
 import styles from "./../styles/pages/monks.module.css"
 import artistData from "./../data/swingOriginalMonks.json"
+
+import {NaviTwo} from "./../components/navi"
+
 
 let menuOptsArr=[
     "bio",
@@ -29,7 +38,7 @@ let AlbumArr=[
         "albumCoverUrl": "/assets/bands/monks/somosAlbumCover.png",
         "albumDescription": "Este disco es la reedición de nuestro primer trabajo: La Santa Fanesca + 6 temas nuevos. La idea de realizar una reedición nació después de un encuentro con Eduardo Cabra el 'Visitante de Calle 13'. Fue un ejercicio para volver más potente nuestro sonido, limpiarlo, y entenderlo. También un gran momento de aprendizaje y autoconocimiento. Es el resumen de todo lo que hemos vivido como banda y de los sonidos que hemos creado en familia.",
         "yearofRelease": "2017",
-        "country": "Puerto Rico, Ecuador",
+        "country": "Puerto Rico & Ecuador",
         "AlbumAltalt":"Swing Original Monks - SIOMOS Album Cover",
         "discoLogo":{
             "src":"/assets/bands/monks/somosAlbumTypeface.png",
@@ -44,6 +53,18 @@ export default function MonksPage(props){
     
     const [monkCart, setMonkCart] = useState([])
     const [monksMenu, setMonksMenu] = useState("home")
+
+    const eachIconDisp=(anIcon, iconLink)=>{
+        return(
+            <>
+                <div className={styles.eachIconDisp}>
+                <a href={iconLink}>
+                    {anIcon}
+                </a> 
+                </div>
+            </>
+        )
+    }
 
     const miniMenu =()=>{
 
@@ -69,12 +90,19 @@ export default function MonksPage(props){
                     <div className={styles.menuOptsCont}>  
                         {menuItemDispl}
                     </div>
+                    <div className={styles.socialLinks}>  
+                        {eachIconDisp(<AppleIcon />, "https://music.apple.com/ec/album/somos/1181676008")}
+                        {eachIconDisp(<YouTubeIcon />, "https://www.youtube.com/channel/UCskvsvRAo8S_z5pSE1Hu17w")}
+                        {eachIconDisp(<TwitterIcon />, "https://twitter.com/swingoriginal")}
+                        {eachIconDisp(<InstagramIcon />, "https://www.instagram.com/swingoriginalmonks/")}
+                        {eachIconDisp(<FacebookIcon />, "https://www.facebook.com/SwingOriginalMonksOficial/")}
+                    </div>
                 </div>
+
                 <div className={styles.naviContMOBILE}>     </div>
             </>
         )
     }
-
     const lyricsDisp=(lyricsArr, anchorNum)=>{
         let eachLyric = lyricsArr.map((elem, i)=><Accordion key={i}>
             <div className={styles.eachSongTitle} >
@@ -97,7 +125,7 @@ export default function MonksPage(props){
             <>
             <div className={styles.aSectionContainer} id={`anchor${anchorNum}`}> 
                 <h3> Lyrics </h3>
-                <div className={styles.accordionContainer}>
+                <div className={styles.lyricContainer}>
                     {eachLyric}
                 </div>
             </div>
@@ -124,7 +152,7 @@ export default function MonksPage(props){
             <div className={styles.eachAlbumDescript}>  
                 {elem.albumDescription}
             </div>
-            <div style={{"width":"650px", "display":"flex", "justifyContent":"center" }}>
+            <div className={styles.albumLogo}>
                 <Image
                     src={elem.discoLogo.src}
                     width={elem.discoLogo.width}
@@ -183,17 +211,7 @@ export default function MonksPage(props){
 
         </div>)}
 
-        const eachIconDisp=(anIcon, iconLink)=>{
-            return(
-                <>
-                    <div className={styles.eachIconDisp}>
-                    <a href={iconLink}>
-                        {anIcon}
-                    </a> 
-                    </div>
-                </>
-            )
-        }
+
 
         return(
             <>
@@ -214,8 +232,8 @@ export default function MonksPage(props){
                                 Contactanos Aqui:
                             </div>
                             <div className={styles.eachIconCont}>
-                                {eachIconDisp(<PhoneIcon />)}
-                                {eachIconDisp(<MailIcon />)}
+                                {eachIconDisp(<PhoneIcon />, "tel:+593995651012")}
+                                {eachIconDisp(<MailIcon />, "mailto:swingoriginalmonks@gmail.com")}
                             </div>
                         </div>
                     </>}
@@ -226,24 +244,60 @@ export default function MonksPage(props){
     }
     const videosDisp=(discoArr, anchorNum)=>{
 
-        let eachAlbum=discoArr.map((elem,i)=><div key={i}> 
-
-        </div>)
+        
 
         return(
             <>
             <div className={styles.aSectionContainer} id={`anchor${anchorNum}`}> 
                 <h3> Videos </h3>
-                <div className={styles.accordionContainer}>
-                    {eachAlbum}
+                <h4> Chocolate</h4>
+                <div className={styles.videoCont}>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0Di5yFzgIMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                    
+                </div>
+                <div className={styles.videoContMOBILE}>
+                    <iframe width="400" height="240" src="https://www.youtube.com/embed/0Di5yFzgIMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                    
+                </div>
+
+                <h4> Hora Pico</h4>
+                <div className={styles.videoCont}>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/t7fb6Y-NQ_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                 
+                </div>
+                <div className={styles.videoContMOBILE}>
+                    <iframe width="400" height="240" src="https://www.youtube.com/embed/t7fb6Y-NQ_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                   
+                </div>
+
+                <h4> Amor Inalambrico </h4>
+                <div className={styles.videoCont}>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HhqiAgADhxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                 
+                </div>
+                <div className={styles.videoContMOBILE}>
+                    <iframe width="400" height="240" src="https://www.youtube.com/embed/HhqiAgADhxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                  
                 </div>
             </div>
             </>
         )
     }
 
+    const welcomeSplash=()=>{
+
+        return(
+            <>
+                <div className={styles.splashCont}>
+                    <Image
+                        src="/assets/bands/monks/typefaceYllwMonks.png"
+                        width={600}
+                        height={360}
+                        alt="Swing Original Monks - Icon Yellow"
+                    />
+                </div>
+            </>
+        )
+    }
+
     return(
         <>
+        <NaviTwo />
+        {welcomeSplash()}
         <div className={styles.aBandPage}>
             <div className={styles.bandPageNavi}>
                 {miniMenu()}

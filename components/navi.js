@@ -119,16 +119,15 @@ export function Navi(props){
 export function NaviTwo(props){
     return(
         <>
-            <div className={styles.naviGenCont}>
+            <div className={styles.naviGenCont2}>
             <Link href="/"><a> 
-                <div className={styles.naviRow}>
+                <div className={styles.naviRow2}>
                 <div className={styles.waraxNaviLogo}> 
                     <Image
                         src={"/assets/icons/waraxLogoBLK.png"}
                         height={80}
                         width={216}
                         alt="Warax Logo"
-                        onClick={()=>props.setPageDisplayer("home")}
                         />
                 </div>
                 </div>
