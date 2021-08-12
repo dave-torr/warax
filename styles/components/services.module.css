@@ -52,35 +52,58 @@
     justify-content: space-between;
     align-items: center;
     transition: var(--general-transition);
-    border-right: solid 1px grey;
 }
 
-.addToCart:hover{
-    box-shadow: var(--generalBoxShadow);
-}
 
-.aPriceBox:first-of-type{
-    margin-left: 6px;
-    border-left: solid 1px grey;
-}
+
 
 .cartOptions{
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.priceDetailMain{
+    font-size: 1.4em;
+    text-align: start;
+    font-weight: 500;
+}
 .priceDetail{
     margin-bottom: 12px;   
 }
 
-.aPrice{
+.aPriceMain{
     font-weight: 500;
     font-size: 1.3em;
     width: 95px;
     text-align: end;
+    width: 100%;
+}
+.aPrice{
+    font-weight: 500;
+    font-size: 1.3em;
+    width: 95px;
+    width: 100%;
+    text-align: end;
 }
 
+.addToCartMain{
+    margin: 3px 0;
+    border-radius: 5px;
+    padding: 9px 12px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    align-items: center;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+.addToCartMain:hover{
+    box-shadow: var(--aHighlightBoxShadow);
+}
 .addToCart{
     margin: 6px 0;
     border-radius: 5px;
@@ -91,14 +114,12 @@
     border: solid 1px grey;
     align-items: center;
     cursor: pointer;
+    transition: all ease-in-out 0.3s;
 }
 
-.aPriceBox:first-of-type > .addToCart{
-    background-color: black;
-    color: white;
-
+.addToCart:hover{
+    box-shadow: var(--generalBoxShadow);
 }
-
 
 @media (max-width: 1080px) {
     .aServiceCont{

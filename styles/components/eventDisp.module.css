@@ -1,5 +1,5 @@
 .eventContainer{
-    width: 800px;
+    width: 900px;
     background-color: white;
     margin: 18px;
     display: flex;
@@ -39,6 +39,31 @@
     justify-content: center;
 }
 
+.aPriceBoxMain{
+    padding: 5px 15px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--general-transition);
+    border: solid 1px transparent;
+    border-right: solid 1px black;
+}
+.aPriceBoxMain:hover{
+    border: solid 1px black;
+}
+
+.priceDetailMain{
+    font-size: 1.3em;
+}
+
+.anEventPriceMain{
+    width: 100%;
+    text-align: end;
+    font-size: 1.3em;
+    margin: 6px;
+}
+
 .aPriceBox{
     padding: 5px 15px;
     width: 180px;
@@ -46,18 +71,12 @@
     flex-direction: column;
     justify-content: space-between;
     transition: var(--general-transition);
-    border-right: solid 1px grey;
+    border: solid 1px transparent;
+    margin-bottom: 9px;
 }
-
-.addToCart:hover{
-    box-shadow: var(--generalBoxShadow);
+.aPriceBox:hover{
+    border: solid 1px black;
 }
-
-.aPriceBox:first-of-type{
-    margin-left: 6px;
-    border-left: solid 1px grey;
-}
-
 
 
 .priceDetail{
@@ -66,12 +85,25 @@
 }
 
 .anEventPrice{
+    width: 100%;
+    text-align: end;
     font-weight: 500;
 }
 
+.addToCartMain{
+    margin: 6px 0;
+    padding: 6px 9px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+}
 .addToCart{
     margin: 6px 0;
-    border-radius: 5px;
     padding: 6px 9px;
     display: flex;
     justify-content: space-between;
@@ -80,6 +112,14 @@
     align-items: center;
     cursor: pointer;
 }
+.addToCart:hover{
+    box-shadow: var(--generalBoxShadow);
+}
+.addToCartMain:hover{
+    box-shadow: var(--generalBoxShadow);
+}
+
+
 .extsaleBTN{
     display: flex;
     flex-direction: column;
@@ -104,12 +144,6 @@
     color: white;
 }
 
-.aPriceBox:first-of-type > .addToCart{
-    background-color: var(--purple-highlight);
-    color: white;
-
-}
-
 .generalModalCont{
     display: flex;
     flex-direction: column;
@@ -131,9 +165,21 @@
     .eventContainer{
         width: 96%;
     }
-
+    .imgCont{
+        width: 40%;
+    }
     .priceContainer{
         flex-wrap: wrap;
+    }
+    .aPriceBoxMain{
+        width: 300px;
+        border-right: solid 1px transparent;
+        padding-bottom: 12px;
+        margin-bottom: 9px;
+        border-bottom: solid 1px black;
+    }
+    .aPriceBox{
+        width: 270px;
     }
 }
 
@@ -149,15 +195,12 @@
         
     }
 
-    .aPriceBox{
-        width: 90%;
-        border: unset;
-        border-bottom: solid 1px black;
-    }
-    .aPriceBox:first-of-type{
-        border: unset;
-        border-bottom: solid 1px black;
+    .imgCont{
+        width: 60%;
     }
 
+    .anEventPriceMain{
+        margin: 12px 0;
+    }
 
 }

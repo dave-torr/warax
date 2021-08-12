@@ -92,7 +92,7 @@ let serviceOne={
 let serviceTwo={
   "serviceName": "Wuan Take",
   "serviceType": "Wuan Take",
-  "serviceDescription":"Grabacion y edicion profesional de una session de ensayo. Incluye fotografia & Videografia profesional, masterisacion y edicion de video",  
+  "serviceDescription":"Grabación y edición profesional de una session de ensayo. Incluye fotografia & Videografia profesional, masterisación y edición de video",  
   "priceObj":[
       {
           "price": 250,
@@ -104,25 +104,25 @@ let serviceTwo={
     "src":"/assets/merchPics/wuanTake.png",
     "height": 400,
     "width": 350,
-    "alt": "Wuan Take - Grabacion de sesiones en vivo"
+    "alt": "Wuan Take - Grabación de sesiones en vivo"
   }
 }
 let serviceThree={
-  "serviceName": "Estudio de Grabacion",
-  "serviceType": "grabacion",
+  "serviceName": "Estudio de Grabación",
+  "serviceType": "grabación",
   "serviceDescription":"Horas de ensayo en el iconico estudio de Warax, donde lo hacemos real",  
   "priceObj":[
       {
           "price": 15,
-          "priceDetail": "1 hora de grabacion",
-          "productName": "Estudio de Grabacion"
+          "priceDetail": "1 hora de grabación",
+          "productName": "Estudio de Grabación"
       }
   ],
   "serviceIMG":{
     "src":"/assets/merchPics/horaEstudio.jpg",
     "height": 400,
     "width": 350,
-    "alt": "Imagen - Estudio de Grabacion en Iconico Warax"
+    "alt": "Imagen - Estudio de Grabación en Iconico Warax"
   }
 }
 
@@ -366,7 +366,7 @@ export default function Home() {
 
         {pageDisplayer==="home"&&<>
           {homeLanding()}
-          {anEventDisp()}
+          {/* {anEventDisp()} */}
           {merchDisp()}
           {servicedisp()}
         </>}

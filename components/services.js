@@ -14,17 +14,23 @@ export function ServiceDisp(props){
 
     let eachServicePrice=theService.priceObj.map((elem, i)=><React.Fragment key={i}>
         <div className={styles.aPriceBox}>
+        {i===0?<>
             <div className={styles.cartOptions}>
-                <div style={{ "display":"flex" }}>
-                    <div className={styles.priceDetail}> {elem.priceDetail} </div>
-                    <div className={styles.aPrice}> $ {elem.price} </div>
-                </div>
-
+                <div className={styles.priceDetailMain}> {elem.priceDetail} </div>
+                <div className={styles.aPriceMain}> $ {elem.price} </div>
+                {props.activeCart&&<>
+                <div className={styles.addToCartMain} onClick={()=>{props.addToCart(elem)}}> 
+                    Comprar <AddShoppingCartIcon /> </div></>}
+            </div>
+        </>:<> 
+            <div className={styles.cartOptions}>
+                <div className={styles.priceDetail}> {elem.priceDetail} </div>
+                <div className={styles.aPrice}> $ {elem.price} </div>
                 {props.activeCart&&<>
                 <div className={styles.addToCart} onClick={()=>{props.addToCart(elem)}}> 
                     Comprar <AddShoppingCartIcon /> </div></>}
             </div>
-                
+        </>}
         </div>
     </React.Fragment>)
 
@@ -56,7 +62,6 @@ export function ServiceDisp(props){
                     <h2> {theService.serviceName} </h2>
                     <p> {theService.serviceDescription} </p>
                     <div className={styles.priceContainer}>
-
                         {eachServicePrice}
                     </div>
                 </div>

@@ -13,26 +13,27 @@ export function EventDisp(props){
     let aSampleEvent = {
         "eventName": "Criollando Con Amigos",
         "eventType": "concierto en linea",
+        "eventDate":"29-07-2021",
         "eventDescription":"Iraiz y Sebastian Oviedo después de trece años de trabajo juntos tienen la dicha de presentarnos su primer disco grabado en vivo “Criollando con amigos” que es un homenaje a la música popular latinoamericana. Una “guitarreada” virtual acompañada de amigos entrañables y admirados.",
         "buyNowURL": "https://recitalesapp.com/event/80",
-        // "priceObj":[
-        //     {
-        //         "price": 13,
-        //         "priceDetail": "Concierto Virtual + Disco",
-        //         "productName": "Criollando Con Amigos"
-        //     },
-        //     {
-        //         "price": 10,
-        //         "priceDetail": "Concierto Virtual + Disco Digital",
-        //         "productName": "Criollando Con Amigos"
-        //     }
-        //     ,
-        //     {
-        //         "price": 8,
-        //         "priceDetail": "Concierto Virtual",
-        //         "productName": "Criollando Con Amigos"
-        //     },
-        // ],
+        "priceObj":[
+            {
+                "price": 13,
+                "priceDetail": "Concierto Virtual + Disco",
+                "productName": "Criollando Con Amigos"
+            },
+            {
+                "price": 10,
+                "priceDetail": "Concierto Virtual + Disco Digital",
+                "productName": "Criollando Con Amigos"
+            }
+            ,
+            {
+                "price": 8,
+                "priceDetail": "Concierto Virtual",
+                "productName": "Criollando Con Amigos"
+            },
+        ],
         "eventPoster":{
             "src":"/assets/eventPosters/criollando.jpg",
             "height": 765,
@@ -41,15 +42,28 @@ export function EventDisp(props){
         }
     }
 
+
     let eachEventPrice
     if(aSampleEvent.priceObj){
     eachEventPrice=aSampleEvent.priceObj.map((elem, i)=><React.Fragment key={i}>
+        {i===0?<>
+        <div className={styles.aPriceBoxMain}>
+            <div className={styles.priceDetailMain}> {elem.priceDetail} </div>
+            <div className={styles.anEventPriceMain}> $ {elem.price} </div>
+            <div className={styles.addToCartMain} onClick={()=>{props.addToCart(elem)}}
+            > Comprar <AddShoppingCartIcon /> </div>
+        </div>
+        </>:<> 
         <div className={styles.aPriceBox}>
             <div className={styles.priceDetail}> {elem.priceDetail} </div>
             <div className={styles.anEventPrice}> $ {elem.price} </div>
             <div className={styles.addToCart} onClick={()=>{props.addToCart(elem)}}
             > Comprar <AddShoppingCartIcon /> </div>
         </div>
+        </>}
+
+
+
     </React.Fragment>)
     } else {
         eachEventPrice= <>
@@ -73,7 +87,8 @@ export function EventDisp(props){
                 </div>
                 <div className={styles.eventDescrCont}>
                     <div className={styles.eventListing}> eventos / {aSampleEvent.eventType} </div>
-                    <h2> {aSampleEvent.eventName} </h2>
+                    <h2>{aSampleEvent.eventDate} </h2>
+                    <h1> {aSampleEvent.eventName} </h1>
                     <p> {aSampleEvent.eventDescription} </p>
                     <div className={styles.priceContainer}> 
                         {eachEventPrice}
