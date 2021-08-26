@@ -50,7 +50,7 @@ export function Navi(props){
                 props.setPageDisplayer(elem.link)
                 props.setMinisite(null)
                 setDialogTrigg(false)
-                window.scrollTo({ top: 0, behavior: "smooth" })}}>
+                window.scrollTo({ top: 0, behavior: "smooth" }) }}>
                     {elem.key}</a>
             </>}
     </React.Fragment>)
@@ -69,6 +69,7 @@ export function Navi(props){
                     <div className={styles.miniSiteLink} onClick={()=>{
                         props.setMinisite("WebVeo")
                         props.setPageDisplayer(null)
+                        window.scrollTo({ top: 0, behavior: "smooth" })
                         }}>
                         #WebVeo
                     </div>
@@ -87,7 +88,8 @@ export function Navi(props){
                             height={70}
                             width={190}
                             alt="Warax Logo"
-                            onClick={()=>props.setPageDisplayer("home")}
+                            onClick={()=>{props.setPageDisplayer("home") 
+                            window.scrollTo({ top: 0, behavior: "smooth" })} }
                             />
                         <div className={styles.naviBTNCont}>
                             <div>
@@ -200,6 +202,8 @@ export function Footer(props){
                     />
                     </a>
                 </Link>
+<iframe src="https://giphy.com/embed/J3GvwYLogUVgY" width="120" height="120" frameBorder="0" class="giphy-embed"></iframe>
+
             </div>
         </>
     )

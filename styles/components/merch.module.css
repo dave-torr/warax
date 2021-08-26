@@ -9,8 +9,7 @@
 }
 
 .aMerchIMG{
-    width: 210px;
-    padding: 6px;
+    width: 240px;
     background-color: white;
     filter: brightness(1.2) saturate(1.5);
 }
@@ -20,6 +19,8 @@
     flex-direction: column;
     padding: 12px;
     width: 210px;
+    justify-content: space-between;
+    height: 220px;
 }
 
 .merchDescCont h2{
@@ -48,8 +49,14 @@
     margin-top: 9px;
 }
 
+.proPrice{
+    width: 100%;
+    text-align: end;
+    font-size: 1.2em;
+
+}
+
 .addToCart{
-    background-color: var(--purple-highlight);
     color: white;
     margin: 6px 0;
     border-radius: 5px;
@@ -57,13 +64,16 @@
     display: flex;
     justify-content: space-between;
     font-weight: 600;
-    border: solid 1px grey;
+    background-color: black;
     align-items: center;
     cursor: pointer;
 }
 
 .modalRow h2{
     text-transform: uppercase;
+}
+.addToCart:hover{
+    background-color: var(--purple-highlight);
 }
 
 .modalBTN{

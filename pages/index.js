@@ -18,53 +18,52 @@ import MuiAlert from '@material-ui/lab/Alert';
 import { Dialog } from '@material-ui/core'
 
 
-let merchOne={
+let capBlack={
   "associatedActs": "WEBVEO",
   "productCateg": "softGoods",
-  "prodName":"HOODIE",
+  "prodName":"Gorra - Black",
   "priceObj":{
       "price": 30,
-      "productName": "Hoodie Webveo"
-  },
-  "variants":
-    [
-      "Stamp Complete",
-      "Green + Stamp",
-      "Yellow + Stamp",
-      "Amethyst + Stamp",
-      "B&W + Stamp",
-      "Wine + Stamp",
-      "White + Stamp"
-    ],
-  "merchIMG":{
-    "src":"/assets/merchPics/webveoHoodies.jpg",
-    "height": 400,
-    "width": 400,
-    "alt": "Merch Oficial Webveo - Hoodie varios colores"
-  }
-}
-let merchTwo={
-  "associatedActs": "WEBVEO",
-  "productCateg": "softGoods",
-  "prodName":"Gorra",
-  "priceObj":{
-      "price": 30,
-      "productName": "Gorra Webveo"
+      "productName": "Gorra Webveo - BLACK"
     },
-  "variants":
-    [
-      "Black + Stamp",
-      "Lime & Onyx + Stamp",
-      "Grey & Lime + Stamp",
-      "Black & Amethyst + Stamp"
-    ],
   "merchIMG":{
-    "src":"/assets/merchPics/webveoGorras.jpg",
+    "src":"/assets/merchPics/blackCap.jpg",
     "height": 400,
     "width": 400,
     "alt": "Merch Oficial Webveo - Gorra varios colores"
   }
 }
+let capYellow={
+  "associatedActs": "WEBVEO",
+  "productCateg": "softGoods",
+  "prodName":"Gorra - Yellow",
+  "priceObj":{
+      "price": 30,
+      "productName": "Gorra Webveo - Yellow"
+    },
+  "merchIMG":{
+    "src":"/assets/merchPics/yellowCap.jpg",
+    "height": 400,
+    "width": 400,
+    "alt": "Merch Oficial Webveo - Gorra Amarillo"
+  }
+}
+let capGrey={
+  "associatedActs": "WEBVEO",
+  "productCateg": "softGoods",
+  "prodName":"Gorra - Grey",
+  "priceObj":{
+      "price": 30,
+      "productName": "Gorra Webveo - Grey"
+    },
+  "merchIMG":{
+    "src":"/assets/merchPics/greyCap.jpg",
+    "height": 400,
+    "width": 400,
+    "alt": "Merch Oficial Webveo - Gorra Grey"
+  }
+}
+
 
 
 let serviceOne={
@@ -126,13 +125,10 @@ let serviceThree={
     "alt": "Imagen - Estudio de Grabación en Iconico Warax"
   }
 }
-
-
 export default function Home() {
 
-
 // State
-  const [pageDisplayer,setPageDisplayer]=useState(null)
+  const [pageDisplayer,setPageDisplayer]=useState("home")
 
   const [waraxiCarti, setWaraxiCart]=useState(true)
 
@@ -304,14 +300,20 @@ export default function Home() {
     )
   }
   const merchDisp=()=>{
-
     return(
       <>
       <div className={styles.aHomeSection}>
         <h1 className={styles.aSectiontitle}> Merch - Exclusiva para ti </h1> 
         <div className={styles.merchDispCont}>
-          <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={merchOne} />
-          <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={merchTwo} />
+
+          {/* <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={merchOne} /> */}
+
+
+          <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capBlack} />
+          <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capYellow} />
+          <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capGrey} />
+
+
         </div>
       </div>        
       </>

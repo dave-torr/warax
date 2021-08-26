@@ -78,9 +78,7 @@ export default function MonksPage(props){
         )
     }
     const miniMenu =()=>{
-
         // vertical mini menu, always visible in wide displays, with content to right. 
-
         let menuItemDispl= menuOptsArr.map((elem, i)=><div key={i} className={styles.eachNaviBTN} onClick={()=>{
             let menuNaviAncho = document.getElementById(`anchor${i}`)
             menuNaviAncho.scrollIntoView({behavior: "smooth"})
@@ -88,12 +86,11 @@ export default function MonksPage(props){
             {elem}
         </div>)
 
-        let floatibngMenuOpts=menuIconArr.map((elem, i)=><div key={i} className={styles.aMenuItem} onClick={()=>{
-            let menuNaviAncho = document.getElementById(`anchor${i}`)
-            menuNaviAncho.scrollIntoView({behavior: "smooth"})
-        }}>
-            {elem}
-        </div>)
+        let floatibngMenuOpts=menuIconArr.map((elem, i)=>
+            <div key={i} className={styles.aMenuItem} onClick={()=>{
+                let menuNaviAncho = document.getElementById(`anchor${i}`)
+                menuNaviAncho.scrollIntoView({behavior: "smooth"})}}>
+            {elem} </div>)
 
         return(
             <>

@@ -18,10 +18,6 @@ let theItem = props.merchItem
         "productName": theItem.priceObj.productName
     })
 
-    let variantPickers=theItem.variants.map((elem, i)=><React.Fragment key={i}>
-            <option value={elem}> {elem} </option>
-        </React.Fragment>)
-    
     const IMGDisplayer=(imgObj)=>{
         return(
             <>
@@ -65,36 +61,15 @@ let theItem = props.merchItem
                         alt={theItem.merchIMG.alt}
                     />
                 </div>
-                <div className={styles.merchDescCont}> 
-                    <div className={styles.merchListing}> merch / {theItem.productCateg} </div>
-                    <h2> {theItem.prodName} </h2>
-                    <h5> {theItem.associatedActs} </h5>
-                    {merchObj.priceDetail? <>
-                        <label htmlFor="variantPickerID" className={styles.varPickLabel} > Selecciona tu favorita:</label>
-                        <select className={styles.variantPickerInput} onChange={(e)=>{
-                            setMerchObj({
-                                ...merchObj,
-                                "priceDetail":e.target.value
-                            })
-                        }}> {variantPickers} </select>
-                        <div className={styles.priceDet}> {merchObj.priceDetail} - ${merchObj.price} </div>
-
-                    {props.activeCart? <> 
-                        <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}> Comprar <AddShoppingCartIcon /> </div> 
-                    </>:<>
-                        {cartReplacement()}
-                        </>}
-
-                    </>:<>
-                        <label htmlFor="variantPickerID" className={styles.varPickLabel} > Selecciona tu opcion favorita:  </label>
-                        <select id="variantPickerID" className={styles.variantPickerInput} onChange={(e)=>{
-                            setMerchObj({
-                                ...merchObj,
-                                "priceDetail":e.target.value
-                            })
-                        }}> <option value=""> </option>
-                        {variantPickers} </select>
-                    </>}
+                <div className={styles.merchDescCont}>
+                    <div>
+                        <div className={styles.merchListing}> merch / {theItem.productCateg} </div>
+                        <h2> {theItem.prodName} </h2>
+                        <h5> {theItem.associatedActs} </h5>
+                    </div>
+                    <div className={styles.proPrice}>${theItem.priceObj.price} </div>
+                    <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}> 
+                    Comprar <AddShoppingCartIcon /> </div> 
                 </div>
             </div>
         </>
