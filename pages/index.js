@@ -17,7 +17,8 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { Dialog } from '@material-ui/core'
 
-
+// 
+// Webveo Cap Merch
 let capBlack={
   "associatedActs": "WEBVEO",
   "productCateg": "softGoods",
@@ -63,7 +64,6 @@ let capGrey={
     "alt": "Merch Oficial Webveo - Gorra Grey"
   }
 }
-
 
 
 let serviceOne={

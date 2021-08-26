@@ -202,7 +202,10 @@ export function Footer(props){
                     />
                     </a>
                 </Link>
-<iframe src="https://giphy.com/embed/J3GvwYLogUVgY" width="120" height="120" frameBorder="0" class="giphy-embed"></iframe>
+<iframe src="https://giphy.com/embed/l41YbRMqR9jrrCodq" width="120" height="120" frameBorder="0" class="giphy-embed"></iframe>
+
+
+
 
             </div>
         </>
