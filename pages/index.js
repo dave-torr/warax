@@ -130,8 +130,9 @@ export default function Home() {
 // State
   const [pageDisplayer,setPageDisplayer]=useState("home")
 
-  const [waraxiCarti, setWaraxiCart]=useState(true)
+  const [showHomeMerch, setShowMerch]=useState(false)
 
+  const [waraxiCarti, setWaraxiCart]=useState(true)
   const [waraxCart, setWaraxCart]=useState([])
   const [addedItemSnack, setAddedItem]=useState(false)
   const [cartModalCont, setCartModal]=useState(false)
@@ -306,14 +307,25 @@ export default function Home() {
         <h1 className={styles.aSectiontitle}> Merch - Exclusiva para ti </h1> 
         <div className={styles.merchDispCont}>
 
-          {/* <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={merchOne} /> */}
-
-
-          <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capBlack} />
-          <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capYellow} />
-          <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capGrey} />
-
-
+          {showHomeMerch? <>
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capBlack} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capYellow} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capGrey} />
+          </>:<>
+            <div className={styles.merchOpenerCont} onClick={()=>{setShowMerch(true)}}>
+              <div className={styles.merchsectionImage}>
+                <Image 
+                  src="/assets/merchPics/webveoGorras.jpg"
+                  height={600}
+                  width={600}
+                  alt="cucu"
+                />
+              </div>
+              <div className={styles.merchOpenerText}>  
+                Mira <br></br>nuestras <br></br>increibles opciones
+              </div>
+            </div>
+          </>}
         </div>
       </div>        
       </>

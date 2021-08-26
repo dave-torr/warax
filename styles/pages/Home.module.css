@@ -114,9 +114,31 @@
   color: white;
 }
 .homeSplashIMGMobi{display: none;}
+
+.merchOpenerCont{
+    display: flex;
+    background-color: white;
+    padding: 3px;
+    width: 750px;
+    margin: 12px;
+    align-items: center;
+}
+
+.merchOpenerText{
+  font-size: 1.8em;
+  font-style: italic;
+  width: 50%;
+  text-align: end;
+  margin: 21px;
+  text-transform: capitalize;
+}
+
 @media (max-width: 1080px) {
   .aSectiontitle{
     width: 100%;
+  }
+  .merchOpenerCont{
+    width: 96%;
   }
 }
 
