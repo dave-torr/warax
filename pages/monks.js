@@ -16,7 +16,6 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
-import MenuOpenIcon from '@material-ui/icons/MenuOpen';
 import TvIcon from '@material-ui/icons/Tv';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import MicIcon from '@material-ui/icons/Mic';

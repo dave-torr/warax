@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import Script from "next/script"
 
 import { useEffect, useState } from 'react'
 
@@ -11,6 +10,8 @@ import {Navi, Footer} from "./../components/navi"
 import {EventDisp} from "./../components/events"
 import {MerchDisp} from "./../components/merch"
 import {ServiceDisp} from "./../components/services"
+
+import {WebveoMiniSite } from "./../components/miniSites/webveo"
 
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
@@ -131,7 +132,7 @@ export default function Home() {
 
 
 // State
-  const [pageDisplayer,setPageDisplayer]=useState("home")
+  const [pageDisplayer,setPageDisplayer]=useState(null)
 
   const [waraxiCarti, setWaraxiCart]=useState(true)
 
@@ -141,6 +142,8 @@ export default function Home() {
   const [mobileCartTrig, setMobCartTrigg] =useState(false)
   const [finalPrice, setFinalPrice]=useState()
   const [payment, setPayment]=useState(false)
+
+  const [minisiteDisp, setMinisite] = useState(null)
 
 // useEffects
   useEffect(()=>{
@@ -180,21 +183,6 @@ export default function Home() {
     tempCart.splice(prodIndex, 1)
     setWaraxCart(tempCart)
   }
-
-  const formLoader=()=>{
-    let kushki = new KushkiCheckout({
-        form: "payment-form",
-        merchant_id: "8291028192001", // Reemplaza esto por tu public merchant id
-        amount: "14.99",
-        currency: "USD",
-        payment_methods:["credit-card"], // Podrás habilitar más medios de pago.
-        inTestEnvironment: true, // Configurado en modo prueba
-    })
-    return kushki
-  }
-
-
-
   const paymenInput=()=>{
     return(
       <>
@@ -218,9 +206,6 @@ export default function Home() {
       </>
     )
   }
-
-
-
 
   ////////////////////////////
   // Cart Display
@@ -359,16 +344,18 @@ export default function Home() {
           pageDisplayer={pageDisplayer} 
           setPageDisplayer={setPageDisplayer}
           waraxCart={waraxCart}
+          minisiteDisp={minisiteDisp}
+          setMinisite={setMinisite}
           setWaraxCart={setWaraxCart}
           setCartModal={setCartModal}
           setMobCartTrigg={setMobCartTrigg}
         />
 
         {pageDisplayer==="home"&&<>
-          {homeLanding()}
-          {/* {anEventDisp()} */}
-          {merchDisp()}
-          {servicedisp()}
+            {homeLanding()}
+            {/* {anEventDisp()} */}
+            {merchDisp()}
+            {servicedisp()}
         </>}
         {pageDisplayer==="artistas"&&<>
           artistas
@@ -385,6 +372,9 @@ export default function Home() {
           <br></br>
           {anEventDisp()}
           {merchDisp()}
+        </>}
+        {minisiteDisp==="WebVeo"&&<>
+          <WebveoMiniSite />
         </>}
 
 

@@ -16,7 +16,6 @@ import { NavigationTwoTone } from "@material-ui/icons";
 
 export function Navi(props){
 
-
     let menuOptsArr= [
         {
             "key": "Home",
@@ -42,18 +41,42 @@ export function Navi(props){
 
     const [dialogTrigg, setDialogTrigg]=useState(false)
 
-        let eachMenuOpt=menuOptsArr.map((elem, i)=><React.Fragment key={i}>
-                {elem.link===props.pageDisplayer? <>
-                <a className={styles.eachMenuBTNActive}>
+    let eachMenuOpt=menuOptsArr.map((elem, i)=><React.Fragment key={i}>
+            {elem.link===props.pageDisplayer? <>
+            <a className={styles.eachMenuBTNActive}>
+                {elem.key}</a>
+            </>:<>
+                <a className={styles.eachMenuBTN} onClick={()=>{
+                props.setPageDisplayer(elem.link)
+                props.setMinisite(null)
+                setDialogTrigg(false)
+                window.scrollTo({ top: 0, behavior: "smooth" })}}>
                     {elem.key}</a>
-                </>:<>
-                    <a className={styles.eachMenuBTN} onClick={()=>{
-                    props.setPageDisplayer(elem.link);
-                    setDialogTrigg(false)
-                    window.scrollTo({ top: 0, behavior: "smooth" })}}>
-                        {elem.key}</a>
+            </>}
+    </React.Fragment>)
+
+    const miniSiteNavi=()=>{
+        return(<>
+            <div className={styles.naviHighlightCont}>
+                <div className={styles.highlightTitle}>Lo Nuevo</div>
+                {props.minisiteDisp==="WebVeo"&&<>
+                    <div className={styles.miniSiteLinkActive}>
+                        #WebVeo
+                    </div>
+                
                 </>}
-        </React.Fragment>)
+                {props.minisiteDisp===null&&<>
+                    <div className={styles.miniSiteLink} onClick={()=>{
+                        props.setMinisite("WebVeo")
+                        props.setPageDisplayer(null)
+                        }}>
+                        #WebVeo
+                    </div>
+                </>}
+            </div>
+        </>)
+    }
+
     const theMenu=()=>{
         return(
             <>
@@ -67,7 +90,10 @@ export function Navi(props){
                             onClick={()=>props.setPageDisplayer("home")}
                             />
                         <div className={styles.naviBTNCont}>
-                            {eachMenuOpt}
+                            <div>
+                                {eachMenuOpt}
+                            </div>
+                            {miniSiteNavi()}
                         </div>
                         <div className={styles.hamburgerCont} onClick={()=>setDialogTrigg(true)}> 
                             <div className={styles.burgerLine} />

@@ -13,7 +13,7 @@ export function EventDisp(props){
     let aSampleEvent = {
         "eventName": "Criollando Con Amigos",
         "eventType": "concierto en linea",
-        "eventDate":"29-07-2021",
+        "eventDate":"2021-07-29",
         "eventDescription":"Iraiz y Sebastian Oviedo después de trece años de trabajo juntos tienen la dicha de presentarnos su primer disco grabado en vivo “Criollando con amigos” que es un homenaje a la música popular latinoamericana. Una “guitarreada” virtual acompañada de amigos entrañables y admirados.",
         "buyNowURL": "https://recitalesapp.com/event/80",
         "priceObj":[
@@ -74,6 +74,10 @@ export function EventDisp(props){
         </>
     }
 
+    let presentationDate =  new Date (aSampleEvent.eventDate)
+    console.log(presentationDate.toLocaleDateString())
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
     return(
         <>
             <div className={styles.eventContainer}> 
@@ -87,7 +91,7 @@ export function EventDisp(props){
                 </div>
                 <div className={styles.eventDescrCont}>
                     <div className={styles.eventListing}> eventos / {aSampleEvent.eventType} </div>
-                    <h2>{aSampleEvent.eventDate} </h2>
+                    <h2>{presentationDate.toLocaleDateString(undefined, options)} </h2>
                     <h1> {aSampleEvent.eventName} </h1>
                     <p> {aSampleEvent.eventDescription} </p>
                     <div className={styles.priceContainer}> 
