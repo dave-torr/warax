@@ -68,8 +68,11 @@ let theItem = props.merchItem
                         <h5> {theItem.associatedActs} </h5>
                     </div>
                     <div className={styles.proPrice}>${theItem.priceObj.price} </div>
-                    <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}> 
-                    Comprar <AddShoppingCartIcon /> </div> 
+
+                    {/* <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}> 
+                    Comprar <AddShoppingCartIcon /> </div>  */}
+
+                    
                 </div>
             </div>
         </>

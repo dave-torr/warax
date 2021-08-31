@@ -1,0 +1,82 @@
+
+.CheckoutLegend{
+    font-size: 1em;
+}
+
+.CheckoutForm{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #a9acaf;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.CardInputfield{
+    color: rgba(0, 128, 128, 0.496);
+    font-size: 1.05em;
+    margin-top: 21px;
+    width: 360px;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #a9acaf;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.CheckoutBtn{
+    align-self: center;
+    margin-top: 21px;
+    border: solid 1px rgba(245, 245, 245, 0);
+    background-color: rgb(118, 11, 218);
+    color: white;
+    width: 200px;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px 0 #a9acaf;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: all ease 0.5s;
+}
+.CheckoutBtn:hover{
+    cursor: pointer;
+    background-color: rgb(5, 138, 47);
+    color: white;
+}
+
+.CheckoutBtn:disabled{
+    cursor: initial;
+    background-color: rgb(160, 101, 214);
+}
+
+.availBTN{
+    border: solid 2px rgb(42, 42, 189); 
+    border-radius: 4px;
+    width: fit-content;
+    padding: 12px 33px;
+    text-align: center;
+    transition: all ease-in 0.3s;
+}
+
+.availBTN:hover{
+    cursor: pointer;
+    background-color: rgb(42, 42, 189);
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .CheckoutForm{
+        width: 85%;
+        margin-bottom: 21px;
+    }
+
+    .CardInputfield{
+        width: 85%;
+
+    }
+}

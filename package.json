@@ -13,11 +13,17 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.60",
     "@sendgrid/mail": "^7.4.5",
+    "@stripe/react-stripe-js": "^1.4.1",
+    "@stripe/stripe-js": "^1.17.1",
     "express-session": "^1.17.2",
     "mongodb": "^3.6.10",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "stripe": "^8.171.0",
     "swr": "^0.5.6"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.2"
   }
 }

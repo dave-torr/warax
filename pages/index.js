@@ -6,8 +6,12 @@ import { useEffect, useState } from 'react'
 
 import styles from '../styles/pages/Home.module.css'
 
+import { Elements } from '@stripe/react-stripe-js'
+import getStripe from './../utils/get-stripejs'
+import {StripeGeneralCheckout} from "./../components/paymentComp/stripeCardSetup"
+
 import {Navi, Footer} from "./../components/navi"
-import {EventDisp} from "./../components/events"
+import {EventDisp, EventPlaceholder} from "./../components/events"
 import {MerchDisp} from "./../components/merch"
 import {ServiceDisp} from "./../components/services"
 
@@ -64,8 +68,6 @@ let capGrey={
     "alt": "Merch Oficial Webveo - Gorra Grey"
   }
 }
-
-
 let serviceOne={
   "serviceName": "Sala de ensayo",
   "serviceType": "ensayo",
@@ -185,6 +187,12 @@ export default function Home() {
       <>
         {payment? <>
 
+            <Elements stripe={getStripe()}>
+              <StripeGeneralCheckout 
+                totalPaymentAmount={finalPrice} 
+                receiptDescription={"Compra en linea - Warax Arte"}
+              /> 
+            </Elements>
 
           {/* CAJITA KUSHKI MOFOOO */}
           {/* <Script src="https://cdn.kushkipagos.com/kushki-checkout.js"/>
@@ -272,7 +280,11 @@ export default function Home() {
     return(<>
       <div className={styles.aHomeSection}>
         <h1 className={styles.aSectiontitle}> Eventos Proximos </h1> 
-        <EventDisp addToCart={addToCart} />
+
+        {/* <EventDisp addToCart={addToCart} /> */}
+        <EventPlaceholder />
+
+
       </div>
     </>)
   }
@@ -338,9 +350,9 @@ export default function Home() {
         <div className={styles.aHomeSection}>
           <h1 className={styles.aSectiontitle}> Servicios Warax </h1> 
           <div className={styles.merchDispCont}>
-            <ServiceDisp activeCart={waraxiCarti} addToCart={addToCart} theService={serviceOne} />
-            <ServiceDisp activeCart={waraxiCarti} addToCart={addToCart} theService={serviceTwo} />
-            <ServiceDisp activeCart={waraxiCarti} addToCart={addToCart} theService={serviceThree} />
+            <ServiceDisp activeCart={false} addToCart={addToCart} theService={serviceOne} />
+            <ServiceDisp activeCart={false} addToCart={addToCart} theService={serviceTwo} />
+            <ServiceDisp activeCart={false} addToCart={addToCart} theService={serviceThree} />
           </div>
         </div>        
       </>

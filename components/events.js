@@ -43,6 +43,7 @@ export function EventDisp(props){
     }
 
 
+
     let eachEventPrice
     if(aSampleEvent.priceObj){
     eachEventPrice=aSampleEvent.priceObj.map((elem, i)=><React.Fragment key={i}>
@@ -75,7 +76,6 @@ export function EventDisp(props){
     }
 
     let presentationDate =  new Date (aSampleEvent.eventDate)
-    console.log(presentationDate.toLocaleDateString())
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
     return(
@@ -111,6 +111,17 @@ export function EventDisp(props){
                     />
                 </div>
             </Dialog>
+        </>
+    )
+}
+
+export function EventPlaceholder(props){
+    return(
+        <>
+        <div className={styles.eventPlaceholder}> 
+            <div className={styles.eventPlaceholderTitle}> Muy pronto</div>
+            <div className={styles.eventPlaceholderTitle2}> Los mejores eventos de la ciudad, más cerca de ti </div>
+        </div>
         </>
     )
 }

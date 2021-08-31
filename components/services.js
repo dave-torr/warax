@@ -18,32 +18,26 @@ export function ServiceDisp(props){
             <div className={styles.cartOptions}>
                 <div className={styles.priceDetailMain}> {elem.priceDetail} </div>
                 <div className={styles.aPriceMain}> $ {elem.price} </div>
-                {props.activeCart&&<>
-                <div className={styles.addToCartMain} onClick={()=>{props.addToCart(elem)}}> 
-                    Comprar <AddShoppingCartIcon /> </div></>}
+                {props.activeCart?<>
+                    <div className={styles.addToCartMain} onClick={()=>{props.addToCart(elem)}}> 
+                    Comprar <AddShoppingCartIcon /> </div>
+                    </>:<> 
+                    <div className={styles.addToCartMain}> Contactanos </div> </>}
+
+
             </div>
         </>:<> 
             <div className={styles.cartOptions}>
                 <div className={styles.priceDetail}> {elem.priceDetail} </div>
                 <div className={styles.aPrice}> $ {elem.price} </div>
-                {props.activeCart&&<>
-                <div className={styles.addToCart} onClick={()=>{props.addToCart(elem)}}> 
-                    Comprar <AddShoppingCartIcon /> </div></>}
+                {props.activeCart?<>
+                    <div className={styles.addToCart} onClick={()=>{props.addToCart(elem)}}> 
+                    Comprar <AddShoppingCartIcon /> </div>
+                    </>:<> 
+                    <div className={styles.addToCart}> Contactanos </div> </>}
             </div>
-        </>}
-        </div>
+        </>}</div>
     </React.Fragment>)
-
-    const priceDisplayer=(aPriceArr)=>{
-        
-        
-
-        return(
-            <>
-
-            </>
-        )
-    }
 
 
     return(
