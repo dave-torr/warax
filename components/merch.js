@@ -69,10 +69,9 @@ let theItem = props.merchItem
                     </div>
                     <div className={styles.proPrice}>${theItem.priceObj.price} </div>
 
-                    {/* <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}> 
-                    Comprar <AddShoppingCartIcon /> </div>  */}
+                    <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}> 
+                    Comprar <AddShoppingCartIcon /> </div> 
 
-                    
                 </div>
             </div>
         </>

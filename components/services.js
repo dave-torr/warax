@@ -4,6 +4,7 @@ import { useState } from "react"
 
 import styles from "./../styles/components/services.module.css"
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import { Dialog } from '@material-ui/core'
 
 
 
@@ -22,9 +23,7 @@ export function ServiceDisp(props){
                     <div className={styles.addToCartMain} onClick={()=>{props.addToCart(elem)}}> 
                     Comprar <AddShoppingCartIcon /> </div>
                     </>:<> 
-                    <div className={styles.addToCartMain}> Contactanos </div> </>}
-
-
+                    <div className={styles.addToCartMain} onClick={()=>setContactModTrig(true)}> Contactanos </div> </>}
             </div>
         </>:<> 
             <div className={styles.cartOptions}>
@@ -34,14 +33,71 @@ export function ServiceDisp(props){
                     <div className={styles.addToCart} onClick={()=>{props.addToCart(elem)}}> 
                     Comprar <AddShoppingCartIcon /> </div>
                     </>:<> 
-                    <div className={styles.addToCart}> Contactanos </div> </>}
+                    <div className={styles.addToCart} onClick={()=>setContactModTrig(true)}> Contactanos </div> </>}
             </div>
         </>}</div>
     </React.Fragment>)
 
+////////////////////////////////////////
+// CONTACT FORM
+
+    // MIGHT EXTRACT THIS AS A SEPARATE COMPONENT
+    const [contactModTrig, setContactModTrig]= useState(false)
+    const [contactObj, setContactObj]= useState({})
+    const contactModal=()=>{
+        return(
+            <><Dialog open={contactModTrig} onClose={()=>setContactModTrig(false)} maxWidth="lg">
+            <form className={styles.contactFormModal}>
+                Email/Whatsapp icon
+                {contactForm()}
+                {/* parking lot checkbox */}
+                {/* factura checkbox */}
+                {/* Submit BTN */}
+            </form>
+            </Dialog></>
+        )
+    }
+
+    const anInputDisp=(formType, idTag, placeholderLabel, dataObj, setDataObj)=>{
+        return(
+            <><div className={styles.anInputCont}>
+                <label className={styles.anInputLabel} htmlFor={idTag}> {placeholderLabel} </label>
+                <input
+                    required
+                    id={`${idTag}`}
+                    placeholder={placeholderLabel}
+                    className={styles.aFormInput}
+                    type={formType}
+                    onChange={(e)=>{
+                        setDataObj({
+                            ...dataObj,
+                            [idTag]: e.target.value
+                        })
+                    }}
+                />
+            </div></>
+        )
+    }
+
+    const contactForm=()=>{
+        return(
+            <>
+                {anInputDisp("text", "userName", "Nombre", contactObj, setContactObj)}
+                {anInputDisp("text", "projectName", "Proyecto/Banda", contactObj, setContactObj)}
+                {anInputDisp("text", "hometown", "Ciudad", contactObj, setContactObj)}
+                {anInputDisp("number", "phono", "Telefono", contactObj, setContactObj)}
+                {anInputDisp("date", "DOB", "Fecha Nacimiento", contactObj, setContactObj)}
+                {/* factura y/n */}
+                {/* parking y/n */}
+            </>
+        )
+    }
+/////////////////////////////////////////////
+
 
     return(
         <>
+        {contactModal()}
             <div className={styles.aServiceCont}> 
                 <div className={styles.imgCont}> 
                     <Image

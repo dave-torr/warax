@@ -103,7 +103,11 @@ useEffect(()=>{
 
 const clientEmail=async()=>{
   if(payment.status==="succeeded"&&count===0){
-    // send email to client with receipt
+    // send email to client with receipt {{product_arr}}
+    // send email to Mundi
+    // empty cart
+    // close modal
+
   } 
 }
 
@@ -116,9 +120,9 @@ const PaymentStatus = ({ status }: { status: string }) => {
     case 'processing':
     case 'requires_payment_method':
     case 'requires_confirmation':
-      return <h2> Processing ... </h2>
+      return <h2> Procesando! ... </h2>
     case 'requires_action':
-      return <h2>Additional Actions Required</h2>
+      return <h2>Acciones adicionales requeridos</h2>
     case 'succeeded':
       // EMAIL API ROUTE
       clientEmail()
@@ -126,10 +130,6 @@ const PaymentStatus = ({ status }: { status: string }) => {
       return (<>
         <h2>Pago Recibido!</h2>
         <h3>Nuestro team se pondra en contacto pronto!</h3>
-        <a href="https://yachtanahi.com/" target="_blank" rel="noopener noreferrer"> 
-          <div className={styles.availBTN}> 
-          Go Back Home</div>
-        </a>
       </>)
     case 'error':
       return (
@@ -152,7 +152,7 @@ const PaymentStatus = ({ status }: { status: string }) => {
       <div style={{display: "flex", justifyContent: "center"}} > 
         <form onSubmit={(e)=>handleSubmit(e)} className={styles.CheckoutForm} >
               <legend className={styles.CheckoutLegend} >
-              Ya casi!<br></br> Puedes comprar tu producto ahora  </legend>
+              Genial! <br></br> Puedes comprar tus productos ahora!  </legend>
               <input
                 placeholder="Nombre en Tarjeta*"
                 className={styles.CardInputfield}                
@@ -177,7 +177,7 @@ const PaymentStatus = ({ status }: { status: string }) => {
                   onChange={(e) => {
                     if (e.error) {
                       setPayment({ status: 'error' })
-                      setErrorMessage(e.error.message ?? 'An unknown error occured')
+                      setErrorMessage(e.error.message ?? 'Error Desconocido')
                     } else {
                       setPayment({ status: 'initial' })
                     }
@@ -189,7 +189,7 @@ const PaymentStatus = ({ status }: { status: string }) => {
               <button
                 className={styles.CheckoutBtn}
                 type="submit"> 
-                Payment Amount $ {props.totalPaymentAmount} .- usd
+                Monto Total $ {props.totalPaymentAmount} .- usd
                 </button></>}
             {payment.status==="error"||payment.status==="succeeded"&&
               <>
@@ -197,7 +197,7 @@ const PaymentStatus = ({ status }: { status: string }) => {
                   className={styles.CheckoutBtn}
                   type="submit"
                   disabled> 
-                Payment Amount $ {props.totalPaymentAmount} .- usd
+                Monto Total $ {props.totalPaymentAmount} .- usd
                 </button></>}
             {payment.status==="error"&&
               <>
@@ -205,7 +205,7 @@ const PaymentStatus = ({ status }: { status: string }) => {
                   className={styles.CheckoutBtn}
                   type="submit"
                   disabled> 
-                Payment Amount $ {props.totalPaymentAmount} .- usd
+                Monto Total $ {props.totalPaymentAmount} .- usd
                 </button></>}
             {payment.status==="processing"&&
             <>
@@ -213,10 +213,10 @@ const PaymentStatus = ({ status }: { status: string }) => {
               className={styles.CheckoutBtn}
                 type="submit"
                 disabled> 
-              Payment Amount $ {props.totalPaymentAmount} .- usd
+              Monto Total $ {props.totalPaymentAmount} .- usd
               </button></>}
            <p style= {{margin: "unset", marginTop:"21px", textAlign:"center"}}>
-           Pagos procesados con <a href="https://stripe.com/"> <strong> 
+           Pagos realizados con <a href="https://stripe.com/"> <strong> 
            Stripe</strong></a> para procesar pagos seguros y eficientes </p> 
         <PaymentStatus status={payment.status} />
       </form>

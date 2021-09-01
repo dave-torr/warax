@@ -112,7 +112,9 @@
   text-align: center;
   font-weight: 500;
   color: white;
+  cursor: pointer;
 }
+
 .homeSplashIMGMobi{display: none;}
 
 .merchOpenerCont{

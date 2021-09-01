@@ -144,6 +144,8 @@ export default function Home() {
 
   const [minisiteDisp, setMinisite] = useState(null)
 
+  console.log(waraxCart)
+
 // useEffects
   useEffect(()=>{
     if(waraxCart.length>0){

@@ -121,6 +121,30 @@
     box-shadow: var(--generalBoxShadow);
 }
 
+.contactFormModal{
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aFormInput{
+    width: 140px;
+    padding: 3px;
+}
+
+.anInputCont{
+    padding: 6px 12px;
+    margin: 3px;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.anInputLabel{
+}
+
 @media (max-width: 1080px) {
     .aServiceCont{
         width: 96%;
