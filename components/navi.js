@@ -59,19 +59,43 @@ export function Navi(props){
         return(<>
             <div className={styles.naviHighlightCont}>
                 <div className={styles.highlightTitle}>Lo Nuevo</div>
-                {props.minisiteDisp==="WebVeo"&&<>
+                {props.minisiteDisp==="WebVeo"?<>
                     <div className={styles.miniSiteLinkActive}>
                         #WebVeo
                     </div>
-                
-                </>}
-                {props.minisiteDisp===null&&<>
+                </>:<>
                     <div className={styles.miniSiteLink} onClick={()=>{
                         props.setMinisite("WebVeo")
                         props.setPageDisplayer(null)
                         window.scrollTo({ top: 0, behavior: "smooth" })
                         }}>
                         #WebVeo
+                    </div>
+                </>}
+                {props.minisiteDisp==="WuanTake"?<>
+                    <div className={styles.miniSiteLinkActive}>
+                        #WuanTake
+                    </div>
+                </>:<>
+                    <div className={styles.miniSiteLink} onClick={()=>{
+                        props.setMinisite("WuanTake")
+                        props.setPageDisplayer(null)
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                        }}>
+                        #WuanTake
+                    </div>
+                </>}
+                {props.minisiteDisp==="WaraxTv"?<>
+                    <div className={styles.miniSiteLinkActive}>
+                        #WaraxTv
+                    </div>
+                </>:<>
+                    <div className={styles.miniSiteLink} onClick={()=>{
+                        props.setMinisite("WaraxTv")
+                        props.setPageDisplayer(null)
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                        }}>
+                        #WaraxTv
                     </div>
                 </>}
             </div>
@@ -95,7 +119,14 @@ export function Navi(props){
                             <div>
                                 {eachMenuOpt}
                             </div>
-                            {miniSiteNavi()}
+                            {props.waraxCart.length>0&&<>
+                            <div className={styles.naviCart} onClick={()=>props.setCartModal(true)}>  
+                                Carrito Warax &nbsp; x {props.waraxCart.length} &nbsp;  <ShoppingCartIcon /> 
+                            </div>
+                            <div className={styles.naviCartMob} onClick={()=>props.setMobCartTrigg(true)}>  
+                                Carrito Warax &nbsp; x {props.waraxCart.length} &nbsp;  <ShoppingCartIcon /> 
+                            </div>
+                            </>}
                         </div>
                         <div className={styles.hamburgerCont} onClick={()=>setDialogTrigg(true)}> 
                             <div className={styles.burgerLine} />
@@ -103,14 +134,10 @@ export function Navi(props){
                             <div className={styles.burgerLine} />
                         </div>
                     </div>
-                    {props.waraxCart.length>0&&<>
-                    <div className={styles.naviCartRow} onClick={()=>props.setCartModal(true)}>  
-                        Carrito Warax &nbsp; x {props.waraxCart.length} &nbsp;  <ShoppingCartIcon /> 
+
+                    <div className={styles.aNaviRow}>
+                        {miniSiteNavi()}
                     </div>
-                    <div className={styles.naviCartRowMob} onClick={()=>props.setMobCartTrigg(true)}>  
-                        Carrito Warax &nbsp; x {props.waraxCart.length} &nbsp;  <ShoppingCartIcon /> 
-                    </div>
-                    </>}
                 </div>
             </>
         )

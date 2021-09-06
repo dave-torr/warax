@@ -16,6 +16,7 @@ import {MerchDisp} from "./../components/merch"
 import {ServiceDisp} from "./../components/services"
 
 import {WebveoMiniSite } from "./../components/miniSites/webveo"
+import {WuanTakeMiniSite, WaraxTvMiniSite} from "./../components/miniSites/waraxMinisites"
 
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
@@ -144,7 +145,6 @@ export default function Home() {
 
   const [minisiteDisp, setMinisite] = useState(null)
 
-  console.log(waraxCart)
 
 // useEffects
   useEffect(()=>{
@@ -403,6 +403,12 @@ export default function Home() {
         </>}
         {minisiteDisp==="WebVeo"&&<>
           <WebveoMiniSite />
+        </>}
+        {minisiteDisp==="WuanTake"&&<>
+          <WuanTakeMiniSite />
+        </>}
+        {minisiteDisp==="WaraxTv"&&<>
+          <WaraxTvMiniSite />
         </>}
 
 

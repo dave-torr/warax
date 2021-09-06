@@ -56,9 +56,16 @@
     transition: var(--general-transition);
 }
 
+.naviHighlightCont{
+    display: flex;
+    border-top: solid 1px black;
+    margin-top: 6px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 9px;
+}
+
 .highlightTitle{
-    width: 100%;
-    text-align: end;
     padding: 0 9px;
     text-transform: uppercase;
     font-style: italic;
@@ -69,14 +76,14 @@
     font-weight: 400;
     padding: 0 9px;
     letter-spacing: 2px;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-style: italic;
 }
 .miniSiteLinkActive{
     font-weight: 800;
     padding: 0 9px;
     letter-spacing: 2px;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-style: italic;
     color: var(--purple-highlight);
 }
@@ -121,17 +128,15 @@
     margin: 6px;
 }
 
-.naviCartRow{
-    width: 100%;
+.naviCart{
     display: flex;
-    justify-content: flex-end;
     padding: 0 15px;
     font-size: 0.8em;
     align-items: center;
     cursor: pointer;
 }
 
-.naviCartRowMob{
+.naviCartMob{
     display: none;
 }
 
@@ -194,11 +199,11 @@
         
     }
 
-    .naviCartRow{
+    .naviCart{
         display: none;
     }
 
-    .naviCartRowMob{
+    .naviCartMob{
         display: unset;
         width: 100%;
         display: flex;

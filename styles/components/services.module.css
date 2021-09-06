@@ -130,7 +130,7 @@
 }
 
 .aFormInput{
-    width: 140px;
+    width: 180px;
     padding: 3px;
 }
 
@@ -142,8 +142,7 @@
     justify-content: space-between;
 }
 
-.anInputLabel{
-}
+
 
 @media (max-width: 1080px) {
     .aServiceCont{

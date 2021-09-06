@@ -38,6 +38,10 @@ export function ServiceDisp(props){
         </>}</div>
     </React.Fragment>)
 
+
+
+
+
 ////////////////////////////////////////
 // CONTACT FORM
 
@@ -57,6 +61,11 @@ export function ServiceDisp(props){
             </Dialog></>
         )
     }
+
+
+
+
+
 
     const anInputDisp=(formType, idTag, placeholderLabel, dataObj, setDataObj)=>{
         return(
@@ -78,7 +87,6 @@ export function ServiceDisp(props){
             </div></>
         )
     }
-
     const contactForm=()=>{
         return(
             <>
@@ -92,9 +100,10 @@ export function ServiceDisp(props){
             </>
         )
     }
+
+
+    
 /////////////////////////////////////////////
-
-
     return(
         <>
         {contactModal()}
