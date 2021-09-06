@@ -2,10 +2,66 @@
     width: 100%;
     min-height: 80vh;
     padding: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.WebveoLanding{
+
+.episodeListAndPlayer{
     width: 100%;
     display: flex;
+    border-top: dotted 2px black;
+    justify-content: space-around;
+    padding: 12px;
     align-items: center;
+}
+
+.episodePicker{
+    padding: 15px;
+}
+.eachepisodeList{
+    padding: 6px;
+    cursor: pointer;
+}
+
+.eachepisodeList:hover{
+    color: var(--purple-highlight);
+    font-weight: 600;
+}
+
+.episodeDescription{
+    width: 100%;
+    background-color: rgb(55, 55, 55);
+    color: white;
+    margin-bottom: 21px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--generalBoxShadow);
+}
+
+.episodeDescription h5{
+    padding: unset;
+    margin: unset;
+    text-align: end;
+    padding: 15px;
+    font-size: 1.4em;
+    font-weight: 200;
+}
+.episodeDescription h3{
+    font-size: 1.5em;
+    padding: 9px 15px;
+    margin: unset;
+}
+
+.episodeDescription p{
+    width: 70%;
+    padding: 9px 15px;
+    text-align: justify;
+}
+
+.webVeoLogo{
+    padding: 9px;
+    width: 250px;
 }

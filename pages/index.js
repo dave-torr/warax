@@ -402,7 +402,7 @@ export default function Home() {
           {merchDisp()}
         </>}
         {minisiteDisp==="WebVeo"&&<>
-          <WebveoMiniSite />
+          <WebveoMiniSite merchDisp={merchDisp} />
         </>}
         {minisiteDisp==="WuanTake"&&<>
           <WuanTakeMiniSite />
