@@ -363,7 +363,6 @@ export default function Home() {
       </>
     )
   }
-
   const webVeoMerch=()=>{
     return(
       <>
@@ -375,7 +374,6 @@ export default function Home() {
       </>
     )
   }
-
   const servicedisp=()=>{
 
     return(

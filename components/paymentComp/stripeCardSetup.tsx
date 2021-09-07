@@ -108,22 +108,15 @@ const purchaseProcess=async()=>{
     // send email to Mundi
     // empty cart
     // close modal
-  setCount(1)
+  setCount(count+1)
   let stringifiedUserData=JSON.stringify(props.saleUsarData)
   const res = await fetch("/api/newSale",{
       method: "post",
       body: stringifiedUserData
     })
   const submittedUserData = await res.json()
-
-  // let emailObj = {
-  //   "userData": props.saleUsarData,
-  //   "product_arr": props.waraxCart
-  // }
-  // let stringifiedEmailObj = JSON.stringify(emailObj)
-
     if(submittedUserData){
-      console.log("res instance created")
+      // console.log("res instance created")
     }
   } 
 }

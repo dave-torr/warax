@@ -6,8 +6,8 @@ import styles from "./../styles/components/services.module.css"
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import { Dialog } from '@material-ui/core'
 
-
-
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
 export function ServiceDisp(props){
 
@@ -50,14 +50,22 @@ export function ServiceDisp(props){
     const [contactObj, setContactObj]= useState({})
     const contactModal=()=>{
         return(
-            <><Dialog open={contactModTrig} onClose={()=>setContactModTrig(false)} maxWidth="lg">
-            <form className={styles.contactFormModal}>
-                Email/Whatsapp icon
+            <><Dialog open={contactModTrig} onClose={()=>{
+                setContactObj({})
+                setContactModTrig(false)}
+                } maxWidth="lg">
+            <div className={styles.contactFormModal}>
+                <div className={styles.contactIntro}>Escribenos un mensaje o Email: </div>
+                <div className={styles.contactIconCont}>
+                    <a href="https://wa.me/00593998638396" target="_blank" rel="noopener noreferrer"> <WhatsAppIcon /></a>
+                    <a href="mailto:warax.arte@gmail.com?subject=Servicios Warax!" target="_blank" rel="noopener noreferrer"> <MailOutlineIcon /></a>
+                </div>
+                <div className={styles.contactIntro}>O Envianos tu información:</div>
                 {contactForm()}
                 {/* parking lot checkbox */}
                 {/* factura checkbox */}
                 {/* Submit BTN */}
-            </form>
+            </div>
             </Dialog></>
         )
     }
@@ -83,16 +91,46 @@ export function ServiceDisp(props){
         )
     }
     
+    const backEndAPI=async()=>{
+        let stringifiedUserData=JSON.stringify(contactObj)
+        const res = await fetch("/api/servicesUserData",{
+            method: "post",
+            body: stringifiedUserData
+        })
+        const sentClientData = await res.json()
+        if(sentClientData){
+            setSentDataTrig(true)
+        }
+    }
+
+    const [submitDataTrig, setDataTrig]=useState(false)
+    const [sentDataTrig, setSentDataTrig]=useState(false)
     const contactForm=()=>{
         return(
             <>
+                <form className={styles.contactForm} onSubmit={(e)=>{
+                    e.preventDefault();
+                    setDataTrig(true)
+                    backEndAPI()
+                }}> 
                 {anInputDisp("text", "userName", "Nombre", contactObj, setContactObj)}
                 {anInputDisp("text", "projectName", "Proyecto/Banda", contactObj, setContactObj)}
+                {anInputDisp("email", "email", "Email", contactObj, setContactObj)}
                 {anInputDisp("text", "hometown", "Ciudad", contactObj, setContactObj)}
                 {anInputDisp("number", "phono", "Telefono", contactObj, setContactObj)}
-                {anInputDisp("date", "DOB", "Fecha Nacimiento", contactObj, setContactObj)}
+                {anInputDisp("date", "reqDate", "Fecha Requerida", contactObj, setContactObj)}
                 {/* factura y/n */}
                 {/* parking y/n */}
+                {sentDataTrig?<>
+                    <div className={styles.sformSubBTN}>Datos Enviados! </div>
+                </>:<> 
+                    {submitDataTrig?<> 
+                        <div className={styles.sformSubBTN}>Enviando tus datos!</div>
+                    </>:<> 
+                        <input type="submit" value="Enviar!" className={styles.sformSubBTN} />
+                    </>}
+                </>}
+                </form>
             </>
         )
     }

@@ -129,6 +129,39 @@
     align-items: center;
 }
 
+.contactForm{
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactIntro{
+    font-size: 1.4em;
+    margin: 9px;
+}
+
+.contactIconCont{
+    width: 60%;
+    display:flex;
+    justify-content: space-around;
+    padding: 21px;
+    border-bottom: solid 2px black;
+    margin-bottom: 12px;
+
+}
+
+.sformSubBTN{
+    border-radius: 5px;
+    /* width: 150px; */
+    border: solid 3px var(--purple-highlight);
+    margin: 12px;
+    padding: 9px;
+    font-size: 1.2em;
+
+}
+
 .aFormInput{
     width: 180px;
     padding: 3px;
