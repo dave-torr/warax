@@ -66,9 +66,28 @@ const eachepisodeDisplayer=(episodeList)=>{
         <strong>Ep. #{elem.episodeNum}:</strong> {elem.episodeName} </div>
     </React.Fragment>)
 
+    let eachEpisodeListSELECT= episodeList.map((elem, i)=><React.Fragment key={i}>
+        <option className={styles.eachepisodeList} 
+        // onChange={()=>{
+        //     console.log(episodeList[i])
+        //     setSelectedEp(episodeList[i])
+        
+        // }}
+        value={JSON.stringify(episodeList[i])}
+        >  
+        {elem.episodeName} </option>
+    </React.Fragment>)
+
     return(<>
         <div className={styles.episodePicker}>
             {eachEpisodeList}
+        </div>
+        <div className={styles.episodePickerMOBILE}>
+            {/* {eachEpisodeList} */}
+            <select className={styles.episodeDropdown} onChange={(e)=>{
+                console.log(JSON.parse(e.target.value))
+                setSelectedEp(JSON.parse(e.target.value))
+            }}> {eachEpisodeListSELECT} </select>
         </div>
     </>)
 }
@@ -76,7 +95,12 @@ const eachepisodeDisplayer=(episodeList)=>{
 const youtubeEmbedder=()=>{
     return(
         <>
+        <div className={styles.youTubeIframCont}>
             <iframe width="560" height="315" src={`https://www.youtube.com/embed/${selectedEp.embeddiLink}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div className={styles.youTubeIframContMOBILE}>
+            <iframe width="280" height="160" src={`https://www.youtube.com/embed/${selectedEp.embeddiLink}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         </>
     )
 }
@@ -86,7 +110,12 @@ const webVeoSessDisp=()=>{
         <>
             <div className={styles.seasonIntrotitle}> WebVeo Sessions </div>
             <div className={styles.webVeoSessIntro}> Increibles temas grabados en vivo desde Warax Studios</div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/EUFxlMliUNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div className={styles.youTubeIframCont}>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/EUFxlMliUNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div className={styles.youTubeIframCont2MOBILE}>
+                <iframe width="280" height="160" src="https://www.youtube.com/embed/EUFxlMliUNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </>
     )
 }

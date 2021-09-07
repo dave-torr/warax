@@ -28,7 +28,7 @@ import { Dialog } from '@material-ui/core'
 let capBlack={
   "associatedActs": "WEBVEO",
   "productCateg": "softGoods",
-  "prodName":"Gorra - Black",
+  "prodName":"Gorra - BLACK",
   "priceObj":{
       "price": 30,
       "productName": "Gorra Webveo - BLACK"
@@ -43,10 +43,10 @@ let capBlack={
 let capYellow={
   "associatedActs": "WEBVEO",
   "productCateg": "softGoods",
-  "prodName":"Gorra - Yellow",
+  "prodName":"Gorra - LIME/ASH",
   "priceObj":{
       "price": 30,
-      "productName": "Gorra Webveo - Yellow"
+      "productName": "Gorra Webveo - LIME/ASH"
     },
   "merchIMG":{
     "src":"/assets/merchPics/yellowCap.jpg",
@@ -58,16 +58,16 @@ let capYellow={
 let capGrey={
   "associatedActs": "WEBVEO",
   "productCateg": "softGoods",
-  "prodName":"Gorra - Grey",
+  "prodName":"Gorra - ONYX/LIME",
   "priceObj":{
       "price": 30,
-      "productName": "Gorra Webveo - Grey"
+      "productName": "Gorra Webveo - Onyx/Grey"
     },
   "merchIMG":{
     "src":"/assets/merchPics/greyCap.jpg",
     "height": 400,
     "width": 400,
-    "alt": "Merch Oficial Webveo - Gorra Grey"
+    "alt": "Merch Oficial Webveo - Onyx/Grey"
   }
 }
 let serviceOne={

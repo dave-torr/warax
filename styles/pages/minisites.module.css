@@ -31,7 +31,8 @@
 }
 
 .episodePicker{
-    padding: 15px;
+    padding: 15px 0;
+    padding-left: 15px;
     background-color: white;
     border-radius: 5px;
     box-shadow: var(--generalBoxShadow);
@@ -40,6 +41,20 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 360px;
+}
+
+
+.youTubeIframCont{
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.564);
+    background-color: blueviolet;
+}
+
+.youTubeIframContMOBILE{
+    display: none;
+}
+.episodePickerMOBILE{
+    display: none;
 }
 
 .eachepisodeList{
@@ -69,12 +84,16 @@
     padding: 15px;
     font-size: 1.4em;
     font-weight: 200;
+    width: 70%;
+    margin-left: 15%;
 }
 .episodeDescription h3{
     font-size: 1.5em;
     padding: 15px;
     margin: unset;
     border-bottom: solid 2px var(--purple-highlight);
+    width: 70%;
+    margin-left: 15%;
 }
 
 .episodeDescription p{
@@ -92,4 +111,47 @@
 .webVeoSessIntro{
     font-size: 1.4em;
     margin-bottom: 15px;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    .episodePicker{
+        display: none;
+    }
+
+    .episodePickerMOBILE{
+        display: unset;
+    }
+
+    .youTubeIframCont{
+        display: none;
+    }
+
+    .episodeListAndPlayer{
+        flex-direction: column;
+    }
+
+    .youTubeIframContMOBILE{
+        display: unset;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        margin-top: 21px;
+        box-shadow: var(--generalBoxShadow);
+    }
+
+    .youTubeIframCont2MOBILE{
+        box-shadow: var(--generalBoxShadow);
+        display: unset;
+    }
+
+    .episodeDropdown{
+        font-size: 1.2em;
+        padding: 9px 12px;
+        border: solid 2px black;
+        border-radius: 5px;
+        box-shadow: var(--generalBoxShadow);
+    }
 }
