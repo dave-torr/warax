@@ -54,6 +54,13 @@ let episodeArr= [
         "episodeName": "Ave Jaramillo - El WEBVEO",
         "embeddiLink": "b4qn2z9fEAI",
         "episodeDescription": "En este nuevo episodio nos acompaña un comediante increible, sin dudarlo uno de los mayores exponentes y precursor del Stand Up Comedy en Ecuador,  con mucho agrado presentamos a Ave Jaramillo, comediante, actor, artista, escritor y amante de los perros, desde los estudios de Warax Arte"
+    },    
+    {
+        "episodeNum": 8,
+        "season": 3,
+        "episodeName": "Begoña Salas - El WEBVEO",
+        "embeddiLink": "jFCvd0WE8DM",
+        "episodeDescription": "En este episodio nos acompaña la talentosísima Begoña Salas, artista plástica, pintora, tarotista y amante de la cocina. No te pierdas esta lectura única del tarot por Bego Salas a Guanaco, desde los estudios de Warax Arte."
     }    
 ]
 

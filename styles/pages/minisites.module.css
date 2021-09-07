@@ -53,6 +53,11 @@
 .youTubeIframContMOBILE{
     display: none;
 }
+
+.youTubeIframCont2MOBILE{
+    display: none;
+}
+
 .episodePickerMOBILE{
     display: none;
 }
