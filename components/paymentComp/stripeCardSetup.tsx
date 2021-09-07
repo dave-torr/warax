@@ -3,11 +3,12 @@ import React, { useState, useEffect } from 'react'
 
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
-import styles from '../../styles/components/stripeStyles.module.css';
+import styles from "./../../styles/components/stripeStyles.module.css"
 
 //CARD STYLING
 //CARD STYLING
 const CARD_OPTIONS = {
+    hidePostalCode: true,
     style: {
       base: {
         color: '#32325d',
@@ -101,15 +102,33 @@ useEffect(()=>{
 },[])
 
 
-const clientEmail=async()=>{
+const purchaseProcess=async()=>{
   if(payment.status==="succeeded"&&count===0){
     // send email to client with receipt {{product_arr}}
     // send email to Mundi
     // empty cart
     // close modal
+  setCount(1)
+  let stringifiedUserData=JSON.stringify(props.saleUsarData)
+  const res = await fetch("/api/newSale",{
+      method: "post",
+      body: stringifiedUserData
+    })
+  const submittedUserData = await res.json()
 
+  // let emailObj = {
+  //   "userData": props.saleUsarData,
+  //   "product_arr": props.waraxCart
+  // }
+  // let stringifiedEmailObj = JSON.stringify(emailObj)
+
+    if(submittedUserData){
+      console.log("res instance created")
+    }
   } 
 }
+
+
 
 
 ////////////////
@@ -124,12 +143,17 @@ const PaymentStatus = ({ status }: { status: string }) => {
     case 'requires_action':
       return <h2>Acciones adicionales requeridos</h2>
     case 'succeeded':
+
       // EMAIL API ROUTE
-      clientEmail()
+
+      purchaseProcess()
 
       return (<>
         <h2>Pago Recibido!</h2>
         <h3>Nuestro team se pondra en contacto pronto!</h3>
+        <div className={styles.btnCont} onClick={()=>{
+          props.setWaraxCart([])
+        }}> Salir! </div>
       </>)
     case 'error':
       return (

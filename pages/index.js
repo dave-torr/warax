@@ -196,6 +196,8 @@ export default function Home() {
                 totalPaymentAmount={finalPrice} 
                 receiptDescription={"Compra en linea - Warax Arte"}
                 saleUsarData={saleUsarData}
+                waraxCart={waraxCart}
+                setWaraxCart={setWaraxCart}
               /> 
             </Elements>
           {/* CAJITA KUSHKI MOFOOO */}
