@@ -62,11 +62,6 @@ export function ServiceDisp(props){
         )
     }
 
-
-
-
-
-
     const anInputDisp=(formType, idTag, placeholderLabel, dataObj, setDataObj)=>{
         return(
             <><div className={styles.anInputCont}>
@@ -87,6 +82,7 @@ export function ServiceDisp(props){
             </div></>
         )
     }
+    
     const contactForm=()=>{
         return(
             <>

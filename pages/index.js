@@ -12,6 +12,7 @@ import {StripeGeneralCheckout} from "./../components/paymentComp/stripeCardSetup
 
 import {Navi, Footer} from "./../components/navi"
 import {EventDisp, EventPlaceholder} from "./../components/events"
+import {SalesForm} from "./../components/forms"
 import {MerchDisp} from "./../components/merch"
 import {ServiceDisp} from "./../components/services"
 
@@ -184,18 +185,19 @@ export default function Home() {
     tempCart.splice(prodIndex, 1)
     setWaraxCart(tempCart)
   }
+  const [saleUsarData, setSaleUserData]= useState()
+  const [userDataTrig, setUserDataTrig]=useState(false)
   const paymenInput=()=>{
     return(
       <>
         {payment? <>
-
             <Elements stripe={getStripe()}>
               <StripeGeneralCheckout 
                 totalPaymentAmount={finalPrice} 
                 receiptDescription={"Compra en linea - Warax Arte"}
+                saleUsarData={saleUsarData}
               /> 
             </Elements>
-
           {/* CAJITA KUSHKI MOFOOO */}
           {/* <Script src="https://cdn.kushkipagos.com/kushki-checkout.js"/>
 
@@ -206,9 +208,16 @@ export default function Home() {
           <Script type="text/javascript">
               {formLoader()}
           </Script> */}
-
         </>:<>
-          <div className={styles.payNowBtn} onClick={()=>{setPayment(true)}}> Pagar Ahora </div>
+          {userDataTrig? <>
+            <SalesForm   
+              saleUsarData={saleUsarData}
+              setSaleUserData={setSaleUserData}
+              submitForm={setPayment}
+            />
+          </>:<>
+            <div className={styles.payNowBtn} onClick={()=>{setUserDataTrig(true)}}>Comprar Ahora</div>
+          </>}
         </>}
       </>
     )
@@ -230,7 +239,11 @@ export default function Home() {
 
     return(
       <>
-        <Dialog open={cartModalCont} onClose={()=>setCartModal(false)}>
+        <Dialog open={cartModalCont} onClose={()=>{
+          setPayment(false)
+          setCartModal(false)
+          setUserDataTrig(false)
+          }}>
           <div className={styles.cartDialog} >
             <h2 className={styles.cartTitle}> Carrito Warax </h2>
             <div className={styles.eachCartElemCont}> {cartDispl} 
@@ -244,7 +257,10 @@ export default function Home() {
         </Dialog>
         <Dialog open={mobileCartTrig} fullScreen onClose={()=>setMobCartTrigg(false)}>
           <div className={styles.cartDialog} >
-            <div style={{ "width":"100%", "textAlign": "end", "padding": "18px" }} onClick={()=>setMobCartTrigg(false)}> 
+            <div style={{ "width":"100%", "textAlign": "end", "padding": "18px" }} onClick={()=>{setMobCartTrigg(false)
+            setUserDataTrig(false)
+            setPayment(false)
+            }}> 
               cerrar | <strong> X </strong>
             </div>
             <h2 className={styles.cartTitle}> Carrito Warax </h2>

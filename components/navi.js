@@ -58,21 +58,31 @@ export function Navi(props){
     const miniSiteNavi=()=>{
         return(<>
             <div className={styles.naviHighlightCont}>
-                <div className={styles.highlightTitle}>Lo Nuevo</div>
-                {props.minisiteDisp==="WebVeo"?<>
-                    <div className={styles.miniSiteLinkActive}>
-                        #WebVeo
-                    </div>
-                </>:<>
-                    <div className={styles.miniSiteLink} onClick={()=>{
-                        props.setMinisite("WebVeo")
-                        props.setPageDisplayer(null)
-                        window.scrollTo({ top: 0, behavior: "smooth" })
-                        }}>
-                        #WebVeo
-                    </div>
-                </>}
-                {props.minisiteDisp==="WuanTake"?<>
+                <div style={{display: "flex", alignItems: "center"}}>
+                    <div className={styles.highlightTitle}>Lo Nuevo</div>
+                    {props.minisiteDisp==="WebVeo"?<>
+                        <div className={styles.miniSiteLinkActive}>
+                            #WebVeo
+                        </div>
+                    </>:<>
+                        <div className={styles.miniSiteLink} onClick={()=>{
+                            props.setMinisite("WebVeo")
+                            props.setPageDisplayer(null)
+                            window.scrollTo({ top: 0, behavior: "smooth" })
+                            }}>
+                            #WebVeo
+                        </div>
+                    </>}
+                </div>
+
+                {props.waraxCart.length>0&&<>
+                <div className={styles.naviCartMob} onClick={()=>props.setMobCartTrigg(true)}>  
+                    {props.waraxCart.length} <ShoppingCartIcon /> 
+                </div> </>}
+
+{/* some changes must occur */}
+
+                {/* {props.minisiteDisp==="WuanTake"?<>
                     <div className={styles.miniSiteLinkActive}>
                         #WuanTake
                     </div>
@@ -85,6 +95,7 @@ export function Navi(props){
                         #WuanTake
                     </div>
                 </>}
+
                 {props.minisiteDisp==="WaraxTv"?<>
                     <div className={styles.miniSiteLinkActive}>
                         #WaraxTv
@@ -97,7 +108,9 @@ export function Navi(props){
                         }}>
                         #WaraxTv
                     </div>
-                </>}
+                </>} */}
+
+
             </div>
         </>)
     }
@@ -121,9 +134,6 @@ export function Navi(props){
                             </div>
                             {props.waraxCart.length>0&&<>
                             <div className={styles.naviCart} onClick={()=>props.setCartModal(true)}>  
-                                Carrito Warax &nbsp; x {props.waraxCart.length} &nbsp;  <ShoppingCartIcon /> 
-                            </div>
-                            <div className={styles.naviCartMob} onClick={()=>props.setMobCartTrigg(true)}>  
                                 Carrito Warax &nbsp; x {props.waraxCart.length} &nbsp;  <ShoppingCartIcon /> 
                             </div>
                             </>}
