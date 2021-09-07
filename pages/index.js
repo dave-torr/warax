@@ -345,6 +345,19 @@ export default function Home() {
       </>
     )
   }
+
+  const webVeoMerch=()=>{
+    return(
+      <>
+        <div className={styles.merchDispCont}>
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capBlack} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capYellow} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capGrey} />
+        </div>
+      </>
+    )
+  }
+
   const servicedisp=()=>{
 
     return(
@@ -393,16 +406,18 @@ export default function Home() {
         </>}
         {pageDisplayer==="servicios"&&<>
           <br></br>
+          <br></br>
           {servicedisp()}
           {merchDisp()}
         </>}
         {pageDisplayer==="eventos"&&<>
           <br></br>
+          <br></br>
           {anEventDisp()}
           {merchDisp()}
         </>}
         {minisiteDisp==="WebVeo"&&<>
-          <WebveoMiniSite merchDisp={merchDisp} />
+          <WebveoMiniSite merchDisp={webVeoMerch} />
         </>}
         {minisiteDisp==="WuanTake"&&<>
           <WuanTakeMiniSite />

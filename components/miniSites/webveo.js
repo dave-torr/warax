@@ -68,7 +68,6 @@ const eachepisodeDisplayer=(episodeList)=>{
 
     return(<>
         <div className={styles.episodePicker}>
-            <h2>Temporada #3: </h2>
             {eachEpisodeList}
         </div>
     </>)
@@ -77,25 +76,32 @@ const eachepisodeDisplayer=(episodeList)=>{
 const youtubeEmbedder=()=>{
     return(
         <>
-        <div>
             <iframe width="560" height="315" src={`https://www.youtube.com/embed/${selectedEp.embeddiLink}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
         </>
     )
 }
-console.log(selectedEp)
 
+const webVeoSessDisp=()=>{
+    return(
+        <>
+            <div className={styles.seasonIntrotitle}> WebVeo Sessions </div>
+            <div className={styles.webVeoSessIntro}> Increibles temas grabados en vivo desde Warax Studios</div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EUFxlMliUNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </>
+    )
+}
 
 return(<>
-<br></br> 
-<br></br> 
     <div className={styles.miniSiteGenCont}>
+        <div className={styles.webVeoIntroBanner}> 
         <Image
             src="/assets/icons/webVeoFirma.png"
             height={388}
             width={1318}
             alt="WebVeo landing Cover"
         />    
+        </div>
+        <div className={styles.seasonIntrotitle}> Temporada 3 </div>
         <div className={styles.episodeListAndPlayer}> 
             {eachepisodeDisplayer(episodeArr)}
             {youtubeEmbedder()}
@@ -105,6 +111,11 @@ return(<>
             <h3> {selectedEp.episodeName} </h3>
             <p> {selectedEp.episodeDescription} </p>
         </div>
+        {webVeoSessDisp()}
+        <br></br>
+        <br></br>
+        <br></br>
+        <div className={styles.seasonIntrotitle}> WebVeo - Merch </div>
         {props.merchDisp()}
         <div className={styles.webVeoLogo}> <Image
             src="/assets/icons/webVeoColor.png"
