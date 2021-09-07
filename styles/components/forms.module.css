@@ -1,0 +1,44 @@
+.formContainer{
+    border-top: solid 2px var(--purple-highlight);
+    margin-top: 15px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.anInputCont{
+    padding: 6px 12px;
+    margin: 3px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .anInputLabel{
+
+}
+
+.aFormInput{
+
+} */
+
+.submitBTN{
+  margin: 12px;
+  padding: 12px;
+  background-color: var(--purple-highlight);
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+
+    .formContainer{
+        width: 100%;
+    }
+
+}

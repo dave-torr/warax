@@ -134,6 +134,8 @@
     padding: 3px;
 }
 
+
+
 .anInputCont{
     padding: 6px 12px;
     margin: 3px;
@@ -172,6 +174,7 @@
         border-bottom: solid 1px black;
         padding: unset;
         margin-top: 9px;
+        height: unset;
     }
     .aPriceBox:first-of-type{
         border: unset;
