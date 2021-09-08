@@ -94,7 +94,9 @@ const eachepisodeDisplayer=(episodeList)=>{
             <select className={styles.episodeDropdown} onChange={(e)=>{
                 console.log(JSON.parse(e.target.value))
                 setSelectedEp(JSON.parse(e.target.value))
-            }}> {eachEpisodeListSELECT} </select>
+            }}> 
+            <option>Elige un Episodio!</option>
+            {eachEpisodeListSELECT} </select>
         </div>
     </>)
 }
