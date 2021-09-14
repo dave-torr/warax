@@ -80,7 +80,7 @@ export function Navi(props){
                     {props.waraxCart.length} <ShoppingCartIcon /> 
                 </div> </>}
 
-{/* some changes must occur */}
+    {/* some changes must occur */}
 
                 {/* {props.minisiteDisp==="WuanTake"?<>
                     <div className={styles.miniSiteLinkActive}>
@@ -94,9 +94,11 @@ export function Navi(props){
                         }}>
                         #WuanTake
                     </div>
-                </>}
+                </>} */}
 
-                {props.minisiteDisp==="WaraxTv"?<>
+
+
+                {/* {props.minisiteDisp==="WaraxTv"?<>
                     <div className={styles.miniSiteLinkActive}>
                         #WaraxTv
                     </div>

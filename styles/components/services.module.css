@@ -167,8 +167,6 @@
     padding: 3px;
 }
 
-
-
 .anInputCont{
     padding: 6px 12px;
     margin: 3px;
@@ -212,5 +210,23 @@
     .aPriceBox:first-of-type{
         border: unset;
         border-bottom: solid 1px black;
+    }
+
+    .contactFormModal{
+        width: 280px;
+    }
+    .contactForm{
+        width: 280px;
+    }
+    .contactIntro{
+        width: 250px;
+        text-align: center;
+    }
+    .contactIconCont{
+        width: 250px;
+    }
+    .anInputCont{
+        flex-direction: column;
+        width: fit-content;
     }
 }

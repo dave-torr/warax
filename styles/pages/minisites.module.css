@@ -22,12 +22,16 @@
     padding-bottom: 15px;
 }
 
+.webveoPageCont{
+    width: 1000px;
+}
+
 .episodeListAndPlayer{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 15px;
+    padding: 15px 0;
 }
 
 .episodePicker{
@@ -48,6 +52,7 @@
 .youTubeIframCont{
     box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.564);
     background-color: blueviolet;
+    width: fit-content;
 }
 
 .youTubeIframContMOBILE{
@@ -116,11 +121,64 @@
 .webVeoSessIntro{
     font-size: 1.4em;
     margin-bottom: 15px;
+    text-align: center;
 }
 
+.wevVeoSessCont{
+    display: flex;
+    justify-content: center;
+}
 
+/* HOME BANNER */
+.webveoBannerCont{
+    margin: 21px;
+    display: flex;
+    flex-direction: column;   
+    background-color: white;
+    box-shadow: var(--generalBoxShadow);
+    width: 420px;
+    padding: 15px;
+    cursor: pointer;
+    transition: var(--general-transition);
+}
+
+.webveoBannerCont:hover{
+    box-shadow: var(--aHighlightBoxShadow);
+    color: white;
+    background-color: rgb(50, 50, 50);
+}
+
+.webveoBannerCont i{
+    font-weight: 400;
+    border-top: solid 1px black;
+    padding: 18px 15px;
+    margin-top: 33px;
+    font-size: 0.8em;
+
+}
+.webveoBannerCont h1{
+    font-weight: 500;
+    font-size: 2.3em;
+    text-transform: capitalize;
+    margin: unset;
+    padding: unset;
+}
+
+.webveoBannerCont h3{
+    margin: unset;
+    padding: 18px 15px;
+    font-weight: 400;
+}
+
+.webVeoBannerLogo{
+    background-color: white;
+    padding: 9px;
+}
 
 @media (max-width: 1000px) {
+    .webveoPageCont{
+        width: 100%;
+    }
 
     .episodePicker{
         display: none;
@@ -132,10 +190,6 @@
 
     .youTubeIframCont{
         display: none;
-    }
-
-    .episodeListAndPlayer{
-        flex-direction: column;
     }
 
     .youTubeIframContMOBILE{
@@ -160,3 +214,19 @@
         box-shadow: var(--generalBoxShadow);
     }
 }
+@media (max-width: 700px) {
+    .episodeDescription h3{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .episodeDescription p{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .episodeListAndPlayer{
+        flex-direction: column;
+    }
+}
+
+

@@ -53,7 +53,7 @@ export function ServiceDisp(props){
             <><Dialog open={contactModTrig} onClose={()=>{
                 setContactObj({})
                 setContactModTrig(false)}
-                } maxWidth="lg">
+                } maxWidth="xl">
             <div className={styles.contactFormModal}>
                 <div className={styles.contactIntro}>Escribenos un mensaje o Email: </div>
                 <div className={styles.contactIconCont}>
@@ -66,7 +66,8 @@ export function ServiceDisp(props){
                 {/* factura checkbox */}
                 {/* Submit BTN */}
             </div>
-            </Dialog></>
+            </Dialog>
+            </>
         )
     }
 

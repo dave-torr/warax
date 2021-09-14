@@ -16,7 +16,7 @@ import {SalesForm} from "./../components/forms"
 import {MerchDisp} from "./../components/merch"
 import {ServiceDisp} from "./../components/services"
 
-import {WebveoMiniSite } from "./../components/miniSites/webveo"
+import {WebveoMiniSite, WebVeoHomeBanner } from "./../components/miniSites/webveo"
 import {WuanTakeMiniSite, WaraxTvMiniSite} from "./../components/miniSites/waraxMinisites"
 
 import Snackbar from '@material-ui/core/Snackbar';
@@ -375,7 +375,6 @@ export default function Home() {
     )
   }
   const servicedisp=()=>{
-
     return(
       <>
         <div className={styles.aHomeSection}>
@@ -389,7 +388,6 @@ export default function Home() {
       </>
     )
   }
-
 
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
@@ -411,6 +409,12 @@ export default function Home() {
         {pageDisplayer==="home"&&<>
             {homeLanding()}
             {/* {anEventDisp()} */}
+            <div style={{display: "flex", justifyContent: "center", width: "100%"}}> 
+              <WebVeoHomeBanner 
+                setMinisite={setMinisite}
+                setPageDisplayer={setPageDisplayer}
+              />
+            </div>
             {merchDisp()}
             {servicedisp()}
         </>}
