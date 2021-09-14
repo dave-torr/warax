@@ -15,13 +15,13 @@ let menuOptsArr=[
     ]
 
 // for floating mobile menu
-let menuIconArr=[
-        <AssignmentIndIcon />,
-        <MicIcon />,
-        <AlbumIcon />,
-        <TvIcon />,
-        <MenuBookIcon />
-    ]
+// let menuIconArr=[
+        // <AssignmentIndIcon />,
+        // <MicIcon />,
+        // <AlbumIcon />,
+        // <TvIcon />,
+        // <MenuBookIcon />
+    // ]
 
     // Bio
     // Merch
@@ -29,5 +29,11 @@ let menuIconArr=[
     // discografia
     // eventos
     // 
+
+    return(
+        <>
+        Guana MC Landing Page
+        </>
+    )
 
 }
