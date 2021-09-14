@@ -62,13 +62,20 @@ let episodeArr= [
         "embeddiLink": "jFCvd0WE8DM",
         "episodeDescription": "En este episodio nos acompaña la talentosísima Begoña Salas, artista plástica, pintora, tarotista y amante de la cocina. No te pierdas esta lectura única del tarot por Bego Salas a Guanaco, desde los estudios de Warax Arte."
     },    
+    {
+        "episodeNum": 9,
+        "season": 3,
+        "episodeName": "Mac Tempo - El WEBVEO",
+        "embeddiLink": "XijAg3nqOE0",
+        "episodeDescription": "En este episodio nos acompaña el genio rítmico del rap Mac Tempo, actual campeón nacional de la Redbull Batalla de Gallos, escritor, rapero y una persona increíble. No te pierdas este freestyle de Mac Tempo junto a la Waráx Band, directamente desde los estudios de Waráx Arte."
+    },    
 ]
 
 useEffect(()=>{
     window.scrollTo(0,0)
 },[])
 
-const [selectedEp, setSelectedEp]=useState(episodeArr[7])
+const [selectedEp, setSelectedEp]=useState(episodeArr[8])
 
 const eachepisodeDisplayer=(episodeList)=>{
 

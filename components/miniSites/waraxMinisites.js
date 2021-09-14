@@ -2,6 +2,8 @@
 
 export function WuanTakeMiniSite(props){
 
+    
+
 return(<>
 <br></br> 
 <br></br> 
