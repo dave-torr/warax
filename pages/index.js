@@ -326,7 +326,7 @@ export default function Home() {
               layout="fill" objectFit="cover"
               alt="Warax Concerts Image - Saxophone player with Band"
             /></div>
-          <div className={styles.homeSplashText}> WARAX <strong>LO HACE REAL</strong> </div>
+          <div className={styles.homeSplashText}> WARáX <strong>LO HACE REAL</strong> </div>
           </div> 
         </div>
       </>
