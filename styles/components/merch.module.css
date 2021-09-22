@@ -17,7 +17,7 @@
 .merchDescCont{
     display: flex;
     flex-direction: column;
-    padding: 12px;
+    padding: 0 12px;
     width: 210px;
     justify-content: space-between;
     height: 220px;
@@ -50,10 +50,7 @@
 }
 
 .proPrice{
-    width: 100%;
-    text-align: end;
     font-size: 1.2em;
-
 }
 
 .addToCart{

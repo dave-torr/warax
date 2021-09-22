@@ -62,15 +62,18 @@ let theItem = props.merchItem
                     />
                 </div>
                 <div className={styles.merchDescCont}>
-                    <div>
-                        <div className={styles.merchListing}> merch / {theItem.productCateg} </div>
-                        <h2> {theItem.prodName} </h2>
-                        <h5> {theItem.associatedActs} </h5>
-                    </div>
-                    <div className={styles.proPrice}>${theItem.priceObj.price} </div>
+                    <div className={styles.merchListing}> merch / {theItem.productCateg} </div>
+                    <h2> {theItem.prodName} </h2>
 
-                    <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}> 
-                    Comprar <AddShoppingCartIcon /> </div> 
+                    <div>
+                        <div style={{display: "flex", justifyContent: "space-between", alignItems:"center"}}>
+                            <h5> {theItem.associatedActs} </h5>
+                            <div className={styles.proPrice}>${theItem.priceObj.price} </div>
+                        </div>
+
+                        <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}> 
+                        Comprar <AddShoppingCartIcon /> </div> 
+                    </div>
 
                 </div>
             </div>

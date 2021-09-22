@@ -35,8 +35,7 @@
 }
 
 .episodePicker{
-    padding: 15px 0;
-    padding-left: 15px;
+    padding: 15px 0 15px 15px;
     background-color: white;
     border-radius: 5px;
     box-shadow: var(--generalBoxShadow);
@@ -46,6 +45,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 360px;
+    overflow-y: scroll;
 }
 
 
@@ -87,23 +87,28 @@
     box-shadow: var(--generalBoxShadow);
 }
 
+.epDesTitle{
+    margin: 0 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px var(--purple-highlight);
+    border-radius: 5px;
+    
+}
+
 .episodeDescription h5{
     padding: unset;
     margin: unset;
-    text-align: end;
-    padding: 15px;
     font-size: 1.4em;
     font-weight: 200;
-    width: 70%;
-    margin-left: 15%;
+    padding-right: 12px;
 }
+
 .episodeDescription h3{
     font-size: 1.5em;
     padding: 15px;
     margin: unset;
-    border-bottom: solid 2px var(--purple-highlight);
-    width: 70%;
-    margin-left: 15%;
 }
 
 .episodeDescription p{

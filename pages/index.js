@@ -445,11 +445,8 @@ export default function Home() {
         {minisiteDisp==="WaraxTv"&&<>
           <WaraxTvMiniSite />
         </>}
-
-
       </div>
       <Footer />
-
       {cartModal()}
       {itemAddedAlert()}
     </>

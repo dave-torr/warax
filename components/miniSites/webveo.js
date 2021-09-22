@@ -69,14 +69,22 @@ let episodeArr= [
         "embeddiLink": "XijAg3nqOE0",
         "episodeDescription": "En este episodio nos acompaña el genio rítmico del rap Mac Tempo, actual campeón nacional de la Redbull Batalla de Gallos, escritor, rapero y una persona increíble. No te pierdas este freestyle de Mac Tempo junto a la Waráx Band, directamente desde los estudios de Waráx Arte."
     },    
+    {
+        "episodeNum": 10,
+        "season": 3,
+        "episodeName": "Fresa Malakian - El WEBVEO",
+        "embeddiLink": "OqIr30BxfZw",
+        "episodeDescription": "En este episodio nos acompaña la increíble Fresa Malakian, body fitness coach, bailarina, presentadora, amante de los tatuajes y por supuesto la actual Twerking queen del Ecuador. No te pierdas la entrevista única junto a Fresa Malakian con Guanaco, desde los estudios de Warax Arte."
+    },    
 ]
 
+
+let epIndex = episodeArr.length-1
+const [selectedEp, setSelectedEp]=useState(episodeArr[epIndex])
 useEffect(()=>{
     window.scrollTo(0,0)
+    setSelectedEp
 },[])
-
-const [selectedEp, setSelectedEp]=useState(episodeArr[8])
-
 const eachepisodeDisplayer=(episodeList)=>{
 
     let eachEpisodeList= episodeList.map((elem, i)=><React.Fragment key={i}>
@@ -111,7 +119,6 @@ const eachepisodeDisplayer=(episodeList)=>{
         </div>
     </>)
 }
-
 const youtubeEmbedder=()=>{
     return(
         <>
@@ -124,7 +131,6 @@ const youtubeEmbedder=()=>{
         </>
     )
 }
-
 const webVeoSessDisp=()=>{
     return(
         <>
@@ -159,8 +165,10 @@ return(<>
                 {youtubeEmbedder()}
             </div>
             <div className={styles.episodeDescription}>
-                <h5> Ep. {selectedEp.episodeNum} / S. 3 </h5>
-                <h3> {selectedEp.episodeName} </h3>
+                <div className={styles.epDesTitle}>
+                    <h3> {selectedEp.episodeName} </h3>
+                    <h5> Ep. {selectedEp.episodeNum} / S. 3 </h5>
+                </div>
                 <p> {selectedEp.episodeDescription} </p>
             </div>
             {webVeoSessDisp()}

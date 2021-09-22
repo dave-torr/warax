@@ -126,9 +126,13 @@ export function Navi(props){
                             src={"/assets/icons/waraxLogoBLK.png"}
                             height={70}
                             width={190}
+                            style={{cursor: "pointer"}}
                             alt="Warax Logo"
-                            onClick={()=>{props.setPageDisplayer("home") 
-                            window.scrollTo({ top: 0, behavior: "smooth" })} }
+                            onClick={()=>{
+                                props.setPageDisplayer("home") 
+                                props.setMinisite(null)
+                                window.scrollTo({ top: 0, behavior: "smooth" })
+                                }}
                             />
                         <div className={styles.naviBTNCont}>
                             <div>
@@ -241,7 +245,7 @@ export function Footer(props){
                     />
                     </a>
                 </Link>
-                <iframe src="https://giphy.com/embed/l41YbRMqR9jrrCodq" width="120" height="120" frameBorder="0"></iframe>
+                {/* <iframe src="https://giphy.com/embed/l41YbRMqR9jrrCodq" width="120" height="120" frameBorder="0"></iframe> */}
             </div>
         </>
     )
