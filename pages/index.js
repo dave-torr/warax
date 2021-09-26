@@ -30,7 +30,7 @@ let capBlack={
   "productCateg": "softGoods",
   "prodName":"Gorra - BLACK",
   "priceObj":{
-      "price": 30,
+      "price": 35,
       "productName": "Gorra Webveo - BLACK"
     },
   "merchIMG":{
@@ -45,7 +45,7 @@ let capYellow={
   "productCateg": "softGoods",
   "prodName":"Gorra - LIME/ASH",
   "priceObj":{
-      "price": 30,
+      "price": 35,
       "productName": "Gorra Webveo - LIME/ASH"
     },
   "merchIMG":{
@@ -60,7 +60,7 @@ let capGrey={
   "productCateg": "softGoods",
   "prodName":"Gorra - ONYX/LIME",
   "priceObj":{
-      "price": 30,
+      "price": 35,
       "productName": "Gorra Webveo - Onyx/Grey"
     },
   "merchIMG":{

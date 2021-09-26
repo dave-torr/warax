@@ -92,5 +92,6 @@
     }
     .merchDescCont{
         width: 94%;
+        height: fit-content;
     }
 }
