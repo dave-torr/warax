@@ -135,7 +135,7 @@ let videoArr=[
         "videoTitle": "Lejos - Epicentro Arte En Vivo",
         "releaseDate": 2016,
         "videoType": "live music"
-    },
+    }
 ]
 
 // for floating mobile menu
