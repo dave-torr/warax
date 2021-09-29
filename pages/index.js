@@ -440,7 +440,7 @@ export default function Home() {
         {pageDisplayer==="home"&&<>
             {homeLanding()}
             {/* {anEventDisp()} */}
-            <div style={{display: "flex", justifyContent: "center", width: "100%"}}> 
+            <div className={styles.homeCardDispCont}> 
               <WebVeoHomeBanner 
                 setMinisite={setMinisite}
                 setPageDisplayer={setPageDisplayer}

@@ -136,6 +136,13 @@
   text-transform: capitalize;
 }
 
+.homeCardDispCont{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
 @media (max-width: 1080px) {
   .aSectiontitle{
     width: 100%;
