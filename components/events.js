@@ -4,7 +4,11 @@ import React, { useState } from "react"
 import { Dialog } from '@material-ui/core'
 
 import styles from "./../styles/components/eventDisp.module.css"
+
+// Material UI Icons
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import LocationOnIcon from '@material-ui/icons//LocationOn';
+import LocalPhoneIcon from '@material-ui/icons//LocalPhone';
 
 export function EventDisp(props){
 
@@ -122,6 +126,38 @@ export function EventPlaceholder(props){
             <div className={styles.eventPlaceholderTitle}> Muy pronto</div>
             <div className={styles.eventPlaceholderTitle2}> Los mejores eventos de la ciudad, más cerca de ti </div>
         </div>
+        </>
+    )
+}
+
+export function EventBanner(props){
+
+    // location
+    // contact
+    // buy now
+
+let locationIcon = <LocationOnIcon />
+let contactIcon = <LocalPhoneIcon />
+let shoppingIcon = <AddShoppingCartIcon />
+
+
+    return(
+        <>
+            <div className={styles.eventBannerGenCont}> 
+                <Image
+                    src={props.bannerData.src}
+                    width={props.bannerData.width}
+                    height={props.bannerData.height}
+                    alt={props.bannerData.alt}
+                />
+                <i>{props.bannerData.categorization} </i>
+                <h1> {props.bannerData.title} </h1>
+                <div className={styles.bannerIconContainer}>
+                    <a href={props.bannerData.location} target="_blank" ><div className={styles.aBannerIcon}> {locationIcon} </div></a>
+                    <a href={`tel:${props.bannerData.phone}`} rel="noopener" ><div className={styles.aBannerIcon}> {contactIcon} </div></a>
+                    {/* <div className={styles.aBannerIcon}> {shoppingIcon} </div> */}
+                </div>
+            </div>
         </>
     )
 }

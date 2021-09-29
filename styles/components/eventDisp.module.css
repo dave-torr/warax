@@ -185,6 +185,59 @@
     text-align: center;
 }
 
+/* ////////////////////////// */
+/* Event Banner Styles */
+/* ////////////////////////// */
+
+
+.eventBannerGenCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: var(--generalBoxShadow);
+    width: 300px;
+    margin: 21px;
+    padding: 15px;
+    cursor: pointer;
+    transition: var(--general-transition);
+
+}
+
+.bannerIconContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.aBannerIcon{
+
+}
+
+.eventBannerGenCont h1{
+    font-weight: 500;
+    font-size: 2.3em;
+    text-transform: capitalize;
+    margin: unset;
+    padding: unset;
+}
+
+.eventBannerGenCont i{
+    font-weight: 400;
+    border-top: solid 1px black;
+    padding: 18px 15px;
+    font-size: 0.8em;
+    width: 100%;
+}
+
+
+
+
+
+
+/* ////////////////////////// */
+/* ////////////////////////// */
 @media (max-width: 1080px) {
     .eventContainer{
         width: 96%;

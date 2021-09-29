@@ -136,12 +136,12 @@
 
 /* HOME BANNER */
 .webveoBannerCont{
-    margin: 21px;
     display: flex;
     flex-direction: column;   
     background-color: white;
     box-shadow: var(--generalBoxShadow);
-    width: 420px;
+    width: 300px;
+    margin: 21px;
     padding: 15px;
     cursor: pointer;
     transition: var(--general-transition);
@@ -159,8 +159,8 @@
     padding: 18px 15px;
     margin-top: 33px;
     font-size: 0.8em;
-
 }
+
 .webveoBannerCont h1{
     font-weight: 500;
     font-size: 2.3em;

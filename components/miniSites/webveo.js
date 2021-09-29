@@ -76,6 +76,13 @@ let episodeArr= [
         "embeddiLink": "OqIr30BxfZw",
         "episodeDescription": "En este episodio nos acompaña la increíble Fresa Malakian, body fitness coach, bailarina, presentadora, amante de los tatuajes y por supuesto la actual Twerking queen del Ecuador. No te pierdas la entrevista única junto a Fresa Malakian con Guanaco, desde los estudios de Warax Arte."
     },    
+    {
+        "episodeNum": 11,
+        "season": 3,
+        "episodeName": "Black Prince - El WEBVEO",
+        "embeddiLink": "9uk-t5DJ7SU",
+        "episodeDescription": "en este episodio nos acompaña Black Prince cantante,  músico, empresario, actual CEO de Moringa Power.No te pierdas este episodio de negocios y mucha musica con la improvisación de Black Prince  junto a la Waráx Band, directamente desde los estudios de Waráx Arte"
+    },    
 ]
 
 
@@ -202,7 +209,7 @@ export function WebVeoHomeBanner(props){
                 alt="WebVeo Icon"
             />
             </div>
-            <i>/ shows / Guanaco MC & Warax Arte</i>
+            <i>/ WaraxTv / Guanaco MC</i>
             <h1> Tercera temporada</h1>
             <h3> Nuevos episodios: Martes 8pm</h3>
         </div>

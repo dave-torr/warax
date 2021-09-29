@@ -11,7 +11,7 @@ import getStripe from './../utils/get-stripejs'
 import {StripeGeneralCheckout} from "./../components/paymentComp/stripeCardSetup"
 
 import {Navi, Footer} from "./../components/navi"
-import {EventDisp, EventPlaceholder} from "./../components/events"
+import {EventDisp, EventBanner, EventPlaceholder} from "./../components/events"
 import {SalesForm} from "./../components/forms"
 import {MerchDisp} from "./../components/merch"
 import {ServiceDisp} from "./../components/services"
@@ -129,6 +129,37 @@ let serviceThree={
     "alt": "Imagen - Estudio de Grabación en Iconico Warax"
   }
 }
+
+
+let fridayJazzHomeBannerData={
+  "width": 640,
+  "height": 640,
+  "alt": "Friday Night Jazz - Event Poster Image",
+  "src": "/assets/eventPosters/fridayJazzNights.jpeg",
+  "title": "Noches de Jazz",
+  "categorization": "/shows/Kony & Juan Correa",
+  "location": "https://goo.gl/maps/CeZugXAVw48A68hu8",
+  "phone": "",
+  "price": null,
+}
+
+let wrxSalsaEnsambleIMG={
+  "width": 640,
+  "height": 640,
+  "alt": "Warax Salsa Ensamble - Event Poster Image",
+  "src": "/assets/eventPosters/salsaEnsamble.jpeg",
+  "categorization": "/ shows / Waras Salsa Ensamble",
+  "title": "Orquesta de Salsa",
+  "location": "https://g.page/sabroso-restaurante-vivero?share",
+  "phone": "005930992985125",
+  "price": null,
+}
+
+
+
+
+
+
 export default function Home() {
 
 // State
@@ -414,6 +445,20 @@ export default function Home() {
                 setMinisite={setMinisite}
                 setPageDisplayer={setPageDisplayer}
               />
+
+
+
+
+
+              <EventBanner  
+                bannerData={wrxSalsaEnsambleIMG}
+              />
+
+
+
+
+
+
             </div>
             {merchDisp()}
             {servicedisp()}
