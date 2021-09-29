@@ -81,7 +81,7 @@ let episodeArr= [
         "season": 3,
         "episodeName": "Black Prince - El WEBVEO",
         "embeddiLink": "9uk-t5DJ7SU",
-        "episodeDescription": "en este episodio nos acompaña Black Prince cantante,  músico, empresario, actual CEO de Moringa Power.No te pierdas este episodio de negocios y mucha musica con la improvisación de Black Prince  junto a la Waráx Band, directamente desde los estudios de Waráx Arte"
+        "episodeDescription": "En este episodio nos acompaña Black Prince cantante,  músico, empresario, actual CEO de Moringa Power.No te pierdas este episodio de negocios y mucha musica con la improvisación de Black Prince  junto a la Waráx Band, directamente desde los estudios de Waráx Arte"
     },    
 ]
 
