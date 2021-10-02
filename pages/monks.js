@@ -328,7 +328,6 @@ export default function MonksPage(props){
                 {discographieDisp(AlbumArr, 2)}
                 {videosDisp([], 3)}
                 {lyricsDisp(artistData.lyrics, 4)}
-
             </div>
         </div>
         </>

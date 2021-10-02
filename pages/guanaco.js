@@ -1,7 +1,11 @@
 import React, { useState } from "react"
 import Image from "next/image"
 
+import GuanacoData from "./../data/guanaco.json"
+
 import {NaviTwo} from "./../components/navi"
+
+import styles from "./../styles/pages/guanaco.module.css"
 
 export default function GuanacoPage(props){
 
@@ -25,118 +29,6 @@ let managementEmail = "mabelenlara@gmail.com"
 
 let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/7hU7xPPEEDgzWw3Ao8SupC?theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
-let albumArr=[
-    {
-        "imageLink": "/cholonizacion.jpg",
-        "albumName": "Cholonizacion",
-        "releaseYear": 2021,
-        "youtubeMusicLink": "https://music.youtube.com/playlist?list=OLAK5uy_nFYVYV8LDK6AFgW1ZJke2lQlZctv8rHQk&feature=share",
-        "spotifyLink": "https://open.spotify.com/album/1GQi1yenQMfJPqUz1toqvm?si=DpGLyxdjRIm0jCTNDwu1AA&dl_branch=1"
-    },
-    {
-        "imageLink": "/blasfemia.jpg",
-        "albumName": "Blasfemia",
-        "releaseYear": 2018,
-        "youtubeMusicLink": "https://music.youtube.com/playlist?list=OLAK5uy_mwJn2-rybQnKD1C-USEb0VxuZTsKaT29w&feature=share",
-        "spotifyLink": "https://open.spotify.com/album/0jdWJQNZGVPurfLKVvXeje?si=geJ8o3MAQwGYhdCbaGdSOw&dl_branch=1"
-    },
-    {
-        "imageLink": "/raiz.jpg",
-        "albumName": "Raiz",
-        "releaseYear": 2013,
-        "youtubeMusicLink": "https://music.youtube.com/playlist?list=OLAK5uy_msXDNHZu8Kn7lyjyrWLwaSh4R-I4z9YfA&feature=share",
-        "spotifyLink": "https://open.spotify.com/album/5mD62fu4zrv7GVdnPevo8H?si=yNFgZ_roQ8eJzwwgg5gqYg&dl_branch=1"
-    },
-    {
-        "imageLink": "/raiz.jpg",
-        "albumName": "Primer Round",
-        "releaseYear": 2007,
-        "youtubeMusicLink": "https://music.youtube.com/playlist?list=OLAK5uy_lIpfBMtb7cMLVREnXmIW8G3_wrPZvbkYI&feature=share",
-        "spotifyLink": "https://open.spotify.com/album/5mPDuemk0uvLVF76JhZLiB?si=fafAo-ejRpK63s3HJ9hi5w&dl_branch=1"
-    },
-    {
-        "imageLink": "/leccionesDeSana.jpg",
-        "albumName": "Lecciones de Saña y Maña",
-        "releaseYear": 2002,
-        "youtubeMusicLink": "https://music.youtube.com/playlist?list=OLAK5uy_lDjF3AdsPQmVLLkVyhUzFhhBIdjyDOXvY&feature=share",
-        "spotifyLink": "https://open.spotify.com/album/27yUzP6UJ4vu25TdDrZIvO?si=d9kSW8BJTUq5KKHC3oEOhQ&dl_branch=1"
-    },
-]
-
-let videoArr=[
-    {
-        "videoLink": "PWxuAbU3axQ",
-        "videoTitle": "Cholonización ft. Emicida",
-        "releaseDate": 2018,
-        "videoType": "music video"
-    },
-    {
-        "videoLink": "JQJbkOH9TPA",
-        "videoTitle": "MUÉVETE ft. Karina Clavijo",
-        "releaseDate": 2018,
-        "videoType": "music video"
-    },
-    {
-        "videoLink": "FnfD8S3CwQs",
-        "videoTitle": "EPK Blasfemia",
-        "releaseDate": 2016,
-        "videoType": "EPK"
-    },
-    {
-        "videoLink": "IXCvWzSxulo",
-        "videoTitle": "El Original",
-        "releaseDate": 2018,
-        "videoType": "music video"
-    },
-    {
-        "videoLink": "a5CB7BFGj8M",
-        "videoTitle": "Siembra",
-        "releaseDate": 2012,
-        "videoType": "music video"
-    },
-    {
-        "videoLink": "91L3pO8X9aE",
-        "videoTitle": "Vamos pa la calle ft. Elder",
-        "releaseDate": 2013,
-        "videoType": "music video"
-    },
-    {
-        "videoLink": "J_RvnNMgDN4",
-        "videoTitle": "Fuego (Feat. Alika)",
-        "releaseDate": 2018,
-        "videoType": "music video"
-    },
-    {
-        "videoLink": "2tMrIXRId80",
-        "videoTitle": "EPK 2013 - 2014",
-        "releaseDate": 2013,
-        "videoType": "EPK"
-    },
-    {
-        "videoLink": "TKDM9bZ8PBU",
-        "videoTitle": "Me Voy - Sesiones Al Parque",
-        "releaseDate": 2019,
-        "videoType": "live music"
-    },
-    {
-        "videoLink": "KvUueg4GCYo",
-        "videoTitle": "Soledad - Epicentro Arte En Vivo",
-        "releaseDate": 2016,
-        "videoType": "live music"
-    },
-    {
-        "videoLink": "PJm001Zu7TQ",
-        "videoTitle": "Canción Para Juan - Epicentro Arte En Vivo",
-        "releaseDate": 2016,
-        "videoType": "live music"
-    },
-    {
-        "videoLink": "zhkrJ1G-Ajk",
-        "videoTitle": "Lejos - Epicentro Arte En Vivo",
-        "releaseDate": 2016,
-        "videoType": "live music"
-    }
-]
 
 // for floating mobile menu
 // let menuIconArr=[
@@ -157,10 +49,76 @@ let videoArr=[
 // Landing: 
 // Cholonizacion landing. Spotify mini player, Merch, 
 
+    const [pickedMusicVideo, setMusicVideo] = useState(GuanacoData.videoArr[0])
+    const eachVideoDisp=(eachVideoData)=>{
+        return(
+            <>
+                <div className={styles.eachVideoDisplayer}> 
+                    <div className={styles.youtubeDisp}> <iframe width="560" height="315" src={`https://www.youtube.com/embed/${eachVideoData.videoLink}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>
+                    <div className={styles.youtubeDispMOBILE}> <iframe width="320" height="190" src={`https://www.youtube.com/embed/${eachVideoData.videoLink}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>
+                    <div className={styles.videoData}> 
+                        <i> {eachVideoData.videoType} </i>
+                        <h1> {eachVideoData.videoTitle} </h1>
+                        <h3> {eachVideoData.releaseDate} </h3>
+                    </div>
+                </div>
+            </>
+        )
+    }
+
+    const videoDisplayer=()=>{
+        let videoSelector=GuanacoData.videoArr.map((elem, i)=><React.Fragment>
+            <option className={styles.eachVideoOption} value={i}>{ elem.videoTitle} </option>
+        </React.Fragment>)
+        return(
+            <>
+            <div className={styles.musicVideoSection}>
+            <h2>VIDEOS</h2>  
+                <select className={styles.videoPickerBox} onChange={(e)=>{
+                    setMusicVideo(GuanacoData.videoArr[e.target.value])
+                }}>{videoSelector}</select>
+                {eachVideoDisp(pickedMusicVideo)}
+            </div>
+            </>
+        )
+    }
+    const guanacoLandingSplash=()=>{
+        return(
+            <>
+            <div className={styles.homeSplash}>
+            <div className={styles.homeSplashIMG}>
+            <Image
+              src={"/assets/bands/guanaco/pics/homeLanding2.jpg"}
+              width={1442}
+              height={1042}
+              alt="Guanaco MC - Cholonizacion Landing Image"
+            /></div>
+            <div className={styles.homeSplashIMGMobi}>
+            <Image
+              src={"/assets/bands/guanaco/pics/homeLanding2.jpg"}
+              layout="fill" objectFit="cover"
+              alt="Guanaco MC - Cholonizacion Landing Image"
+            /></div>
+            <div className={styles.guanacoLogo}>
+            <Image 
+                src="/assets/bands/guanaco/logoGold.png"
+                height={155}
+                width={930}
+                alt="Guanaco MC Logo - GOLD"
+            /></div>
+            </div>
+            </>
+        )
+    }
+
     return(
         <>
-        Guana MC Landing Page
+        <div className={styles.guanacoMCGenPAge}>
+            {guanacoLandingSplash()}
+            <div className={styles.aBandPage}>
+                {videoDisplayer()}
+            </div>
+        </div>
         </>
     )
-
 }

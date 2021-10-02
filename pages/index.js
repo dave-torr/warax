@@ -446,18 +446,9 @@ export default function Home() {
                 setPageDisplayer={setPageDisplayer}
               />
 
-
-
-
-
               <EventBanner  
                 bannerData={wrxSalsaEnsambleIMG}
               />
-
-
-
-
-
 
             </div>
             {merchDisp()}
