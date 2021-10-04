@@ -6,11 +6,14 @@ import GuanacoData from "./../data/guanaco.json"
 import {Footer} from "./../components/navi"
 
 import InstagramIcon from '@material-ui/icons/Instagram';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
+
+import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 
 import styles from "./../styles/pages/guanaco.module.css"
 
@@ -44,7 +47,7 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
 // let menuIconArr=[
         // <AssignmentIndIcon />,
         // <MicIcon />,
-        // <AlbumIcon />,
+        // <PlayArrowIcon />,
         // <TvIcon />,
         // <MenuBookIcon />
     // ]
@@ -58,6 +61,11 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
 
 // Landing: 
 // Cholonizacion landing. Spotify mini player, Merch, 
+
+/////////////////////////////////////
+/////////////////////////////////////
+// home sections
+/////////////////////////////////////
 
     const [pickedMusicVideo, setMusicVideo] = useState(GuanacoData.videoArr[0])
     const eachVideoDisp=(eachVideoData)=>{
@@ -91,6 +99,57 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
             </>
         )
     }
+    ////////////////////////////////
+    const [aPickedAlbum, setAPickedAlbum] = useState(GuanacoData.albumArr[0])
+    const albumDisplayer=()=>{
+        let eachAlbumCover=GuanacoData.albumArr.map((elem, i)=><React.Fragment key={i}>
+            {(aPickedAlbum != GuanacoData.albumArr[i]) &&<>
+            <div className={styles.eachAlbumCover} onClick={()=>setAPickedAlbum(GuanacoData.albumArr[i])}><Image 
+                src={`/assets/bands/guanaco/albums${elem.imageLink}`}
+                height={350}
+                width={350}
+                alt={`${elem.albumName} - Disco por Guanaco MC`}
+            /></div></>}
+        </React.Fragment>)
+        return(
+            <>
+            <div className={styles.albumDisplayerSection}>
+                <h2>DISCOGRAFIA</h2>
+                {aPickedAlbum===GuanacoData.albumArr[0] && <>
+                    <div className={styles.newDiscTitle}><WarningAmberIcon />&nbsp; &nbsp; &nbsp; DISCO NUEVO &nbsp; &nbsp; &nbsp; <WarningAmberIcon /> </div>
+                </>} 
+                <div className={styles.albumDataDisplayer}>
+                    <div className={styles.aPickedAlbumCont}>
+                        <div className={styles.aPickedAlbumIMG}><Image 
+                            src={`/assets/bands/guanaco/albums${aPickedAlbum.imageLink}`}
+                            height={350}
+                            width={350}
+                            alt={`${aPickedAlbum.albumName} - Disco por Guanaco MC`}
+                        /></div>
+                        <div className={styles.anAlbumData}>
+                            <div> L/P || {aPickedAlbum.releaseYear} </div>
+                            <h1>{aPickedAlbum.albumName} </h1>
+                            <div className={styles.albumMediaLinks}> 
+                                <a href={aPickedAlbum.youtubeMusicLink} target="_blank" rel="noopener" > <PlayArrowIcon /></a>
+                                <a href={aPickedAlbum.spotifyLink} target="_blank" rel="noopener" > {SpotifyIcon}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.albumCoverCont}>
+                    {eachAlbumCover}
+                </div>
+            </div>
+            </>
+        )
+    }
+
+
+/////////////////////
+////////////////////
+// DISPLAY ELEMENTS
+///////////////////
+
     const guanacoLandingSplash=()=>{
         return(
             <>
@@ -182,6 +241,7 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
             {guanaMCHead()}
             {guanacoLandingSplash()}
             <div className={styles.aBandPage}>
+                {albumDisplayer()}
                 {videoDisplayer()}
             </div>
             {GuanacoMCFooter()}

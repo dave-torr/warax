@@ -27,6 +27,7 @@
     transition: 1s;
 }
 .guanacoLogo2{
+    transition: 1s;
     position: absolute;
     bottom: calc(0vh + 90px);
     width: 40%;
@@ -44,12 +45,15 @@
     display: flex;
     flex-direction: column;
     color: white;
+    background-image: url("/assets/bands/guanaco/pics/homeLanding.jpg");
 }
 
 .musicVideoSection h2{
     font-size: 2.5em;
     font-weight: 400;
 }
+
+
 
 .videoPickerBox{
     padding: 15px 21px;
@@ -103,6 +107,101 @@
     font-size: 1.5em;
 }
 
+.newDiscTitle{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.albumDisplayerSection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.albumDisplayerSection H2{
+    color: white;
+    font-size: 2.5em;
+    font-weight: 400;
+    padding-left: 21px;    
+}
+.albumCoverCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.eachAlbumCover{
+    width: 25%;
+    filter: brightness(0.5);
+    transition: 1s;
+}
+
+.eachAlbumCover:hover{
+    filter: none;
+
+}
+
+.albumDataDisplayer{
+    margin: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aPickedAlbumCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.anAlbumData{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid 1px white;
+    padding: 12px;
+    width: 320px;
+    padding-top: 66px;
+}
+
+.anAlbumData h1{
+    font-weight: 400;
+    margin: unset;
+    margin: 9px 0;    
+}
+
+.albumMediaLinks{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 21px 0;
+    border-top: solid 1px white;
+    margin: 15px 0;
+}
+
+.albumMediaLinks a{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    padding: 6px;
+    width: fit-content;
+}
+
+/*  FOOTER */
 .guanacoFooter{
   display: flex;
   flex-direction: column;
@@ -142,13 +241,41 @@
 }
 
 @media (max-width: 1080px) {
-  
+
 }
 
 @media (max-width: 700px) {
 
     .guanacoLogo{
         width: 70%;
+    }
+    .guanacoLogo2{
+        width: 70%;
+    }
+
+    .eachAlbumCover{
+       width: 50%;
+    }
+
+    .anAlbumData{
+        text-align: center;
+    }
+
+    .aPickedAlbumCont{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerIMG{
+        width: 75%;
+    }
+
+    .socialLinksCont{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .socialLinksCont a{
+        margin: 6px;
     }
 
     .homeSplashIMG{
