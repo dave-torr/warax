@@ -12,6 +12,7 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
+import NewReleasesIcon from '@mui/icons-material/NewReleases';
 
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 
@@ -104,7 +105,11 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
     const albumDisplayer=()=>{
         let eachAlbumCover=GuanacoData.albumArr.map((elem, i)=><React.Fragment key={i}>
             {(aPickedAlbum != GuanacoData.albumArr[i]) &&<>
-            <div className={styles.eachAlbumCover} onClick={()=>setAPickedAlbum(GuanacoData.albumArr[i])}><Image 
+            <div className={styles.eachAlbumCover} onClick={()=>
+                {setAPickedAlbum(GuanacoData.albumArr[i])
+                let aBTNAnchor = document.getElementById("GuanacoAlbumDisp")
+                    aBTNAnchor.scrollIntoView({behavior: "smooth"})
+                }}><Image 
                 src={`/assets/bands/guanaco/albums${elem.imageLink}`}
                 height={350}
                 width={350}
@@ -113,10 +118,10 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
         </React.Fragment>)
         return(
             <>
-            <div className={styles.albumDisplayerSection}>
+            <div className={styles.albumDisplayerSection} id="GuanacoAlbumDisp">
                 <h2>DISCOGRAFIA</h2>
                 {aPickedAlbum===GuanacoData.albumArr[0] && <>
-                    <div className={styles.newDiscTitle}><WarningAmberIcon />&nbsp; &nbsp; &nbsp; DISCO NUEVO &nbsp; &nbsp; &nbsp; <WarningAmberIcon /> </div>
+                    <div className={styles.newDiscTitle}><WarningAmberIcon /> <NewReleasesIcon /> &nbsp; &nbsp; &nbsp; DISCO NUEVO &nbsp; &nbsp; &nbsp; <NewReleasesIcon /> <WarningAmberIcon /> </div>
                 </>} 
                 <div className={styles.albumDataDisplayer}>
                     <div className={styles.aPickedAlbumCont}>
@@ -156,16 +161,16 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
             <div className={styles.homeSplash}>
                 <div className={styles.homeSplashIMG}>
                 <Image
-                src={"/assets/bands/guanaco/pics/homeLanding2.jpg"}
-                width={1442}
-                height={1042}
-                alt="Guanaco MC - Cholonizacion Landing Image"
+                    src={"/assets/bands/guanaco/pics/homeLanding2.jpg"}
+                    width={1442}
+                    height={1042}
+                    alt="Guanaco MC - Cholonizacion Landing Image"
                 /></div>
                 <div className={styles.homeSplashIMGMobi}>
                 <Image
-                src={"/assets/bands/guanaco/pics/homeLanding2.jpg"}
-                layout="fill" objectFit="cover"
-                alt="Guanaco MC - Cholonizacion Landing Image"
+                    src={"/assets/bands/guanaco/pics/homeLanding.jpg"}
+                    layout="fill" objectFit="cover"
+                    alt="Guanaco MC - Cholonizacion Landing Image"
                 /></div>
                 <div className={styles.guanacoLogo}>
                 <Image 

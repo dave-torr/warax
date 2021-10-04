@@ -114,6 +114,7 @@
     align-items: center;
     font-weight: 600;
     font-size: 1.3em;
+    color: gold;
 }
 
 .albumDisplayerSection{
@@ -251,6 +252,9 @@
     }
     .guanacoLogo2{
         width: 70%;
+    }
+    .homeSplash:hover> .guanacoLogo {
+        transform: translate(4px, 3px);
     }
 
     .eachAlbumCover{
