@@ -1,13 +1,23 @@
 import React, { useState } from "react"
 import Image from "next/image"
-
+import Head from "next/head"
 import GuanacoData from "./../data/guanaco.json"
 
-import {NaviTwo} from "./../components/navi"
+import {Footer} from "./../components/navi"
+
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import EmailIcon from '@mui/icons-material/Email';
 
 import styles from "./../styles/pages/guanaco.module.css"
 
 export default function GuanacoPage(props){
+
+    let SoundCloudIcon = <Image src="/assets/icons/soundcloud.png" height={20} width={20} alt="SoundCloud Icon" />
+    let SpotifyIcon = <Image src="/assets/icons/spotify.png" height={20} width={20} alt="Spotify Icon" />
 
 // for large screen lateral menu
 let menuOptsArr=[
@@ -24,8 +34,8 @@ let facebookLink = "https://www.facebook.com/guanacomcoficial/"
 let youtubeLink = "https://www.youtube.com/channel/UCAbqgPCOhrOYMhpmPsbPXvg"
 let spotifyLink = "https://open.spotify.com/artist/7hU7xPPEEDgzWw3Ao8SupC?si=UIn1jimpTLer-Fgjv1csZg&dl_branch=1"
 let soundcloudLink = "https://soundcloud.com/guanaco-mc/tracks";
-let managmentNumber = "00593996027198";
-let managementEmail = "mabelenlara@gmail.com"
+let managmentNumber = "tel:00593996027198";
+let managementEmail = "mailto:mabelenlara@gmail.com?subject=Guanaco MC | Website Email"
 
 let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/7hU7xPPEEDgzWw3Ao8SupC?theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
@@ -65,7 +75,6 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
             </>
         )
     }
-
     const videoDisplayer=()=>{
         let videoSelector=GuanacoData.videoArr.map((elem, i)=><React.Fragment>
             <option className={styles.eachVideoOption} value={i}>{ elem.videoTitle} </option>
@@ -86,26 +95,82 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
         return(
             <>
             <div className={styles.homeSplash}>
-            <div className={styles.homeSplashIMG}>
-            <Image
-              src={"/assets/bands/guanaco/pics/homeLanding2.jpg"}
-              width={1442}
-              height={1042}
-              alt="Guanaco MC - Cholonizacion Landing Image"
-            /></div>
-            <div className={styles.homeSplashIMGMobi}>
-            <Image
-              src={"/assets/bands/guanaco/pics/homeLanding2.jpg"}
-              layout="fill" objectFit="cover"
-              alt="Guanaco MC - Cholonizacion Landing Image"
-            /></div>
-            <div className={styles.guanacoLogo}>
-            <Image 
-                src="/assets/bands/guanaco/logoGold.png"
-                height={155}
-                width={930}
-                alt="Guanaco MC Logo - GOLD"
-            /></div>
+                <div className={styles.homeSplashIMG}>
+                <Image
+                src={"/assets/bands/guanaco/pics/homeLanding2.jpg"}
+                width={1442}
+                height={1042}
+                alt="Guanaco MC - Cholonizacion Landing Image"
+                /></div>
+                <div className={styles.homeSplashIMGMobi}>
+                <Image
+                src={"/assets/bands/guanaco/pics/homeLanding2.jpg"}
+                layout="fill" objectFit="cover"
+                alt="Guanaco MC - Cholonizacion Landing Image"
+                /></div>
+                <div className={styles.guanacoLogo}>
+                <Image 
+                    src="/assets/bands/guanaco/logoWHT.png"
+                    height={155}
+                    width={930}
+                    alt="Guanaco MC Logo - GOLD"
+                /></div>
+                <div className={styles.guanacoLogo2}>
+                <Image 
+                    src="/assets/bands/guanaco/logoGold.png"
+                    height={155}
+                    width={930}
+                    alt="Guanaco MC Logo - White"
+                /></div>
+            </div>
+            </>
+        )
+    }
+    const guanaMCHead=()=>{
+        return(
+            <>
+            <Head>
+                <title> Guanaco MC | Pagina Oficial | warax.art</title>
+                <meta name="description" content="Guanaco MC - Conciertos, musica, noticas, Webveo" />
+                <meta property="og:title" content="Guanaco MC - Conciertos, musica, noticas, Webveo" key="title" />
+                <link rel="canonical" href="https://www.warax.art/guanaco" />
+                <meta name="robots" content="index, follow" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            </>
+        )
+    }
+    const aSocialLinkDisp=(aLink, anIcon)=>{
+        return(
+            <>
+            <a href={aLink} target="_blank" rel="noopener"> {anIcon} </a>
+            </>
+        )
+    }
+    const GuanacoMCFooter=()=>{
+        return(
+            <>
+            <div className={styles.guanacoFooter}>
+                <div className={styles.footerIMG}>
+                <Image
+                    src="/assets/bands/guanaco/logoBLK.png"
+                    height={155}
+                    width={930}
+                    alt="Guanaco MC Logo - Black"
+                /></div>
+                <div className={styles.socialLinksCont}>
+                    {aSocialLinkDisp(instagramLink, <InstagramIcon />)}
+                    {aSocialLinkDisp(twitterLink, <TwitterIcon />)}
+                    {aSocialLinkDisp(facebookLink, <FacebookIcon />)}
+                    {aSocialLinkDisp(youtubeLink, <YouTubeIcon />)}
+                    {aSocialLinkDisp(soundcloudLink, SoundCloudIcon)}
+                    {aSocialLinkDisp(spotifyLink, SpotifyIcon)}
+                </div>
+                <i> Management:</i>
+                <div className={styles.mngmntLinksCont}>
+                    <a href={managmentNumber} target="_blank" rel="noopener"> <LocalPhoneIcon /> </a>
+                    <a href={managementEmail} target="_blank" rel="noopener"> <EmailIcon /> </a>
+                </div>
             </div>
             </>
         )
@@ -114,11 +179,14 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
     return(
         <>
         <div className={styles.guanacoMCGenPAge}>
+            {guanaMCHead()}
             {guanacoLandingSplash()}
             <div className={styles.aBandPage}>
                 {videoDisplayer()}
             </div>
+            {GuanacoMCFooter()}
         </div>
+        <Footer socialLinks={false}/>
         </>
     )
 }

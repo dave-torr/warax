@@ -482,7 +482,7 @@ export default function Home() {
           <WaraxTvMiniSite />
         </>}
       </div>
-      <Footer />
+      <Footer socialLinks={true}/>
       {cartModal()}
       {itemAddedAlert()}
     </>

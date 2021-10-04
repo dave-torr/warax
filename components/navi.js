@@ -234,7 +234,8 @@ export function Footer(props){
     return(
         <>
             <div className={styles.generalFooterCont}>
-                <div className={styles.aSomeIconCont}> {eachSoMeBTN} </div>
+                {props.socialLinks&&<>
+                <div className={styles.aSomeIconCont}> {eachSoMeBTN} </div> </>}
                 <Link href="/">
                 <a>
                 <Image

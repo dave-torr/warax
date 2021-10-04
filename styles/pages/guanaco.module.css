@@ -15,15 +15,25 @@
   position: relative;
 }
 .homeSplashIMG{
-  filter: brightness(1.1);
+  filter: brightness(1.6) saturate(80%);
 }
 
 .homeSplashIMGMobi{display: none;}
 
 .guanacoLogo{
     position: absolute;
+    bottom: calc(0vh + 94px);
+    width: 40%;
+    transition: 1s;
+}
+.guanacoLogo2{
+    position: absolute;
     bottom: calc(0vh + 90px);
     width: 40%;
+}
+
+.homeSplash:hover> .guanacoLogo {
+    transform: translate(6px, 6px);
 }
 
 .musicVideoSection{
@@ -91,6 +101,44 @@
     font-weight: 300;
     margin: unset;
     font-size: 1.5em;
+}
+
+.guanacoFooter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footerIMG{
+    margin: 21px;
+    width: 40%;
+}
+
+.socialLinksCont{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.socialLinksCont a{
+    border: solid 2px black;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 6px;
+}
+
+.mngmntLinksCont{
+    display: flex;
+    margin: 15px;
+}
+
+.mngmntLinksCont a{
+    margin: 0 12px;
 }
 
 @media (max-width: 1080px) {
