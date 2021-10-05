@@ -139,7 +139,9 @@ export function EventBanner(props){
 let locationIcon = <LocationOnIcon />
 let contactIcon = <LocalPhoneIcon />
 let shoppingIcon = <AddShoppingCartIcon />
+const [eventBannerDialogTrig, setBannerIMGTrig]= useState(false)
 
+console.log(eventBannerDialogTrig)
 
     return(
         <>
@@ -149,6 +151,7 @@ let shoppingIcon = <AddShoppingCartIcon />
                     width={props.bannerData.width}
                     height={props.bannerData.height}
                     alt={props.bannerData.alt}
+                    onClick={()=>setBannerIMGTrig(true)}
                 />
                 <i>{props.bannerData.categorization} </i>
                 <h1> {props.bannerData.title} </h1>
@@ -158,6 +161,18 @@ let shoppingIcon = <AddShoppingCartIcon />
                     {/* <div className={styles.aBannerIcon}> {shoppingIcon} </div> */}
                 </div>
             </div>
+            <Dialog open={eventBannerDialogTrig} onClose={()=>{
+                setBannerIMGTrig(false)
+            }}>
+            <div width="100%" >
+                <Image 
+                    src={props.bannerData.src}
+                    width={600}
+                    height={600}
+                    alt={props.bannerData.alt}
+                />
+            </div>
+            </Dialog>
         </>
     )
 }

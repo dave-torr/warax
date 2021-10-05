@@ -138,8 +138,8 @@ let fridayJazzHomeBannerData={
   "src": "/assets/eventPosters/fridayJazzNights.jpeg",
   "title": "Noches de Jazz",
   "categorization": "/shows/Kony & Juan Correa",
-  "location": "https://goo.gl/maps/CeZugXAVw48A68hu8",
-  "phone": "",
+  "location": "https://goo.gl/maps/ycEjThVbWaWtostX8",
+  "phone": "00593999981369",
   "price": null,
 }
 
@@ -154,10 +154,6 @@ let wrxSalsaEnsambleIMG={
   "phone": "005930992985125",
   "price": null,
 }
-
-
-
-
 
 
 export default function Home() {
@@ -448,6 +444,9 @@ export default function Home() {
 
               <EventBanner  
                 bannerData={wrxSalsaEnsambleIMG}
+              />
+              <EventBanner  
+                bannerData={fridayJazzHomeBannerData}
               />
 
             </div>
