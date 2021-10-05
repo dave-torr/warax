@@ -26,8 +26,8 @@ import { Dialog } from '@material-ui/core'
 // 
 // Webveo Cap Merch
 let capBlack={
-  "associatedActs": "WEBVEO",
-  "productCateg": "softGoods",
+  "associatedActs": "incl. delivery",
+  "productCateg": "WebVeo",
   "prodName":"Gorra - BLACK",
   "priceObj":{
       "price": 35,
@@ -41,8 +41,8 @@ let capBlack={
   }
 }
 let capYellow={
-  "associatedActs": "WEBVEO",
-  "productCateg": "softGoods",
+  "associatedActs": "incl. delivery",
+  "productCateg": "WebVeo",
   "prodName":"Gorra - LIME/ASH",
   "priceObj":{
       "price": 35,
@@ -56,8 +56,8 @@ let capYellow={
   }
 }
 let capGrey={
-  "associatedActs": "WEBVEO",
-  "productCateg": "softGoods",
+  "associatedActs": "incl. delivery",
+  "productCateg": "WebVeo",
   "prodName":"Gorra - ONYX/LIME",
   "priceObj":{
       "price": 35,
