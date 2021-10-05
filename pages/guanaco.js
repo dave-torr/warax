@@ -234,13 +234,14 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
                         <div className={styles.burgerDeco}/>
                         <div className={styles.burgerDeco}/>
                     </div>
-                    {waraxCart.length>0?<>
+                    {waraxCart.length===0?<>
                     <div className={styles.cartDisplayer}>
                         <ShoppingCartIcon />
                     </div>
                     </>:<>
                     <div className={styles.cartDisplayer} onClick={()=>setCartModal(true)}>
                         <ShoppingCartIcon />
+                        <div className={styles.cartCount}> {waraxCart.length} </div>
                     </div>
                     </>}
                 </div>

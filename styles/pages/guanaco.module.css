@@ -348,6 +348,7 @@
     background-color: rgb(10, 12, 18);
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .burgerDeco{
@@ -367,6 +368,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.cartCount{
+    background-color: red;
+    border-radius: 50%;
+    padding: 1px 3px;
+    position: fixed;
+    transform: translate(9px, -9px);
+    font-size: 0.7em;
+}
+
+.payNowBtn{
+    width: calc(100% - 36px);
+    margin: 12px;
+    padding: 12px;
+    background-color: var(--purple-highlight);
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 1080px) {
