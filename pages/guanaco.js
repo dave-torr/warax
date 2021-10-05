@@ -5,6 +5,11 @@ import GuanacoData from "./../data/guanaco.json"
 
 import {MiniMerchDisp} from "./../components/merch"
 import {Footer} from "./../components/navi"
+import {SalesForm} from "./../components/forms"
+
+import { Elements } from '@stripe/react-stripe-js'
+import getStripe from './../utils/get-stripejs'
+import {StripeGeneralCheckout} from "./../components/paymentComp/stripeCardSetup"
 
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
@@ -18,7 +23,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 import NewReleasesIcon from '@mui/icons-material/NewReleases';
-
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 
 import styles from "./../styles/pages/guanaco.module.css"
@@ -154,8 +159,8 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
         )
     }
 
-
-
+    ///////////
+    // MERCH
     let capBlack={
     "associatedActs": "incl. delivery",
     "productCateg": "WebVeo",
@@ -217,24 +222,54 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
     }
     }
 
-/////////////////////////////////
-// cartFunctions
-////////////////////////////////
+
+    // Floating Menu
+    const [menuTrig, setMenuTrig] = useState(false)
+    const floatingMenu=()=>{
+        return(
+            <>
+                <div className={styles.floatingMenu}> 
+                    <div className={styles.burgerCont} onClick={()=>setMenuTrig(true)}>
+                        <div className={styles.burgerDeco}/>
+                        <div className={styles.burgerDeco}/>
+                        <div className={styles.burgerDeco}/>
+                    </div>
+                    {waraxCart.length>0?<>
+                    <div className={styles.cartDisplayer}>
+                        <ShoppingCartIcon />
+                    </div>
+                    </>:<>
+                    <div className={styles.cartDisplayer} onClick={()=>setCartModal(true)}>
+                        <ShoppingCartIcon />
+                    </div>
+                    </>}
+                </div>
+            </>
+        )
+    }
+
+
+    /////////////////////////////////
+    // Cart Functions
+    ////////////////////////////////
     const [waraxiCarti, setWaraxiCart]=useState(true)
     const [waraxCart, setWaraxCart]=useState([])
     const [addedItemSnack, setAddedItem]=useState(false)
+
     const [cartModalCont, setCartModal]=useState(false)
+
     const [mobileCartTrig, setMobCartTrigg] =useState(false)
     const [finalPrice, setFinalPrice]=useState()
     const [payment, setPayment]=useState(false)
-
+    const [saleUsarData, setSaleUserData]= useState()
+    const [userDataTrig, setUserDataTrig]=useState(false)
     useEffect(()=>{
-    if(waraxCart.length>0){
-        setFinalPrice(waraxCart.map(elem => elem.price).reduce((prev, next) => prev + next))
-    } else if(waraxCart.length===0){
-        setCartModal(false)
-        setMobCartTrigg(false)
-    }
+        if(waraxCart.length>0){
+            setFinalPrice(waraxCart.map(elem => elem.price).reduce((prev, next) => prev + next))
+        } else if(waraxCart.length===0){
+            // setCartModal(false)
+            setMobCartTrigg(false)
+        }
     },[waraxCart])
     function Alert(props) {return <MuiAlert elevation={6} variant="filled" {...props} />}    
     const itemAddedAlert=()=>{
@@ -256,8 +291,94 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
         tempCart.splice(prodIndex, 1)
         setWaraxCart(tempCart)
     }
+    const paymenInput=()=>{
+        return(
+        <>
+            {payment? <>
+                <Elements stripe={getStripe()}>
+                <StripeGeneralCheckout 
+                    totalPaymentAmount={finalPrice} 
+                    receiptDescription={"Compra en linea - Warax Arte"}
+                    saleUsarData={saleUsarData}
+                    waraxCart={waraxCart}
+                    setWaraxCart={setWaraxCart}
+                /> 
+                </Elements>
+            {/* CAJITA KUSHKI MOFOOO */}
+            {/* <Script src="https://cdn.kushkipagos.com/kushki-checkout.js"/>
 
-    console.log(waraxCart)
+            <form id="payment-form" action="/confirm" method="post">
+                <input type="hidden" name="cart_id" value="123"/>
+            </form>
+
+            <Script type="text/javascript">
+                {formLoader()}
+            </Script> */}
+            </>:<>
+            {userDataTrig? <>
+                <SalesForm   
+                saleUsarData={saleUsarData}
+                setSaleUserData={setSaleUserData}
+                submitForm={setPayment}
+                />
+            </>:<>
+                <div className={styles.payNowBtn} onClick={()=>{setUserDataTrig(true)}}>Comprar Ahora</div>
+            </>}
+            </>}
+        </>
+        )
+    }    
+    const cartModal=()=>{
+        let cartDispl=waraxCart.map((elem, i)=><React.Fragment key={i}>
+        <div className={styles.eachCartItemCont}>
+            <div className={styles.cartItemName}> 
+            {elem.productName} 
+            <span className={styles.rmvBTN} onClick={()=>{ removeFromCart(waraxCart, i)}}> X </span>
+            </div>
+            <div className={styles.cartItmeDescription}> {elem.priceDetail} </div> 
+            <div className={styles.cartItmePrice}> $ {elem.price} </div>
+        </div>
+        </React.Fragment>)
+        return(
+        <>
+            <Dialog open={cartModalCont} onClose={()=>{
+                setPayment(false)
+                setCartModal(false)
+                setUserDataTrig(false)
+            }}> 
+                <div className={styles.cartDialog} >
+                    <h2 className={styles.cartTitle}> Carrito Warax </h2>
+                    <div className={styles.eachCartElemCont}> {cartDispl} 
+                    <div className={styles.totalCartPrice}>
+                        <strong> Total </strong>
+                        <span> ${finalPrice} </span>
+                    </div>
+                    </div>
+                    {paymenInput()}
+                </div>
+            </Dialog>
+            <Dialog open={mobileCartTrig} fullScreen onClose={()=>setMobCartTrigg(false)}>
+                <div className={styles.cartDialog} >
+                    <div style={{ "width":"100%", "textAlign": "end", "padding": "18px" }} onClick={()=>{
+                        setMobCartTrigg(false)
+                        setUserDataTrig(false)
+                        setPayment(false)
+                    }}> cerrar | <strong> X </strong>
+                    </div>
+                    <h2 className={styles.cartTitle}> Carrito Warax </h2>
+                    <div className={styles.eachCartElemCont}> 
+                    {cartDispl} 
+                    <div className={styles.totalCartPrice}>
+                        <strong> Total </strong>
+                        <span> ${finalPrice} </span>
+                    </div>
+                    </div>
+                    {paymenInput()}
+                </div>
+            </Dialog>
+        </>
+        )
+    }
 
 
 ////////////////////
@@ -280,8 +401,6 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
             </div>
         )
     }
-
-
     const guanacoLandingSplash=()=>{
         return(
             <>
@@ -371,6 +490,7 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
         <>
         <div className={styles.guanacoMCGenPAge}>
             {guanaMCHead()}
+            {floatingMenu()}
             {guanacoLandingSplash()}
             <div className={styles.aBandPage}>
                 {albumDisplayer()}
@@ -378,10 +498,10 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
                 {videoDisplayer()}
             </div>
             {GuanacoMCFooter()}
+            {cartModal()}
+            {itemAddedAlert()}    
         </div>
         <Footer socialLinks={false}/>
-        {/* {cartModal()} */}
-        {itemAddedAlert()}    
         </>
     )
 }
