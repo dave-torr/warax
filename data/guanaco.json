@@ -5,7 +5,8 @@
             "albumName": "Cholonizacion",
             "releaseYear": 2021,
             "youtubeMusicLink": "https://music.youtube.com/playlist?list=OLAK5uy_nFYVYV8LDK6AFgW1ZJke2lQlZctv8rHQk&feature=share",
-            "spotifyLink": "https://open.spotify.com/album/1GQi1yenQMfJPqUz1toqvm?si=DpGLyxdjRIm0jCTNDwu1AA&dl_branch=1"
+            "spotifyLink": "https://open.spotify.com/album/1GQi1yenQMfJPqUz1toqvm?si=DpGLyxdjRIm0jCTNDwu1AA&dl_branch=1",
+            "spotifyEmbed": "https://open.spotify.com/embed/album/1GQi1yenQMfJPqUz1toqvm"
         },
         {
             "imageLink": "/blasfemia.jpg",

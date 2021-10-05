@@ -3,6 +3,7 @@ import Image from "next/image"
 import Head from "next/head"
 import GuanacoData from "./../data/guanaco.json"
 
+import {MiniMerchDisp} from "./../components/merch"
 import {Footer} from "./../components/navi"
 
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -150,10 +151,106 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
     }
 
 
-/////////////////////
+
+let capBlack={
+  "associatedActs": "incl. delivery",
+  "productCateg": "WebVeo",
+  "prodName":"Gorra - BLACK",
+  "priceObj":{
+      "price": 35,
+      "productName": "Gorra Webveo - BLACK"
+    },
+  "merchIMG":{
+    "src":"/assets/merchPics/blackCap.jpg",
+    "height": 400,
+    "width": 400,
+    "alt": "Merch Oficial Webveo - Gorra varios colores"
+  }
+}
+let capCholoBrown={
+  "associatedActs": "incl. delivery",
+  "productCateg": "Cholonizacion",
+  "prodName":"Gorra - SAHARA - BLACK",
+  "priceObj":{
+      "price": 35,
+      "productName": "Gorra Webveo - SAHARA - BLACK"
+    },
+  "merchIMG":{
+    "src":"/assets/bands/guanaco/merch/capBrownBlack.png",
+    "height": 400,
+    "width": 400,
+    "alt": "Merch Oficial Cholonizacion - Gorra varios colores"
+  }
+}
+let hoodieCholoBlk={
+  "associatedActs": "incl. delivery",
+  "productCateg": "Cholonizacion",
+  "prodName":"Hoodie - BLACK STAMP",
+  "priceObj":{
+      "price": 35,
+      "productName": "Hoodie Cholonizacion - BLACK STAMP"
+    },
+  "merchIMG":{
+    "src":"/assets/bands/guanaco/merch/cholonizacionHoodie.png",
+    "height": 400,
+    "width": 400,
+    "alt": "Merch Oficial Cholonizacion - Gorra varios colores"
+  }
+}
+let buzoCholoBlk={
+  "associatedActs": "incl. delivery",
+  "productCateg": "Cholonizacion",
+  "prodName":"Buzo - Cholonizacion STAMP",
+  "priceObj":{
+      "price": 35,
+      "productName": "Buzo Cholonizacion - BLACK STAMP"
+    },
+  "merchIMG":{
+    "src":"/assets/bands/guanaco/merch/cholonizacionBuzo.png",
+    "height": 400,
+    "width": 400,
+    "alt": "Merch Oficial Cholonizacion - Buzo varios colores"
+  }
+}
+
+/////////////////////////////////
+// cartFunctions
+////////////////////////////////
+  const [waraxiCarti, setWaraxiCart]=useState(true)
+
+  const addToCart=(product)=>{ 
+    setWaraxCart(waraxCart.concat(product))
+    setAddedItem(true)
+  }
+  const removeFromCart=(cart, prodIndex)=>{
+    let tempCart = [...cart];
+    tempCart.splice(prodIndex, 1)
+    setWaraxCart(tempCart)
+  }
+
+
+
 ////////////////////
 // DISPLAY ELEMENTS
 ///////////////////
+    const merchDisplayer=()=>{
+        return(
+            <div className={styles.merchSectionCont}>
+                <h1> MERCH</h1>
+                <div className={styles.merchContainer}>
+                    <div style={{display: "flex"}}>
+                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capBlack} />
+                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capCholoBrown} />
+                    </div>
+                    <div style={{display: "flex"}}>
+                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={hoodieCholoBlk} />
+                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={buzoCholoBlk} />
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
 
     const guanacoLandingSplash=()=>{
         return(
@@ -247,6 +344,7 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
             {guanacoLandingSplash()}
             <div className={styles.aBandPage}>
                 {albumDisplayer()}
+                {merchDisplayer()}
                 {videoDisplayer()}
             </div>
             {GuanacoMCFooter()}
