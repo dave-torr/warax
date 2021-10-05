@@ -147,7 +147,7 @@ let wrxSalsaEnsambleIMG={
   "width": 640,
   "height": 640,
   "alt": "Warax Salsa Ensamble - Event Poster Image",
-  "src": "/assets/eventPosters/salsaEnsamble.jpeg",
+  "src": "/assets/eventPosters/salsaEnsamble.png",
   "categorization": "/ shows / Waras Salsa Ensamble",
   "title": "Orquesta de Salsa",
   "location": "https://g.page/sabroso-restaurante-vivero?share",

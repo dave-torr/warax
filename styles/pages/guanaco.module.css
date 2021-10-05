@@ -149,7 +149,6 @@
 
 .eachAlbumCover:hover{
     filter: none;
-
 }
 
 .albumDataDisplayer{
@@ -259,6 +258,7 @@
 
     .eachAlbumCover{
        width: 50%;
+       filter: none;
     }
 
     .anAlbumData{
