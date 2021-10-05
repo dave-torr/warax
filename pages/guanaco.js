@@ -18,6 +18,7 @@ import NewReleasesIcon from '@mui/icons-material/NewReleases';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 
 import styles from "./../styles/pages/guanaco.module.css"
+import { style } from "@mui/system"
 
 export default function GuanacoPage(props){
 
@@ -238,11 +239,11 @@ let buzoCholoBlk={
             <div className={styles.merchSectionCont}>
                 <h1> MERCH</h1>
                 <div className={styles.merchContainer}>
-                    <div style={{display: "flex"}}>
+                    <div className={styles.merchSubCont}>
                         <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capBlack} />
                         <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capCholoBrown} />
                     </div>
-                    <div style={{display: "flex"}}>
+                    <div className={styles.merchSubCont}>
                         <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={hoodieCholoBlk} />
                         <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={buzoCholoBlk} />
                     </div>

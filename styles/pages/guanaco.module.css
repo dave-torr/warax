@@ -270,7 +270,7 @@
 .merchContainer{
     background-color: white;
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
     border-top: solid 1px black;
     border-bottom: solid 3px black;
     min-height: 30vh;
@@ -279,13 +279,29 @@
     margin-bottom: 66px;
 }
 
+.merchSubCont{
+    display: flex;
+}
 
 @media (max-width: 1080px) {
+    .merchContainer{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .merchSubCont{
+        flex-direction: column;
+        width: 550px;
+        align-items: center;
+    }
 }
 
 @media (max-width: 700px) {
-
+    .merchSubCont{
+        flex-direction: column;
+        width: 280px;
+    }
     .guanacoLogo{
         width: 70%;
     }
