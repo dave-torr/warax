@@ -1,10 +1,14 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Image from "next/image"
 import Head from "next/head"
 import GuanacoData from "./../data/guanaco.json"
 
 import {MiniMerchDisp} from "./../components/merch"
 import {Footer} from "./../components/navi"
+
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+import { Dialog } from '@material-ui/core'
 
 import InstagramIcon from '@material-ui/icons/Instagram';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
@@ -18,7 +22,6 @@ import NewReleasesIcon from '@mui/icons-material/NewReleases';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 
 import styles from "./../styles/pages/guanaco.module.css"
-import { style } from "@mui/system"
 
 export default function GuanacoPage(props){
 
@@ -87,7 +90,7 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
         )
     }
     const videoDisplayer=()=>{
-        let videoSelector=GuanacoData.videoArr.map((elem, i)=><React.Fragment>
+        let videoSelector=GuanacoData.videoArr.map((elem, i)=><React.Fragment key={i}>
             <option className={styles.eachVideoOption} value={i}>{ elem.videoTitle} </option>
         </React.Fragment>)
         return(
@@ -153,82 +156,108 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
 
 
 
-let capBlack={
-  "associatedActs": "incl. delivery",
-  "productCateg": "WebVeo",
-  "prodName":"Gorra - BLACK",
-  "priceObj":{
-      "price": 35,
-      "productName": "Gorra Webveo - BLACK"
-    },
-  "merchIMG":{
-    "src":"/assets/merchPics/blackCap.jpg",
-    "height": 400,
-    "width": 400,
-    "alt": "Merch Oficial Webveo - Gorra varios colores"
-  }
-}
-let capCholoBrown={
-  "associatedActs": "incl. delivery",
-  "productCateg": "Cholonizacion",
-  "prodName":"Gorra - SAHARA - BLACK",
-  "priceObj":{
-      "price": 35,
-      "productName": "Gorra Webveo - SAHARA - BLACK"
-    },
-  "merchIMG":{
-    "src":"/assets/bands/guanaco/merch/capBrownBlack.png",
-    "height": 400,
-    "width": 400,
-    "alt": "Merch Oficial Cholonizacion - Gorra varios colores"
-  }
-}
-let hoodieCholoBlk={
-  "associatedActs": "incl. delivery",
-  "productCateg": "Cholonizacion",
-  "prodName":"Hoodie - BLACK STAMP",
-  "priceObj":{
-      "price": 35,
-      "productName": "Hoodie Cholonizacion - BLACK STAMP"
-    },
-  "merchIMG":{
-    "src":"/assets/bands/guanaco/merch/cholonizacionHoodie.png",
-    "height": 400,
-    "width": 400,
-    "alt": "Merch Oficial Cholonizacion - Gorra varios colores"
-  }
-}
-let buzoCholoBlk={
-  "associatedActs": "incl. delivery",
-  "productCateg": "Cholonizacion",
-  "prodName":"Buzo - Cholonizacion STAMP",
-  "priceObj":{
-      "price": 35,
-      "productName": "Buzo Cholonizacion - BLACK STAMP"
-    },
-  "merchIMG":{
-    "src":"/assets/bands/guanaco/merch/cholonizacionBuzo.png",
-    "height": 400,
-    "width": 400,
-    "alt": "Merch Oficial Cholonizacion - Buzo varios colores"
-  }
-}
+    let capBlack={
+    "associatedActs": "incl. delivery",
+    "productCateg": "WebVeo",
+    "prodName":"Gorra - BLACK",
+    "priceObj":{
+        "price": 35,
+        "productName": "Gorra Webveo - BLACK"
+        },
+    "merchIMG":{
+        "src":"/assets/merchPics/blackCap.jpg",
+        "height": 400,
+        "width": 400,
+        "alt": "Merch Oficial Webveo - Gorra varios colores"
+    }
+    }
+    let capCholoBrown={
+    "associatedActs": "incl. delivery",
+    "productCateg": "Cholonizacion",
+    "prodName":"Gorra - SAHARA - BLACK",
+    "priceObj":{
+        "price": 35,
+        "productName": "Gorra Webveo - SAHARA - BLACK"
+        },
+    "merchIMG":{
+        "src":"/assets/bands/guanaco/merch/capBrownBlack.png",
+        "height": 400,
+        "width": 400,
+        "alt": "Merch Oficial Cholonizacion - Gorra varios colores"
+    }
+    }
+    let hoodieCholoBlk={
+    "associatedActs": "incl. delivery",
+    "productCateg": "Cholonizacion",
+    "prodName":"Hoodie - BLACK STAMP",
+    "priceObj":{
+        "price": 35,
+        "productName": "Hoodie Cholonizacion - BLACK STAMP"
+        },
+    "merchIMG":{
+        "src":"/assets/bands/guanaco/merch/cholonizacionHoodie.png",
+        "height": 400,
+        "width": 400,
+        "alt": "Merch Oficial Cholonizacion - Gorra varios colores"
+    }
+    }
+    let buzoCholoBlk={
+    "associatedActs": "incl. delivery",
+    "productCateg": "Cholonizacion",
+    "prodName":"Buzo - Cholonizacion STAMP",
+    "priceObj":{
+        "price": 35,
+        "productName": "Buzo Cholonizacion - BLACK STAMP"
+        },
+    "merchIMG":{
+        "src":"/assets/bands/guanaco/merch/cholonizacionBuzo.png",
+        "height": 400,
+        "width": 400,
+        "alt": "Merch Oficial Cholonizacion - Buzo varios colores"
+    }
+    }
 
 /////////////////////////////////
 // cartFunctions
 ////////////////////////////////
-  const [waraxiCarti, setWaraxiCart]=useState(true)
+    const [waraxiCarti, setWaraxiCart]=useState(true)
+    const [waraxCart, setWaraxCart]=useState([])
+    const [addedItemSnack, setAddedItem]=useState(false)
+    const [cartModalCont, setCartModal]=useState(false)
+    const [mobileCartTrig, setMobCartTrigg] =useState(false)
+    const [finalPrice, setFinalPrice]=useState()
+    const [payment, setPayment]=useState(false)
 
-  const addToCart=(product)=>{ 
-    setWaraxCart(waraxCart.concat(product))
-    setAddedItem(true)
-  }
-  const removeFromCart=(cart, prodIndex)=>{
-    let tempCart = [...cart];
-    tempCart.splice(prodIndex, 1)
-    setWaraxCart(tempCart)
-  }
+    useEffect(()=>{
+    if(waraxCart.length>0){
+        setFinalPrice(waraxCart.map(elem => elem.price).reduce((prev, next) => prev + next))
+    } else if(waraxCart.length===0){
+        setCartModal(false)
+        setMobCartTrigg(false)
+    }
+    },[waraxCart])
+    function Alert(props) {return <MuiAlert elevation={6} variant="filled" {...props} />}    
+    const itemAddedAlert=()=>{
+        return(<>
+            <Snackbar open={addedItemSnack} autoHideDuration={5000} onClose={()=>setAddedItem(false)}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} >
+                <Alert onClose={()=>setAddedItem(false)} severity="success">
+                    Añadido a Carrito Warax
+                </Alert>
+            </Snackbar>
+        </>)
+    }
+    const addToCart=(product)=>{ 
+        setWaraxCart(waraxCart.concat(product))
+        setAddedItem(true)
+    }
+    const removeFromCart=(cart, prodIndex)=>{
+        let tempCart = [...cart];
+        tempCart.splice(prodIndex, 1)
+        setWaraxCart(tempCart)
+    }
 
+    console.log(waraxCart)
 
 
 ////////////////////
@@ -351,6 +380,8 @@ let buzoCholoBlk={
             {GuanacoMCFooter()}
         </div>
         <Footer socialLinks={false}/>
+        {/* {cartModal()} */}
+        {itemAddedAlert()}    
         </>
     )
 }
