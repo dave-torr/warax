@@ -159,70 +159,6 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
         )
     }
 
-    ///////////
-    // MERCH
-    let capBlack={
-    "associatedActs": "incl. delivery",
-    "productCateg": "WebVeo",
-    "prodName":"Gorra - BLACK",
-    "priceObj":{
-        "price": 35,
-        "productName": "Gorra Webveo - BLACK"
-        },
-    "merchIMG":{
-        "src":"/assets/merchPics/blackCap.jpg",
-        "height": 400,
-        "width": 400,
-        "alt": "Merch Oficial Webveo - Gorra varios colores"
-    }
-    }
-    let capCholoBrown={
-    "associatedActs": "incl. delivery",
-    "productCateg": "Cholonizacion",
-    "prodName":"Gorra - SAHARA - BLACK",
-    "priceObj":{
-        "price": 35,
-        "productName": "Gorra Webveo - SAHARA - BLACK"
-        },
-    "merchIMG":{
-        "src":"/assets/bands/guanaco/merch/capBrownBlack.png",
-        "height": 400,
-        "width": 400,
-        "alt": "Merch Oficial Cholonizacion - Gorra varios colores"
-    }
-    }
-    let hoodieCholoBlk={
-    "associatedActs": "incl. delivery",
-    "productCateg": "Cholonizacion",
-    "prodName":"Hoodie - BLACK STAMP",
-    "priceObj":{
-        "price": 35,
-        "productName": "Hoodie Cholonizacion - BLACK STAMP"
-        },
-    "merchIMG":{
-        "src":"/assets/bands/guanaco/merch/cholonizacionHoodie.png",
-        "height": 400,
-        "width": 400,
-        "alt": "Merch Oficial Cholonizacion - Gorra varios colores"
-    }
-    }
-    let buzoCholoBlk={
-    "associatedActs": "incl. delivery",
-    "productCateg": "Cholonizacion",
-    "prodName":"Buzo - Cholonizacion STAMP",
-    "priceObj":{
-        "price": 35,
-        "productName": "Buzo Cholonizacion - BLACK STAMP"
-        },
-    "merchIMG":{
-        "src":"/assets/bands/guanaco/merch/cholonizacionBuzo.png",
-        "height": 400,
-        "width": 400,
-        "alt": "Merch Oficial Cholonizacion - Buzo varios colores"
-    }
-    }
-
-
     // Floating Menu
     const [menuTrig, setMenuTrig] = useState(false)
     const floatingMenu=()=>{
@@ -391,12 +327,12 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
                 <h1> MERCH</h1>
                 <div className={styles.merchContainer}>
                     <div className={styles.merchSubCont}>
-                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capBlack} />
-                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capCholoBrown} />
+                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.buzoCholoBlk} />
+                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.capCholoSnapback} />
                     </div>
                     <div className={styles.merchSubCont}>
-                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={hoodieCholoBlk} />
-                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={buzoCholoBlk} />
+                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.capCholoFivePanl} />
+                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.capCholoFPRed} />
                     </div>
                 </div>
             </div>

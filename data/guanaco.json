@@ -110,5 +110,116 @@
             "releaseDate": 2016,
             "videoType": "live music"
         }
-    ]
+    ],
+    "merchData": 
+    {
+        "capBlack" :{
+            "associatedActs": "incl. delivery",
+            "productCateg": "WebVeo",
+            "prodName":"Gorra - BLACK",
+            "priceObj":{
+                "price": 35,
+                "productName": "Gorra Webveo - BLACK"
+                },
+            "merchIMG":{
+                "src":"/assets/merchPics/blackCap.jpg",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Webveo - Gorra varios colores"
+                }
+        },
+        "capCholoBrown" :{
+            "associatedActs": "incl. delivery",
+            "productCateg": "Cholonizacion",
+            "prodName":"SnapBack | Beige con negro",
+            "priceObj":{
+                "price": 35,
+                "productName": "Gorra Webveo - SAHARA - BLACK"
+                },
+            "merchIMG":{
+                "src":"/assets/bands/guanaco/merch/capBrownBlack.png",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Cholonizacion - Gorra varios colores"
+            }
+        },
+        "capCholoFivePanl" :{
+            "associatedActs": "incl. delivery",
+            "productCateg": "Cholonizacion",
+            "prodName":"Five Panels | Beige",
+            "priceObj":{
+                "price": 35,
+                "productName": "Gorra Cholonizacion - Five Panels | Beige"
+                },
+            "merchIMG":{
+                "src":"/assets/bands/guanaco/merch/capBrown.png",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Cholonizacion - Gorra Cholonizacion - Five Panels | Beige"
+                }
+        },
+        "hoodieCholoBlk" :{
+            "associatedActs": "incl. delivery",
+            "productCateg": "Cholonizacion",
+            "prodName":"Hoodie - BLACK STAMP",
+            "priceObj":{
+                "price": 35,
+                "productName": "Hoodie Cholonizacion - BLACK STAMP"
+                },
+            "merchIMG":{
+                "src":"/assets/bands/guanaco/merch/cholonizacionHoodie.png",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Cholonizacion - Gorra varios colores"
+            }
+        },
+        "buzoCholoBlk" :{
+            "associatedActs": "incl. delivery",
+            "productCateg": "Cholonizacion",
+            "prodName":"Buzo - Cholonizacion STAMP",
+            "priceObj":{
+                "price": 35,
+                "productName": "Buzo Cholonizacion - BLACK STAMP"
+                },
+            "merchIMG":{
+                "src":"/assets/bands/guanaco/merch/cholonizacionBuzo.png",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Cholonizacion - Buzo varios colores"
+            }
+        },
+        "capCholoSnapback" :{
+            "associatedActs": "incl. delivery",
+            "productCateg": "Cholonizacion",
+            "prodName":"SnapBack | Letter",
+            "priceObj":{
+                "price": 35,
+                "productName": "Gorra Cholonizacion - SnapBack | Letter"
+                },
+            "merchIMG":{
+                "src":"/assets/bands/guanaco/merch/choloCapLetter.png",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Cholonizacion - Gorra SnapBack | Letter"
+            }
+        },
+        "capCholoFPRed" :{
+            "associatedActs": "incl. delivery",
+            "productCateg": "Cholonizacion",
+            "prodName":"Five Panels | Roja con negro",
+            "priceObj":{
+                "price": 35,
+                "productName": "Gorra Cholonizacion - Five Panels | Roja con negro"
+                },
+            "merchIMG":{
+                "src":"/assets/bands/guanaco/merch/capFivePRed.png",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Cholonizacion - Gorra Five Panels | Roja con negro"
+            }
+        }
+
+
+
+    }
 }
