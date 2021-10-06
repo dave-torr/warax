@@ -83,6 +83,13 @@ let episodeArr= [
         "embeddiLink": "9uk-t5DJ7SU",
         "episodeDescription": "En este episodio nos acompaña Black Prince cantante,  músico, empresario, actual CEO de Moringa Power.No te pierdas este episodio de negocios y mucha musica con la improvisación de Black Prince  junto a la Waráx Band, directamente desde los estudios de Waráx Arte"
     },    
+    {
+        "episodeNum": 12,
+        "season": 3,
+        "episodeName": "Dario Castro y Maria Buendia - El WEBVEO",
+        "embeddiLink": "w4CEFkSzOJc",
+        "episodeDescription": "En este episodio nos acompañan Dario Castro y Maria Buendia músicos, cantantes, productores, pareja y amantes de la comida mexicana, actualmente juntos forman la agrupación musical Violeta Gandhi."
+    },    
 ]
 
 
