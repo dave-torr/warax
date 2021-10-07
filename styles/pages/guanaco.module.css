@@ -469,6 +469,13 @@
     justify-content: space-around;
 }
 
+.closeMenuBTN{
+    padding: 9px 12px;
+    border: solid 2px black;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
 @media only screen and (max-width: 1080px) {
     .merchContainer{
         width: 100%;
@@ -566,5 +573,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .marketplaceSectionCont h1{
+        font-weight: 400;
+        margin: 33vh 0;
+        padding: 66px 0;   
+        text-align: end;
+        width: 100%;
+        font-size: 2em;
+        transform: translatey(120px);
     }
 }

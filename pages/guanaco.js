@@ -184,6 +184,7 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
                 </div>
                 <Dialog open={menuTrig} onClose={()=>setMenuTrig(false)} fullScreen>
                     <div className={styles.guanacoMenu}>
+                        <div className={styles.closeMenuBTN}> close | x </div>
                         <div className={styles.menuLogoIMG}>
                             <Image
                                 src="/assets/bands/guanaco/logoBLK.png"
@@ -462,7 +463,6 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
             </>
         )
     }
-
     let productArr = Object.keys(GuanacoData.merchData).map(function (key){
         return {...GuanacoData.merchData[key]}
     })
