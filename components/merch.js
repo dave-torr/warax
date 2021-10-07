@@ -117,17 +117,10 @@ let theItem = props.merchItem
             </>
         )
     }
-    const cartReplacement=()=>{
-        return(
-            <>
-            {/* <a href="mailto"><WhatsAppIcon /></a> */}
-            </>
-        )
-    }
     return(
         <>
             {IMGDisplayer(theItem.merchIMG)}
-            <div className={styles.merchGenCont}>  
+            <div className={styles.merchMiniGenCont}>  
                 <div className={styles.aMerchIMG} onClick={()=>{setMerchVis(true)}} > 
                     <Image
                         src={theItem.merchIMG.src}

@@ -141,8 +141,6 @@ let contactIcon = <LocalPhoneIcon />
 let shoppingIcon = <AddShoppingCartIcon />
 const [eventBannerDialogTrig, setBannerIMGTrig]= useState(false)
 
-console.log(eventBannerDialogTrig)
-
     return(
         <>
             <div className={styles.eventBannerGenCont}> 

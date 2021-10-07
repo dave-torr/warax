@@ -7,6 +7,16 @@
     transition: all ease-in 0.3s;
     align-items: center;
 }
+.merchMiniGenCont{
+    min-height: 50px;
+    margin: 15px;
+    background-color: white;
+    min-width: 50px;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in 0.3s;
+    align-items: center;
+}
 
 .aMerchIMG{
     width: 240px;

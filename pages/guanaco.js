@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react"
 import Image from "next/image"
 import Head from "next/head"
+import Link from "next/link"
+
 import GuanacoData from "./../data/guanaco.json"
 
-import {MiniMerchDisp} from "./../components/merch"
+import {MerchDisp, MiniMerchDisp} from "./../components/merch"
 import {Footer} from "./../components/navi"
 import {SalesForm} from "./../components/forms"
 
@@ -72,6 +74,9 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
 
 // Landing: 
 // Cholonizacion landing. Spotify mini player, Merch, 
+
+    const [guanacoPageDisp, setGuanacoPage]=useState("landing")
+
 
 /////////////////////////////////////
 /////////////////////////////////////
@@ -170,17 +175,50 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
                         <div className={styles.burgerDeco}/>
                         <div className={styles.burgerDeco}/>
                     </div>
-                    {waraxCart.length===0?<>
-                    <div className={styles.cartDisplayer}>
-                        <ShoppingCartIcon />
-                    </div>
-                    </>:<>
+                    {waraxCart.length>0&&<>
                     <div className={styles.cartDisplayer} onClick={()=>setCartModal(true)}>
                         <ShoppingCartIcon />
                         <div className={styles.cartCount}> {waraxCart.length} </div>
                     </div>
                     </>}
                 </div>
+                <Dialog open={menuTrig} onClose={()=>setMenuTrig(false)} fullScreen>
+                    <div className={styles.guanacoMenu}>
+                        <div className={styles.menuLogoIMG}>
+                            <Image
+                                src="/assets/bands/guanaco/logoBLK.png"
+                                height={155}
+                                width={930}
+                                alt="Guanaco MC Logo - Black"
+                            /></div>
+                        <div className={styles.menuOptsCont}> 
+                            <div className={styles.aMenuOpt} onClick={()=>{
+                                window.scrollTo(0,0)
+                                setMenuTrig(false); setGuanacoPage("landing");}}>
+                                Home
+                            </div>
+                            <div className={styles.aMenuOpt} onClick={()=>{
+                                window.scrollTo(0,0)
+                                setMenuTrig(false); setGuanacoPage("marketPlace");}}>
+                                Tienda
+                            </div>
+                            {/* <div className={styles.aMenuOpt} onClick={()=>{
+                                window.scrollTo(0,0)
+                                setMenuTrig(false); setGuanacoPage("eventCalendar");}}>
+                                Eventos
+                            </div> */}
+                        </div>
+                        <Link className={styles.waraxLogo} href="/">
+                            <div className={styles.menuLogoWRX}>
+                                <Image
+                                    src="/assets/icons/waraxLogoBLK.png"
+                                    height={242}
+                                    width={644}
+                                    alt="Guanaco MC Logo - Black"
+                                /></div>
+                        </Link>
+                    </div>
+                </Dialog>
             </>
         )
     }
@@ -322,18 +360,20 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
 // DISPLAY ELEMENTS
 ///////////////////
     const merchDisplayer=()=>{
+
         return(
             <div className={styles.merchSectionCont}>
                 <h1> MERCH</h1>
                 <div className={styles.merchContainer}>
                     <div className={styles.merchSubCont}>
-                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.buzoCholoBlk} />
-                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.capCholoSnapback} />
+                        <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.buzoCholoBlk} />
+                        <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.capCholoSnapback} />
                     </div>
                     <div className={styles.merchSubCont}>
-                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.capCholoFivePanl} />
-                        <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.capCholoFPRed} />
+                        <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.capCholoFivePanl} />
+                        <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.capCholoFPRed} />
                     </div>
+                    <div className={styles.marketPLCBTN} onClick={()=>{window.scrollTo(0,0); setGuanacoPage("marketPlace")}}> Ver más increibles productos!</div>
                 </div>
             </div>
         )
@@ -423,17 +463,49 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
         )
     }
 
+    let productArr = Object.keys(GuanacoData.merchData).map(function (key){
+        return {...GuanacoData.merchData[key]}
+    })
+
+
+    console.log(productArr)
+
+    const marketPlace=()=>{
+        let eachProdDisplayer = productArr.map((elem, i)=><React.Fragment key={i}>
+            <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={elem} />
+        </React.Fragment>)
+        return(
+            <>
+            <div className={styles.marketplaceSectionCont}>
+                <h1> MARKETPLACE </h1>
+                {/* MarketplaceCont */}
+                <div className={styles.merchContainer}>
+                    <div className={styles.MarketplaceCont}>
+                        {eachProdDisplayer}
+                    </div>
+                </div>
+            </div>
+            </>
+        )
+    }
+
+
     return(
         <>
         <div className={styles.guanacoMCGenPAge}>
             {guanaMCHead()}
             {floatingMenu()}
-            {guanacoLandingSplash()}
-            <div className={styles.aBandPage}>
-                {albumDisplayer()}
-                {merchDisplayer()}
-                {videoDisplayer()}
-            </div>
+            {guanacoPageDisp==="landing"&&<>
+                {guanacoLandingSplash()}
+                <div className={styles.aBandPage}>
+                    {albumDisplayer()}
+                    {merchDisplayer()}
+                    {videoDisplayer()}
+                </div>
+            </>}
+            {guanacoPageDisp==="marketPlace"&&<>
+                {marketPlace()}
+            </>}
             {GuanacoMCFooter()}
             {cartModal()}
             {itemAddedAlert()}    
