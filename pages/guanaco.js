@@ -479,11 +479,12 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
             <div className={styles.marketplaceSectionCont}>
                 <h1> MARKETPLACE </h1>
                 {/* MarketplaceCont */}
-                <div className={styles.merchContainer}>
+                <div className={styles.merchContainer2}>
                     <div className={styles.MarketplaceCont}>
                         {eachProdDisplayer}
                     </div>
                 </div>
+
             </div>
             </>
         )
