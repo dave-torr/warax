@@ -5,10 +5,12 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 import styles from '../styles/pages/Home.module.css'
-
+//////
+// STRIPE ELEMENTS
 import { Elements } from '@stripe/react-stripe-js'
 import getStripe from './../utils/get-stripejs'
 import {StripeGeneralCheckout} from "./../components/paymentComp/stripeCardSetup"
+
 
 import {Navi, Footer} from "./../components/navi"
 import {EventDisp, EventBanner, EventPlaceholder} from "./../components/events"
@@ -16,8 +18,11 @@ import {SalesForm} from "./../components/forms"
 import {MerchDisp} from "./../components/merch"
 import {ServiceDisp} from "./../components/services"
 
+
 import {WebveoMiniSite, WebVeoHomeBanner } from "./../components/miniSites/webveo"
 import {WuanTakeMiniSite, WaraxTvMiniSite} from "./../components/miniSites/waraxMinisites"
+
+import waraxhomeData from "./../data/warax.json"
 
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
@@ -26,8 +31,10 @@ import { Dialog } from '@material-ui/core'
 // 
 // Webveo Cap Merch
 let capBlack={
-  "associatedActs": "incl. delivery",
-  "productCateg": "WebVeo",
+  "priceDetail": "incl. delivery",
+  "productCatalog": "WebVeo",
+  "productCategory": "merch",
+  "productType": "cap",
   "prodName":"Gorra - BLACK",
   "priceObj":{
       "price": 35,
@@ -41,8 +48,10 @@ let capBlack={
   }
 }
 let capYellow={
-  "associatedActs": "incl. delivery",
-  "productCateg": "WebVeo",
+  "priceDetail": "incl. delivery",
+  "productCatalog": "WebVeo",
+  "productCategory": "merch",
+  "productType": "cap",
   "prodName":"Gorra - LIME/ASH",
   "priceObj":{
       "price": 35,
@@ -56,8 +65,10 @@ let capYellow={
   }
 }
 let capGrey={
-  "associatedActs": "incl. delivery",
-  "productCateg": "WebVeo",
+  "priceDetail": "incl. delivery",
+  "productCatalog": "WebVeo",
+  "productCategory": "merch",
+  "productType": "cap",
   "prodName":"Gorra - ONYX/LIME",
   "priceObj":{
       "price": 35,
@@ -129,32 +140,6 @@ let serviceThree={
     "alt": "Imagen - Estudio de Grabación en Iconico Warax"
   }
 }
-
-
-let fridayJazzHomeBannerData={
-  "width": 640,
-  "height": 640,
-  "alt": "Friday Night Jazz - Event Poster Image",
-  "src": "/assets/eventPosters/fridayJazzNights.jpeg",
-  "title": "Noches de Jazz",
-  "categorization": "/shows/Kony & Juan Correa",
-  "location": "https://goo.gl/maps/ycEjThVbWaWtostX8",
-  "phone": "00593999981369",
-  "price": null,
-}
-
-let wrxSalsaEnsambleIMG={
-  "width": 640,
-  "height": 640,
-  "alt": "Warax Salsa Ensamble - Event Poster Image",
-  "src": "/assets/eventPosters/salsaEnsamble.png",
-  "categorization": "/ shows / Waras Salsa Ensamble",
-  "title": "Orquesta de Salsa",
-  "location": "https://g.page/sabroso-restaurante-vivero?share",
-  "phone": "005930992985125",
-  "price": null,
-}
-
 
 export default function Home() {
 
@@ -416,6 +401,7 @@ export default function Home() {
     )
   }
 
+
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
   return (
@@ -443,10 +429,10 @@ export default function Home() {
               />
 
               <EventBanner  
-                bannerData={wrxSalsaEnsambleIMG}
+                bannerData={waraxhomeData.homeBannerData.wrxSalsaEnsambleBannerData}
               />
               <EventBanner  
-                bannerData={fridayJazzHomeBannerData}
+                bannerData={waraxhomeData.homeBannerData.fridayJazzHomeBannerData}
               />
 
             </div>

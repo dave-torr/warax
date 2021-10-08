@@ -114,8 +114,10 @@
     "merchData": 
     {
         "capBlack" :{
-            "associatedActs": "incl. delivery",
-            "productCateg": "WebVeo",
+            "priceDetail": "incl. delivery",
+            "productCatalog": "WebVeo",
+            "productCategory": "merch",
+            "productType": "cap",
             "prodName":"Gorra - BLACK",
             "priceObj":{
                 "price": 35,
@@ -129,8 +131,10 @@
                 }
         },
         "capCholoBrown" :{
-            "associatedActs": "incl. delivery",
-            "productCateg": "Cholonizacion",
+            "priceDetail": "incl. delivery",
+            "productCatalog": "Cholonizacion",
+            "productCategory": "merch",
+            "productType": "cap",
             "prodName":"SnapBack | Beige con negro",
             "priceObj":{
                 "price": 35,
@@ -144,8 +148,10 @@
             }
         },
         "capCholoFivePanl" :{
-            "associatedActs": "incl. delivery",
-            "productCateg": "Cholonizacion",
+            "priceDetail": "incl. delivery",
+            "productCatalog": "Cholonizacion",
+            "productCategory": "merch",
+            "productType": "cap",
             "prodName":"Five Panels | Beige",
             "priceObj":{
                 "price": 35,
@@ -159,8 +165,10 @@
                 }
         },
         "hoodieCholoBlk" :{
-            "associatedActs": "incl. delivery",
-            "productCateg": "Cholonizacion",
+            "priceDetail": "incl. delivery",
+            "productCatalog": "Cholonizacion",
+            "productCategory": "merch",
+            "productType": "hoodie",
             "prodName":"Hoodie - BLACK STAMP",
             "priceObj":{
                 "price": 35,
@@ -174,8 +182,10 @@
             }
         },
         "buzoCholoBlk" :{
-            "associatedActs": "incl. delivery",
-            "productCateg": "Cholonizacion",
+            "priceDetail": "incl. delivery",
+            "productCatalog": "Cholonizacion",
+            "productCategory": "hoodie",
+            "productType": "cap",
             "prodName":"Buzo - Cholonizacion STAMP",
             "priceObj":{
                 "price": 35,
@@ -189,8 +199,10 @@
             }
         },
         "capCholoSnapback" :{
-            "associatedActs": "incl. delivery",
-            "productCateg": "Cholonizacion",
+            "priceDetail": "incl. delivery",
+            "productCatalog": "Cholonizacion",
+            "productCategory": "merch",
+            "productType": "cap",
             "prodName":"SnapBack | Letter",
             "priceObj":{
                 "price": 35,
@@ -204,8 +216,10 @@
             }
         },
         "capCholoFPRed" :{
-            "associatedActs": "incl. delivery",
-            "productCateg": "Cholonizacion",
+            "priceDetail": "incl. delivery",
+            "productCatalog": "Cholonizacion",
+            "productCategory": "merch",
+            "productType": "cap",
             "prodName":"Five Panels | Roja con negro",
             "priceObj":{
                 "price": 35,
@@ -218,8 +232,5 @@
                 "alt": "Merch Oficial Cholonizacion - Gorra Five Panels | Roja con negro"
             }
         }
-
-
-
     }
 }

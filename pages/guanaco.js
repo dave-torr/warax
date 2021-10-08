@@ -467,9 +467,6 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
         return {...GuanacoData.merchData[key]}
     })
 
-
-    console.log(productArr)
-
     const marketPlace=()=>{
         let eachProdDisplayer = productArr.map((elem, i)=><React.Fragment key={i}>
             <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={elem} />
@@ -490,6 +487,8 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
         )
     }
 
+
+console.log(waraxCart)
 
     return(
         <>

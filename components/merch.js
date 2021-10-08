@@ -14,8 +14,11 @@ let theItem = props.merchItem
     const [merchVisTrigger, setMerchVis]=useState(false)
     const [merchObj, setMerchObj] =useState({
         "price": theItem.priceObj.price,
-        "priceDetail": theItem.priceObj.priceDetail,
-        "productName": theItem.priceObj.productName
+        "priceDetail": theItem.priceDetail,
+        "productName": theItem.priceObj.productName,
+        "productType": theItem.productType,
+        "productCatalog": theItem.productCatalog,
+        "productCategory": theItem.productCategory,
     })
 
     const IMGDisplayer=(imgObj)=>{
@@ -62,12 +65,12 @@ let theItem = props.merchItem
                     />
                 </div>
                 <div className={styles.merchDescCont}>
-                    <div className={styles.merchListing}> merch / {theItem.productCateg} </div>
+                    <div className={styles.merchListing}> merch / {theItem.productCatalog} </div>
                     <h2> {theItem.prodName} </h2>
 
                     <div>
                         <div style={{display: "flex", justifyContent: "space-between", alignItems:"center"}}>
-                            <h5> {theItem.associatedActs} </h5>
+                            <h5> {theItem.priceDetail} </h5>
                             <div className={styles.proPrice}>${theItem.priceObj.price} </div>
                         </div>
 
@@ -130,12 +133,12 @@ let theItem = props.merchItem
                     />
                 </div>
                 <div className={styles.merchDescCont}>
-                    <div className={styles.merchListing}> merch / {theItem.productCateg} </div>
+                    <div className={styles.merchListing}> merch / {theItem.productCatalog} </div>
                     <h2> {theItem.prodName} </h2>
 
                     <div>
                         <div style={{display: "flex", justifyContent: "space-between", alignItems:"center"}}>
-                            <h5> {theItem.associatedActs} </h5>
+                            <h5> {theItem.priceDetail} </h5>
                             <div className={styles.proPrice}>${theItem.priceObj.price} </div>
                         </div>
 
