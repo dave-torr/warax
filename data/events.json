@@ -21,9 +21,9 @@
         }
     },
     {
-        "eventName": "WEBVEO - con Guanaco MC",
-        "eventType": "web series",
-        "eventDescription":"COMING SOON",
+        "eventName": "Criollando Con Amigos",
+        "eventType": "concierto en linea",
+        "eventDescription":"Agarrate Catalina volvió a los escenarios con Amor y Odio, primer premio del carnaval 2020. Un espectáculo critico. humoristico y humanista, con el sello proprio de la murga más ganadora de los últimos veinte años.",
         "priceObj":[
             {
                 "price": 13,
@@ -38,7 +38,7 @@
             "src":"/assets/eventPosters/criollando.jpg",
             "height": 765,
             "width": 595,
-            "alt": "Poster Evento: Criollando con Amigos - "
+            "alt": "Poster Evento: Criollando con Amigos"
         }
     }
 ]

@@ -130,6 +130,9 @@ export function EventPlaceholder(props){
     )
 }
 
+///////////////////////////////
+// Home page event components
+/////////////////////////////
 export function EventBanner(props){
 
     // location
@@ -171,6 +174,146 @@ const [eventBannerDialogTrig, setBannerIMGTrig]= useState(false)
                 />
             </div>
             </Dialog>
+        </>
+    )
+}
+
+
+export function HomeEventDisplayer(props){
+
+
+    let sampleEventArr=[
+        {
+            "eventName": "Lanzamiento C.H.A.M.A",
+            "eventType": "estreno single",
+            "eventLocation": "https://goo.gl/maps/HVdxyNV3boXrqh9y9",
+            "productCatalog": "Pakul",
+            "productCategory": "concert",
+            "productType": "cap",
+            "prodName":"Pakul | Lanzamiento C.H.A.M.A Ticket",            
+            "priceObj":[
+                {
+                    "price": 8,
+                    "priceDetail": "Preventa",
+                    "priceExpirationDate": "Oct 20 2021"
+                },
+                {
+                    "price": 10,
+                    "priceDetail": "Cover"
+                }
+            ],
+            "eventPoster":{
+                "src":"/assets/eventPosters/pakulOct23.jpeg",
+                "height": 600,
+                "width": 600,
+                "alt": "Pakul En Vivo | Poster Evento"
+            }
+        },
+    ]
+
+    // CALENDAR DISPLAYER
+    // - upcoming 3-5 events ordered by date. 
+    // - addToCartBTN(eventPurchaseObj) 
+    // - event poster popup
+    // - share to instagram stories BTN?? 
+
+    const [eventPurchaseObj, setEventSaleObj] = useState({
+        "price": null,
+        "priceDetail": null,
+        "productName": null,
+        "productType": null,
+        "productCatalog": null,
+        "productCategory": null,
+    })
+    // props.waraxCart
+    // props.addToCart()
+
+
+
+
+
+    const [eventIMGDialogTrig, setPosterIMDialogTrig] = useState(false)
+    const [eventDialogIMG, setImgDialogData] = useState({
+        "alt": "aSample Alt Tag",
+        "height": 500,
+        "width": 500,
+        "src":"./"
+    })
+
+    
+
+    const eachEventDisp=(upcomingEventArr)=>{
+        let eachEventDispl=upcomingEventArr.map((elem, i)=><React.Fragment key={i}>
+            <div className={styles.eachEventCont}> 
+                <div className={styles.posterdispl} onClick={()=>{
+                    setPosterIMDialogTrig(true)
+                    setImgDialogData(elem.eventPoster)
+                }}> 
+                    <Image
+                        height={150}
+                        width={150}
+                        alt={elem.eventPoster.alt}
+                        src={elem.eventPoster.src}
+                    />
+                </div>
+                <div className={styles.priceBox}> 
+                    <div> priceBox </div>
+                </div>
+            </div>
+        </React.Fragment>)
+        return(
+            <>
+            <div className={styles.eventCalendarCont}>
+                {eachEventDispl}
+            </div>
+            </>
+        )
+    }
+
+
+    const homeLandingSection=()=>{
+        return(
+            <>
+            <div className={styles.homeSection}>
+                <div className={styles.backgroundImageCont}>
+                    <Image
+                        alt="Mountains"
+                        src="/assets/pictures/homeEventCalendarIMG.jpg"
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                    />
+                </div>
+                <div className={styles.eventCalendarContent}>
+                    <h1>Eventos Próximos</h1>
+                    {eachEventDisp(sampleEventArr)}
+                </div>
+            </div>
+            </>
+        )
+    }
+    const eventPosterDialog=()=>{
+        // trigger: eventIMGDialogTrig
+        // onClose: setPosterIMDialogTrig
+        return(
+            <><Dialog open={eventIMGDialogTrig} onClose={()=>setPosterIMDialogTrig(false)}>
+                <div className={styles.closeDialogBTN} onCllick={()=>setPosterIMDialogTrig(false)}> cerrar | x </div>
+                <Image
+                    height={500}
+                    width={500}
+                    alt={eventDialogIMG.alt}
+                    src={eventDialogIMG.src}
+                />
+
+            </Dialog> 
+            </>
+        )
+    }
+
+    return(
+        <>
+        {homeLandingSection()}
+        {eventPosterDialog()}
         </>
     )
 }

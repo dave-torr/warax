@@ -13,8 +13,8 @@ import {StripeGeneralCheckout} from "./../components/paymentComp/stripeCardSetup
 
 
 import {Navi, Footer} from "./../components/navi"
-import {EventDisp, EventBanner, EventPlaceholder} from "./../components/events"
-import {SalesForm} from "./../components/forms"
+import {EventDisp, EventBanner, EventPlaceholder, HomeEventDisplayer} from "./../components/events"
+import {SalesForm} from "../data/forms"
 import {MerchDisp} from "./../components/merch"
 import {ServiceDisp} from "./../components/services"
 
@@ -434,8 +434,10 @@ export default function Home() {
               <EventBanner  
                 bannerData={waraxhomeData.homeBannerData.fridayJazzHomeBannerData}
               />
-
             </div>
+            {/* <HomeEventDisplayer 
+              addToCart={addToCart}
+            /> */}
             {merchDisp()}
             {servicedisp()}
         </>}

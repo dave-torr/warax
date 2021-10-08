@@ -102,6 +102,13 @@ useEffect(()=>{
 },[])
 
 
+
+
+
+
+// add new sale email to clients with product arr. 
+
+
 const purchaseProcess=async()=>{
   if(payment.status==="succeeded"&&count===0){
     // send email to client with receipt {{product_arr}}
@@ -120,6 +127,9 @@ const purchaseProcess=async()=>{
     }
   } 
 }
+
+
+
 
 
 

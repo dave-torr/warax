@@ -213,9 +213,6 @@
     padding-top: 15px;
 }
 
-.aBannerIcon{
-}
-
 .eventBannerGenCont h1{
     font-weight: 500;
     font-size: 2.3em;
@@ -232,13 +229,98 @@
     width: 100%;
 }
 
+/* ///////////////////// */
+/* ///////////////////// */
 
+.homeSection{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.backgroundImageCont {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+    filter: brightness(0.5) contrast(1.2);
+    background-color: rgb(24, 24, 24);
+}
 
+.eventCalendarContent{
+    position: relative;
+    color: white;
+    z-index: 1;
+    width: 900px;
+    background-color: rgb(231, 228, 228, 0.21);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    border-radius: 5px;
+    padding: 21px 33px;
+    flex-direction: column;
+    display: flex;
+}
+
+.eventCalendarContent h1{
+    font-weight: 300;
+    font-size: 2.5em;
+    margin: unset;
+    padding: unset;
+}
+
+.eventCalendarCont{
+    width: 100%;
+    border: solid 2px white;
+    min-height: 33px;
+    margin: 21px 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.eachEventCont{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.posterdispl{
+    padding-left: 6px;
+    padding-top: 6px;
+}
+
+.closeDialogBTN{
+    width: fit-content;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 6px 9px;
+    cursor: pointer;
+    margin: 12px 21px;
+}
+
+.priceBox{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    padding: 0 21px;
+    border-left: solid 1px white;
+}
 
 
 /* ////////////////////////// */
 /* ////////////////////////// */
+
+
+
+
+
 @media (max-width: 1080px) {
     .eventContainer{
         width: 96%;

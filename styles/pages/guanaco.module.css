@@ -488,6 +488,13 @@
     margin-top: 12px;
 }
 
+.rmvBTN{
+  color: red;
+  font-weight: 700;
+  padding: 3px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1080px) {
     .merchContainer{
         width: 100%;
