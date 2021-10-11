@@ -6,7 +6,7 @@
             "alt": "Friday Night Jazz - Event Poster Image",
             "src": "/assets/eventPosters/fridayJazzNights.jpeg",
             "title": "Noches de Jazz",
-            "categorization": "/shows/Kony & Juan Correa",
+            "categorization": "/ eventos / Kony & Juan Correa",
             "location": "https://goo.gl/maps/ycEjThVbWaWtostX8",
             "phone": "00593999981369",
             "price": null
@@ -16,7 +16,7 @@
             "height": 640,
             "alt": "Warax Salsa Ensamble - Event Poster Image",
             "src": "/assets/eventPosters/salsaEnsamble.png",
-            "categorization": "/ shows / Waras Salsa Ensamble",
+            "categorization": "/ eventos / Waras Salsa Ensamble",
             "title": "Orquesta de Salsa",
             "location": "https://g.page/sabroso-restaurante-vivero?share",
             "phone": "005930992985125",

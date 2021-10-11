@@ -184,19 +184,20 @@ export function HomeEventDisplayer(props){
 
     let sampleEventArr=[
         {
-            "eventName": "Lanzamiento C.H.A.M.A",
+            "eventName": "Pakul | Lanzamiento C.H.A.M.A",
             "eventType": "estreno single",
             "eventLocation": "https://goo.gl/maps/HVdxyNV3boXrqh9y9",
             "productCatalog": "Pakul",
             "productCategory": "event",
             "productType": "concert",
-            "prodName":"Pakul | Lanzamiento C.H.A.M.A Ticket",
+            "productName":"Pakul | Lanzamiento C.H.A.M.A Ticket",
             "eventDate": "OCT 23 2021",
+            "contactPhone": "https://wa.me/00593984057223",
             "priceObj":[
                 {
                     "price": 8,
                     "priceDetail": "Preventa",
-                    "priceExpirationDate": "Oct 20 2021"
+                    "priceExpirationDate": "Oct 21 2021"
                 },
                 {
                     "price": 10,
@@ -212,19 +213,15 @@ export function HomeEventDisplayer(props){
         },
         {
             "eventName": "Pichirilo Radioactivo | En vivo",
-            "eventType": "concert",
-            "eventLocation": "https://goo.gl/maps/HVdxyNV3boXrqh9y9",
+            "eventType": "en vivo",
+            "eventLocation": "https://goo.gl/maps/xrNwvJhYBXbmFdCj7",
             "productCatalog": "Pichirilo Radioactivo",
             "productCategory": "event",
             "productType": "concert",
-            "prodName":"Pichirilo Raioactivo | En vivo | Ticket",
+            "productName":"Pichirilo Raioactivo | En vivo | Ticket",
             "eventDate": "NOV 05 2021",
+            "contactPhone": "https://wa.me/00593984057223",
             "priceObj":[
-                {
-                    "price": 8,
-                    "priceDetail": "Preventa",
-                    "priceExpirationDate": "Oct 20 2021"
-                },
                 {
                     "price": 10,
                     "priceDetail": "Cover"
@@ -245,20 +242,22 @@ export function HomeEventDisplayer(props){
     // - event poster popup
     // - share to instagram stories BTN?? 
 
-    const [eventPurchaseObj, setEventSaleObj] = useState({
-        "price": null,
-        "priceDetail": null,
-        "productName": null,
-        "productType": null,
-        "productCatalog": null,
-        "productCategory": null,
-    })
+///////
+// FFD
+///////
+    // const [eventPurchaseObj, setEventSaleObj] = useState({
+    //     "price": null,
+    //     "priceDetail": null,
+    //     "productName": null,
+    //     "productType": null,
+    //     "productCatalog": null,
+    //     "productCategory": null,
+    // })
+
+
+
     // props.waraxCart
     // props.addToCart()
-
-
-
-
 
     const [eventIMGDialogTrig, setPosterIMDialogTrig] = useState(false)
     const [eventDialogIMG, setImgDialogData] = useState({
@@ -268,7 +267,72 @@ export function HomeEventDisplayer(props){
         "src":"./"
     })
 
-    
+    const priceDisplayer=(priceObj, eventData)=>{
+        let theEventPrice;
+        if(priceObj.length>1){
+            let priceOne=priceObj[0]
+            let toDate = new Date()
+            let priceExpirationDate = new Date(priceOne.priceExpirationDate)
+            if(toDate < priceExpirationDate){
+                theEventPrice=priceObj[0]
+                return(
+                    <>
+                        <div className={styles.eventPrice}> ${theEventPrice.price}.-</div>
+                        <div className={styles.eventPriceDetail}>{theEventPrice.priceDetail}</div>
+                        <div className={styles.addToCartBTN} onClick={()=>{
+                            let cartEventObj= {
+                                "price":theEventPrice.price,
+                                "priceDetail":theEventPrice.priceDetail,
+                                "productName":eventData.productName,
+                                "productType":eventData.productType,
+                                "productCatalog":eventData.productCatalog,
+                                "productCategory":eventData.productCategory,
+                            }
+                            props.addToCart(cartEventObj)
+                        }}> <AddShoppingCartIcon/></div>
+                    </>
+                )
+            } else {
+                theEventPrice=priceObj[1]
+                return(
+                    <>
+                        <div className={styles.eventPrice}> ${theEventPrice.price}.-</div>
+                        <div className={styles.eventPriceDetail}>{theEventPrice.priceDetail}</div>
+                        <div className={styles.addToCartBTN} onClick={()=>{
+                            let cartEventObj= {
+                                "price":theEventPrice.price,
+                                "priceDetail":theEventPrice.priceDetail,
+                                "productName":eventData.productName,
+                                "productType":eventData.productType,
+                                "productCatalog":eventData.productCatalog,
+                                "productCategory":eventData.productCategory,
+                            }
+                            props.addToCart(cartEventObj)
+                        }}> <AddShoppingCartIcon/></div>
+                    </>
+                )
+            }
+        } else {
+            theEventPrice=priceObj[0]
+            return(
+                <>
+                    <div className={styles.eventPrice}> ${theEventPrice.price}.-</div>
+                    <div className={styles.eventPriceDetail}>{theEventPrice.priceDetail}</div>
+                    <div className={styles.addToCartBTN} onClick={()=>{
+                        let cartEventObj= {
+                                "price":theEventPrice.price,
+                                "priceDetail":theEventPrice.priceDetail,
+                                "productName":eventData.productName,
+                                "productType":eventData.productType,
+                                "productCatalog":eventData.productCatalog,
+                                "productCategory":eventData.productCategory,
+                        }
+                        props.addToCart(cartEventObj)
+                    }}> <AddShoppingCartIcon/></div>
+                </>
+            )
+        }
+    }
 
     const eachEventDisp=(upcomingEventArr)=>{
         let eachEventDispl=upcomingEventArr.map((elem, i)=><React.Fragment key={i}>
@@ -276,7 +340,7 @@ export function HomeEventDisplayer(props){
                 <div className={styles.posterdispl} onClick={()=>{
                     setPosterIMDialogTrig(true)
                     setImgDialogData(elem.eventPoster)
-                }}> 
+                    }}> 
                     <Image
                         height={150}
                         width={150}
@@ -284,8 +348,17 @@ export function HomeEventDisplayer(props){
                         src={elem.eventPoster.src}
                     />
                 </div>
+                <div className={styles.eventDataCont}> 
+                    <i className={styles.eventCatalog}> / eventos / {elem.eventType} / {elem.productCatalog} </i>
+                    <div className={styles.eventName}>{elem.eventName} </div>
+                    <div className={styles.eventDate}>{elem.eventDate}</div>
+                    <div className={styles.eventIconCont}> 
+                        <a target="_blank" href={elem.eventLocation} className={styles.anEventIcon}><div><LocationOnIcon/></div></a> 
+                        <a target="_blank" href={elem.contactPhone} className={styles.anEventIcon}><div><LocalPhoneIcon/></div></a> 
+                    </div>
+                </div>
                 <div className={styles.priceBox}> 
-                    <div> priceBox </div>
+                    {priceDisplayer(elem.priceObj, elem)}
                 </div>
             </div>
         </React.Fragment>)
@@ -297,8 +370,6 @@ export function HomeEventDisplayer(props){
             </>
         )
     }
-
-
     const homeLandingSection=()=>{
         return(
             <>

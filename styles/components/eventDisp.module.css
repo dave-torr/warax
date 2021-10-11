@@ -239,6 +239,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 12px 0;
 }
 
 .backgroundImageCont {
@@ -314,12 +315,58 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: fit-content;
-    padding: 0 21px;
+    align-items: center;
+    width: 120px;
     border-left: solid 1px white;
 }
 
+.eventDataCont{
+    width: 66%;
+    height: 150px;
+    padding: 6px;
+}
+.eventCatalog{
+    margin: 6px 12px;
+    font-size: 0.8em;
+}
+.eventDate{
+    margin: 6px 12px;
+    font-size: 1.4em;
+}
+.eventName{
+    margin: 6px 12px;
+    font-size: 2em;
+}
+.eventIconCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
+.anEventIcon{
+    width: 30%;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.eventPrice{
+    font-size: 1.5em;
+    margin-top: 9px;
+}
+
+.addToCartBTN{
+    padding: 6px 12px;
+    border: solid 2px rgb(199, 211, 211);
+    border-radius: 5px;
+    margin: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 /* ////////////////////////// */
 /* ////////////////////////// */
 

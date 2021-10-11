@@ -405,7 +405,7 @@ export default function Home() {
   const homeSwitcher=()=>{
     let concertDate= new Date("Nov 06 2021")
     let toDate= new Date()
-    if(toDate <= concertDate){
+    if(toDate < concertDate){
       return(
         <>
         <div className={styles.pichiLanding} onClick={()=>{
@@ -477,9 +477,9 @@ export default function Home() {
 
 
             <div id="EventCalendarAnchor"/>
-            {/* <HomeEventDisplayer 
+            <HomeEventDisplayer 
               addToCart={addToCart}
-            /> */}
+            />
 
 
 
