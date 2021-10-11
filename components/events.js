@@ -188,9 +188,10 @@ export function HomeEventDisplayer(props){
             "eventType": "estreno single",
             "eventLocation": "https://goo.gl/maps/HVdxyNV3boXrqh9y9",
             "productCatalog": "Pakul",
-            "productCategory": "concert",
-            "productType": "cap",
-            "prodName":"Pakul | Lanzamiento C.H.A.M.A Ticket",            
+            "productCategory": "event",
+            "productType": "concert",
+            "prodName":"Pakul | Lanzamiento C.H.A.M.A Ticket",
+            "eventDate": "OCT 23 2021",
             "priceObj":[
                 {
                     "price": 8,
@@ -207,6 +208,33 @@ export function HomeEventDisplayer(props){
                 "height": 600,
                 "width": 600,
                 "alt": "Pakul En Vivo | Poster Evento"
+            }
+        },
+        {
+            "eventName": "Pichirilo Radioactivo | En vivo",
+            "eventType": "concert",
+            "eventLocation": "https://goo.gl/maps/HVdxyNV3boXrqh9y9",
+            "productCatalog": "Pichirilo Radioactivo",
+            "productCategory": "event",
+            "productType": "concert",
+            "prodName":"Pichirilo Raioactivo | En vivo | Ticket",
+            "eventDate": "NOV 05 2021",
+            "priceObj":[
+                {
+                    "price": 8,
+                    "priceDetail": "Preventa",
+                    "priceExpirationDate": "Oct 20 2021"
+                },
+                {
+                    "price": 10,
+                    "priceDetail": "Cover"
+                }
+            ],
+            "eventPoster":{
+                "src":"/assets/eventPosters/pichiriloRioNov5mobile.jpg",
+                "height": 730,
+                "width": 600,
+                "alt": "Pichirilo Radioactivo En Vivo | Poster Evento"
             }
         },
     ]
@@ -297,14 +325,13 @@ export function HomeEventDisplayer(props){
         // onClose: setPosterIMDialogTrig
         return(
             <><Dialog open={eventIMGDialogTrig} onClose={()=>setPosterIMDialogTrig(false)}>
-                <div className={styles.closeDialogBTN} onCllick={()=>setPosterIMDialogTrig(false)}> cerrar | x </div>
+                <div className={styles.closeDialogBTN} onClick={()=>setPosterIMDialogTrig(false)}> cerrar | x </div>
                 <Image
-                    height={500}
-                    width={500}
+                    height={eventDialogIMG.height}
+                    width={eventDialogIMG.width}
                     alt={eventDialogIMG.alt}
                     src={eventDialogIMG.src}
                 />
-
             </Dialog> 
             </>
         )

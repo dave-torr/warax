@@ -312,14 +312,12 @@ export default function Home() {
     return(<>
       <div className={styles.aHomeSection}>
         <h1 className={styles.aSectiontitle}> Eventos Proximos </h1> 
-
         {/* <EventDisp addToCart={addToCart} /> */}
         <EventPlaceholder />
-
-
       </div>
     </>)
   }
+
   const homeLanding=()=>{
     return(
       <>
@@ -344,6 +342,8 @@ export default function Home() {
       </>
     )
   }
+
+
   const merchDisp=()=>{
     return(
       <>
@@ -402,6 +402,42 @@ export default function Home() {
   }
 
 
+  const homeSwitcher=()=>{
+    let concertDate= new Date("Nov 06 2021")
+    let toDate= new Date()
+    if(toDate <= concertDate){
+      return(
+        <>
+        <div className={styles.pichiLanding} onClick={()=>{
+          let eventCalAnchor = document.getElementById(`EventCalendarAnchor`)
+              eventCalAnchor.scrollIntoView({behavior: "smooth"})
+        }}>
+          <div className={styles.altLandingCont}><Image 
+            src="/assets/eventPosters/pichiriloRioNov5.jpg"
+            width={1085}
+            height={572}
+            alt="Warax Presents: Pichirilo Radioactivo ft. Pakul | Nov 05 Riobamba"
+          /></div>
+        </div>
+        <div className={styles.pichiLandingNobile} onClick={()=>{
+          let eventCalAnchor = document.getElementById(`EventCalendarAnchor`)
+              eventCalAnchor.scrollIntoView({behavior: "smooth"})
+        }}>
+          <div className={styles.altLandingCont}><Image 
+            src="/assets/eventPosters/pichiriloRioNov5mobile.jpg"
+            width={600}
+            height={700}
+            alt="Warax Presents: Pichirilo Radioactivo ft. Pakul | Nov 05 Riobamba"
+          /></div>
+        </div>
+        </>
+      )
+    } else {
+      {homeLanding()}
+    }
+  }
+
+
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
   return (
@@ -420,7 +456,9 @@ export default function Home() {
         />
 
         {pageDisplayer==="home"&&<>
-            {homeLanding()}
+        <br></br>
+        <br></br>
+            {homeSwitcher()}
             {/* {anEventDisp()} */}
             <div className={styles.homeCardDispCont}> 
               <WebVeoHomeBanner 
@@ -435,9 +473,16 @@ export default function Home() {
                 bannerData={waraxhomeData.homeBannerData.fridayJazzHomeBannerData}
               />
             </div>
+
+
+
+            <div id="EventCalendarAnchor"/>
             {/* <HomeEventDisplayer 
               addToCart={addToCart}
             /> */}
+
+
+
             {merchDisp()}
             {servicedisp()}
         </>}

@@ -144,6 +144,17 @@
   }
 
 
+/* Alt landing */
+.pichiLandingNobile{
+  display: none;
+}
+
+.pichiLanding{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
 
 @media (max-width: 1080px) {
   .aSectiontitle{
@@ -155,6 +166,17 @@
 }
 
 @media (max-width: 700px) {
+  .pichiLanding{
+    display: none;
+  }
+  .pichiLandingNobile{
+    display: unset;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+  }
+
   .homeSplashText{
     bottom: 66px;
     font-size: 2em;
