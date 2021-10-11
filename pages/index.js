@@ -14,7 +14,7 @@ import {StripeGeneralCheckout} from "./../components/paymentComp/stripeCardSetup
 
 import {Navi, Footer} from "./../components/navi"
 import {EventDisp, EventBanner, EventPlaceholder, HomeEventDisplayer} from "./../components/events"
-import {SalesForm} from "../data/forms"
+import {SalesForm} from "../components/forms"
 import {MerchDisp} from "./../components/merch"
 import {ServiceDisp} from "./../components/services"
 
