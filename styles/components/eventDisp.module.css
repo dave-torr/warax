@@ -280,7 +280,6 @@
     margin: 21px 0;
     display: flex;
     flex-direction: column;
-
 }
 
 .eachEventCont{
@@ -394,6 +393,22 @@
     .aPriceBox{
         width: 270px;
     }
+
+    .posterdispl{
+        display: none;
+    }
+    .eventCatalog{
+        display: none;
+    }
+
+    .eventDataCont{
+        height: fit-content;
+        width: 100%;
+    }
+    .eventCalendarContent{
+        width: 96%;
+        padding: 27px 15px;
+    }
 }
 
 @media (max-width: 750px) {
@@ -416,4 +431,14 @@
         margin: 12px 0;
     }
 
+    .eventCalendarContent h1{
+        font-size: 1.8em;
+    }
+
+    .eventName{
+        font-size: 1.6em;
+    }
+    .eventDate{
+        font-size: 1.2em;
+    }
 }

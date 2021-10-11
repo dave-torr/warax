@@ -187,6 +187,7 @@ export function HomeEventDisplayer(props){
             "eventName": "Pakul | Lanzamiento C.H.A.M.A",
             "eventType": "estreno single",
             "eventLocation": "https://goo.gl/maps/HVdxyNV3boXrqh9y9",
+            "eventCity": "Quito",
             "productCatalog": "Pakul",
             "productCategory": "event",
             "productType": "concert",
@@ -212,9 +213,10 @@ export function HomeEventDisplayer(props){
             }
         },
         {
-            "eventName": "Pichirilo Radioactivo | En vivo",
+            "eventName": "Pichirilo Radioactivo | En Vivo",
             "eventType": "en vivo",
             "eventLocation": "https://goo.gl/maps/xrNwvJhYBXbmFdCj7",
+            "eventCity": "Riobamba",
             "productCatalog": "Pichirilo Radioactivo",
             "productCategory": "event",
             "productType": "concert",
@@ -351,7 +353,7 @@ export function HomeEventDisplayer(props){
                 <div className={styles.eventDataCont}> 
                     <i className={styles.eventCatalog}> / eventos / {elem.eventType} / {elem.productCatalog} </i>
                     <div className={styles.eventName}>{elem.eventName} </div>
-                    <div className={styles.eventDate}>{elem.eventDate}</div>
+                    <div className={styles.eventDate}>{elem.eventDate} | {elem.eventCity}</div>
                     <div className={styles.eventIconCont}> 
                         <a target="_blank" href={elem.eventLocation} className={styles.anEventIcon}><div><LocationOnIcon/></div></a> 
                         <a target="_blank" href={elem.contactPhone} className={styles.anEventIcon}><div><LocalPhoneIcon/></div></a> 
