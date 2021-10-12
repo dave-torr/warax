@@ -14,13 +14,14 @@ const handler = nextConnect()
     from: 'david@latintravelcollection.com', 
     template_id: "d-539d1ee229a544c38c2b5175746fadf8",
     dynamic_template_data: {
-        "userName": aRequest.userName,
+        "clientName": aRequest.clientName,
         "waraxCart": aRequest.waraxCart
       },
   }
   sgMail
     .send(msg)
     .then(() => {
+      console.log('Client Email sent')
       res.status(200).json({email: "Admin Email Success"})
     })
     .catch((error) => {

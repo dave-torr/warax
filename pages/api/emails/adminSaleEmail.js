@@ -11,8 +11,8 @@ const handler = nextConnect()
     from: 'david@latintravelcollection.com', 
     template_id: "d-b61082e45fda43dc8e1e2bf816af9c1e",
     dynamic_template_data: {
-        "userName": aRequest.userName,
-        "userPhono": aRequest.userPhono,
+        "clientName": aRequest.clientName,
+        "clientPhono": aRequest.clientPhono,
         "clientEmail": aRequest.clientEmail,
         "clientCity": aRequest.clientCity,
         "clientProvince": aRequest.clientProvince,
@@ -24,6 +24,7 @@ const handler = nextConnect()
   sgMail
     .send(msg)
     .then(() => {
+      console.log('Admin Email sent')
       res.status(200).json({email: "Client Email Success"})
     })
     .catch((error) => {

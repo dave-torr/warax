@@ -110,8 +110,6 @@ const purchaseProcess=async()=>{
     // close modal
   setCount(count+1)
 
-
-
   // Automated emails
     let saleEmailObj={
       ...props.saleUsarData,
@@ -132,12 +130,10 @@ const purchaseProcess=async()=>{
     const emailRes2Ans = await emailRes2.json()
     if (emailRes2Ans){ console.log(emailRes2Ans)}
 
-
-
 // to Backend and Database
   const res = await fetch("/api/newSale",{
-      method: "post",
-      body: saleEmailObj
+      method: 'POST',
+      body: stringifiedEmailData
     })
 
   const submittedUserData = await res.json()
