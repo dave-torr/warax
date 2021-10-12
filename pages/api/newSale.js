@@ -10,7 +10,7 @@ const handler = nextConnect()
   const ResCreation = await db
     .collection("b2cSales")
     .insertOne(reqData);
-    res.status(200).json( ResCreation )
+    res.status(200).json({ResCreation: "Success"})
 })
 
 export default (req, res) => handler.run(req, res) 

@@ -24,8 +24,7 @@ const handler = nextConnect()
   sgMail
     .send(msg)
     .then(() => {
-      console.log('Admin Email sent')
-      res.status(200).json({email: "Success"})
+      res.status(200).json({email: "Client Email Success"})
     })
     .catch((error) => {
       console.error(error)
