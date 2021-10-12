@@ -189,8 +189,8 @@ export function HomeEventDisplayer(props){
             "eventLocation": "https://goo.gl/maps/HVdxyNV3boXrqh9y9",
             "eventCity": "Quito",
             "productCatalog": "Pakul",
-            "productCategory": "event",
-            "productType": "concert",
+            "productCategory": "Event",
+            "productType": "Concert",
             "productName":"Pakul | Lanzamiento C.H.A.M.A Ticket",
             "eventDate": "OCT 23 2021",
             "contactPhone": "https://wa.me/00593984057223",
@@ -218,8 +218,8 @@ export function HomeEventDisplayer(props){
             "eventLocation": "https://goo.gl/maps/xrNwvJhYBXbmFdCj7",
             "eventCity": "Riobamba",
             "productCatalog": "Pichirilo Radioactivo",
-            "productCategory": "event",
-            "productType": "concert",
+            "productCategory": "Event",
+            "productType": "Concert",
             "productName":"Pichirilo Raioactivo | En vivo | Ticket",
             "eventDate": "NOV 05 2021",
             "contactPhone": "https://wa.me/00593984057223",
@@ -243,20 +243,6 @@ export function HomeEventDisplayer(props){
     // - addToCartBTN(eventPurchaseObj) 
     // - event poster popup
     // - share to instagram stories BTN?? 
-
-///////
-// FFD
-///////
-    // const [eventPurchaseObj, setEventSaleObj] = useState({
-    //     "price": null,
-    //     "priceDetail": null,
-    //     "productName": null,
-    //     "productType": null,
-    //     "productCatalog": null,
-    //     "productCategory": null,
-    // })
-
-
 
     // props.waraxCart
     // props.addToCart()

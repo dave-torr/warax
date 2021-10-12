@@ -209,6 +209,8 @@ export default function Home() {
                 totalPaymentAmount={finalPrice} 
                 receiptDescription={"Compra en linea - Warax Arte"}
                 saleUsarData={saleUsarData}
+                setSaleUserData={setSaleUserData}
+                setUserDataTrig={setUserDataTrig}
                 waraxCart={waraxCart}
                 setWaraxCart={setWaraxCart}
               /> 

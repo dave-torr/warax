@@ -121,9 +121,10 @@ const purchaseProcess=async()=>{
       body: stringifiedEmailData
     })
     const emailResAns = await emailRes.json()
-    if (emailResAns){ console.log(emailResAns)}
-    const emailRes2 = await fetch("/api/emails/clientSaleEmail",{
-      method: 'post',
+    if (emailResAns){ console.log("Ye ye")}
+
+    const emailRes2 = await fetch("/api/emails/adminSaleEmail",{
+      method: 'PATCH',
       body: stringifiedEmailData
     })
     const emailRes2Ans = await emailRes2.json()
@@ -171,6 +172,8 @@ const PaymentStatus = ({ status }: { status: string }) => {
         <h3>Nuestro team se pondra en contacto pronto!</h3>
         <div className={styles.btnCont} onClick={()=>{
           props.setWaraxCart([])
+          props.setSaleUserData()
+          props.setUserDataTrig(false)
         }}> Salir! </div>
       </>)
     case 'error':
