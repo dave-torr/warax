@@ -230,14 +230,6 @@ export default function Home() {
     )
   }
 
-  useEffect(()=>{
-      let saleEmialObj={
-      ...saleUsarData,
-      "waraxCart": waraxCart
-    }
-    console.log(saleEmialObj)
-  },[saleUsarData])
-
   ////////////////////////////
   // Cart Display
   const cartModal=()=>{

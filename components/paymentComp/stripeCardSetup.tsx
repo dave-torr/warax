@@ -110,25 +110,13 @@ const purchaseProcess=async()=>{
     // close modal
   setCount(count+1)
 
+
+
+  // Automated emails
     let saleEmailObj={
       ...props.saleUsarData,
       "waraxCart": props.waraxCart
     }
-  ///////////////////////////
-  // to Backend and Database
-  /////////////////////////
-    const res = await fetch("/api/newSale",{
-        method: "post",
-        body: saleEmailObj
-      })
-
-  ////////////////////
-  // Automated emails
-  ///////////////////
-    const submittedUserData = await res.json()
-      if(submittedUserData){
-        console.log("res instance created")
-      }
     let stringifiedEmailData=JSON.stringify(saleEmailObj)
     const emailRes = await fetch("/api/emails/clientSaleEmail",{
       method: 'PATCH',
@@ -144,8 +132,25 @@ const purchaseProcess=async()=>{
     const emailRes2Ans = await emailRes2.json()
     if (emailRes2Ans){ console.log(emailRes2Ans)}
 
+
+
+// to Backend and Database
+  const res = await fetch("/api/newSale",{
+      method: "post",
+      body: saleEmailObj
+    })
+
+  const submittedUserData = await res.json()
+    if(submittedUserData){
+      console.log("res instance created")
+    }
   } 
 }
+
+
+
+
+
 
 
 ////////////////
