@@ -175,6 +175,7 @@ export default function Home() {
     }
   },[])
 
+
   ///////////////////////////
   // Cart Utils
   function Alert(props) {return <MuiAlert elevation={6} variant="filled" {...props} />}    
@@ -212,16 +213,6 @@ export default function Home() {
                 setWaraxCart={setWaraxCart}
               /> 
             </Elements>
-          {/* CAJITA KUSHKI MOFOOO */}
-          {/* <Script src="https://cdn.kushkipagos.com/kushki-checkout.js"/>
-
-          <form id="payment-form" action="/confirm" method="post">
-              <input type="hidden" name="cart_id" value="123"/>
-          </form>
-
-          <Script type="text/javascript">
-              {formLoader()}
-          </Script> */}
         </>:<>
           {userDataTrig? <>
             <SalesForm   
@@ -236,6 +227,14 @@ export default function Home() {
       </>
     )
   }
+
+  useEffect(()=>{
+      let saleEmialObj={
+      ...saleUsarData,
+      "waraxCart": waraxCart
+    }
+    console.log(saleEmialObj)
+  },[saleUsarData])
 
   ////////////////////////////
   // Cart Display

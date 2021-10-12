@@ -94,16 +94,9 @@ export function StripeGeneralCheckout(props){
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
-
-//////////////
-// FFD
-useEffect(()=>{
-  setCount(0)
-},[])
-
-
-
-
+// useEffect(()=>{
+//   setCount(0)
+// },[])
 
 
 // add new sale email to clients with product arr. 
@@ -116,14 +109,36 @@ const purchaseProcess=async()=>{
     // empty cart
     // close modal
   setCount(count+1)
+
+  // Automated emails
+    let saleEmailObj={
+      ...props.saleUsarData,
+      "waraxCart": props.waraxCart
+    }
+    let stringifiedEmailData=JSON.stringify(saleEmailObj)
+    const emailRes = await fetch("/api/emails/clientSaleEmail",{
+      method: 'PATCH',
+      body: stringifiedEmailData
+    })
+    const emailResAns = await emailRes.json()
+    if (emailResAns){ console.log(emailResAns)}
+    const emailRes2 = await fetch("/api/emails/clientSaleEmail",{
+      method: 'post',
+      body: stringifiedEmailData
+    })
+    const emailRes2Ans = await emailRes2.json()
+    if (emailRes2Ans){ console.log(emailRes2Ans)}
+
+// to Backend and Database
   let stringifiedUserData=JSON.stringify(props.saleUsarData)
   const res = await fetch("/api/newSale",{
       method: "post",
       body: stringifiedUserData
     })
+
   const submittedUserData = await res.json()
     if(submittedUserData){
-      // console.log("res instance created")
+      console.log("res instance created")
     }
   } 
 }

@@ -32,13 +32,13 @@ export function SalesForm(props){
         }}>
             <div> Dejanos tus Datos: </div>
             <br></br>
-            {anInputDisp("text", "userName", "Nombre", props.saleUsarData, props.setSaleUserData)}
-            {anInputDisp("number", "phono", "Telefono", props.saleUsarData, props.setSaleUserData)}
-            {anInputDisp("email", "email", "Email", props.saleUsarData, props.setSaleUserData)}
-            {anInputDisp("text", "city", "Ciudad", props.saleUsarData, props.setSaleUserData)}
-            {anInputDisp("text", "province", "Provincia", props.saleUsarData, props.setSaleUserData)}
-            {anInputDisp("text", "address", "Dirección", props.saleUsarData, props.setSaleUserData)}
-            {anInputDisp("text", "building", "Edif/Dpto", props.saleUsarData, props.setSaleUserData)}
+            {anInputDisp("text", "clientName", "Nombre", props.saleUsarData, props.setSaleUserData)}
+            {anInputDisp("number", "clientPhono", "Telefono", props.saleUsarData, props.setSaleUserData)}
+            {anInputDisp("email", "clientEmail", "Email", props.saleUsarData, props.setSaleUserData)}
+            {anInputDisp("text", "clientCity", "Ciudad", props.saleUsarData, props.setSaleUserData)}
+            {anInputDisp("text", "clientProvince", "Provincia", props.saleUsarData, props.setSaleUserData)}
+            {anInputDisp("text", "clientAddress", "Dirección", props.saleUsarData, props.setSaleUserData)}
+            {anInputDisp("text", "clientBuilding", "Edif/Dpto", props.saleUsarData, props.setSaleUserData)}
             {/* {anInputDisp("date", "DOB", "Fecha Nacimiento", props.saleUsarData, props.setSaleUserData)} */}
             <input 
                 type="submit"

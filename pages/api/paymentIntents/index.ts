@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import { formatAmountForStripe } from '../../../utils/stripe-helpers'
 
 const CURRENCY = 'usd'
-const MIN_AMOUNT = 10.0
+const MIN_AMOUNT = 5.0
 const MAX_AMOUNT = 500.0
 
 import Stripe from 'stripe'
