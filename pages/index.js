@@ -145,9 +145,7 @@ export default function Home() {
 
 // State
   const [pageDisplayer,setPageDisplayer]=useState("home")
-
   const [showHomeMerch, setShowMerch]=useState(false)
-
   const [waraxiCarti, setWaraxiCart]=useState(true)
   const [waraxCart, setWaraxCart]=useState([])
   const [addedItemSnack, setAddedItem]=useState(false)
@@ -155,9 +153,7 @@ export default function Home() {
   const [mobileCartTrig, setMobCartTrigg] =useState(false)
   const [finalPrice, setFinalPrice]=useState()
   const [payment, setPayment]=useState(false)
-
   const [minisiteDisp, setMinisite] = useState(null)
-
 
 // useEffects
   useEffect(()=>{
@@ -299,18 +295,19 @@ export default function Home() {
     )
   }
 
+
   //////////////////////////
   // Display elems
   const anEventDisp=()=>{
     return(<>
       <div className={styles.aHomeSection}>
-        <h1 className={styles.aSectiontitle}> Eventos Proximos </h1> 
         {/* <EventDisp addToCart={addToCart} /> */}
-        <EventPlaceholder />
+        <HomeEventDisplayer 
+          addToCart={addToCart}
+        />
       </div>
     </>)
   }
-
   const homeLanding=()=>{
     return(
       <>
@@ -335,8 +332,6 @@ export default function Home() {
       </>
     )
   }
-
-
   const merchDisp=()=>{
     return(
       <>
@@ -393,8 +388,6 @@ export default function Home() {
       </>
     )
   }
-
-
   const homeSwitcher=()=>{
     let concertDate= new Date("Nov 06 2021")
     let toDate= new Date()
@@ -406,10 +399,10 @@ export default function Home() {
               eventCalAnchor.scrollIntoView({behavior: "smooth"})
         }}>
           <div className={styles.altLandingCont}><Image 
-            src="/assets/eventPosters/pichiriloRioNov5.jpg"
-            width={1085}
-            height={572}
-            alt="Warax Presents: Pichirilo Radioactivo ft. Pakul | Nov 05 Riobamba"
+            src="/assets/eventPosters/pakulCover.jpeg"
+            width={1201}
+            height={628}
+            alt="Warax Presents: Pakul | Oct 23 Quito"
           /></div>
         </div>
         <div className={styles.pichiLandingNobile} onClick={()=>{
@@ -417,10 +410,10 @@ export default function Home() {
               eventCalAnchor.scrollIntoView({behavior: "smooth"})
         }}>
           <div className={styles.altLandingCont}><Image 
-            src="/assets/eventPosters/pichiriloRioNov5mobile.jpg"
-            width={600}
-            height={700}
-            alt="Warax Presents: Pichirilo Radioactivo ft. Pakul | Nov 05 Riobamba"
+            src="/assets/eventPosters/pakulOct23.jpeg"
+            width={620}
+            height={629}
+            alt="Warax Presents: Pakul | Oct 23 Quito"
           /></div>
         </div>
         </>
