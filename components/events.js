@@ -157,7 +157,7 @@ const [eventBannerDialogTrig, setBannerIMGTrig]= useState(false)
                 <i>{props.bannerData.categorization} </i>
                 <h1> {props.bannerData.title} </h1>
                 <div className={styles.bannerIconContainer}>
-                    <a href={props.bannerData.location} target="_blank" ><div className={styles.aBannerIcon}> {locationIcon} </div></a>
+                    <a href={props.bannerData.location} target="_blank" rel="noopener" ><div className={styles.aBannerIcon}> {locationIcon} </div></a>
                     <a href={`tel:${props.bannerData.phone}`} rel="noopener" ><div className={styles.aBannerIcon}> {contactIcon} </div></a>
                     {/* <div className={styles.aBannerIcon}> {shoppingIcon} </div> */}
                 </div>
@@ -341,8 +341,8 @@ export function HomeEventDisplayer(props){
                     <div className={styles.eventName}>{elem.eventName} </div>
                     <div className={styles.eventDate}>{elem.eventDate} | {elem.eventCity}</div>
                     <div className={styles.eventIconCont}> 
-                        <a target="_blank" href={elem.eventLocation} className={styles.anEventIcon}><div><LocationOnIcon/></div></a> 
-                        <a target="_blank" href={elem.contactPhone} className={styles.anEventIcon}><div><LocalPhoneIcon/></div></a> 
+                        <a target="_blank" href={elem.eventLocation} rel="noopener" className={styles.anEventIcon}><div><LocationOnIcon/></div></a> 
+                        <a target="_blank" href={elem.contactPhone} rel="noopener" className={styles.anEventIcon}><div><LocalPhoneIcon/></div></a> 
                     </div>
                 </div>
                 <div className={styles.priceBox}> 
