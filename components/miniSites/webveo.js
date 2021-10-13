@@ -90,6 +90,13 @@ let episodeArr= [
         "embeddiLink": "w4CEFkSzOJc",
         "episodeDescription": "En este episodio nos acompañan Dario Castro y Maria Buendia músicos, cantantes, productores, pareja y amantes de la comida mexicana, actualmente juntos forman la agrupación musical Violeta Gandhi."
     },    
+    {
+        "episodeNum": 13,
+        "season": 3,
+        "episodeName": "Alex Alvear - El WEBVEO",
+        "embeddiLink": "b8xYWzt2LI8",
+        "episodeDescription": "En este episodio nos acompaña el genio musical Alex Alvear, músico, compositor, arreglista, y papa de todos los pollitos, su carrera ha sido una influencia para muchos músicos. Actualmente forma parte y lidera Mango Blue, Wañukta Tonic y su proyectos solista."
+    },    
 ]
 
 
