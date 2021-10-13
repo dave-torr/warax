@@ -107,7 +107,7 @@ let serviceOne={
 let serviceTwo={
   "serviceName": "Wuan Take",
   "serviceType": "Wuan Take",
-  "serviceDescription":"Grabación y edición profesional de una session de ensayo. Incluye fotografia & Videografia profesional, masterisación y edición de video",  
+  "serviceDescription":"Grabación y edición profesional de una sesión de ensayo con 1 sola cámara. Incluye fotografía y videografía profesional, masterización de audio y post producción de video.",  
   "priceObj":[
       {
           "price": 250,
@@ -336,7 +336,7 @@ export default function Home() {
     return(
       <>
       <div className={styles.aHomeSection}>
-        <h1 className={styles.aSectiontitle}> Merch - Exclusiva para ti </h1> 
+        <h1 className={styles.aSectiontitle}> Merch - Envios a todo el Ecuador </h1> 
         <div className={styles.merchDispCont}>
 
           {showHomeMerch? <>

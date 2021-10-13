@@ -9,6 +9,7 @@ import styles from "./../styles/components/eventDisp.module.css"
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import LocationOnIcon from '@material-ui/icons//LocationOn';
 import LocalPhoneIcon from '@material-ui/icons//LocalPhone';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 export function EventDisp(props){
 
@@ -141,6 +142,7 @@ export function EventBanner(props){
 
 let locationIcon = <LocationOnIcon />
 let contactIcon = <LocalPhoneIcon />
+let instaIcon = <InstagramIcon />
 let shoppingIcon = <AddShoppingCartIcon />
 const [eventBannerDialogTrig, setBannerIMGTrig]= useState(false)
 
@@ -159,6 +161,9 @@ const [eventBannerDialogTrig, setBannerIMGTrig]= useState(false)
                 <div className={styles.bannerIconContainer}>
                     <a href={props.bannerData.location} target="_blank" rel="noopener" ><div className={styles.aBannerIcon}> {locationIcon} </div></a>
                     <a href={`tel:${props.bannerData.phone}`} rel="noopener" ><div className={styles.aBannerIcon}> {contactIcon} </div></a>
+                    {props.bannerData.instagramLink&&<>
+                    <a href={props.bannerData.instagramLink} target="_blank" rel="noopener" ><div className={styles.aBannerIcon}> {instaIcon} </div></a>
+                    </>}
                     {/* <div className={styles.aBannerIcon}> {shoppingIcon} </div> */}
                 </div>
             </div>
