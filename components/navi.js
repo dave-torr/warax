@@ -73,6 +73,10 @@ export function Navi(props){
                             #WebVeo
                         </div>
                     </>}
+                    <Link href="/guanaco"> 
+                    <div className={styles.miniSiteLink}>
+                    Guanaco MC</div>
+                    </Link>
                 </div>
 
                 {props.waraxCart.length>0&&<>
