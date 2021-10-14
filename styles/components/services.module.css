@@ -25,6 +25,7 @@
 }
 .serviceDescrCont h2{
     text-transform: uppercase;
+    margin: unset;
 }
 
 .serviceListing{
@@ -33,7 +34,8 @@
 }
 .serviceDescrCont p{
     text-align: justify;
-    margin-bottom: 18px;
+    margin: unset;
+    margin: 12px 0;
 }
 
 .priceContainer{
@@ -55,10 +57,8 @@
 }
 
 
-
-
 .cartOptions{
-    height: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -24,5 +24,119 @@
             "phone": "https://wa.me/00593993712981",
             "price": null
         }
+    },
+    "services": {
+        "salaEnsayo":{
+            "serviceName": "Sala de ensayo",
+            "serviceType": "ensayo",
+            "serviceDescription":"Equipos de alta calidad y cuarto con tratamiento acústico. La sala de ensayo es tu espacio para ser creativo. Tenemos capacidad para orquestas, quintetos, dúos, solistas, etc, nuestra sala se adapta a tus necesidades y la hacemos real.",
+            "priceObj":[
+                {
+                    "price": 10,
+                    "priceDetail": "1 hora de servicio",
+                    "productName": "Sala de Ensayo"
+                },
+                {
+                    "price": 65,
+                    "priceDetail": "8 horas de ensayo por mes",
+                    "productName": "Sala de ensayo"
+                }
+            ],
+            "serviceIMG":{
+                "src":"/assets/merchPics/salaEnsayo.png",
+                "height": 400,
+                "width": 350,
+                "alt": "Sala de Ensayo - Servicios"
+            }
+        },
+        "wuanTake":{
+            "serviceName": "Wuan Take",
+            "serviceType": "Wuan Take",
+            "serviceDescription":"Grabación y edición profesional de una sesión de ensayo con 1 sola cámara. Incluye fotografía y videografía profesional, masterización de audio y post producción de video.",  
+            "priceObj":[
+                {
+                    "price": 250,
+                    "priceDetail": "1 Sesion de Wuan Take",
+                    "productName": "Wuan Take"
+                }
+            ],
+            "serviceIMG":{
+                "src":"/assets/merchPics/wuanTake.png",
+                "height": 400,
+                "width": 350,
+                "alt": "Wuan Take - Grabación de sesiones en vivo"
+            }
+        },
+        "estudioGrabacion":{
+            "serviceName": "Estudio de Grabación",
+            "serviceType": "grabación",
+            "serviceDescription":"Horas de ensayo en el iconico estudio de Warax, donde lo hacemos real",  
+            "priceObj":[
+                {
+                    "price": 15,
+                    "priceDetail": "1 hora de grabación",
+                    "productName": "Estudio de Grabación"
+                }
+            ],
+            "serviceIMG":{
+                "src":"/assets/merchPics/horaEstudio.jpg",
+                "height": 400,
+                "width": 350,
+                "alt": "Imagen - Estudio de Grabación en Iconico Warax"
+            }
+        }
+    },
+    "merchItems":{
+        "capBlack":{
+            "priceDetail": "Entrega Gratis!",
+            "productCatalog": "WebVeo",
+            "productCategory": "merch",
+            "productType": "cap",
+            "prodName":"Gorra - BLACK",
+            "priceObj":{
+                "price": 35,
+                "productName": "Gorra Webveo - BLACK"
+                },
+            "merchIMG":{
+                "src":"/assets/merchPics/blackCap.jpg",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Webveo - Gorra varios colores"
+            }
+        },
+        "capYellow":{
+            "priceDetail": "Entrega Gratis!",
+            "productCatalog": "WebVeo",
+            "productCategory": "merch",
+            "productType": "cap",
+            "prodName":"Gorra - LIME/ASH",
+            "priceObj":{
+                "price": 35,
+                "productName": "Gorra Webveo - LIME/ASH"
+                },
+            "merchIMG":{
+                "src":"/assets/merchPics/yellowCap.jpg",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Webveo - Gorra Amarillo"
+            }
+        },
+        "capGrey":{
+            "priceDetail": "Entrega Gratis!",
+            "productCatalog": "WebVeo",
+            "productCategory": "merch",
+            "productType": "cap",
+            "prodName":"Gorra - ONYX/LIME",
+            "priceObj":{
+                "price": 35,
+                "productName": "Gorra Webveo - Onyx/Grey"
+                },
+            "merchIMG":{
+                "src":"/assets/merchPics/greyCap.jpg",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Webveo - Onyx/Grey"
+            }
+        }        
     }
 }

@@ -28,119 +28,6 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { Dialog } from '@material-ui/core'
 
-// 
-// Webveo Cap Merch
-let capBlack={
-  "priceDetail": "incl. delivery",
-  "productCatalog": "WebVeo",
-  "productCategory": "merch",
-  "productType": "cap",
-  "prodName":"Gorra - BLACK",
-  "priceObj":{
-      "price": 35,
-      "productName": "Gorra Webveo - BLACK"
-    },
-  "merchIMG":{
-    "src":"/assets/merchPics/blackCap.jpg",
-    "height": 400,
-    "width": 400,
-    "alt": "Merch Oficial Webveo - Gorra varios colores"
-  }
-}
-let capYellow={
-  "priceDetail": "incl. delivery",
-  "productCatalog": "WebVeo",
-  "productCategory": "merch",
-  "productType": "cap",
-  "prodName":"Gorra - LIME/ASH",
-  "priceObj":{
-      "price": 35,
-      "productName": "Gorra Webveo - LIME/ASH"
-    },
-  "merchIMG":{
-    "src":"/assets/merchPics/yellowCap.jpg",
-    "height": 400,
-    "width": 400,
-    "alt": "Merch Oficial Webveo - Gorra Amarillo"
-  }
-}
-let capGrey={
-  "priceDetail": "incl. delivery",
-  "productCatalog": "WebVeo",
-  "productCategory": "merch",
-  "productType": "cap",
-  "prodName":"Gorra - ONYX/LIME",
-  "priceObj":{
-      "price": 35,
-      "productName": "Gorra Webveo - Onyx/Grey"
-    },
-  "merchIMG":{
-    "src":"/assets/merchPics/greyCap.jpg",
-    "height": 400,
-    "width": 400,
-    "alt": "Merch Oficial Webveo - Onyx/Grey"
-  }
-}
-let serviceOne={
-  "serviceName": "Sala de ensayo",
-  "serviceType": "ensayo",
-  "serviceDescription":"Horas de ensayo en el iconico estudio de Warax, donde lo hacemos real",  
-  "priceObj":[
-      {
-          "price": 10,
-          "priceDetail": "1 hora de servicio",
-          "productName": "Sala de Ensayo"
-      },
-      {
-          "price": 65,
-          "priceDetail": "8 horas de ensayo por mes",
-          "productName": "Sala de ensayo"
-      }
-  ],
-  "serviceIMG":{
-    "src":"/assets/merchPics/salaEnsayo.png",
-    "height": 400,
-    "width": 350,
-    "alt": "Sala de Ensayo - Servicios"
-  }
-}
-let serviceTwo={
-  "serviceName": "Wuan Take",
-  "serviceType": "Wuan Take",
-  "serviceDescription":"Grabación y edición profesional de una sesión de ensayo con 1 sola cámara. Incluye fotografía y videografía profesional, masterización de audio y post producción de video.",  
-  "priceObj":[
-      {
-          "price": 250,
-          "priceDetail": "1 Sesion de Wuan Take",
-          "productName": "Wuan Take"
-      }
-  ],
-  "serviceIMG":{
-    "src":"/assets/merchPics/wuanTake.png",
-    "height": 400,
-    "width": 350,
-    "alt": "Wuan Take - Grabación de sesiones en vivo"
-  }
-}
-let serviceThree={
-  "serviceName": "Estudio de Grabación",
-  "serviceType": "grabación",
-  "serviceDescription":"Horas de ensayo en el iconico estudio de Warax, donde lo hacemos real",  
-  "priceObj":[
-      {
-          "price": 15,
-          "priceDetail": "1 hora de grabación",
-          "productName": "Estudio de Grabación"
-      }
-  ],
-  "serviceIMG":{
-    "src":"/assets/merchPics/horaEstudio.jpg",
-    "height": 400,
-    "width": 350,
-    "alt": "Imagen - Estudio de Grabación en Iconico Warax"
-  }
-}
-
 export default function Home() {
 
 // State
@@ -340,9 +227,9 @@ export default function Home() {
         <div className={styles.merchDispCont}>
 
           {showHomeMerch? <>
-            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capBlack} />
-            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capYellow} />
-            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capGrey} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capBlack} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capYellow} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capGrey} />
           </>:<>
             <div className={styles.merchOpenerCont} onClick={()=>{setShowMerch(true)}}>
               <div className={styles.merchsectionImage}>
@@ -367,9 +254,9 @@ export default function Home() {
     return(
       <>
         <div className={styles.merchDispCont}>
-            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capBlack} />
-            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capYellow} />
-            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={capGrey} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capBlack} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capYellow} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capGrey} />
         </div>
       </>
     )
@@ -380,9 +267,9 @@ export default function Home() {
         <div className={styles.aHomeSection}>
           <h1 className={styles.aSectiontitle}> Servicios Warax </h1> 
           <div className={styles.merchDispCont}>
-            <ServiceDisp activeCart={false} addToCart={addToCart} theService={serviceOne} />
-            <ServiceDisp activeCart={false} addToCart={addToCart} theService={serviceTwo} />
-            <ServiceDisp activeCart={false} addToCart={addToCart} theService={serviceThree} />
+            <ServiceDisp activeCart={false} addToCart={addToCart} theService={waraxhomeData.services.salaEnsayo} />
+            <ServiceDisp activeCart={false} addToCart={addToCart} theService={waraxhomeData.services.wuanTake} />
+            <ServiceDisp activeCart={false} addToCart={addToCart} theService={waraxhomeData.services.estudioGrabacion} />
           </div>
         </div>        
       </>

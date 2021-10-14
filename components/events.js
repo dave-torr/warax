@@ -185,8 +185,7 @@ const [eventBannerDialogTrig, setBannerIMGTrig]= useState(false)
 
 
 export function HomeEventDisplayer(props){
-
-
+    let toDate = new Date()
     let sampleEventArr=[
         {
             "eventName": "Pakul | Lanzamiento C.H.A.M.A",
@@ -251,7 +250,13 @@ export function HomeEventDisplayer(props){
 
     // props.waraxCart
     // props.addToCart()
+    const dateFormatter=(theDate)=>{
+        let aFormattedDate = new Date(theDate);
+        aFormattedDate.setHours(15,36,0,0)
+        return (aFormattedDate)
+    }
 
+    let sortedArray=sampleEventArr.sort((a, b)=> dateFormatter(a.eventDate) - dateFormatter(b.eventDate))
     const [eventIMGDialogTrig, setPosterIMDialogTrig] = useState(false)
     const [eventDialogIMG, setImgDialogData] = useState({
         "alt": "aSample Alt Tag",
@@ -259,12 +264,10 @@ export function HomeEventDisplayer(props){
         "width": 500,
         "src":"./"
     })
-
     const priceDisplayer=(priceObj, eventData)=>{
         let theEventPrice;
         if(priceObj.length>1){
             let priceOne=priceObj[0]
-            let toDate = new Date()
             let priceExpirationDate = new Date(priceOne.priceExpirationDate)
             if(toDate < priceExpirationDate){
                 theEventPrice=priceObj[0]
@@ -326,9 +329,10 @@ export function HomeEventDisplayer(props){
             )
         }
     }
-
     const eachEventDisp=(upcomingEventArr)=>{
+        let compDate = new Date()
         let eachEventDispl=upcomingEventArr.map((elem, i)=><React.Fragment key={i}>
+            {compDate <= dateFormatter(elem.eventDate)&&<>
             <div className={styles.eachEventCont}> 
                 <div className={styles.posterdispl} onClick={()=>{
                     setPosterIMDialogTrig(true)
@@ -354,6 +358,7 @@ export function HomeEventDisplayer(props){
                     {priceDisplayer(elem.priceObj, elem)}
                 </div>
             </div>
+            </>}
         </React.Fragment>)
         return(
             <>
@@ -378,7 +383,7 @@ export function HomeEventDisplayer(props){
                 </div>
                 <div className={styles.eventCalendarContent}>
                     <h1>Eventos Próximos</h1>
-                    {eachEventDisp(sampleEventArr)}
+                    {eachEventDisp(sortedArray)}
                 </div>
             </div>
             </>

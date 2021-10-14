@@ -130,7 +130,6 @@ export function Navi(props){
                             src={"/assets/icons/waraxLogoBLK.png"}
                             height={70}
                             width={190}
-                            style={{cursor: "pointer"}}
                             alt="Warax Logo"
                             onClick={()=>{
                                 props.setPageDisplayer("home") 

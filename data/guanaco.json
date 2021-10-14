@@ -114,7 +114,7 @@
     "merchData": 
     {
         "capBlack" :{
-            "priceDetail": "incl. delivery",
+            "priceDetail": "Entrega Gratis!",
             "productCatalog": "WebVeo",
             "productCategory": "merch",
             "productType": "cap",
@@ -131,7 +131,7 @@
                 }
         },
         "capCholoBrown" :{
-            "priceDetail": "incl. delivery",
+            "priceDetail": "Entrega Gratis!",
             "productCatalog": "Cholonizacion",
             "productCategory": "merch",
             "productType": "cap",
@@ -148,7 +148,7 @@
             }
         },
         "capCholoFivePanl" :{
-            "priceDetail": "incl. delivery",
+            "priceDetail": "Entrega Gratis!",
             "productCatalog": "Cholonizacion",
             "productCategory": "merch",
             "productType": "cap",
@@ -165,7 +165,7 @@
                 }
         },
         "hoodieCholoBlk" :{
-            "priceDetail": "incl. delivery",
+            "priceDetail": "Entrega Gratis!",
             "productCatalog": "Cholonizacion",
             "productCategory": "merch",
             "productType": "hoodie",
@@ -182,7 +182,7 @@
             }
         },
         "buzoCholoBlk" :{
-            "priceDetail": "incl. delivery",
+            "priceDetail": "Entrega Gratis!",
             "productCatalog": "Cholonizacion",
             "productCategory": "hoodie",
             "productType": "cap",
@@ -199,7 +199,7 @@
             }
         },
         "capCholoSnapback" :{
-            "priceDetail": "incl. delivery",
+            "priceDetail": "Entrega Gratis!",
             "productCatalog": "Cholonizacion",
             "productCategory": "merch",
             "productType": "cap",
@@ -216,7 +216,7 @@
             }
         },
         "capCholoFPRed" :{
-            "priceDetail": "incl. delivery",
+            "priceDetail": "Entrega Gratis!",
             "productCatalog": "Cholonizacion",
             "productCategory": "merch",
             "productType": "cap",
