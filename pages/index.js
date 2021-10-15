@@ -28,6 +28,9 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { Dialog } from '@material-ui/core'
 
+import Carousel from 'react-material-ui-carousel'
+import { Paper, Button } from '@material-ui/core'
+
 export default function Home() {
 
 // State
@@ -195,6 +198,33 @@ export default function Home() {
       </div>
     </>)
   }
+  function ImageDisp(props){
+    return (
+      <Paper><div className={styles.homeSliderDesktopIMG} onClick={()=>{
+          let eventCalAnchor = document.getElementById(`EventCalendarAnchor`)
+              eventCalAnchor.scrollIntoView({behavior: "smooth"})
+        }}>
+        <Image
+          src={props.imgData.src}
+          width={props.imgData.width}
+          height={props.imgData.height}
+          alt={props.imgData.alt}
+        /></div>
+      </Paper>
+    )
+  }
+  const carouselDispl=()=>{
+    return(
+      <>  
+        <Carousel className={styles.desktopCarousel}>
+          {waraxhomeData.desktopImageArr.map((elem, i)=><ImageDisp key={i} imgData={elem} /> )}
+        </Carousel>
+        <Carousel className={styles.mobileCarousel}>
+          {waraxhomeData.mobileImageArr.map((elem, i)=><ImageDisp key={i} imgData={elem} /> )}
+        </Carousel>
+      </>
+    )
+  }
   const homeLanding=()=>{
     return(
       <>
@@ -276,7 +306,7 @@ export default function Home() {
     )
   }
   const homeSwitcher=()=>{
-    let concertDate= new Date("Nov 06 2021")
+    let concertDate= new Date("Oct 23 2021")
     let toDate= new Date()
     if(toDate < concertDate){
       return(
@@ -310,7 +340,6 @@ export default function Home() {
     }
   }
 
-
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
   return (
@@ -331,7 +360,13 @@ export default function Home() {
         {pageDisplayer==="home"&&<>
         <br></br>
         <br></br>
-            {homeSwitcher()}
+
+
+            {/* {homeSwitcher()} */}
+            {carouselDispl()}
+
+
+
             {/* {anEventDisp()} */}
             <div className={styles.homeCardDispCont}> 
               <WebVeoHomeBanner 
@@ -347,15 +382,10 @@ export default function Home() {
               />
             </div>
 
-
-
             <div id="EventCalendarAnchor"/>
             <HomeEventDisplayer 
               addToCart={addToCart}
             />
-
-
-
             {merchDisp()}
             {servicedisp()}
         </>}

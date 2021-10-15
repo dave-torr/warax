@@ -138,5 +138,33 @@
                 "alt": "Merch Oficial Webveo - Onyx/Grey"
             }
         }        
-    }
+    },
+    "desktopImageArr": [
+        {
+        "src": "/assets/eventPosters/pakulCover.jpeg",
+        "width": 1201,
+        "height": 628,
+        "alt": "Warax Presents: Pakul | Oct 23 Quito"
+        },
+        {
+        "src": "/assets/eventPosters/pichiriloRioNov5.jpg",
+        "width": 1085,
+        "height": 572,
+        "alt": "Warax Presents: Pichirilo Radioactivo | Nov 5 Quito"
+        }
+    ],
+    "mobileImageArr": [
+        {
+        "src": "/assets/eventPosters/pakulOct23.jpeg",
+        "width": 629,
+        "height": 629,
+        "alt": "Warax Presents: Pakul | Oct 23 Quito"
+        },
+        {
+        "src": "/assets/eventPosters/pichiriloRioNov5mobile.jpg",
+        "width": 600,
+        "height": 700,
+        "alt": "Warax Presents: Pichirilo Radioactivo | Nov 5 Quito"
+        }
+    ]
 }
