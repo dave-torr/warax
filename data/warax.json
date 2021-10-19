@@ -141,16 +141,16 @@
     },
     "desktopImageArr": [
         {
-        "src": "/assets/eventPosters/cholo23OctCov.jpeg",
-        "width": 1201,
-        "height": 628,
-        "alt": "Warax Presents: Guanaco Cholonizacion | Oct 23 Riobamba"
-        },
-        {
         "src": "/assets/eventPosters/pakulCover.jpeg",
         "width": 1201,
         "height": 628,
         "alt": "Warax Presents: Pakul | Oct 23 Quito"
+        },
+        {
+        "src": "/assets/eventPosters/cholo23OctCov.jpeg",
+        "width": 1201,
+        "height": 628,
+        "alt": "Warax Presents: Guanaco Cholonizacion | Oct 23 Riobamba"
         },
         {
         "src": "/assets/eventPosters/cholo31OCTCover.jpeg",
@@ -167,16 +167,16 @@
     ],
     "mobileImageArr": [
         {
-        "src": "/assets/eventPosters/choloOCT23mobile.jpeg",
-        "width": 629,
-        "height": 629,
-        "alt": "Warax Presents: Cholonizacion | Oct 23 Riobamba"
-        },
-        {
         "src": "/assets/eventPosters/pakulOct23.jpeg",
         "width": 629,
         "height": 629,
         "alt": "Warax Presents: Pakul | Oct 23 Quito"
+        },
+        {
+        "src": "/assets/eventPosters/choloOCT23mobile.jpeg",
+        "width": 629,
+        "height": 629,
+        "alt": "Warax Presents: Cholonizacion | Oct 23 Riobamba"
         },
         {
         "src": "/assets/eventPosters/cholo31OCTMobile.jpeg",

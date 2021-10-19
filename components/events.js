@@ -188,30 +188,6 @@ export function HomeEventDisplayer(props){
     let toDate = new Date()
     let sampleEventArr=[
         {
-            "eventName": "Guanaco | Cholonizacion Tour",
-            "eventType": "en vivo",
-            "eventLocation": "https://goo.gl/maps/xrNwvJhYBXbmFdCj7",
-            "eventCity": "Riobamba",
-            "productCatalog": "Guanaco",
-            "productCategory": "Event",
-            "productType": "Concert",
-            "productName":"Guanaco | Cholonizacion Tour Ticket",
-            "eventDate": "OCT 23 2021",
-            "contactPhone": "https://wa.me/00593995284667",
-            "priceObj":[
-                {
-                    "price": 10,
-                    "priceDetail": "Cover"
-                }
-            ],
-            "eventPoster":{
-                "src":"/assets/eventPosters/choloOCT23mobile.jpeg",
-                "height": 600,
-                "width": 600,
-                "alt": "Guanaco MC Cholonizacion | Poster Evento"
-            }
-        },
-        {
             "eventName": "Pakul | Lanzamiento C.H.A.M.A",
             "eventType": "estreno single",
             "eventLocation": "https://goo.gl/maps/HVdxyNV3boXrqh9y9",
@@ -238,6 +214,30 @@ export function HomeEventDisplayer(props){
                 "height": 600,
                 "width": 600,
                 "alt": "Pakul En Vivo | Poster Evento"
+            }
+        },
+        {
+            "eventName": "Guanaco | Cholonizacion Tour",
+            "eventType": "en vivo",
+            "eventLocation": "https://goo.gl/maps/xrNwvJhYBXbmFdCj7",
+            "eventCity": "Riobamba",
+            "productCatalog": "Guanaco",
+            "productCategory": "Event",
+            "productType": "Concert",
+            "productName":"Guanaco | Cholonizacion Tour Ticket",
+            "eventDate": "OCT 23 2021",
+            "contactPhone": "https://wa.me/00593995284667",
+            "priceObj":[
+                {
+                    "price": 10,
+                    "priceDetail": "Cover"
+                }
+            ],
+            "eventPoster":{
+                "src":"/assets/eventPosters/choloOCT23mobile.jpeg",
+                "height": 600,
+                "width": 600,
+                "alt": "Guanaco MC Cholonizacion | Poster Evento"
             }
         },
         {
@@ -396,8 +396,9 @@ export function HomeEventDisplayer(props){
                     <i className={styles.eventCatalog}> / eventos / {elem.eventType} / {elem.productCatalog} </i>
                     <div className={styles.eventName}>{elem.eventName} </div>
                     <div className={styles.eventDate}>{elem.eventDate} | {elem.eventCity}</div>
-                    <div className={styles.eventIconCont}> 
-                        <a target="_blank" href={elem.eventLocation} rel="noopener" className={styles.anEventIcon}><div><LocationOnIcon/></div></a> 
+                    <div className={styles.eventIconCont}>
+                        {elem.eventLocation&&<>
+                            <a target="_blank" href={elem.eventLocation} rel="noopener" className={styles.anEventIcon}><div><LocationOnIcon/></div></a> </>}
                         <a target="_blank" href={elem.contactPhone} rel="noopener" className={styles.anEventIcon}><div><LocalPhoneIcon/></div></a> 
                     </div>
                 </div>
