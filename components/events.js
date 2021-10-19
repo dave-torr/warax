@@ -217,6 +217,29 @@ export function HomeEventDisplayer(props){
             }
         },
         {
+            "eventName": "Guanaco | Cholonizacion Ft. Pakul",
+            "eventType": "en vivo",
+            "eventCity": "Baños",
+            "productCatalog": "Guanaco",
+            "productCategory": "Event",
+            "productType": "Concert",
+            "productName":"Guanaco | Cholonizacion Ft. Pakul Ticket",
+            "eventDate": "OCT 31 2021",
+            "contactPhone": "https://wa.me/00593984057223",
+            "priceObj":[
+                {
+                    "price": 20,
+                    "priceDetail": "Cover"
+                }
+            ],
+            "eventPoster":{
+                "src": "/assets/eventPosters/cholo31OCTMobile.jpeg",
+                "width": 629,
+                "height": 629,
+                "alt": "Guanaco Ft. Pakul | Oct 31 Baños"
+            }
+        },
+        {
             "eventName": "Pichirilo Radioactivo | En Vivo",
             "eventType": "en vivo",
             "eventLocation": "https://goo.gl/maps/xrNwvJhYBXbmFdCj7",
