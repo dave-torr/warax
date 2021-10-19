@@ -188,6 +188,30 @@ export function HomeEventDisplayer(props){
     let toDate = new Date()
     let sampleEventArr=[
         {
+            "eventName": "Guanaco | Cholonizacion Tour",
+            "eventType": "en vivo",
+            "eventLocation": "https://goo.gl/maps/xrNwvJhYBXbmFdCj7",
+            "eventCity": "Riobamba",
+            "productCatalog": "Guanaco",
+            "productCategory": "Event",
+            "productType": "Concert",
+            "productName":"Guanaco | Cholonizacion Tour Ticket",
+            "eventDate": "OCT 23 2021",
+            "contactPhone": "https://wa.me/00593995284667",
+            "priceObj":[
+                {
+                    "price": 10,
+                    "priceDetail": "Cover"
+                }
+            ],
+            "eventPoster":{
+                "src":"/assets/eventPosters/choloOCT23mobile.jpeg",
+                "height": 600,
+                "width": 600,
+                "alt": "Guanaco MC Cholonizacion | Poster Evento"
+            }
+        },
+        {
             "eventName": "Pakul | Lanzamiento C.H.A.M.A",
             "eventType": "estreno single",
             "eventLocation": "https://goo.gl/maps/HVdxyNV3boXrqh9y9",
