@@ -321,7 +321,7 @@
 
 .eventDataCont{
     width: 66%;
-    height: 150px;
+    /* height: 150px; */
     padding: 6px;
 }
 .eventCatalog{
