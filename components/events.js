@@ -160,7 +160,7 @@ const [eventBannerDialogTrig, setBannerIMGTrig]= useState(false)
                 <h1> {props.bannerData.title} </h1>
                 <div className={styles.bannerIconContainer}>
                     <a href={props.bannerData.location} target="_blank" rel="noopener" ><div className={styles.aBannerIcon}> {locationIcon} </div></a>
-                    <a href={`tel:${props.bannerData.phone}`} rel="noopener" ><div className={styles.aBannerIcon}> {contactIcon} </div></a>
+                    <a href={props.bannerData.phone} rel="noopener" ><div className={styles.aBannerIcon}> {contactIcon} </div></a>
                     {props.bannerData.instagramLink&&<>
                     <a href={props.bannerData.instagramLink} target="_blank" rel="noopener" ><div className={styles.aBannerIcon}> {instaIcon} </div></a>
                     </>}
