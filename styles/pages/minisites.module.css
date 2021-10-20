@@ -88,13 +88,12 @@
 }
 
 .epDesTitle{
-    margin: 0 15%;
+    margin: 0 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: solid 2px var(--purple-highlight);
     border-radius: 5px;
-    
 }
 
 .episodeDescription h5{
@@ -102,12 +101,12 @@
     margin: unset;
     font-size: 1.4em;
     font-weight: 200;
-    padding-right: 12px;
+    padding-right: 9px;
 }
 
 .episodeDescription h3{
     font-size: 1.5em;
-    padding: 15px;
+    padding: 9px;
     margin: unset;
 }
 
@@ -218,10 +217,12 @@
         border-radius: 5px;
         box-shadow: var(--generalBoxShadow);
     }
+    .episodeListAndPlayer{
+        flex-direction: column;
+    }
 }
 @media (max-width: 700px) {
     .episodeDescription h3{
-        width: 90%;
         margin-left: 5%;
     }
     .episodeDescription p{
@@ -229,9 +230,6 @@
         margin-left: 5%;
     }
 
-    .episodeListAndPlayer{
-        flex-direction: column;
-    }
 }
 
 

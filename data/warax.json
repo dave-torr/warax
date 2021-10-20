@@ -17,7 +17,7 @@
             "height": 640,
             "alt": "Warax Salsa Ensamble - Event Poster Image",
             "src": "/assets/eventPosters/salsaEnsamble.png",
-            "categorization": "/ eventos / Waras Salsa Ensamble",
+            "categorization": "/ eventos / Warax Salsa Ensamble",
             "title": "Orquesta de Salsa",
             "instagramLink": "https://www.instagram.com/sabrosoec/?hl=en",
             "location": "https://g.page/sabroso-restaurante-vivero?share",
@@ -144,25 +144,29 @@
         "src": "/assets/eventPosters/pakulCover.jpeg",
         "width": 1201,
         "height": 628,
-        "alt": "Warax Presents: Pakul | Oct 23 Quito"
+        "alt": "Warax Presents: Pakul | Oct 23 Quito",
+        "timeout": "OCT 23 2021"
         },
         {
         "src": "/assets/eventPosters/cholo23OctCov.jpeg",
         "width": 1201,
         "height": 628,
-        "alt": "Warax Presents: Guanaco Cholonizacion | Oct 23 Riobamba"
+        "alt": "Warax Presents: Guanaco Cholonizacion | Oct 23 Riobamba",
+        "timeout": "OCT 23 2021"
         },
         {
         "src": "/assets/eventPosters/cholo31OCTCover.jpeg",
         "width": 1181,
         "height": 619,
-        "alt": "Guanaco Ft. Pakul | Oct 31 Baños"
+        "alt": "Guanaco Ft. Pakul | Oct 31 Baños",
+        "timeout": "OCT 31 2021"
         },
         {
         "src": "/assets/eventPosters/pichiriloRioNov5.jpg",
         "width": 1085,
         "height": 572,
-        "alt": "Warax Presents: Pichirilo Radioactivo | Nov 5 Quito"
+        "alt": "Warax Presents: Pichirilo Radioactivo | Nov 5 Quito",
+        "timeout": "NOV 05 2021"
         }
     ],
     "mobileImageArr": [
@@ -170,25 +174,29 @@
         "src": "/assets/eventPosters/pakulOct23.jpeg",
         "width": 629,
         "height": 629,
-        "alt": "Warax Presents: Pakul | Oct 23 Quito"
+        "alt": "Warax Presents: Pakul | Oct 23 Quito",
+        "timeout": "OCT 23 2021"
         },
         {
         "src": "/assets/eventPosters/choloOCT23mobile.jpeg",
         "width": 629,
         "height": 629,
-        "alt": "Warax Presents: Cholonizacion | Oct 23 Riobamba"
+        "alt": "Warax Presents: Cholonizacion | Oct 23 Riobamba",
+        "timeout": "OCT 23 2021"
         },
         {
         "src": "/assets/eventPosters/cholo31OCTMobile.jpeg",
         "width": 629,
         "height": 629,
-        "alt": "Guanaco Ft. Pakul | Oct 31 Baños"
+        "alt": "Guanaco Ft. Pakul | Oct 31 Baños",
+        "timeout": "OCT 31 2021"
         },
         {
         "src": "/assets/eventPosters/pichiriloRioNov5mobile.jpg",
         "width": 600,
         "height": 700,
-        "alt": "Warax Presents: Pichirilo Radioactivo | Nov 5 Quito"
+        "alt": "Warax Presents: Pichirilo Radioactivo | Nov 5 Quito",
+        "timeout": "NOV 05 2021"
         }
     ]
 }

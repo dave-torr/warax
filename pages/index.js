@@ -217,10 +217,16 @@ export default function Home() {
     return(
       <>  
         <Carousel className={styles.desktopCarousel}>
-          {waraxhomeData.desktopImageArr.map((elem, i)=><ImageDisp key={i} imgData={elem} /> )}
+          {waraxhomeData.desktopImageArr.map((elem, i)=>
+            
+            <ImageDisp key={i} imgData={elem} /> 
+          )}
         </Carousel>
         <Carousel className={styles.mobileCarousel}>
-          {waraxhomeData.mobileImageArr.map((elem, i)=><ImageDisp key={i} imgData={elem} /> )}
+          {waraxhomeData.mobileImageArr.map((elem, i)=>
+            
+            <ImageDisp key={i} imgData={elem} /> 
+          )}
         </Carousel>
       </>
     )

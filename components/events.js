@@ -299,7 +299,7 @@ export function HomeEventDisplayer(props){
     // props.addToCart()
     const dateFormatter=(theDate)=>{
         let aFormattedDate = new Date(theDate);
-        aFormattedDate.setHours(15,36,0,0)
+        aFormattedDate.setHours(18,0,0,0)
         return (aFormattedDate)
     }
 
