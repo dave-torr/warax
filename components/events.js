@@ -197,7 +197,7 @@ export function HomeEventDisplayer(props){
             "productType": "Concert",
             "productName":"Pakul | Lanzamiento C.H.A.M.A Ticket",
             "eventDate": "OCT 23 2021",
-            "contactPhone": "https://wa.me/00593984057223",
+            "contactPhone": "https://wa.me/593984057223",
             "priceObj":[
                 {
                     "price": 8,
@@ -226,7 +226,7 @@ export function HomeEventDisplayer(props){
             "productType": "Concert",
             "productName":"Guanaco | Cholonizacion Tour Ticket",
             "eventDate": "OCT 23 2021",
-            "contactPhone": "https://wa.me/00593995284667",
+            "contactPhone": "https://wa.me/593995284667",
             "priceObj":[
                 {
                     "price": 10,
@@ -249,7 +249,7 @@ export function HomeEventDisplayer(props){
             "productType": "Concert",
             "productName":"Guanaco | Cholonizacion Ft. Pakul Ticket",
             "eventDate": "OCT 31 2021",
-            "contactPhone": "https://wa.me/00593984057223",
+            "contactPhone": "https://wa.me/593984057223",
             "priceObj":[
                 {
                     "price": 20,
@@ -273,7 +273,7 @@ export function HomeEventDisplayer(props){
             "productType": "Concert",
             "productName":"Pichirilo Raioactivo | En vivo | Ticket",
             "eventDate": "NOV 05 2021",
-            "contactPhone": "https://wa.me/00593984057223",
+            "contactPhone": "https://wa.me/593984057223",
             "priceObj":[
                 {
                     "price": 10,
@@ -289,14 +289,15 @@ export function HomeEventDisplayer(props){
         },
     ]
 
-    // CALENDAR DISPLAYER
-    // - upcoming 3-5 events ordered by date. 
-    // - addToCartBTN(eventPurchaseObj) 
-    // - event poster popup
-    // - share to instagram stories BTN?? 
+// CALENDAR DISPLAYER
+// - upcoming 3-5 events ordered by date. 
+// - addToCartBTN(eventPurchaseObj) 
+// - event poster popup
+// - share to instagram stories BTN?? 
 
-    // props.waraxCart
-    // props.addToCart()
+// props.waraxCart
+// props.addToCart()
+
     const dateFormatter=(theDate)=>{
         let aFormattedDate = new Date(theDate);
         aFormattedDate.setHours(18,0,0,0)

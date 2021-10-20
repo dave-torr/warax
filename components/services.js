@@ -57,7 +57,7 @@ export function ServiceDisp(props){
             <div className={styles.contactFormModal}>
                 <div className={styles.contactIntro}>Escribenos un mensaje o Email: </div>
                 <div className={styles.contactIconCont}>
-                    <a href="https://wa.me/00593998638396" target="_blank" rel="noopener noreferrer"> <WhatsAppIcon /></a>
+                    <a href="https://wa.me/593998638396" target="_blank" rel="noopener noreferrer"> <WhatsAppIcon /></a>
                     <a href="mailto:warax.arte@gmail.com?subject=Servicios Warax!" target="_blank" rel="noopener noreferrer"> <MailOutlineIcon /></a>
                 </div>
                 <div className={styles.contactIntro}>O Envianos tu información:</div>
