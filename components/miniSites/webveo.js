@@ -97,6 +97,13 @@ let episodeArr= [
         "embeddiLink": "b8xYWzt2LI8",
         "episodeDescription": "En este episodio nos acompaña el genio musical Alex Alvear, músico, compositor, arreglista, y papa de todos los pollitos, su carrera ha sido una influencia para muchos músicos. Actualmente forma parte y lidera Mango Blue, Wañukta Tonic y su proyectos solista."
     },    
+    {
+        "episodeNum": 14,
+        "season": 3,
+        "episodeName": "Alvaro Bermeo",
+        "embeddiLink": "JPm3nDoua4o",
+        "episodeDescription": "En este episodio nos acompaña el gran Alvaro Bermeo, cantante, músico y compositor. Líder de Guardarraya y de su proyecto solista. No te pierdas este episodio y la presentación de Alvaro Bermeo junto a la Waráx Band, directamente desde los estudios de Waráx Arte."
+    },    
 ]
 
 

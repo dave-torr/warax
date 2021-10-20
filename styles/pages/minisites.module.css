@@ -88,7 +88,7 @@
 }
 
 .epDesTitle{
-    margin: 0 9%;
+    margin: 0 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -229,7 +229,9 @@
         width: 90%;
         margin-left: 5%;
     }
-
+    .epDesTitle{
+        margin: 0 5%;
+    }
 }
 
 
