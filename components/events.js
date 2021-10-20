@@ -226,7 +226,7 @@ export function HomeEventDisplayer(props){
             "productType": "Concert",
             "productName":"Guanaco | Cholonizacion Tour Ticket",
             "eventDate": "OCT 23 2021",
-            "contactPhone": "https://wa.me/593995284667",
+            "contactPhone": "tel:00593995284667",
             "priceObj":[
                 {
                     "price": 10,
