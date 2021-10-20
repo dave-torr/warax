@@ -212,4 +212,7 @@
         align-items: center;
         cursor: pointer;
     }
+    .miniSiteLink{
+        font-size: 1em;
+    }
 }
