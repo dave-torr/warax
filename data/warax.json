@@ -141,20 +141,6 @@
     },
     "desktopImageArr": [
         {
-        "src": "/assets/eventPosters/pakulCover.jpeg",
-        "width": 1201,
-        "height": 628,
-        "alt": "Warax Presents: Pakul | Oct 23 Quito",
-        "timeout": "OCT 23 2021"
-        },
-        {
-        "src": "/assets/eventPosters/cholo23OctCov.jpeg",
-        "width": 1201,
-        "height": 628,
-        "alt": "Warax Presents: Guanaco Cholonizacion | Oct 23 Riobamba",
-        "timeout": "OCT 23 2021"
-        },
-        {
         "src": "/assets/eventPosters/cholo31OCTCover.jpeg",
         "width": 1181,
         "height": 619,

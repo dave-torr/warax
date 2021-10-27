@@ -81,7 +81,7 @@ export function Navi(props){
 
                 {props.waraxCart.length>0&&<>
                 <div className={styles.naviCartMob} onClick={()=>props.setMobCartTrigg(true)}>  
-                    {props.waraxCart.length} <ShoppingCartIcon /> 
+                    {props.waraxCart.length} <ShoppingCartIcon color="error"/> 
                 </div> </>}
 
     {/* some changes must occur */}
@@ -143,7 +143,7 @@ export function Navi(props){
                             </div>
                             {props.waraxCart.length>0&&<>
                             <div className={styles.naviCart} onClick={()=>props.setCartModal(true)}>  
-                                Carrito Warax &nbsp; x {props.waraxCart.length} &nbsp;  <ShoppingCartIcon /> 
+                                Carrito Warax &nbsp; x {props.waraxCart.length} &nbsp;  <ShoppingCartIcon color="error"/> 
                             </div>
                             </>}
                         </div>

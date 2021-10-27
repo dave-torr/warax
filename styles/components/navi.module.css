@@ -130,10 +130,12 @@
 
 .naviCart{
     display: flex;
-    padding: 0 15px;
+    padding: 5px 9px;
     font-size: 0.8em;
     align-items: center;
     cursor: pointer;
+    border: solid 2px red;
+    border-radius: 5px;
 }
 
 .naviCartMob{
@@ -196,7 +198,7 @@
         width: 100%;
         text-align: end;
         padding-right: 18px;
-        
+        cursor: pointer;
     }
 
     .naviCart{
@@ -207,7 +209,7 @@
         display: unset;
         display: flex;
         justify-content: flex-end;
-        padding: 0 15px;
+        padding: 6px 9px;
         font-size: 0.8em;
         align-items: center;
         cursor: pointer;

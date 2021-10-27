@@ -188,59 +188,6 @@ export function HomeEventDisplayer(props){
     let toDate = new Date()
     let sampleEventArr=[
         {
-            "eventName": "Pakul | Lanzamiento C.H.A.M.A",
-            "eventType": "estreno single",
-            "eventLocation": "https://goo.gl/maps/HVdxyNV3boXrqh9y9",
-            "eventCity": "Quito",
-            "productCatalog": "Pakul",
-            "productCategory": "Event",
-            "productType": "Concert",
-            "productName":"Pakul | Lanzamiento C.H.A.M.A Ticket",
-            "eventDate": "OCT 23 2021",
-            "contactPhone": "https://wa.me/593984057223",
-            "priceObj":[
-                {
-                    "price": 8,
-                    "priceDetail": "Preventa",
-                    "priceExpirationDate": "Oct 21 2021"
-                },
-                {
-                    "price": 10,
-                    "priceDetail": "Cover"
-                }
-            ],
-            "eventPoster":{
-                "src":"/assets/eventPosters/pakulOct23.jpeg",
-                "height": 600,
-                "width": 600,
-                "alt": "Pakul En Vivo | Poster Evento"
-            }
-        },
-        {
-            "eventName": "Guanaco | Cholonizacion Tour",
-            "eventType": "en vivo",
-            "eventLocation": "https://goo.gl/maps/xrNwvJhYBXbmFdCj7",
-            "eventCity": "Riobamba",
-            "productCatalog": "Guanaco",
-            "productCategory": "Event",
-            "productType": "Concert",
-            "productName":"Guanaco | Cholonizacion Tour Ticket",
-            "eventDate": "OCT 23 2021",
-            "contactPhone": "tel:00593995284667",
-            "priceObj":[
-                {
-                    "price": 10,
-                    "priceDetail": "Cover"
-                }
-            ],
-            "eventPoster":{
-                "src":"/assets/eventPosters/choloOCT23mobile.jpeg",
-                "height": 600,
-                "width": 600,
-                "alt": "Guanaco MC Cholonizacion | Poster Evento"
-            }
-        },
-        {
             "eventName": "Guanaco | Cholonizacion Ft. Pakul",
             "eventType": "en vivo",
             "eventCity": "Baños",
@@ -252,7 +199,7 @@ export function HomeEventDisplayer(props){
             "contactPhone": "https://wa.me/593984057223",
             "priceObj":[
                 {
-                    "price": 20,
+                    "price": 10,
                     "priceDetail": "Cover"
                 }
             ],
