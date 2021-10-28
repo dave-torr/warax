@@ -205,10 +205,11 @@ export default function Home() {
               eventCalAnchor.scrollIntoView({behavior: "smooth"})
         }}>
         <Image
+          // placeholder="blur"
           src={props.imgData.src}
+          alt={props.imgData.alt}
           width={props.imgData.width}
           height={props.imgData.height}
-          alt={props.imgData.alt}
         /></div>
       </Paper>
     )

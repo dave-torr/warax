@@ -88,6 +88,7 @@ export function EventDisp(props){
             <div className={styles.eventContainer}> 
                 <div className={styles.imgCont} onClick={()=>setImgTrig(true)}> 
                     <Image
+                        placeholder="blur"
                         src={aSampleEvent.eventPoster.src}
                         width={aSampleEvent.eventPoster.width}
                         height={aSampleEvent.eventPoster.height}
