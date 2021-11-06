@@ -9,6 +9,8 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import AddIcCall from '@material-ui/icons/AddIcCall';
+import Directions from '@material-ui/icons/Directions';
 
 import { Dialog } from '@material-ui/core'
 import { NavigationTwoTone } from "@material-ui/icons";
@@ -189,7 +191,6 @@ export function Navi(props){
         </>
     )
 }
-
 export function NaviTwo(props){
     return(
         <>
@@ -210,7 +211,6 @@ export function NaviTwo(props){
         </>
     )    
 }
-
 export function Footer(props){
 
     let footerLinkArr=[
@@ -249,8 +249,17 @@ export function Footer(props){
                     />
                     </a>
                 </Link>
-                {/* <iframe src="https://giphy.com/embed/l41YbRMqR9jrrCodq" width="120" height="120" frameBorder="0"></iframe> */}
+                <div className={styles.contactData}>
+                    <h4>Contáctanos:</h4>
+                    <h5>
+                        <a href="tel:593993712981"><AddIcCall /> </a> 
+                        {/* &nbsp; &nbsp; &nbsp; */}
+                        {/* <a href="tel:593993712981"><Directions /> </a> */}
+                    </h5>
+                </div>
             </div>
         </>
     )
 }
+
+//  npm install @mui/material

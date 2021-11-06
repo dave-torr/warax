@@ -146,6 +146,11 @@
     width: 100px;
 }
 
+.contactData{
+    color: white;
+    text-align: center;
+}
+
 @media (max-width: 750px) {
     .naviGenCont{
         padding: unset;

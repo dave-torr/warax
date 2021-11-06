@@ -369,8 +369,8 @@ export default function Home() {
         <br></br>
 
 
-            {/* {homeSwitcher()} */}
-            {carouselDispl()}
+            {homeLanding()}
+            {/* {carouselDispl()} */}
 
 
 

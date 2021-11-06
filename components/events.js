@@ -380,7 +380,9 @@ export function HomeEventDisplayer(props){
                 </div>
                 <div className={styles.eventCalendarContent}>
                     <h1>Eventos Próximos</h1>
-                    {eachEventDisp(sortedArray)}
+
+                    {/* {eachEventDisp(sortedArray)} */}
+                    <h3> Muy pronto los mejores eventos más cerca de ti</h3>
                 </div>
             </div>
             </>
