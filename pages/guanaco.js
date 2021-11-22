@@ -184,7 +184,7 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
                 </div>
                 <Dialog open={menuTrig} onClose={()=>setMenuTrig(false)} fullScreen>
                     <div className={styles.guanacoMenu}>
-                        <div className={styles.closeMenuBTN}> close | x </div>
+                        <div className={styles.closeMenuBTN} onClick={()=>setMenuTrig(false)}> close | x </div>
                         <div className={styles.menuLogoIMG}>
                             <Image
                                 src="/assets/bands/guanaco/logoBLK.png"

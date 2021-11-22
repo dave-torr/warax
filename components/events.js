@@ -10,7 +10,7 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import LocationOnIcon from '@material-ui/icons//LocationOn';
 import LocalPhoneIcon from '@material-ui/icons//LocalPhone';
 import InstagramIcon from '@mui/icons-material/Instagram';
-
+import AssistantIcon from '@mui/icons-material/Assistant';
 export function EventDisp(props){
 
     const [imgTrig, setImgTrig] = useState(false)
@@ -183,56 +183,55 @@ const [eventBannerDialogTrig, setBannerIMGTrig]= useState(false)
         </>
     )
 }
-
-
 export function HomeEventDisplayer(props){
     let toDate = new Date()
     let sampleEventArr=[
         {
-            "eventName": "Guanaco | Cholonizacion Ft. Pakul",
+            "eventName": "Concierto por Fiestas de Quito",
             "eventType": "en vivo",
-            "eventCity": "Baños",
-            "productCatalog": "Guanaco",
+            "eventCity": "Quito",
+            "productCatalog": "Banda del Gremio de Albañiles",
             "productCategory": "Event",
             "productType": "Concert",
-            "productName":"Guanaco | Cholonizacion Ft. Pakul Ticket",
-            "eventDate": "OCT 31 2021",
+            "eventLocation": "https://goo.gl/maps/Mr1mtrFe4pQViYHS6",
+            "productName":"Banda del Gremio de Albañiles",
+            "eventDate": "DEC 04 2021",
             "contactPhone": "https://wa.me/593984057223",
             "priceObj":[
                 {
-                    "price": 10,
-                    "priceDetail": "Cover"
-                }
+                    "price": 10.7,
+                    "priceDetail": "PRESENCIAL"
+                },
             ],
             "eventPoster":{
-                "src": "/assets/eventPosters/cholo31OCTMobile.jpeg",
+                "src": "/assets/eventPosters/orquestaalbaniles.jpeg",
                 "width": 629,
                 "height": 629,
-                "alt": "Guanaco Ft. Pakul | Oct 31 Baños"
+                "alt": "Banda Orquesta Gremio Albañiles Quito. 04 Dic"
             }
         },
         {
-            "eventName": "Pichirilo Radioactivo | En Vivo",
+            "eventName": "Concierto por Fiestas de Quito",
             "eventType": "en vivo",
-            "eventLocation": "https://goo.gl/maps/xrNwvJhYBXbmFdCj7",
-            "eventCity": "Riobamba",
-            "productCatalog": "Pichirilo Radioactivo",
+            "eventCity": "Quito",
+            "productCatalog": "Banda del Gremio de Albañiles",
             "productCategory": "Event",
             "productType": "Concert",
-            "productName":"Pichirilo Raioactivo | En vivo | Ticket",
-            "eventDate": "NOV 05 2021",
+            "eventLocation": "https://goo.gl/maps/Mr1mtrFe4pQViYHS6",
+            "productName":"Banda del Gremio de Albañiles",
+            "eventDate": "DEC 04 2021",
             "contactPhone": "https://wa.me/593984057223",
             "priceObj":[
                 {
-                    "price": 10,
-                    "priceDetail": "Cover"
+                    "price": 5.35,
+                    "priceDetail": "VIRTUAL"
                 }
             ],
             "eventPoster":{
-                "src":"/assets/eventPosters/pichiriloRioNov5mobile.jpg",
-                "height": 730,
-                "width": 600,
-                "alt": "Pichirilo Radioactivo En Vivo | Poster Evento"
+                "src": "/assets/eventPosters/orquestaalbaniles.jpeg",
+                "width": 629,
+                "height": 629,
+                "alt": "Banda Orquesta Gremio Albañiles Quito. 04 Dic"
             }
         },
     ]
@@ -348,7 +347,11 @@ export function HomeEventDisplayer(props){
                     <div className={styles.eventIconCont}>
                         {elem.eventLocation&&<>
                             <a target="_blank" href={elem.eventLocation} rel="noopener" className={styles.anEventIcon}><div><LocationOnIcon/></div></a> </>}
-                        <a target="_blank" href={elem.contactPhone} rel="noopener" className={styles.anEventIcon}><div><LocalPhoneIcon/></div></a> 
+                        <a target="_blank" href={elem.contactPhone} rel="noopener" className={styles.anEventIcon}><div><LocalPhoneIcon/></div></a>
+                        <a className={styles.eventPosterDisp} onClick={()=>{
+                            setPosterIMDialogTrig(true)
+                            setImgDialogData(elem.eventPoster)
+                            }}><div>< AssistantIcon /></div></a> 
                     </div>
                 </div>
                 <div className={styles.priceBox}> 
@@ -381,8 +384,8 @@ export function HomeEventDisplayer(props){
                 <div className={styles.eventCalendarContent}>
                     <h1>Eventos Próximos</h1>
 
-                    {/* {eachEventDisp(sortedArray)} */}
-                    <h3> Muy pronto los mejores eventos más cerca de ti</h3>
+                    {eachEventDisp(sortedArray)}
+                    {/* <h3> Muy pronto los mejores eventos más cerca de ti</h3> */}
                 </div>
             </div>
             </>
@@ -412,3 +415,21 @@ export function HomeEventDisplayer(props){
         </>
     )
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// export async function getStaticProps() {
+//   const res = await fetch('https://.../fetchEvetns')
+//   const events = await res.json()
+
+//   return {
+//     props: {
+//       events,
+//     },
+//     // Next.js will attempt to re-generate the page:
+//     // - When a request comes in
+//     // - At most once every 10 seconds
+//     revalidate: 10, // In seconds
+//   }
+// }

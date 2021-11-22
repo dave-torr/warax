@@ -29,7 +29,7 @@ import MuiAlert from '@material-ui/lab/Alert';
 import { Dialog } from '@material-ui/core'
 
 import Carousel from 'react-material-ui-carousel'
-import { Paper, Button } from '@material-ui/core'
+import { Paper } from '@material-ui/core'
 
 export default function Home() {
 
@@ -142,7 +142,7 @@ export default function Home() {
             <div className={styles.eachCartElemCont}> {cartDispl} 
               <div className={styles.totalCartPrice}>
                 <strong> Total </strong>
-                <span> ${finalPrice} </span>
+                <span> ${finalPrice.toFixed(2)} </span>
               </div>
             </div>
             {paymenInput()}
@@ -150,7 +150,7 @@ export default function Home() {
         </Dialog>
         <Dialog open={mobileCartTrig} fullScreen onClose={()=>setMobCartTrigg(false)}>
           <div className={styles.cartDialog} >
-            <div style={{ "width":"100%", "textAlign": "end", "padding": "18px" }} onClick={()=>{setMobCartTrigg(false)
+            <div style={{ "width":"100%", "textAlign": "end", "padding": "18px", "cursor": "pointer" }} onClick={()=>{setMobCartTrigg(false)
             setUserDataTrig(false)
             setPayment(false)
             }}> 
@@ -161,7 +161,7 @@ export default function Home() {
               {cartDispl} 
               <div className={styles.totalCartPrice}>
                 <strong> Total </strong>
-                <span> ${finalPrice} </span>
+                <span> ${finalPrice.toFixed(2)} </span>
               </div>
             </div>
             {paymenInput()}

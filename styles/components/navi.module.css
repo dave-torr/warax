@@ -150,6 +150,29 @@
     color: white;
     text-align: center;
 }
+.logInBtn{
+    color: rgb(86, 85, 85);
+    transition: all ease-in 0.5s;
+    cursor: pointer;
+}
+.logInBtn:hover{
+    color: whitesmoke;
+}
+
+.naviLogInFrom{
+    color: whitesmoke;
+    border-radius: 5px;
+    border: solid 2px white;
+    padding: 12px;
+
+}
+
+.naviInputCont{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    margin: 12px 0;
+}
 
 @media (max-width: 750px) {
     .naviGenCont{

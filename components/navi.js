@@ -1,20 +1,17 @@
 import Image from "next/image"
 import Link from "next/link"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import styles from  "./../styles/components/navi.module.css"
 
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import YouTubeIcon from '@material-ui/icons/YouTube';
-
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import AddIcCall from '@material-ui/icons/AddIcCall';
 import Directions from '@material-ui/icons/Directions';
-
-import { Dialog } from '@material-ui/core'
 import { NavigationTwoTone } from "@material-ui/icons";
-
+import { Dialog } from '@material-ui/core'
 
 export function Navi(props){
 
@@ -234,6 +231,41 @@ export function Footer(props){
             </a>
     </React.Fragment>)
 
+    const [loginSwitcher, setLogInSwitch]=useState(false)
+    const [userInputs, setUserInputs]=useState({
+        "userName": null,
+        "clientPassword": null,
+    })
+    const logInSwitcherDisp=(switcher, setSwitch)=>{
+        if(switcher){
+            return(<>
+                <form className={styles.naviLogInFrom}>
+                    <div className={styles.naviInputCont}> <label htmlFor="naviLoginUsername">Username</label> <input required id="naviLoginUsername" 
+                        onChange={(e)=>{
+                            setUserInputs({
+                                userName: e.target.value
+                            })}} /></div>
+                    <div className={styles.naviInputCont}> <label htmlFor="naviLoginPassword">Password</label> <input required id="naviLoginPassword" 
+                        onChange={(e)=>{
+                            setUserInputs({
+                                clientPassword: e.target.value
+                            })}} /></div>
+                </form>
+            </>)
+        } else {
+            return(<>
+                <div className={styles.logInBtn} onClick={()=>setSwitch(true)}> LogIn</div>
+            </>)
+        }
+    }
+
+
+    useEffect(()=>{
+        if(userInputs.userName===process.env.CONTNT_CURATR_USERNM){
+            console.log("matching userName")
+        }
+    },[userInputs])
+
     return(
         <>
             <div className={styles.generalFooterCont}>
@@ -257,7 +289,9 @@ export function Footer(props){
                         {/* <a href="tel:593993712981"><Directions /> </a> */}
                     </h5>
                 </div>
+                {logInSwitcherDisp(loginSwitcher, setLogInSwitch)}
             </div>
+            
         </>
     )
 }

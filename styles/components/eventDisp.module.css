@@ -352,6 +352,10 @@
     cursor: pointer;
 }
 
+.eventPosterDisp{
+    display: none;
+}
+
 .eventPrice{
     font-size: 1.5em;
     margin-top: 9px;
@@ -403,6 +407,16 @@
     .posterdispl{
         display: none;
     }
+
+    .eventPosterDisp{
+    display: flex;
+    width: 30%;
+    height: 42px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    }
+
     .eventCatalog{
         display: none;
     }
