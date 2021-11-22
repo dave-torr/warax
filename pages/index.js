@@ -142,7 +142,8 @@ export default function Home() {
             <div className={styles.eachCartElemCont}> {cartDispl} 
               <div className={styles.totalCartPrice}>
                 <strong> Total </strong>
-                <span> ${finalPrice.toFixed(2)} </span>
+                {finalPrice&&<>
+                <span> ${finalPrice.toFixed(2)} </span></>}
               </div>
             </div>
             {paymenInput()}
@@ -161,7 +162,8 @@ export default function Home() {
               {cartDispl} 
               <div className={styles.totalCartPrice}>
                 <strong> Total </strong>
-                <span> ${finalPrice.toFixed(2)} </span>
+                {finalPrice&&<>
+                <span> ${finalPrice.toFixed(2)} </span></>}
               </div>
             </div>
             {paymenInput()}
