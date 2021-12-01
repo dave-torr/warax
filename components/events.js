@@ -186,54 +186,7 @@ const [eventBannerDialogTrig, setBannerIMGTrig]= useState(false)
 export function HomeEventDisplayer(props){
     let toDate = new Date()
     let sampleEventArr=[
-        {
-            "eventName": "Concierto por Fiestas de Quito",
-            "eventType": "en vivo",
-            "eventCity": "Quito",
-            "productCatalog": "Banda del Gremio de Albañiles",
-            "productCategory": "Event",
-            "productType": "Concert",
-            "eventLocation": "https://goo.gl/maps/Mr1mtrFe4pQViYHS6",
-            "productName":"Banda del Gremio de Albañiles",
-            "eventDate": "DEC 04 2021",
-            "contactPhone": "https://wa.me/593984057223",
-            "priceObj":[
-                {
-                    "price": 10.7,
-                    "priceDetail": "PRESENCIAL"
-                },
-            ],
-            "eventPoster":{
-                "src": "/assets/eventPosters/orquestaalbaniles.jpeg",
-                "width": 629,
-                "height": 629,
-                "alt": "Banda Orquesta Gremio Albañiles Quito. 04 Dic"
-            }
-        },
-        {
-            "eventName": "Concierto por Fiestas de Quito",
-            "eventType": "en vivo",
-            "eventCity": "Quito",
-            "productCatalog": "Banda del Gremio de Albañiles",
-            "productCategory": "Event",
-            "productType": "Concert",
-            "eventLocation": "https://goo.gl/maps/Mr1mtrFe4pQViYHS6",
-            "productName":"Banda del Gremio de Albañiles",
-            "eventDate": "DEC 04 2021",
-            "contactPhone": "https://wa.me/593984057223",
-            "priceObj":[
-                {
-                    "price": 5.35,
-                    "priceDetail": "VIRTUAL"
-                }
-            ],
-            "eventPoster":{
-                "src": "/assets/eventPosters/orquestaalbaniles.jpeg",
-                "width": 629,
-                "height": 629,
-                "alt": "Banda Orquesta Gremio Albañiles Quito. 04 Dic"
-            }
-        },
+
     ]
 
 // CALENDAR DISPLAYER
@@ -384,8 +337,11 @@ export function HomeEventDisplayer(props){
                 <div className={styles.eventCalendarContent}>
                     <h1>Eventos Próximos</h1>
 
-                    {eachEventDisp(sortedArray)}
-                    {/* <h3> Muy pronto los mejores eventos más cerca de ti</h3> */}
+                    {/* {eachEventDisp(sortedArray)} */}
+
+                    <h3> Muy pronto los mejores eventos más cerca de ti</h3>
+
+
                 </div>
             </div>
             </>

@@ -104,6 +104,41 @@ let episodeArr= [
         "embeddiLink": "JPm3nDoua4o",
         "episodeDescription": "En este episodio nos acompaña el gran Alvaro Bermeo, cantante, músico y compositor. Líder de Guardarraya y de su proyecto solista. No te pierdas este episodio y la presentación de Alvaro Bermeo junto a la Waráx Band, directamente desde los estudios de Waráx Arte."
     },    
+    {
+        "episodeNum": 15,
+        "season": 3,
+        "episodeName": "Jalal Dubois",
+        "embeddiLink": "jwmDFrL9eUY",
+        "episodeDescription": "En este episodio nos acompaña el emblemático Jalal Dubois, presentador, comediante, actor y personaje público. Su genialidad nos ha acompañado por más de 10 años. No te pierdas este episodio lleno de consejos, sabiduría y mucha música con la presentación musical de Jalal Dubois junto a la Waráx Band, interpretando un clásico de la música ecuatoriana, directamente desde los estudios de Waráx Arte."
+    },    
+    {
+        "episodeNum": 16,
+        "season": 3,
+        "episodeName": "Nicolas Schiper, Super Can, Lady Gia",
+        "embeddiLink": "X4zVLNRVFZ8",
+        "episodeDescription": "En este episodio tenemos una edición especial pura GOUNI nos acompañan Nicolas Schiper, músico, gestor cultural y productor.  Super Can productor, King Road Manager, y Party Lover. Lady Gia música, rapera y amante de la comida. No te pierdas este episodio lleno de mucha comida, risas, consejos y anécdotas. En esta ocasión nos acompaña Celtic Trip interpretando los clásicos del webveo y su música inédita, directamente desde los estudios de Waráx Arte Cumbaya. "
+    },    
+    {
+        "episodeNum": 17,
+        "season": 3,
+        "episodeName": "Rapder",
+        "embeddiLink": "fMmeplPnRLI",
+        "episodeDescription": "En este episodio nos acompaña el gran Rapder, cantante, músico, rapero. Actual campeón mundial de la Redbull Batalla de Gallos. No te pierdas este episodio con este increíble expositor del rap mundial."
+    },    
+    {
+        "episodeNum": 18,
+        "season": 3,
+        "episodeName": "Alfredozky, Eppico, Adulterio",
+        "embeddiLink": "rM9LnaznTVs",
+        "episodeDescription": "En este episodio nos acompañan el Top 3 de la Redbull Batalla de Gallos Alfredozky, Eppico y Adulterio. Actual Top 3 de la Redbull Batalla de Gallos Ecuador. No te pierdas este episodio con estos increíbles exponentes del rap ecuatoriano."
+    },    
+    {
+        "episodeNum": 19,
+        "season": 3,
+        "episodeName": "Michelena",
+        "embeddiLink": "vuUlJDenJrk",
+        "episodeDescription": "En este episodio nos acompaña la leyenda viva el gran Carlos Michelena. Sin duda uno de los mayores exponentes y pionero de la actuación en el Ecuador. No te pierdas este episodio lleno de palabras y musica con el gran Michelena."
+    },    
 ]
 
 

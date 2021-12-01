@@ -383,9 +383,9 @@ export default function Home() {
                 setPageDisplayer={setPageDisplayer}
               />
 
-              <EventBanner  
+              {/* <EventBanner  
                 bannerData={waraxhomeData.homeBannerData.wrxSalsaEnsambleBannerData}
-              />
+              /> */}
               <EventBanner  
                 bannerData={waraxhomeData.homeBannerData.fridayJazzHomeBannerData}
               />
