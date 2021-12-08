@@ -367,12 +367,12 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
                 <h1> MERCH</h1>
                 <div className={styles.merchContainer}>
                     <div className={styles.merchSubCont}>
-                        <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.buzoCholoBlk} />
-                        <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.capCholoSnapback} />
+                        <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchItems.buzoCholoBlk} />
+                        <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchItems.capCholoSnapback} />
                     </div>
                     <div className={styles.merchSubCont}>
-                        <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.capCholoFivePanl} />
-                        <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchData.capCholoFPRed} />
+                        <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchItems.capCholoFivePanl} />
+                        <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchItems.capCholoFPRed} />
                     </div>
                     <div className={styles.marketPLCBTN} onClick={()=>{window.scrollTo(0,0); setGuanacoPage("marketPlace")}}> Ver más increibles productos!</div>
                 </div>
@@ -463,8 +463,8 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
             </>
         )
     }
-    let productArr = Object.keys(GuanacoData.merchData).map(function (key){
-        return {...GuanacoData.merchData[key]}
+    let productArr = Object.keys(GuanacoData.merchItems).map(function (key){
+        return {...GuanacoData.merchItems[key]}
     })
 
     const marketPlace=()=>{
@@ -488,7 +488,6 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
     }
 
 
-console.log(waraxCart)
 
     return(
         <>

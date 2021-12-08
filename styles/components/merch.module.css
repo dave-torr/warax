@@ -1,11 +1,12 @@
 .merchGenCont{
     min-height: 50px;
     margin: 15px;
-    background-color: white;
+    background-color: whitesmoke;
     min-width: 50px;
     display: flex;
     transition: all ease-in 0.3s;
     align-items: center;
+    color: black;
 }
 .merchMiniGenCont{
     min-height: 50px;
@@ -78,6 +79,8 @@
 
 .modalRow h2{
     text-transform: uppercase;
+    padding: 0 9px;
+    word-wrap: break-word;
 }
 .addToCart:hover{
     background-color: var(--purple-highlight);

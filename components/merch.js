@@ -27,7 +27,7 @@ let theItem = props.merchItem
                 <Dialog open={merchVisTrigger} onClose={()=>{setMerchVis(false)}} >
                     <div className={styles.modalRow}>
                         <div className={styles.modalBTN} onClick={()=>setMerchVis(false)}> close | X </div>  
-                        <h2> &nbsp; {theItem.prodName} </h2>
+                        <h2> {theItem.prodName} </h2>
                         <div>
                             <Image
                                 src={imgObj.src}
@@ -45,13 +45,7 @@ let theItem = props.merchItem
             </>
         )
     }
-    const cartReplacement=()=>{
-        return(
-            <>
-            {/* <a href="mailto"><WhatsAppIcon /></a> */}
-            </>
-        )
-    }
+
     return(
         <>
             {IMGDisplayer(theItem.merchIMG)}

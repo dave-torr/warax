@@ -137,6 +137,40 @@
                 "width": 400,
                 "alt": "Merch Oficial Webveo - Onyx/Grey"
             }
+        },        
+        "webVeoTshWTH":{
+            "priceDetail": "Entrega Gratis!",
+            "productCatalog": "WebVeo",
+            "productCategory": "merch",
+            "productType": "tee",
+            "prodName":"Camiseta - Blanca",
+            "priceObj":{
+                "price": 25,
+                "productName": "Camiseta Webveo - Blanca"
+                },
+            "merchIMG":{
+                "src":"/assets/merchPics/guaniTshirtWHT.jpg",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Webveo - Camiseta Blanca"
+            }
+        },
+        "webVeoTshBLK":{
+            "priceDetail": "Entrega Gratis!",
+            "productCatalog": "WebVeo",
+            "productCategory": "merch",
+            "productType": "tee",
+            "prodName":"Camiseta - NEGRA",
+            "priceObj":{
+                "price": 25,
+                "productName": "Camiseta Webveo - NEGRA"
+                },
+            "merchIMG":{
+                "src":"/assets/merchPics/guaniTshirtBLK.jpg",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Webveo - Camiseta NEGRA"
+            }
         }        
     },
     "desktopImageArr": [

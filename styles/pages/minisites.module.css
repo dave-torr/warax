@@ -6,10 +6,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(29, 28, 28);
+    color: white;
 }
 
 .webVeoIntroBanner{
-    padding: 120px 0;
+    padding: 60px 0;
 }
 
 .seasonIntrotitle{
@@ -36,9 +38,7 @@
 
 .episodePicker{
     padding: 15px 0 15px 15px;
-    background-color: white;
     border-radius: 5px;
-    box-shadow: var(--generalBoxShadow);
     width: 360px;
     height: 315px;
     display: flex;
@@ -51,7 +51,7 @@
 
 .youTubeIframCont{
     box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.564);
-    background-color: blueviolet;
+    background-color: var(--purple-highlight);
     width: fit-content;
 }
 
@@ -70,6 +70,7 @@
 .eachepisodeList{
     padding: 6px;
     cursor: pointer;
+    border-bottom: solid 1px rgb(126, 124, 124);
 }
 
 .eachepisodeList:hover{
@@ -80,11 +81,11 @@
 .episodeDescription{
     margin: 15px;
     border-radius: 5px;
-    background-color: whitesmoke;
     margin-bottom: 21px;
     display: flex;
     flex-direction: column;
-    box-shadow: var(--generalBoxShadow);
+    border: solid 1px white;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.564);
 }
 
 .epDesTitle{
@@ -118,8 +119,11 @@
 }
 
 .webVeoLogo{
-    padding: 9px;
-    width: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+    background-color: white;
 }
 
 .webVeoSessIntro{

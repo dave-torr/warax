@@ -23,6 +23,7 @@ import {WebveoMiniSite, WebVeoHomeBanner } from "./../components/miniSites/webve
 import {WuanTakeMiniSite, WaraxTvMiniSite} from "./../components/miniSites/waraxMinisites"
 
 import waraxhomeData from "./../data/warax.json"
+import guanacoData from "./../data/guanaco.json"
 
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
@@ -258,6 +259,7 @@ export default function Home() {
       </>
     )
   }
+
   const merchDisp=()=>{
     return(
       <>
@@ -267,7 +269,8 @@ export default function Home() {
 
           {showHomeMerch? <>
             <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capBlack} />
-            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capYellow} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={guanacoData.merchItems.capCholoFPRed} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.webVeoTshWTH} />
             <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capGrey} />
           </>:<>
             <div className={styles.merchOpenerCont} onClick={()=>{setShowMerch(true)}}>
@@ -293,6 +296,8 @@ export default function Home() {
     return(
       <>
         <div className={styles.merchDispCont}>
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.webVeoTshWTH} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.webVeoTshBLK} />
             <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capBlack} />
             <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capYellow} />
             <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capGrey} />
@@ -395,7 +400,11 @@ export default function Home() {
             <HomeEventDisplayer 
               addToCart={addToCart}
             />
+
+
             {merchDisp()}
+
+
             {servicedisp()}
         </>}
         {pageDisplayer==="artistas"&&<>

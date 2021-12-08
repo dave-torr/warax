@@ -111,25 +111,8 @@
             "videoType": "live music"
         }
     ],
-    "merchData": 
+    "merchItems": 
     {
-        "capBlack" :{
-            "priceDetail": "Entrega Gratis!",
-            "productCatalog": "WebVeo",
-            "productCategory": "merch",
-            "productType": "cap",
-            "prodName":"Gorra - BLACK",
-            "priceObj":{
-                "price": 35,
-                "productName": "Gorra Webveo - BLACK"
-                },
-            "merchIMG":{
-                "src":"/assets/merchPics/blackCap.jpg",
-                "height": 400,
-                "width": 400,
-                "alt": "Merch Oficial Webveo - Gorra varios colores"
-                }
-        },
         "capCholoBrown" :{
             "priceDetail": "Entrega Gratis!",
             "productCatalog": "Cholonizacion",
@@ -231,6 +214,91 @@
                 "width": 400,
                 "alt": "Merch Oficial Cholonizacion - Gorra Five Panels | Roja con negro"
             }
-        }
+        },
+        "capBlack":{
+            "priceDetail": "Entrega Gratis!",
+            "productCatalog": "WebVeo",
+            "productCategory": "merch",
+            "productType": "cap",
+            "prodName":"Gorra - BLACK",
+            "priceObj":{
+                "price": 35,
+                "productName": "Gorra Webveo - BLACK"
+                },
+            "merchIMG":{
+                "src":"/assets/merchPics/blackCap.jpg",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Webveo - Gorra varios colores"
+            }
+        },
+        "capYellow":{
+            "priceDetail": "Entrega Gratis!",
+            "productCatalog": "WebVeo",
+            "productCategory": "merch",
+            "productType": "cap",
+            "prodName":"Gorra - LIME/ASH",
+            "priceObj":{
+                "price": 35,
+                "productName": "Gorra Webveo - LIME/ASH"
+                },
+            "merchIMG":{
+                "src":"/assets/merchPics/yellowCap.jpg",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Webveo - Gorra Amarillo"
+            }
+        },
+        "capGrey":{
+            "priceDetail": "Entrega Gratis!",
+            "productCatalog": "WebVeo",
+            "productCategory": "merch",
+            "productType": "cap",
+            "prodName":"Gorra - ONYX/LIME",
+            "priceObj":{
+                "price": 35,
+                "productName": "Gorra Webveo - Onyx/Grey"
+                },
+            "merchIMG":{
+                "src":"/assets/merchPics/greyCap.jpg",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Webveo - Onyx/Grey"
+            }
+        },        
+        "webVeoTshWTH":{
+            "priceDetail": "Entrega Gratis!",
+            "productCatalog": "WebVeo",
+            "productCategory": "merch",
+            "productType": "tee",
+            "prodName":"Camiseta - Blanca",
+            "priceObj":{
+                "price": 25,
+                "productName": "Camiseta Webveo - Blanca"
+                },
+            "merchIMG":{
+                "src":"/assets/merchPics/guaniTshirtWHT.jpg",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Webveo - Camiseta Blanca"
+            }
+        },
+        "webVeoTshBLK":{
+            "priceDetail": "Entrega Gratis!",
+            "productCatalog": "WebVeo",
+            "productCategory": "merch",
+            "productType": "tee",
+            "prodName":"Camiseta - NEGRA",
+            "priceObj":{
+                "price": 25,
+                "productName": "Camiseta Webveo - NEGRA"
+                },
+            "merchIMG":{
+                "src":"/assets/merchPics/guaniTshirtBLK.jpg",
+                "height": 400,
+                "width": 400,
+                "alt": "Merch Oficial Webveo - Camiseta NEGRA"
+            }
+        }      
     }
 }

@@ -236,8 +236,8 @@ return(<>
         {props.merchDisp()}
         <div className={styles.webVeoLogo}> <Image
             src="/assets/icons/webVeoColor.png"
-            height={250}
-            width={430}
+            height={145}
+            width={250}
             alt="WebVeo Icon"
         />
         </div>
