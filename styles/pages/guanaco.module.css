@@ -263,10 +263,11 @@
     align-items: center;
     background-color: whitesmoke;
     background-image: url("/assets/bands/guanaco/merchIntroParallaxIMG.png");
-    background-position: 0 15%;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 90%;
-    padding: 21px;
+    background-size: 100%;
+    padding: 55px 21px;
 }
 
 .merchSectionCont h1{
@@ -471,7 +472,7 @@
     background-color: whitesmoke;
     background-image: url("/assets/bands/guanaco/merchIntroParallaxIMG.png");
     background-attachment: fixed;
-    background-position: center;
+    background-position: 50% 10%;
     background-repeat: no-repeat;
     background-size: 100%;
     padding: 21px;

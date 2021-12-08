@@ -243,7 +243,7 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
         if(waraxCart.length>0){
             setFinalPrice(waraxCart.map(elem => elem.price).reduce((prev, next) => prev + next))
         } else if(waraxCart.length===0){
-            // setCartModal(false)
+            setCartModal(false)
             setMobCartTrigg(false)
         }
     },[waraxCart])
@@ -311,7 +311,7 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
             {elem.productName} 
             <span className={styles.rmvBTN} onClick={()=>{ removeFromCart(waraxCart, i)}}> X </span>
             </div>
-            <div className={styles.cartItmeDescription}> {elem.priceDetail} </div> 
+            <div className={styles.cartItmeDescription}>Talla {elem.merchSize} || {elem.priceDetail} </div> 
             <div className={styles.cartItmePrice}> $ {elem.price} </div>
         </div>
         </React.Fragment>)

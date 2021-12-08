@@ -61,7 +61,14 @@ export default function Home() {
       setPageDisplayer(  hrefVari.slice(hrefVari.search("=")+1) )
     }
   },[])
-
+    useEffect(()=>{
+        if(waraxCart.length>0){
+            setFinalPrice(waraxCart.map(elem => elem.price).reduce((prev, next) => prev + next))
+        } else if(waraxCart.length===0){
+            // setCartModal(false)
+            setMobCartTrigg(false)
+        }
+    },[waraxCart])
 
   ///////////////////////////
   // Cart Utils
