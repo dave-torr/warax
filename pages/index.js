@@ -375,12 +375,8 @@ export default function Home() {
         <br></br>
         <br></br>
 
-
             {homeLanding()}
             {/* {carouselDispl()} */}
-
-
-
             {/* {anEventDisp()} */}
             <div className={styles.homeCardDispCont}> 
               <WebVeoHomeBanner 
@@ -401,10 +397,7 @@ export default function Home() {
               addToCart={addToCart}
             />
 
-
             {merchDisp()}
-
-
             {servicedisp()}
         </>}
         {pageDisplayer==="artistas"&&<>

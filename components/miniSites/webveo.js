@@ -234,13 +234,13 @@ return(<>
                 </div>
                 <p> {selectedEp.episodeDescription} </p>
             </div>
-            {webVeoSessDisp()}
         </div>
         <br></br>
-        <br></br>
-        <br></br>
+
         <div className={styles.seasonIntrotitle}> WebVeo - Merch </div>
         {props.merchDisp()}
+        {webVeoSessDisp()}
+        <br></br>
         <div className={styles.webVeoLogo}> <Image
             src="/assets/icons/webVeoColor.png"
             height={145}
@@ -251,6 +251,7 @@ return(<>
     </div>
 </>)
 }
+
 
 export function WebVeoHomeBanner(props){
     return(
