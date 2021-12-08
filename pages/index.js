@@ -126,7 +126,7 @@ export default function Home() {
           {elem.productName} 
           <span className={styles.rmvBTN} onClick={()=>{ removeFromCart(waraxCart, i)}}> X </span>
         </div>
-        <div className={styles.cartItmeDescription}> {elem.priceDetail} </div> 
+        <div className={styles.cartItmeDescription}> Talla {elem.merchSize}  || {elem.priceDetail} </div> 
         <div className={styles.cartItmePrice}> $ {elem.price} </div>
       </div>
     </React.Fragment>)

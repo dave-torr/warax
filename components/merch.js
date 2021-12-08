@@ -19,7 +19,9 @@ let theItem = props.merchItem
         "productType": theItem.productType,
         "productCatalog": theItem.productCatalog,
         "productCategory": theItem.productCategory,
+        "merchSize": null
     })
+    const [sizeTrigg, setCartTrig]=useState(false)
 
     const IMGDisplayer=(imgObj)=>{
         return(
@@ -68,8 +70,30 @@ let theItem = props.merchItem
                             <div className={styles.proPrice}>${theItem.priceObj.price} </div>
                         </div>
 
+                    {theItem.productType==="hoodie" || theItem.productType==="tee"?<> 
+                        <div className={styles.sizePicker}>
+                            <div className={styles.aMerchSize} onClick={()=>{
+                                setCartTrig(true),
+                                setMerchObj({...merchObj, "merchSize":"S"})}} >S</div>
+                            <div className={styles.aMerchSize} onClick={()=>{
+                                setCartTrig(true),
+                                setMerchObj({...merchObj, "merchSize":"M"})}} >M</div>
+                            <div className={styles.aMerchSize} onClick={()=>{
+                                setCartTrig(true),
+                                setMerchObj({...merchObj, "merchSize":"L"})}} >L</div>
+                            <div className={styles.aMerchSize} onClick={()=>{
+                                setCartTrig(true),
+                                setMerchObj({...merchObj, "merchSize":"XL"})}} >XL</div>
+                        </div>
+                        {sizeTrigg&&<>
+                            <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}> 
+                            Comprar: Talla {merchObj.merchSize} <AddShoppingCartIcon /> </div> 
+                        </>}
+                    </>:<> 
                         <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}> 
                         Comprar <AddShoppingCartIcon /> </div> 
+                    </>}
+
                     </div>
 
                 </div>
@@ -87,8 +111,10 @@ let theItem = props.merchItem
     const [merchObj, setMerchObj] =useState({
         "price": theItem.priceObj.price,
         "priceDetail": theItem.priceObj.priceDetail,
-        "productName": theItem.priceObj.productName
+        "productName": theItem.priceObj.productName,
+        "merchSize": null
     })
+    const [sizeTrigg, setCartTrig]=useState(false)
 
     const IMGDisplayer=(imgObj)=>{
         return(
@@ -114,6 +140,7 @@ let theItem = props.merchItem
             </>
         )
     }
+
     return(
         <>
             {IMGDisplayer(theItem.merchIMG)}
@@ -136,10 +163,31 @@ let theItem = props.merchItem
                             <div className={styles.proPrice}>${theItem.priceObj.price} </div>
                         </div>
 
+                    {theItem.productType==="hoodie" || theItem.productType==="tee"?<> 
+                        <div className={styles.sizePicker}>
+                            <div className={styles.aMerchSize} onClick={()=>{
+                                setCartTrig(true),
+                                setMerchObj({...merchObj, "merchSize":"S"})}} >S</div>
+                            <div className={styles.aMerchSize} onClick={()=>{
+                                setCartTrig(true),
+                                setMerchObj({...merchObj, "merchSize":"M"})}} >M</div>
+                            <div className={styles.aMerchSize} onClick={()=>{
+                                setCartTrig(true),
+                                setMerchObj({...merchObj, "merchSize":"L"})}} >L</div>
+                            <div className={styles.aMerchSize} onClick={()=>{
+                                setCartTrig(true),
+                                setMerchObj({...merchObj, "merchSize":"XL"})}} >XL</div>
+                        </div>
+                        {sizeTrigg&&<>
+                            <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}> 
+                            Comprar: Talla {merchObj.merchSize} <AddShoppingCartIcon /> </div> 
+                        </>}
+                    </>:<> 
                         <div className={styles.addToCart} onClick={()=>{props.addToCart(merchObj)}}> 
                         Comprar <AddShoppingCartIcon /> </div> 
-                    </div>
+                    </>}
 
+                    </div>
                 </div>
             </div>
         </>

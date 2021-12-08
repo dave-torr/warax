@@ -139,6 +139,13 @@ let episodeArr= [
         "embeddiLink": "vuUlJDenJrk",
         "episodeDescription": "En este episodio nos acompaña la leyenda viva el gran Carlos Michelena. Sin duda uno de los mayores exponentes y pionero de la actuación en el Ecuador. No te pierdas este episodio lleno de palabras y musica con el gran Michelena."
     },    
+    {
+        "episodeNum": 20,
+        "season": 3,
+        "episodeName": "Spiritual Lyric Sound ",
+        "embeddiLink": "D4DAzZVXNHc",
+        "episodeDescription": "En este episodio nos acompañan los increíbles Spiritual Lyric Sound quienes desde el 2007 traen su sonido al mundo. No te pierdas este episodio lleno de anécdotas y música con Spiritual, Guanaco y la Warax Band."
+    },    
 ]
 
 
