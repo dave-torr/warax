@@ -19,6 +19,7 @@
     "@sendgrid/mail": "^7.4.5",
     "@stripe/react-stripe-js": "^1.4.1",
     "@stripe/stripe-js": "^1.17.1",
+    "@types/react": "^17.0.37",
     "bcryptjs": "^2.4.3",
     "connect-mongo": "^4.6.0",
     "connect-redis": "^6.0.0",

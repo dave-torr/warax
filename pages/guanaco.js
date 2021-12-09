@@ -17,63 +17,47 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { Dialog } from '@material-ui/core'
 
-import InstagramIcon from '@material-ui/icons/Instagram';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import EmailIcon from '@mui/icons-material/Email';
-import NewReleasesIcon from '@mui/icons-material/NewReleases';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 
 import styles from "./../styles/pages/guanaco.module.css"
 
-export default function GuanacoPage(props){
-
+// Icons and links
+/////////////////////////////////////////////////////////////////////////////////
+    import InstagramIcon from '@material-ui/icons/Instagram';
+    import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+    import FacebookIcon from '@material-ui/icons/Facebook';
+    import YouTubeIcon from '@material-ui/icons/YouTube';
+    import TwitterIcon from '@mui/icons-material/Twitter';
+    import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+    import EmailIcon from '@mui/icons-material/Email';
+    import NewReleasesIcon from '@mui/icons-material/NewReleases';
+    import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+    import WarningAmberIcon from '@mui/icons-material/WarningAmber';
     let SoundCloudIcon = <Image src="/assets/icons/soundcloud.png" height={20} width={20} alt="SoundCloud Icon" />
     let SpotifyIcon = <Image src="/assets/icons/spotify.png" height={20} width={20} alt="Spotify Icon" />
+    let instagramLink ="https://www.instagram.com/guanaco_mc/"
+    let twitterLink = "https://twitter.com/guanaco_mc?s=17"
+    let facebookLink = "https://www.facebook.com/guanacomcoficial/"
+    let youtubeLink = "https://www.youtube.com/channel/UCAbqgPCOhrOYMhpmPsbPXvg"
+    let spotifyLink = "https://open.spotify.com/artist/7hU7xPPEEDgzWw3Ao8SupC?si=UIn1jimpTLer-Fgjv1csZg&dl_branch=1"
+    let soundcloudLink = "https://soundcloud.com/guanaco-mc/tracks";
+    let managmentNumber = "tel:00593996027198";
+    let managementEmail = "mailto:mabelenlara@gmail.com?subject=Guanaco MC | Website Email"
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
 
-// for large screen lateral menu
-let menuOptsArr=[
-        "bio",
-        "eventos",
-        "discografia",
-        "videos",
-        "lyrics"
-    ]
-
-let instagramLink ="https://www.instagram.com/guanaco_mc/"
-let twitterLink = "https://twitter.com/guanaco_mc?s=17"
-let facebookLink = "https://www.facebook.com/guanacomcoficial/"
-let youtubeLink = "https://www.youtube.com/channel/UCAbqgPCOhrOYMhpmPsbPXvg"
-let spotifyLink = "https://open.spotify.com/artist/7hU7xPPEEDgzWw3Ao8SupC?si=UIn1jimpTLer-Fgjv1csZg&dl_branch=1"
-let soundcloudLink = "https://soundcloud.com/guanaco-mc/tracks";
-let managmentNumber = "tel:00593996027198";
-let managementEmail = "mailto:mabelenlara@gmail.com?subject=Guanaco MC | Website Email"
-
-let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/7hU7xPPEEDgzWw3Ao8SupC?theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-
-
-// for floating mobile menu
-// let menuIconArr=[
-        // <AssignmentIndIcon />,
-        // <MicIcon />,
-        // <PlayArrowIcon />,
-        // <TvIcon />,
-        // <MenuBookIcon />
-    // ]
 
     // Bio
     // Merch
     // Cholonizacion
     // discografia
     // eventos
-    // 
 
 // Landing: 
 // Cholonizacion landing. Spotify mini player, Merch, 
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+export default function GuanacoPage(props){
 
     const [guanacoPageDisp, setGuanacoPage]=useState("landing")
 
@@ -466,7 +450,6 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
     let productArr = Object.keys(GuanacoData.merchItems).map(function (key){
         return {...GuanacoData.merchItems[key]}
     })
-
     const marketPlace=()=>{
         let eachProdDisplayer = productArr.map((elem, i)=><React.Fragment key={i}>
             <MiniMerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={elem} />
@@ -477,11 +460,11 @@ let spotifyPlayerEmbedding = <iframe src="https://open.spotify.com/embed/artist/
                 <h1> MARKETPLACE </h1>
                 {/* MarketplaceCont */}
                 <div className={styles.merchContainer2}>
+                    <div className={styles.merch}> </div>
                     <div className={styles.MarketplaceCont}>
                         {eachProdDisplayer}
                     </div>
                 </div>
-
             </div>
             </>
         )

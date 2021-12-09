@@ -275,10 +275,8 @@ export default function Home() {
         <div className={styles.merchDispCont}>
 
           {showHomeMerch? <>
-            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capBlack} />
             <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={guanacoData.merchItems.capCholoFPRed} />
             <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.webVeoTshWTH} />
-            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capGrey} />
           </>:<>
             <div className={styles.merchOpenerCont} onClick={()=>{setShowMerch(true)}}>
               <div className={styles.merchsectionImage}>
@@ -305,9 +303,6 @@ export default function Home() {
         <div className={styles.merchDispCont}>
             <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.webVeoTshWTH} />
             <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.webVeoTshBLK} />
-            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capBlack} />
-            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capYellow} />
-            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.capGrey} />
         </div>
       </>
     )

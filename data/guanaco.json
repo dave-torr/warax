@@ -214,58 +214,7 @@
                 "width": 400,
                 "alt": "Merch Oficial Cholonizacion - Gorra Five Panels | Roja con negro"
             }
-        },
-        "capBlack":{
-            "priceDetail": "Entrega Gratis!",
-            "productCatalog": "WebVeo",
-            "productCategory": "merch",
-            "productType": "cap",
-            "prodName":"Gorra - BLACK",
-            "priceObj":{
-                "price": 35,
-                "productName": "Gorra Webveo - BLACK"
-                },
-            "merchIMG":{
-                "src":"/assets/merchPics/blackCap.jpg",
-                "height": 400,
-                "width": 400,
-                "alt": "Merch Oficial Webveo - Gorra varios colores"
-            }
-        },
-        "capYellow":{
-            "priceDetail": "Entrega Gratis!",
-            "productCatalog": "WebVeo",
-            "productCategory": "merch",
-            "productType": "cap",
-            "prodName":"Gorra - LIME/ASH",
-            "priceObj":{
-                "price": 35,
-                "productName": "Gorra Webveo - LIME/ASH"
-                },
-            "merchIMG":{
-                "src":"/assets/merchPics/yellowCap.jpg",
-                "height": 400,
-                "width": 400,
-                "alt": "Merch Oficial Webveo - Gorra Amarillo"
-            }
-        },
-        "capGrey":{
-            "priceDetail": "Entrega Gratis!",
-            "productCatalog": "WebVeo",
-            "productCategory": "merch",
-            "productType": "cap",
-            "prodName":"Gorra - ONYX/LIME",
-            "priceObj":{
-                "price": 35,
-                "productName": "Gorra Webveo - Onyx/Grey"
-                },
-            "merchIMG":{
-                "src":"/assets/merchPics/greyCap.jpg",
-                "height": 400,
-                "width": 400,
-                "alt": "Merch Oficial Webveo - Onyx/Grey"
-            }
-        },        
+        },      
         "webVeoTshWTH":{
             "priceDetail": "Entrega Gratis!",
             "productCatalog": "WebVeo",
@@ -298,6 +247,40 @@
                 "height": 400,
                 "width": 400,
                 "alt": "Merch Oficial Webveo - Camiseta NEGRA"
+            }
+        },      
+        "cdRaíz":{
+            "priceDetail": "Entrega Gratis!",
+            "productCatalog": "Guanaco",
+            "productCategory": "merch",
+            "productType": "cd/lp",
+            "prodName":"Raíz - CD 2013",
+            "priceObj":{
+                "price": 20,
+                "productName": "Raíz CD- 2013"
+                },
+            "merchIMG":{
+                "src":"/assets/bands/guanaco/albums/raiz.jpg",
+                "height": 400,
+                "width": 400,
+                "alt": "Raíz CD- 2013"
+            }
+        },      
+        "lpBlasfemia":{
+            "priceDetail": "Entrega Gratis!",
+            "productCatalog": "Guanaco",
+            "productCategory": "merch",
+            "productType": "cd/lp",
+            "prodName":"Blasfemia - LP 2018",
+            "priceObj":{
+                "price": 35,
+                "productName": "Blasfemia LP- 2018"
+                },
+            "merchIMG":{
+                "src":"/assets/bands/guanaco/albums/blasfemia.jpg",
+                "height": 400,
+                "width": 400,
+                "alt": "Raíz CD- 2013"
             }
         }      
     }

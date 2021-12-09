@@ -86,58 +86,7 @@
             }
         }
     },
-    "merchItems":{
-        "capBlack":{
-            "priceDetail": "Entrega Gratis!",
-            "productCatalog": "WebVeo",
-            "productCategory": "merch",
-            "productType": "cap",
-            "prodName":"Gorra - BLACK",
-            "priceObj":{
-                "price": 35,
-                "productName": "Gorra Webveo - BLACK"
-                },
-            "merchIMG":{
-                "src":"/assets/merchPics/blackCap.jpg",
-                "height": 400,
-                "width": 400,
-                "alt": "Merch Oficial Webveo - Gorra varios colores"
-            }
-        },
-        "capYellow":{
-            "priceDetail": "Entrega Gratis!",
-            "productCatalog": "WebVeo",
-            "productCategory": "merch",
-            "productType": "cap",
-            "prodName":"Gorra - LIME/ASH",
-            "priceObj":{
-                "price": 35,
-                "productName": "Gorra Webveo - LIME/ASH"
-                },
-            "merchIMG":{
-                "src":"/assets/merchPics/yellowCap.jpg",
-                "height": 400,
-                "width": 400,
-                "alt": "Merch Oficial Webveo - Gorra Amarillo"
-            }
-        },
-        "capGrey":{
-            "priceDetail": "Entrega Gratis!",
-            "productCatalog": "WebVeo",
-            "productCategory": "merch",
-            "productType": "cap",
-            "prodName":"Gorra - ONYX/LIME",
-            "priceObj":{
-                "price": 35,
-                "productName": "Gorra Webveo - Onyx/Grey"
-                },
-            "merchIMG":{
-                "src":"/assets/merchPics/greyCap.jpg",
-                "height": 400,
-                "width": 400,
-                "alt": "Merch Oficial Webveo - Onyx/Grey"
-            }
-        },        
+    "merchItems":{   
         "webVeoTshWTH":{
             "priceDetail": "Entrega Gratis!",
             "productCatalog": "WebVeo",
@@ -150,8 +99,8 @@
                 },
             "merchIMG":{
                 "src":"/assets/merchPics/guaniTshirtWHT.jpg",
-                "height": 400,
-                "width": 400,
+                "height": 380,
+                "width": 380,
                 "alt": "Merch Oficial Webveo - Camiseta Blanca"
             }
         },
@@ -167,8 +116,8 @@
                 },
             "merchIMG":{
                 "src":"/assets/merchPics/guaniTshirtBLK.jpg",
-                "height": 400,
-                "width": 400,
+                "height": 380,
+                "width": 380,
                 "alt": "Merch Oficial Webveo - Camiseta NEGRA"
             }
         }        

@@ -17,6 +17,7 @@
     flex-direction: column;
     transition: all ease-in 0.3s;
     align-items: center;
+    box-shadow: var(--generalBoxShadow);
 }
 
 .aMerchIMG{
