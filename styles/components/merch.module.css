@@ -23,6 +23,8 @@
     width: 240px;
     background-color: white;
     filter: brightness(1.1) saturate(1.2) contrast(1.1);
+    margin-left: 4px;
+    margin-top: 4px;
 }
 
 .merchDescCont{

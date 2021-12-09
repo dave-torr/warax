@@ -2,6 +2,9 @@ import Image from "next/image"
 import Link from "next/link"
 import React, { useEffect, useState } from "react"
 
+import {useUser} from "./../utils/auth/userHook"
+
+
 import styles from  "./../styles/components/navi.module.css"
 
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -210,6 +213,9 @@ export function NaviTwo(props){
 }
 export function Footer(props){
 
+/////////////////////////////////
+// User Data
+/////////////////////////////////
     let footerLinkArr=[
         {
             "Icon": <InstagramIcon />,
@@ -224,32 +230,62 @@ export function Footer(props){
             "link": "https://www.facebook.com/warax.arte/"
         }
     ]
-
     let eachSoMeBTN=footerLinkArr.map((elem, i)=><React.Fragment key={i}>
             <a className={styles.aSoMeIcon} href={elem.link}> 
                 {elem.Icon}
             </a>
     </React.Fragment>)
+/////////////////////////////////
+// AUTH
+/////////////////////////////////
 
+    const [user, { mutate }] = useUser();
     const [loginSwitcher, setLogInSwitch]=useState(false)
-    const [userInputs, setUserInputs]=useState({
-        "userName": null,
-        "clientPassword": null,
-    })
+    const logInSubmit= async(e)=>{
+        e.preventDefault();
+        const body = {
+            userName: e.currentTarget.userName.value,
+            password: e.currentTarget.password.value,
+        };
+        const res = await fetch('/api/auth/logInOut', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+        });
+        if (res.status === 200) {
+            const userObj = await res.json();
+            mutate(userObj);
+
+        } else {
+            console.log(res.status)
+            console.log("Error")
+        }
+    }
     const logInSwitcherDisp=(switcher, setSwitch)=>{
         if(switcher){
             return(<>
-                <form className={styles.naviLogInFrom}>
-                    <div className={styles.naviInputCont}> <label htmlFor="naviLoginUsername">Username</label> <input required id="naviLoginUsername" 
-                        onChange={(e)=>{
-                            setUserInputs({
-                                userName: e.target.value
-                            })}} /></div>
-                    <div className={styles.naviInputCont}> <label htmlFor="naviLoginPassword">Password</label> <input required id="naviLoginPassword" 
-                        onChange={(e)=>{
-                            setUserInputs({
-                                clientPassword: e.target.value
-                            })}} /></div>
+                <form className={styles.naviLogInFrom} onSubmit={(e)=>logInSubmit(e)}>
+                    <div className={styles.naviInputCont}> 
+                        <label htmlFor="naviLoginUsername">Username</label> 
+                        <input 
+                            required 
+                            id="naviLoginUsername" 
+                            type="text" 
+                            name="userName"
+                            placeholder="Ingresa tu Usuario"
+                            />
+                    </div>
+                    <div className={styles.naviInputCont}> 
+                        <label htmlFor="naviLoginPassword">Password</label> 
+                        <input 
+                            required 
+                            id="naviLoginPassword" 
+                            type="password" 
+                            name="password"
+                            placeholder="Ingresa tu Password"
+                            />
+                    </div>
+                    <button className={styles.logInBtn} type="submit">Sign In</button>
                 </form>
             </>)
         } else {
@@ -259,13 +295,9 @@ export function Footer(props){
         }
     }
 
+    const samplePass = "WrxLabs3000!@@"
 
-    useEffect(()=>{
-        if(userInputs.userName===process.env.CONTNT_CURATR_USERNM){
-            console.log("matching userName")
-        }
-    },[userInputs])
-
+ 
     return(
         <>
             <div className={styles.generalFooterCont}>
