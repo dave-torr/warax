@@ -50,7 +50,6 @@ export function Navi(props){
             </>:<>
                 <a className={styles.eachMenuBTN} onClick={()=>{
                 props.setPageDisplayer(elem.link)
-                props.setMinisite(null)
                 setDialogTrigg(false)
                 window.scrollTo({ top: 0, behavior: "smooth" }) }}>
                     {elem.key}</a>
@@ -62,14 +61,13 @@ export function Navi(props){
             <div className={styles.naviHighlightCont}>
                 <div style={{display: "flex", alignItems: "center"}}>
                     <div className={styles.highlightTitle}>Lo Nuevo</div>
-                    {props.minisiteDisp==="WebVeo"?<>
+                    {props.pageDisplayer==="WebVeo"?<>
                         <div className={styles.miniSiteLinkActive}>
                             #WebVeo
                         </div>
                     </>:<>
                         <div className={styles.miniSiteLink} onClick={()=>{
-                            props.setMinisite("WebVeo")
-                            props.setPageDisplayer(null)
+                            props.setPageDisplayer("WebVeo")
                             window.scrollTo({ top: 0, behavior: "smooth" })
                             }}>
                             #WebVeo
@@ -94,8 +92,7 @@ export function Navi(props){
                     </div>
                 </>:<>
                     <div className={styles.miniSiteLink} onClick={()=>{
-                        props.setMinisite("WuanTake")
-                        props.setPageDisplayer(null)
+                        props.setPageDisplayer("WuanTake")
                         window.scrollTo({ top: 0, behavior: "smooth" })
                         }}>
                         #WuanTake
@@ -110,8 +107,7 @@ export function Navi(props){
                     </div>
                 </>:<>
                     <div className={styles.miniSiteLink} onClick={()=>{
-                        props.setMinisite("WaraxTv")
-                        props.setPageDisplayer(null)
+                        props.setPageDisplayer("WaraxTv")
                         window.scrollTo({ top: 0, behavior: "smooth" })
                         }}>
                         #WaraxTv
@@ -135,7 +131,6 @@ export function Navi(props){
                             alt="Warax Logo"
                             onClick={()=>{
                                 props.setPageDisplayer("home") 
-                                props.setMinisite(null)
                                 window.scrollTo({ top: 0, behavior: "smooth" })
                                 }}
                             />
@@ -239,7 +234,7 @@ export function Footer(props){
 // AUTH
 /////////////////////////////////
 
-    const [user, { mutate }] = useUser();
+    // const [user, { mutate }] = useUser();
     const [loginSwitcher, setLogInSwitch]=useState(false)
     const logInSubmit= async(e)=>{
         e.preventDefault();
@@ -321,7 +316,7 @@ export function Footer(props){
                         {/* <a href="tel:593993712981"><Directions /> </a> */}
                     </h5>
                 </div>
-                {logInSwitcherDisp(loginSwitcher, setLogInSwitch)}
+                {/* {logInSwitcherDisp(loginSwitcher, setLogInSwitch)} */}
             </div>
             
         </>

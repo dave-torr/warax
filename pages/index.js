@@ -32,6 +32,12 @@ import { Dialog } from '@material-ui/core'
 import Carousel from 'react-material-ui-carousel'
 import { Paper } from '@material-ui/core'
 
+import wrxHomeCarr01 from "../public/assets/pictures/coverSec1.jpg"
+import wrxHomeCarr07 from "../public/assets/pictures/coverSec7.jpg"
+import wrxHomeCarr09 from "../public/assets/pictures/coverSec9.jpg"
+import wrxHomeCarr12 from "../public/assets/pictures/coverSec12.jpg"
+import wrxHomeCarrGroup from "../public/assets/pictures/coverGroupal.jpg"
+
 export default function Home() {
 
 // State
@@ -44,7 +50,6 @@ export default function Home() {
   const [mobileCartTrig, setMobCartTrigg] =useState(false)
   const [finalPrice, setFinalPrice]=useState()
   const [payment, setPayment]=useState(false)
-  const [minisiteDisp, setMinisite] = useState(null)
 
 // useEffects
   useEffect(()=>{
@@ -58,17 +63,17 @@ export default function Home() {
   useEffect(()=>{
     if(window.location.search){
       let hrefVari = window.location.search
-      setPageDisplayer(  hrefVari.slice(hrefVari.search("=")+1) )
+      setPageDisplayer( hrefVari.slice(hrefVari.search("=")+1) )
     }
   },[])
-    useEffect(()=>{
-        if(waraxCart.length>0){
-            setFinalPrice(waraxCart.map(elem => elem.price).reduce((prev, next) => prev + next))
-        } else if(waraxCart.length===0){
-            // setCartModal(false)
-            setMobCartTrigg(false)
-        }
-    },[waraxCart])
+  useEffect(()=>{
+      if(waraxCart.length>0){
+          setFinalPrice(waraxCart.map(elem => elem.price).reduce((prev, next) => prev + next))
+      } else if(waraxCart.length===0){
+          // setCartModal(false)
+          setMobCartTrigg(false)
+      }
+  },[waraxCart])
 
   ///////////////////////////
   // Cart Utils
@@ -210,35 +215,52 @@ export default function Home() {
   }
   function ImageDisp(props){
     return (
-      <Paper><div className={styles.homeSliderDesktopIMG} onClick={()=>{
-          let eventCalAnchor = document.getElementById(`EventCalendarAnchor`)
-              eventCalAnchor.scrollIntoView({behavior: "smooth"})
-        }}>
+      <Paper><div className={styles.homeSliderDesktopIMG}>
         <Image
-          // placeholder="blur"
           src={props.imgData.src}
           alt={props.imgData.alt}
-          width={props.imgData.width}
-          height={props.imgData.height}
         /></div>
+        <div className={styles.homeSliderCaption}> {props.imgData.alt}  </div>
       </Paper>
     )
   }
+  let desktopImageArr= [
+      {
+      "src": wrxHomeCarr01,
+      "alt": "Webveo invita: Michelena"
+      },
+      {
+      "src": wrxHomeCarr07,
+      "alt": "Warax Presenta: Ricardo Pita"
+      },
+      {
+      "src": wrxHomeCarr09,
+      "alt": "Warax Presenta: Guitarreando con Amigos"
+      },
+      {
+      "src": wrxHomeCarr12,
+      "alt": "Webveo Presenta: Carolina Perez"
+      },
+      {
+      "src": wrxHomeCarrGroup,
+      "alt": "Warax: Equipo en Produccion"
+      },
+  ];
   const carouselDispl=()=>{
     return(
       <>  
         <Carousel className={styles.desktopCarousel}>
-          {waraxhomeData.desktopImageArr.map((elem, i)=>
-            
+          {desktopImageArr.map((elem, i)=>
             <ImageDisp key={i} imgData={elem} /> 
           )}
         </Carousel>
-        <Carousel className={styles.mobileCarousel}>
+        {/* <Carousel className={styles.mobileCarousel}>
           {waraxhomeData.mobileImageArr.map((elem, i)=>
             
             <ImageDisp key={i} imgData={elem} /> 
           )}
-        </Carousel>
+        </Carousel> */}
+        <div className={styles.homeSplashText}> WARáX <strong>LO HACE REAL</strong> </div>
       </>
     )
   }
@@ -266,7 +288,6 @@ export default function Home() {
       </>
     )
   }
-
   const merchDisp=()=>{
     return(
       <>
@@ -321,40 +342,7 @@ export default function Home() {
       </>
     )
   }
-  const homeSwitcher=()=>{
-    let concertDate= new Date("Oct 23 2021")
-    let toDate= new Date()
-    if(toDate < concertDate){
-      return(
-        <>
-        <div className={styles.pichiLanding} onClick={()=>{
-          let eventCalAnchor = document.getElementById(`EventCalendarAnchor`)
-              eventCalAnchor.scrollIntoView({behavior: "smooth"})
-        }}>
-          <div className={styles.altLandingCont}><Image 
-            src="/assets/eventPosters/pakulCover.jpeg"
-            width={1201}
-            height={628}
-            alt="Warax Presents: Pakul | Oct 23 Quito"
-          /></div>
-        </div>
-        <div className={styles.pichiLandingNobile} onClick={()=>{
-          let eventCalAnchor = document.getElementById(`EventCalendarAnchor`)
-              eventCalAnchor.scrollIntoView({behavior: "smooth"})
-        }}>
-          <div className={styles.altLandingCont}><Image 
-            src="/assets/eventPosters/pakulOct23.jpeg"
-            width={620}
-            height={629}
-            alt="Warax Presents: Pakul | Oct 23 Quito"
-          /></div>
-        </div>
-        </>
-      )
-    } else {
-      {homeLanding()}
-    }
-  }
+
 
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
@@ -366,8 +354,6 @@ export default function Home() {
           pageDisplayer={pageDisplayer} 
           setPageDisplayer={setPageDisplayer}
           waraxCart={waraxCart}
-          minisiteDisp={minisiteDisp}
-          setMinisite={setMinisite}
           setWaraxCart={setWaraxCart}
           setCartModal={setCartModal}
           setMobCartTrigg={setMobCartTrigg}
@@ -377,12 +363,14 @@ export default function Home() {
         <br></br>
         <br></br>
 
-            {homeLanding()}
-            {/* {carouselDispl()} */}
+            {/* {homeLanding()} */}
+
+            {carouselDispl()}
+
+
             {/* {anEventDisp()} */}
             <div className={styles.homeCardDispCont}> 
               <WebVeoHomeBanner 
-                setMinisite={setMinisite}
                 setPageDisplayer={setPageDisplayer}
               />
 
@@ -420,13 +408,13 @@ export default function Home() {
           {anEventDisp()}
           {merchDisp()}
         </>}
-        {minisiteDisp==="WebVeo"&&<>
+        {pageDisplayer==="WebVeo"&&<>
           <WebveoMiniSite merchDisp={webVeoMerch} />
         </>}
-        {minisiteDisp==="WuanTake"&&<>
+        {pageDisplayer==="WuanTake"&&<>
           <WuanTakeMiniSite />
         </>}
-        {minisiteDisp==="WaraxTv"&&<>
+        {pageDisplayer==="WaraxTv"&&<>
           <WaraxTvMiniSite />
         </>}
       </div>

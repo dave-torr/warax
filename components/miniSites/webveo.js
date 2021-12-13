@@ -257,8 +257,7 @@ export function WebVeoHomeBanner(props){
     return(
         <>
         <div className={styles.webveoBannerCont} onClick={()=>{
-            props.setMinisite("WebVeo")
-            props.setPageDisplayer(null)}}>
+            props.setPageDisplayer("WebVeo")}}>
             <div className={styles.webVeoBannerLogo}> <Image
                 src="/assets/icons/webVeoColor.png"
                 height={250}

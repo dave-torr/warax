@@ -39,11 +39,11 @@
 }
 
 .homeSplashText{
-  position: absolute;
-  color: white;
   font-size: 2.3em;
   font-weight: 300;
   text-transform: uppercase;
+  text-align: center;
+  margin: 44px 0;
 }
 
 .cartDialog{
@@ -143,28 +143,24 @@
     flex-wrap: wrap;
   }
 
-
-/* Alt landing */
-.pichiLandingNobile{
-  display: none;
-}
-
-.pichiLanding{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: black;
-}
-
 .homeSliderDesktopIMG{
   background-color: black;
+  height: 50vh;
+  transform: translateY(-50px);
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
-.mobileCarousel{
-  display: none;
+.homeSliderCaption{
+  color: white;
+  position: absolute;
+  z-index: 5;
+  margin-left: 33px;
+  transform: translateY(-30px);
+  font-size: 2em;
+  text-shadow: 2px 2px black;
+}
+.desktopCarousel{
+  background-color: black;
 }
 
 @media (max-width: 1080px) {
@@ -174,42 +170,30 @@
   .merchOpenerCont{
     width: 96%;
   }
+  .homeSliderDesktopIMG{
+    transform: unset;
+  }
 }
 
 @media (max-width: 700px) {
-  .mobileCarousel{
-    display: unset;
+  .homeSliderCaption{
+    font-size: 1.5em;
   }
-
-  .desktopCarousel{
-    display: none;
-  }
-
-  .pichiLanding{
-    display: none;
-  }
-  .pichiLandingNobile{
-    display: unset;
-    width: 100%;
+  .homeSliderDesktopIMG{
     display: flex;
-    justify-content: center;
-    background-color: black;
+    align-items: center;
   }
-
   .homeSplashText{
     bottom: 66px;
     font-size: 2em;
   }
+
   .aSectiontitle{
     font-size: 1.7em;
   }
   .homeSplashIMG{
     display: none;
   }
-  .homeSplashIMGMobi{
-    display: unset;
-  }
-
   .cartDialog{
     width: auto;
     display: flex;

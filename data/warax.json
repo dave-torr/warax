@@ -122,22 +122,6 @@
             }
         }        
     },
-    "desktopImageArr": [
-        {
-        "src": "/assets/eventPosters/cholo31OCTCover.jpeg",
-        "width": 1181,
-        "height": 619,
-        "alt": "Guanaco Ft. Pakul | Oct 31 Baños",
-        "timeout": "OCT 31 2021"
-        },
-        {
-        "src": "/assets/eventPosters/pichiriloRioNov5.jpg",
-        "width": 1085,
-        "height": 572,
-        "alt": "Warax Presents: Pichirilo Radioactivo | Nov 5 Quito",
-        "timeout": "NOV 05 2021"
-        }
-    ],
     "mobileImageArr": [
         {
         "src": "/assets/eventPosters/pakulOct23.jpeg",

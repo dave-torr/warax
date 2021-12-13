@@ -10,7 +10,7 @@ export default function SocialPage(){
 
         return(
             <>
-                <Link href={`/`+ "?switr=" + passingVar}>
+                <Link href={`/`+ "?minipage=" + passingVar}>
                     {secTitle}
                 </Link>
             </>
@@ -21,9 +21,12 @@ export default function SocialPage(){
         <>
             <div className={styles.socialPageContainer}>
                 {socialPageSection("Warax Home", "home")}
-                {socialPageSection("Artistas", "artistas")}
-                {socialPageSection("Team", "team")}
+                {/* {socialPageSection("Artistas", "artistas")} */}
+                {/* {socialPageSection("Team", "team")} */}
+
                 {socialPageSection("Servicios", "servicios")}
+                {socialPageSection("WebVeo", "WebVeo")}
+
                 {socialPageSection("Eventos", "eventos")}
             </div>
             <Footer />
