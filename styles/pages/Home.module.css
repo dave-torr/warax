@@ -155,9 +155,10 @@
   position: absolute;
   z-index: 5;
   margin-left: 33px;
-  transform: translateY(-30px);
-  font-size: 2em;
+  transform: translateY(-45px);
+  font-size: 1.5em;
   text-shadow: 2px 2px black;
+  background-color: transparent;
 }
 .desktopCarousel{
   background-color: black;
@@ -182,6 +183,7 @@
   .homeSliderDesktopIMG{
     display: flex;
     align-items: center;
+    width: unset;
   }
   .homeSplashText{
     bottom: 66px;

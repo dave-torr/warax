@@ -227,23 +227,23 @@ export default function Home() {
   let desktopImageArr= [
       {
       "src": wrxHomeCarr01,
-      "alt": "Webveo invita: Michelena"
+      "alt": "Michelena en el Webveo"
       },
       {
       "src": wrxHomeCarr07,
-      "alt": "Warax Presenta: Ricardo Pita"
+      "alt": "Ricardo Pita En la Casa"
       },
       {
       "src": wrxHomeCarr09,
-      "alt": "Warax Presenta: Guitarreando con Amigos"
+      "alt": "Guitarreando con Amigos"
       },
       {
       "src": wrxHomeCarr12,
-      "alt": "Webveo Presenta: Carolina Perez"
+      "alt": "Carolina Perez en el Webveo"
       },
       {
       "src": wrxHomeCarrGroup,
-      "alt": "Warax: Equipo en Produccion"
+      "alt": "Warax Producciones"
       },
   ];
   const carouselDispl=()=>{
