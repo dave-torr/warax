@@ -142,9 +142,16 @@ let episodeArr= [
     {
         "episodeNum": 20,
         "season": 3,
-        "episodeName": "Spiritual Lyric Sound ",
+        "episodeName": "Spiritual Lyric Sound",
         "embeddiLink": "D4DAzZVXNHc",
         "episodeDescription": "En este episodio nos acompañan los increíbles Spiritual Lyric Sound quienes desde el 2007 traen su sonido al mundo. No te pierdas este episodio lleno de anécdotas y música con Spiritual, Guanaco y la Warax Band."
+    },    
+    {
+        "episodeNum": 21,
+        "season": 3,
+        "episodeName": "San Andres",
+        "embeddiLink": "ZWXqOIlVXGo",
+        "episodeDescription": "En este episodio nos acompañan los increíbles San Andrés Cumbia. La dupla mágica de Carlitos Valdivieso y Marco Vivanco creadores del nuevo sonido Cumbia Reggae Style. No te pierdas este episodio lleno de risas, recuerdos y mucha  música junto a este nuevo proyecto que se viene para este 2022."
     },    
 ]
 
