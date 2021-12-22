@@ -101,7 +101,6 @@ export function StripeGeneralCheckout(props){
 
 // add new sale email to clients with product arr. 
 
-
 const purchaseProcess=async()=>{
   if(payment.status==="succeeded"&&count===0){
     // send email to client with receipt {{product_arr}}
@@ -109,13 +108,15 @@ const purchaseProcess=async()=>{
     // empty cart
     // close modal
   setCount(count+1)
-
+  let purchaseDate=new Date();
   // Automated emails
     let saleEmailObj={
       ...props.saleUsarData,
+      "purchaseDate": purchaseDate,
       "waraxCart": props.waraxCart
     }
     let stringifiedEmailData=JSON.stringify(saleEmailObj)
+    /////////////////////////////////////////////////////
     const emailRes = await fetch("/api/emails/clientSaleEmail",{
       method: 'PATCH',
       body: stringifiedEmailData
