@@ -308,6 +308,12 @@
     display: flex;
 }
 
+.newCollectionNotice{
+    font-size: 2em;
+    text-align: center;
+    
+}
+
 .marketPLCBTN{
     width: 300px;
     padding: 12px 21px;

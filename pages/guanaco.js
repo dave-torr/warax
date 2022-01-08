@@ -58,15 +58,11 @@ import styles from "./../styles/pages/guanaco.module.css"
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
 export default function GuanacoPage(props){
-
     const [guanacoPageDisp, setGuanacoPage]=useState("landing")
-
-
 /////////////////////////////////////
 /////////////////////////////////////
 // home sections
 /////////////////////////////////////
-
     const [pickedMusicVideo, setMusicVideo] = useState(GuanacoData.videoArr[0])
     const eachVideoDisp=(eachVideoData)=>{
         return(
@@ -182,11 +178,11 @@ export default function GuanacoPage(props){
                                 setMenuTrig(false); setGuanacoPage("landing");}}>
                                 Home
                             </div>
-                            <div className={styles.aMenuOpt} onClick={()=>{
+                            {/* <div className={styles.aMenuOpt} onClick={()=>{
                                 window.scrollTo(0,0)
                                 setMenuTrig(false); setGuanacoPage("marketPlace");}}>
                                 Tienda
-                            </div>
+                            </div> */}
                             {/* <div className={styles.aMenuOpt} onClick={()=>{
                                 window.scrollTo(0,0)
                                 setMenuTrig(false); setGuanacoPage("eventCalendar");}}>
@@ -215,9 +211,7 @@ export default function GuanacoPage(props){
     const [waraxiCarti, setWaraxiCart]=useState(true)
     const [waraxCart, setWaraxCart]=useState([])
     const [addedItemSnack, setAddedItem]=useState(false)
-
     const [cartModalCont, setCartModal]=useState(false)
-
     const [mobileCartTrig, setMobCartTrigg] =useState(false)
     const [finalPrice, setFinalPrice]=useState()
     const [payment, setPayment]=useState(false)
@@ -350,15 +344,22 @@ export default function GuanacoPage(props){
             <div className={styles.merchSectionCont}>
                 <h1> MERCH</h1>
                 <div className={styles.merchContainer}>
-                    <div className={styles.merchSubCont}>
+                    {/* <div className={styles.merchSubCont}>
                         <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchItems.buzoCholoBlk} />
                         <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchItems.capCholoSnapback} />
-                    </div>
-                    <div className={styles.merchSubCont}>
+                    </div> */}
+
+                    {/* <div className={styles.merchSubCont}>
                         <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchItems.capCholoFivePanl} />
                         <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={GuanacoData.merchItems.capCholoFPRed} />
-                    </div>
-                    <div className={styles.marketPLCBTN} onClick={()=>{window.scrollTo(0,0); setGuanacoPage("marketPlace")}}> Ver más increibles productos!</div>
+                    </div> */}
+
+                    {/* <div className={styles.marketPLCBTN} onClick={()=>{window.scrollTo(0,0); setGuanacoPage("marketPlace")}}> Ver más increibles productos!</div> */}
+
+                    <div className={styles.newCollectionNotice}> 
+                        Muy Pronto 
+                        <div>Nuevos diseños exclusivos || ediciones limitadas</div>
+                    </div> 
                 </div>
             </div>
         )

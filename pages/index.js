@@ -296,8 +296,9 @@ export default function Home() {
         <div className={styles.merchDispCont}>
 
           {showHomeMerch? <>
-            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={guanacoData.merchItems.capCholoFPRed} />
+            {/* <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={guanacoData.merchItems.capCholoFPRed} /> */}
             <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.webVeoTshWTH} />
+            <MerchDisp activeCart={waraxiCarti} addToCart={addToCart} merchItem={waraxhomeData.merchItems.webVeoTshBLK} />
           </>:<>
             <div className={styles.merchOpenerCont} onClick={()=>{setShowMerch(true)}}>
               <div className={styles.merchsectionImage}>
@@ -377,9 +378,7 @@ export default function Home() {
               {/* <EventBanner  
                 bannerData={waraxhomeData.homeBannerData.wrxSalsaEnsambleBannerData}
               /> */}
-              <EventBanner  
-                bannerData={waraxhomeData.homeBannerData.fridayJazzHomeBannerData}
-              />
+              
             </div>
 
             <div id="EventCalendarAnchor"/>
