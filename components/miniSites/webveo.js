@@ -3,8 +3,6 @@ import Image from "next/image"
 
 import styles from "./../../styles/pages/minisites.module.css"
 
-export function WebveoMiniSite(props){
-
 let episodeArr= [
     {
         "episodeNum": 1,
@@ -153,10 +151,31 @@ let episodeArr= [
         "embeddiLink": "ZWXqOIlVXGo",
         "episodeDescription": "En este episodio nos acompañan los increíbles San Andrés Cumbia. La dupla mágica de Carlitos Valdivieso y Marco Vivanco creadores del nuevo sonido Cumbia Reggae Style. No te pierdas este episodio lleno de risas, recuerdos y mucha  música junto a este nuevo proyecto que se viene para este 2022."
     },    
+    {
+        "episodeNum": 22,
+        "season": 3,
+        "episodeName": "Edgar Castellanos",
+        "embeddiLink": "IHVuaFRlRLg",
+        "episodeDescription": "Felices de terminar este 2021 con mucha felicidad y alegría. En este episodio nos acompañan el gran Edgar Castellanos Lead de la legendaria banda Mama Vudu. No te pierdas este episodio lleno de risas, anécdotas y los mejores deseos navideños del crew para este 2022."
+    },    
+    {
+        "episodeNum": 23,
+        "season": 3,
+        "episodeName": "Alejandra García",
+        "embeddiLink": "ZnPAVhYZN-g",
+        "episodeDescription": "En este capítulo junto a la extraordinaria Alejandra, la cantante manabita más conocida como “La Toquilla” que tiene en sus manos un proyecto musical cuyo objetivo es fortalecer la cultura latinoamericana a través de la música nacional con un toque moderno y un estilo e imagen fuera de lo común, mezclando lo tradicional con un toque más tropical, manteniendo la base del requinto, el charango y todas esas mezclas sonoras  que imprimen su  estilo. No te pierdas este episodio lleno de risas, anécdotas y los mejores deseos navideños del crew para este 2022."
+    },    
+    {
+        "episodeNum": 24,
+        "season": 3,
+        "episodeName": "Pancho Viñachi ",
+        "embeddiLink": "hlNsBmQy6iE",
+        "episodeDescription": "En este capítulo nos visita Pancho Viñachi, multifacético freelancer y autodidacta convencido. Uno de los precursores del Stand Up Comedy en Ecuador, actor, escritor, comediante y gran persona. No te pierdas este episodio lleno de risas para empezaz este 2022 junto a la familia del Webveo y Warñax Arte."
+    },    
 ]
-
-
 let epIndex = episodeArr.length-1
+
+export function WebveoMiniSite(props){
 const [selectedEp, setSelectedEp]=useState(episodeArr[epIndex])
 useEffect(()=>{
     window.scrollTo(0,0)
@@ -261,20 +280,44 @@ return(<>
 
 
 export function WebVeoHomeBanner(props){
+
+    const [selectedEp, setSelectedEp]=useState(episodeArr[epIndex])
+    useEffect(()=>{
+        window.scrollTo(0,0)
+        setSelectedEp
+    },[])
+    const youtubeEmbedder=()=>{
+        return(
+            <>
+            <div className={styles.youTubeIframCont}>
+                <iframe width="560" height="315" src={`https://www.youtube.com/embed/${selectedEp.embeddiLink}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            </div>
+            <div className={styles.youTubeIframContMOBILE}>
+                <iframe width="320" height="190" src={`https://www.youtube.com/embed/${selectedEp.embeddiLink}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            </div>
+            </>
+        )
+    }
+
     return(
         <>
         <div className={styles.webveoBannerCont} onClick={()=>{
             props.setPageDisplayer("WebVeo")}}>
-            <div className={styles.webVeoBannerLogo}> <Image
-                src="/assets/icons/webVeoColor.png"
-                height={250}
-                width={430}
-                alt="WebVeo Icon"
-            />
+            <div className={styles.webveoBannerContent}>
+                <div className={styles.webVeoBannerLogo}> <Image
+                    src="/assets/icons/webVeoColor.png"
+                    height={250}
+                    width={430}
+                    alt="WebVeo Icon"
+                />
+                </div>
+                <i>/ WaraxTv / Guanaco MC</i>
+                <h1> Tercera temporada</h1>
+                <h3> Nuevos episodios: Martes 8pm</h3>
             </div>
-            <i>/ WaraxTv / Guanaco MC</i>
-            <h1> Tercera temporada</h1>
-            <h3> Nuevos episodios: Martes 8pm</h3>
+            <div className={styles.bannerYoutubeCont}>
+                {youtubeEmbedder()}
+            </div>
         </div>
         </>
     )

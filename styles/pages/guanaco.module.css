@@ -291,6 +291,7 @@
     box-shadow: var(--aHighlightBoxShadow);
     margin-bottom: 66px;
 }
+
 .merchContainer2{
     background-color: white;
     display: flex;
@@ -311,7 +312,6 @@
 .newCollectionNotice{
     font-size: 2em;
     text-align: center;
-    
 }
 
 .marketPLCBTN{

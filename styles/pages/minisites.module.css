@@ -140,14 +140,19 @@
 /* HOME BANNER */
 .webveoBannerCont{
     display: flex;
-    flex-direction: column;   
     background-color: white;
     box-shadow: var(--generalBoxShadow);
-    width: 300px;
     margin: 21px;
-    padding: 15px;
+    padding: 12px;
     cursor: pointer;
     transition: var(--general-transition);
+}
+.webveoBannerContent{
+    display: flex;
+    flex-direction: column;   
+    width: 300px;
+    padding: 15px;
+    cursor: pointer;
 }
 
 .webveoBannerCont:hover{
@@ -181,6 +186,14 @@
 .webVeoBannerLogo{
     background-color: white;
     padding: 9px;
+}
+
+.bannerYoutubeCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 33px;
 }
 
 @media (max-width: 1000px) {
@@ -223,6 +236,12 @@
     }
     .episodeListAndPlayer{
         flex-direction: column;
+    }
+    .webveoBannerCont{
+        flex-direction: column;    
+    }
+    .bannerYoutubeCont{
+        padding: 0;
     }
 }
 @media (max-width: 700px) {

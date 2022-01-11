@@ -358,7 +358,7 @@ export default function GuanacoPage(props){
 
                     <div className={styles.newCollectionNotice}> 
                         Muy Pronto 
-                        <div>Nuevos diseños exclusivos || ediciones limitadas</div>
+                        <div>Nuevos diseños exclusivos & Ediciones Limitadas</div>
                     </div> 
                 </div>
             </div>
@@ -470,8 +470,6 @@ export default function GuanacoPage(props){
             </>
         )
     }
-
-
 
     return(
         <>
