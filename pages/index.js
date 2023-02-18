@@ -386,8 +386,8 @@ export default function Home() {
               addToCart={addToCart}
             />
 
-            {merchDisp()}
-            {servicedisp()}
+            {/* {merchDisp()} */}
+            {/* {servicedisp()} */}
         </>}
         {pageDisplayer==="artistas"&&<>
           artistas
@@ -399,14 +399,14 @@ export default function Home() {
           <br></br>
           <br></br>
           {servicedisp()}
-          {merchDisp()}
+          {/* {merchDisp()} */}
         </>}
-        {pageDisplayer==="eventos"&&<>
+        {/* {pageDisplayer==="eventos"&&<>
           <br></br>
           <br></br>
           {anEventDisp()}
           {merchDisp()}
-        </>}
+        </>} */}
         {pageDisplayer==="WebVeo"&&<>
           <WebveoMiniSite merchDisp={webVeoMerch} />
         </>}
